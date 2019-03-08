@@ -1,0 +1,43 @@
+tracers module
+==============
+
+Warning! EXPERIMENTAL:
+ these features and functions are under development, will have bugs,
+ and may be heavily modified in the future
+
+Tracer particles in a vector field
+Uses a KDTree to find nearest vector to advect the particles
+
+- Requires scipy.spatial
+
+
+Module Summary
+--------------
+functions:
+~~~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    tracers.trace_particles
+
+classes:
+~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    tracers.TracerState
+
+Module Details
+--------------
+functions:
+~~~~~~~~~~
+.. autofunction:: tracers.trace_particles
+
+classes:
+~~~~~~~~
+.. autoclass:: tracers.TracerState
+    :members:
+    :show-inheritance:
+

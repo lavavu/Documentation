@@ -1,0 +1,261 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Introduction &#8212; LavaVu 1.3.2 documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LavaVu Installation" href="Installation.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Installation.html" title="LavaVu Installation"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="figure">
+<img alt="# logo" src="_images/LavaVu.png" />
+</div>
+<p>A scientific visualisation tool with a python interface for fast and
+flexible visual analysis.</p>
+<div class="figure">
+<img alt="examplevis" src="_images/examples.png" />
+</div>
+<p>LavaVu development is supported by the <a class="reference external" href="http://monash.edu.au/mivp">Monash Immersive Visualisation
+Plaform</a> and the Simulation, Analysis &amp;
+Modelling component of the <a class="reference external" href="http://www.auscope.org.au/simulation-analysis-modelling">NCRIS
+AuScope</a> capability.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Python Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Property-Reference.html">Property Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scripting-Commands-Reference.html">Scripting Commands Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lavavu.html">API Reference: lavavu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">API Reference: control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert.html">API Reference: convert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">API Reference: points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracers.html">API Reference: tracers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interaction.html">Interaction with keyboard/mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Commandline-Arguments.html">Running from command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Setting-Properties.html">Setting Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GLDB-file-format.html">GLDB File Format</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/OKaluza/LavaVu">LavaVu Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/OKaluza/LavaVu/wiki">LavaVu Wiki</a></li>
+</ul>
+</div>
+<a class="reference external image-reference" href="https://travis-ci.org/OKaluza/LavaVu"><img alt="https://travis-ci.org/OKaluza/LavaVu.svg?branch=master" src="https://travis-ci.org/OKaluza/LavaVu.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.2585377"><img alt="https://zenodo.org/badge/DOI/10.5281/zenodo.2585377.svg" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2585377.svg" /></a>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The acronym stands for: Lightweight, Automatable Visualisation and
+Analysis Viewing Utility, but “lava” is also a reference to its origins
+as a viewer for geophysical simulations.
+It’s also unique enough to find the repository with google.</p>
+<p>The project started in the gLucifer <a class="footnote-reference" href="#id3" id="id1">[1]</a> framework for visualising
+geodynamics simulations. The OpenGL visualisation module was separated
+from the simulation and sampling libraries and became a more general
+purpose visualisation tool. gLucifer continues as a set of sampling
+tools for Underworld simulations as part of the
+<a class="reference external" href="https://github.com/underworldcode/underworld2/">Underworld2</a> code.
+LavaVu provides the rendering library for creating 2d and 3d
+visualisations to view this sampled data, inline within interactive
+IPython notebooks and offline through saved visualisation databases and
+images/movies.</p>
+<p>As a standalone tool it is a scriptable 3D visualisation tool capable of
+producing publication quality high res images and video output from time
+varying data sets along with HTML5 3D visualisations in WebGL. Rendering
+features include correctly and efficiently rendering large numbers of
+opaque and transparent points and surfaces and volume rendering by GPU
+ray-marching. There are also features for drawing vector fields and
+tracers (streamlines).</p>
+<p>Control is via python and a set of simple verbose scripting commands
+along with mouse/keyboard interaction. GUI components can be generated
+for use from a web browser via the python “control” module and a built
+in web server.</p>
+<p>A native data format called GLDB is used to store and visualisations in
+a compact single file, using SQLite for storage and fast loading. A
+small number of other data formats are supported for import (OBJ
+surfaces, TIFF stacks etc). Further data import formats are supported
+with python scripts, with the numpy interface allowing rapid loading and
+manipulation of data.</p>
+<p>A CAVE2 virtual reality mode is provided by utilising Omegalib
+(<a class="reference external" href="http://github.com/uic-evl/omegalib">http://github.com/uic-evl/omegalib</a>) to allow use in Virtual Reality and
+Immersive Visualisation facilities, such as the CAVE2 at Monash, see
+(<a class="reference external" href="https://github.com/mivp/LavaVR">https://github.com/mivp/LavaVR</a>). Side-by-side and quad buffer
+stereoscopic 3D support is also provided for other 3D displays.</p>
+</div>
+<div class="section" id="how-do-i-get-started">
+<h1>How do I get started?<a class="headerlink" href="#how-do-i-get-started" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference internal" href="Installation.html"><span class="doc">LavaVu Installation</span></a></p>
+<p>Then to get started with the python API <a class="reference internal" href="tutorials/QuickStart.html"><span class="doc">LavaVu: python API quickstart guide</span></a></p>
+<p>The core of LavaVu is an OpenGL powered rendering engine written in C++,
+this library is accessible via the python API with interactive output in Jupyter notebooks or
+as a standalone application</p>
+<p>Some of the documentation applies primarily to the standalone viewer application,
+but much of the content is still applicable when using via the python API.</p>
+<p>Most important for both use cases is the <a class="reference internal" href="Property-Reference.html"><span class="doc">Properties reference</span></a>, these are values that can be changed globally or per object to modify the rendering parameters.</p>
+<p>The <a class="reference internal" href="Scripting-Commands-Reference.html"><span class="doc">Scripting Commands</span></a> reference also still applies to the python API,
+but it has many more commands available through python functions that are not available to the standalone Viewer.</p>
+<p>In python : all the properties available on the Viewer and Objects can be set in python using a dictionary style interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<span class="n">lv</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span>
+
+<span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
+<span class="n">pts</span><span class="p">[</span><span class="s2">&quot;pointsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>All the scripting commands can be run by calling them as functions on the Viewer object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">lv</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>For more information on the python and IPython interface, see</p>
+<ul class="simple">
+<li><a class="reference internal" href="Tutorials.html"><span class="doc">Tutorials</span></a></li>
+<li><a class="reference internal" href="lavavu.html"><span class="doc">LavaVu Python API Reference</span></a></li>
+</ul>
+<p>For more information on using the standalone viewer, see</p>
+<ul class="simple">
+<li><a class="reference internal" href="Interaction.html"><span class="doc">Interaction with keyboard/mouse</span></a></li>
+<li><a class="reference internal" href="Commandline-Arguments.html"><span class="doc">Running from command Line</span></a></li>
+<li><a class="reference internal" href="Setting-Properties.html"><span class="doc">Setting Properties</span></a></li>
+</ul>
+</div>
+<div class="section" id="who-do-i-talk-to">
+<h1>Who do I talk to?<a class="headerlink" href="#who-do-i-talk-to" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Report bugs or request help on the github issue tracker:
+<a class="reference external" href="https://github.com/OKaluza/LavaVu/issues">https://github.com/OKaluza/LavaVu/issues</a></li>
+<li>Contact developers: Owen Kaluza (at) monash.edu</li>
+</ul>
+</div>
+<div class="section" id="included-libraries">
+<h1>Included libraries<a class="headerlink" href="#included-libraries" title="Permalink to this headline">¶</a></h1>
+<p>In order to avoid as many external dependencies as possible, the LavaVu
+sources include files from the following public domain or open source
+libraries, many thanks to the authors for making their code available!</p>
+<ul class="simple">
+<li>SQLite3 <a class="reference external" href="https://www.sqlite.org">https://www.sqlite.org</a></li>
+<li>JSON for Modern C++ <a class="reference external" href="https://github.com/nlohmann/json">https://github.com/nlohmann/json</a></li>
+<li>Tiny OBJ Loader <a class="reference external" href="https://github.com/syoyo/tinyobjloader">https://github.com/syoyo/tinyobjloader</a></li>
+<li>LodePNG <a class="reference external" href="https://github.com/lvandeve/lodepng">https://github.com/lvandeve/lodepng</a></li>
+<li>jpeg-compressor <a class="reference external" href="https://github.com/richgel999/jpeg-compressor">https://github.com/richgel999/jpeg-compressor</a></li>
+<li>miniz <a class="reference external" href="https://github.com/richgel999/miniz">https://github.com/richgel999/miniz</a></li>
+<li>GPU Cubic B-Spline Interpolation (optional) in volume shader <a class="reference external" href="http://www.dannyruijters.nl/cubicinterpolation/">http://www.dannyruijters.nl/cubicinterpolation/</a> <a class="footnote-reference" href="#id4" id="id2">[2]</a></li>
+</ul>
+</div>
+<div class="section" id="citation">
+<h1>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h1>
+<p>If you use LavaVu in any published work we would appreciate a citation of the code using the zenodo DOI. There is a master DOI for all releases and releases after 1.3.2 are automatically given a DOI under the master.</p>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.2585377"><img alt="https://zenodo.org/badge/DOI/10.5281/zenodo.2585377.svg" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2585377.svg" /></a>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://dx.doi.org/10.1007/s10069-008-0010-2">Stegman, D.R., Moresi, L., Turnbull, R., Giordani, J., Sunter, P.,
+Lo, A. and S. Quenette, gLucifer: Next Generation Visualization
+Framework for High performance computational geodynamics, 2008, Visual
+Geosciences</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://dx.doi.org/10.1080/2151237X.2008.10129269">Ruijters, Daniel &amp; ter Haar Romeny, Bart &amp; Suetens, Paul. (2008).
+Efficient GPU-Based Texture Interpolation using Uniform B-Splines. J.
+Graphics Tools. 13.
+61-69.</a></td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a></li>
+<li><a class="reference internal" href="#how-do-i-get-started">How do I get started?</a></li>
+<li><a class="reference internal" href="#who-do-i-talk-to">Who do I talk to?</a></li>
+<li><a class="reference internal" href="#included-libraries">Included libraries</a></li>
+<li><a class="reference internal" href="#citation">Citation</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Installation.html"
+                        title="next chapter">LavaVu Installation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Installation.html" title="LavaVu Installation"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

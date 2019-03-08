@@ -1,0 +1,34 @@
+points module
+=============
+
+Warning! EXPERIMENTAL:
+ these features and functions are under development, will have bugs,
+ and may be heavily modified in the future
+
+Tools for importing and working with point clouds
+- OBJ loader, requires pywavefront
+- PLY loader, requires plyfile
+- LAS loader, requires laspy
+
+These functions ported from my viz script repo here:
+https://github.com/mivp/vizscripts/tree/master/pointcloud
+More tools can be found there, including a ptx reader which handles transformations of multiple point clouds into one coord space
+
+
+
+Module Summary
+--------------
+functions:
+~~~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    points.loadpointcloud
+
+Module Details
+--------------
+functions:
+~~~~~~~~~~
+.. autofunction:: points.loadpointcloud
+

@@ -1,0 +1,1170 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Scripting command reference &#8212; LavaVu 1.3.2 documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lavavu module" href="lavavu.html" />
+    <link rel="prev" title="Property reference" href="Property-Reference.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lavavu.html" title="lavavu module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Property-Reference.html" title="Property reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="scripting-command-reference">
+<h1>Scripting command reference<a class="headerlink" href="#scripting-command-reference" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><strong><a class="reference external" href="#general-commands">General</a></strong></li>
+</ul>
+<p><a class="reference external" href="#quit">quit</a>, <a class="reference external" href="#repeat">repeat</a>, <a class="reference external" href="#animate">animate</a>, <a class="reference external" href="#history">history</a>, <a class="reference external" href="#clearhistory">clearhistory</a>, <a class="reference external" href="#pause">pause</a>, <a class="reference external" href="#list">list</a>, <a class="reference external" href="#step">step</a>, <a class="reference external" href="#timestep">timestep</a>, <a class="reference external" href="#jump">jump</a>, <a class="reference external" href="#model">model</a>, <a class="reference external" href="#reload">reload</a>, <a class="reference external" href="#redraw">redraw</a>, <a class="reference external" href="#clear">clear</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#input-commands">Input</a></strong></li>
+</ul>
+<p><a class="reference external" href="#file">file</a>, <a class="reference external" href="#script">script</a>, <a class="reference external" href="#figure">figure</a>, <a class="reference external" href="#savefigure">savefigure</a>, <a class="reference external" href="#view">view</a>, <a class="reference external" href="#scan">scan</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#output-commands">Output</a></strong></li>
+</ul>
+<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#view-commands">View</a></strong></li>
+</ul>
+<p><a class="reference external" href="#rotate">rotate</a>, <a class="reference external" href="#rotatex">rotatex</a>, <a class="reference external" href="#rotatey">rotatey</a>, <a class="reference external" href="#rotatez">rotatez</a>, <a class="reference external" href="#rotation">rotation</a>, <a class="reference external" href="#zoom">zoom</a>, <a class="reference external" href="#translate">translate</a>, <a class="reference external" href="#translatex">translatex</a>, <a class="reference external" href="#translatey">translatey</a>, <a class="reference external" href="#translatez">translatez</a>, <a class="reference external" href="#translation">translation</a>, <a class="reference external" href="#autorotate">autorotate</a>, <a class="reference external" href="#spin">spin</a>, <a class="reference external" href="#focus">focus</a>, <a class="reference external" href="#aperture">aperture</a>, <a class="reference external" href="#focallength">focallength</a>, <a class="reference external" href="#eyeseparation">eyeseparation</a>, <a class="reference external" href="#nearclip">nearclip</a>, <a class="reference external" href="#farclip">farclip</a>, <a class="reference external" href="#zoomclip">zoomclip</a>, <a class="reference external" href="#zerocam">zerocam</a>, <a class="reference external" href="#reset">reset</a>, <a class="reference external" href="#bounds">bounds</a>, <a class="reference external" href="#camera">camera</a>, <a class="reference external" href="#resize">resize</a>, <a class="reference external" href="#fullscreen">fullscreen</a>, <a class="reference external" href="#fit">fit</a>, <a class="reference external" href="#autozoom">autozoom</a>, <a class="reference external" href="#stereo">stereo</a>, <a class="reference external" href="#coordsystem">coordsystem</a>, <a class="reference external" href="#sort">sort</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#object-commands">Object</a></strong></li>
+</ul>
+<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#read">read</a>, <a class="reference external" href="#label">label</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#vertex">vertex</a>, <a class="reference external" href="#normal">normal</a>, <a class="reference external" href="#vector">vector</a>, <a class="reference external" href="#value">value</a>, <a class="reference external" href="#colour">colour</a>, <a class="reference external" href="#isosurface">isosurface</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#display-commands">Display</a></strong></li>
+</ul>
+<p><a class="reference external" href="#background">background</a>, <a class="reference external" href="#alpha">alpha</a>, <a class="reference external" href="#axis">axis</a>, <a class="reference external" href="#rulers">rulers</a>, <a class="reference external" href="#antialias">antialias</a>, <a class="reference external" href="#valuerange">valuerange</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#colourbar">colourbar</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#pointsample">pointsample</a>, <a class="reference external" href="#border">border</a>, <a class="reference external" href="#title">title</a>, <a class="reference external" href="#scale">scale</a>, <a class="reference external" href="#modelscale">modelscale</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#scripting-commands">Scripting</a></strong></li>
+</ul>
+<p><a class="reference external" href="#next">next</a>, <a class="reference external" href="#play">play</a>, <a class="reference external" href="#stop">stop</a>, <a class="reference external" href="#open">open</a>, <a class="reference external" href="#interactive">interactive</a>, <a class="reference external" href="#display">display</a></p>
+<ul class="simple">
+<li><strong><a class="reference external" href="#miscellanious-commands">Miscellanious</a></strong></li>
+</ul>
+<p><a class="reference external" href="#shaders">shaders</a>, <a class="reference external" href="#blend">blend</a>, <a class="reference external" href="#props">props</a>, <a class="reference external" href="#defaults">defaults</a>, <a class="reference external" href="#test">test</a>, <a class="reference external" href="#voltest">voltest</a>, <a class="reference external" href="#newstep">newstep</a>, <a class="reference external" href="#filter">filter</a>, <a class="reference external" href="#filterout">filterout</a>, <a class="reference external" href="#filtermin">filtermin</a>, <a class="reference external" href="#filtermax">filtermax</a>, <a class="reference external" href="#clearfilters">clearfilters</a>, <a class="reference external" href="#verbose">verbose</a>, <a class="reference external" href="#toggle">toggle</a>, <a class="reference external" href="#createvolume">createvolume</a>, <a class="reference external" href="#clearvolume">clearvolume</a>, <a class="reference external" href="#palette">palette</a></p>
+<hr class="docutils" />
+<div class="section" id="general-commands">
+<h2>General commands:<a class="headerlink" href="#general-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quit">
+<h3>quit<a class="headerlink" href="#quit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Quit the program</div></blockquote>
+</div>
+<div class="section" id="repeat">
+<h3>repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Repeat commands from history</p>
+<p><strong>Usage:</strong> repeat [count=1] [N=1]</p>
+<p>count (integer) : repeat commands count timesN (integer) : repeat the last N commands</p>
+</div></blockquote>
+</div>
+<div class="section" id="animate">
+<h3>animate<a class="headerlink" href="#animate" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Update display between each command</p>
+<p><strong>Usage:</strong> animate rate</p>
+<p>rate (integer) : animation timer to fire every (rate) msec (default: 50)When on, if multiple commands are issued the frame is re-rendered at set framerateWhen off, all commands will be processed before the display is updated</p>
+</div></blockquote>
+</div>
+<div class="section" id="history">
+<h3>history<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Write command history to output (eg: terminal)</p>
+<p><strong>Usage:</strong> history [filename]</p>
+<p>filename (string) : optional file to write data to</p>
+</div></blockquote>
+</div>
+<div class="section" id="clearhistory">
+<h3>clearhistory<a class="headerlink" href="#clearhistory" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Clear command history</div></blockquote>
+</div>
+<div class="section" id="pause">
+<h3>pause<a class="headerlink" href="#pause" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Pause execution (for scripting)</p>
+<p><strong>Usage:</strong> pause msecs</p>
+<p>msecs (integer) : how long to pause for in milliseconds</p>
+</div></blockquote>
+</div>
+<div class="section" id="list">
+<h3>list<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>List available data</p>
+<p><strong>Usage:</strong> list objects/colourmaps/elements</p>
+<p>objects : enable object list (stays on screen until disabled)(dimmed objects are hidden or not in selected viewport)colourmaps : show colourmap listelements : show geometry elements by id in terminaldata : show available data sets in selected object or all</p>
+</div></blockquote>
+</div>
+<div class="section" id="step">
+<h3>step<a class="headerlink" href="#step" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set timestep to view</p>
+<p><strong>Usage:</strong> timestep -/+/value</p>
+<p>value (integer) : the timestep to view</p>
+<ul class="simple">
+<li>: switch to previous timestep if available</li>
+</ul>
+<ul class="simple">
+<li>: switch to next timestep if available</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="timestep">
+<h3>timestep<a class="headerlink" href="#timestep" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set timestep to view</p>
+<p><strong>Usage:</strong> timestep -/+/value</p>
+<p>value (integer) : the timestep to view</p>
+<ul class="simple">
+<li>: switch to previous timestep if available</li>
+</ul>
+<ul class="simple">
+<li>: switch to next timestep if available</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="jump">
+<h3>jump<a class="headerlink" href="#jump" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Jump from current timestep forward/backwards</p>
+<p><strong>Usage:</strong> jump value</p>
+<p>value (integer) : how many timesteps to jump (negative for backwards)</p>
+</div></blockquote>
+</div>
+<div class="section" id="model">
+<h3>model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model to view (when multiple models loaded)</p>
+<p><strong>Usage:</strong> model up/down/value</p>
+<p>value (integer) : the model index to view [1,n]up : switch to previous model if availabledown : switch to next model if availableadd : add a new model</p>
+</div></blockquote>
+</div>
+<div class="section" id="reload">
+<h3>reload<a class="headerlink" href="#reload" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Reload all data of current model/timestep from database</p>
+<p><strong>Usage:</strong> reload [object_id]</p>
+<p>If an object is selected, reload will apply to that object only(If no database, will still reload data to gpu)</p>
+</div></blockquote>
+</div>
+<div class="section" id="redraw">
+<h3>redraw<a class="headerlink" href="#redraw" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Redraw all object data, required after changing some parameters but may be slow</div></blockquote>
+</div>
+<div class="section" id="clear">
+<h3>clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Clear all data of current model/timestep</p>
+<p><strong>Usage:</strong> clear [objects]</p>
+<p>objects : optionally clear all object entries(if omitted, only the objects geometry data is cleared)</p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="input-commands">
+<h2>Input commands:<a class="headerlink" href="#input-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file">
+<h3>file<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Load database or model file<strong>Usage:</strong> file “filename”</p>
+<p>filename (string) : the path to the file, quotes necessary if path contains spaces</p>
+</div></blockquote>
+</div>
+<div class="section" id="script">
+<h3>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Run script fileLoad a saved script of viewer commands from a file</p>
+<p><strong>Usage:</strong> script filename</p>
+<p>filename (string) : path and name of the script file to load</p>
+</div></blockquote>
+</div>
+<div class="section" id="figure">
+<h3>figure<a class="headerlink" href="#figure" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set figure to view</p>
+<p><strong>Usage:</strong> figure up/down/value</p>
+<p>value (integer/string) : the figure index or name to viewup : switch to previous figure if availabledown : switch to next figure if available</p>
+</div></blockquote>
+</div>
+<div class="section" id="savefigure">
+<h3>savefigure<a class="headerlink" href="#savefigure" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Store current vis settings in a figure</p>
+<p><strong>Usage:</strong> figure name</p>
+<p>name (string) : the figure name to saveif ommitted, currently active or default figure will be savedif it doesn’t exist it will be created</p>
+</div></blockquote>
+</div>
+<div class="section" id="view">
+<h3>view<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set view (when available)</p>
+<p><strong>Usage:</strong> view up/down/value</p>
+<p>value (integer) : the view index to switch toup : switch to previous view if availabledown : switch to next view if available</p>
+</div></blockquote>
+</div>
+<div class="section" id="scan">
+<h3>scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Rescan the current directory for timestep database filesbased on currently loaded filename</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="output-commands">
+<h2>Output commands:<a class="headerlink" href="#output-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image">
+<h3>image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Save an image of the current view<strong>Usage:</strong> image [filename]</p>
+<p>filename (string) : optional base filename without extension</p>
+</div></blockquote>
+</div>
+<div class="section" id="images">
+<h3>images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Write images in sequence from current timestep to specified timestep</p>
+<p><strong>Usage:</strong> images endstep</p>
+<p>endstep (integer) : last frame timestep</p>
+</div></blockquote>
+</div>
+<div class="section" id="outwidth">
+<h3>outwidth<a class="headerlink" href="#outwidth" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set output image width (height calculated to match window aspect)</p>
+<p><strong>Usage:</strong> outwidth value</p>
+<p>value (integer) : width in pixels for output images</p>
+</div></blockquote>
+</div>
+<div class="section" id="outheight">
+<h3>outheight<a class="headerlink" href="#outheight" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set output image height</p>
+<p><strong>Usage:</strong> outheight value</p>
+<p>value (integer) : height in pixels for output images</p>
+</div></blockquote>
+</div>
+<div class="section" id="movie">
+<h3>movie<a class="headerlink" href="#movie" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Encode video of model running from current timestep to specified timestep(Requires libavcodec)</p>
+<p><strong>Usage:</strong> movie [endstep]<strong>Usage:</strong> movie [startstep] [endstep]<strong>Usage:</strong> movie [startstep] [endstep] [fps]</p>
+<p>startstep (integer) : first frame timestep (defaults to first)endstep (integer) : last frame timestep (defaults to final)fps (integer) : fps, default=30</p>
+</div></blockquote>
+</div>
+<div class="section" id="record">
+<h3>record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Encode video of all frames displayed at specified framerate(Requires libavcodec)</p>
+<p><strong>Usage:</strong> record (framerate) (quality)</p>
+<p>framerate (integer): frames per second (default 30)quality (integer): 1=low/2=medium/3=high (default 1)</p>
+</div></blockquote>
+</div>
+<div class="section" id="bake">
+<h3>bake<a class="headerlink" href="#bake" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+</div></blockquote>
+</div>
+<div class="section" id="export">
+<h3>export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export model database</p>
+<p><strong>Usage:</strong> export [filename] [objects] [uncompressed]</p>
+<p>filename (string) : the name of the file to export to, extension must be .gldbobjects (integer/string) : the indices or names of the objects to export (see: “list objects”)uncompressed : add this to skip the zlib compression step in the export processIf object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="csv">
+<h3>csv<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export CSV data</p>
+<p><strong>Usage:</strong> csv [objects]</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="json">
+<h3>json<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export json data</p>
+<p><strong>Usage:</strong> json [object]</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="save">
+<h3>save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export all settings as json state file that can be reloaded later</p>
+<p><strong>Usage:</strong> save [“filename”]</p>
+<p>file (string) : name of file to importIf filename omitted and database loaded, will save the stateto the active figure in the database instead</p>
+</div></blockquote>
+</div>
+<div class="section" id="tiles">
+<h3>tiles<a class="headerlink" href="#tiles" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Save a tiled image of selected volume dataset<strong>Usage:</strong> tiles (object)</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="view-commands">
+<h2>View commands:<a class="headerlink" href="#view-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rotate">
+<h3>rotate<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Rotate model</p>
+<p><strong>Usage:</strong> rotate axis degrees</p>
+<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation</p>
+<p><strong>Usage:</strong> rotate x y z</p>
+<p>x (number) : x axis degrees of rotationy (number) : y axis degrees of rotationz (number) : z axis degrees of rotation</p>
+</div></blockquote>
+</div>
+<div class="section" id="rotatex">
+<h3>rotatex<a class="headerlink" href="#rotatex" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Rotate model about x-axis</p>
+<p><strong>Usage:</strong> rotatex degrees</p>
+<p>degrees (number) : degrees of rotation</p>
+</div></blockquote>
+</div>
+<div class="section" id="rotatey">
+<h3>rotatey<a class="headerlink" href="#rotatey" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Rotate model about y-axis</p>
+<p><strong>Usage:</strong> rotatey degrees</p>
+<p>degrees (number) : degrees of rotation</p>
+</div></blockquote>
+</div>
+<div class="section" id="rotatez">
+<h3>rotatez<a class="headerlink" href="#rotatez" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Rotate model about z-axis</p>
+<p><strong>Usage:</strong> rotatez degrees</p>
+<p>degrees (number) : degrees of rotation</p>
+</div></blockquote>
+</div>
+<div class="section" id="rotation">
+<h3>rotation<a class="headerlink" href="#rotation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model rotation (replaces any previous rotation)</p>
+<p><strong>Usage:</strong> rotation x y z [w]</p>
+<p>x (number) : rotation x componenty (number) : rotation y componentz (number) : rotation z componentw (number) : rotation w componentIf only x,y,z are provided they determine the rotationabout these axis (roll/pitch/yaw)If x,y,z,w are provided, the rotation is loadedas a quaternion with these components</p>
+</div></blockquote>
+</div>
+<div class="section" id="zoom">
+<h3>zoom<a class="headerlink" href="#zoom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Translate model in Z direction (zoom)</p>
+<p><strong>Usage:</strong> zoom units</p>
+<p>units (number) : distance to zoom, units are based on model size1 unit is approx the model bounding box sizenegative to zoom out, positive in</p>
+</div></blockquote>
+</div>
+<div class="section" id="translate">
+<h3>translate<a class="headerlink" href="#translate" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Translate model in 3 dimensions</p>
+<p><strong>Usage:</strong> translate dir shift</p>
+<p>dir (x/y/z) : direction to translateshift (number) : amount of translation</p>
+<p><strong>Usage:</strong> translation x y z</p>
+<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+</div></blockquote>
+</div>
+<div class="section" id="translatex">
+<h3>translatex<a class="headerlink" href="#translatex" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Translate model in X direction</p>
+<p><strong>Usage:</strong> translationx shift</p>
+<p>shift (number) : x axis shift</p>
+</div></blockquote>
+</div>
+<div class="section" id="translatey">
+<h3>translatey<a class="headerlink" href="#translatey" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Translate model in Y direction</p>
+<p><strong>Usage:</strong> translationy shift</p>
+<p>shift (number) : y axis shift</p>
+</div></blockquote>
+</div>
+<div class="section" id="translatez">
+<h3>translatez<a class="headerlink" href="#translatez" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Translate model in Z direction</p>
+<p><strong>Usage:</strong> translationz shift</p>
+<p>shift (number) : z axis shift</p>
+</div></blockquote>
+</div>
+<div class="section" id="translation">
+<h3>translation<a class="headerlink" href="#translation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model translation in 3d coords (replaces any previous translation)</p>
+<p><strong>Usage:</strong> translation x y z</p>
+<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+</div></blockquote>
+</div>
+<div class="section" id="autorotate">
+<h3>autorotate<a class="headerlink" href="#autorotate" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Auto-Rotate model to face camera if flat in X or Y dimensions</div></blockquote>
+</div>
+<div class="section" id="spin">
+<h3>spin<a class="headerlink" href="#spin" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Auto-spin model, animates</p>
+<p><strong>Usage:</strong> spin axis degrees</p>
+<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation per frame</p>
+</div></blockquote>
+</div>
+<div class="section" id="focus">
+<h3>focus<a class="headerlink" href="#focus" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model focal point in 3d coords</p>
+<p><strong>Usage:</strong> focus x y z</p>
+<p>x (number) : x coordy (number) : y coordz (number) : z coord</p>
+</div></blockquote>
+</div>
+<div class="section" id="aperture">
+<h3>aperture<a class="headerlink" href="#aperture" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set camera aperture (field-of-view)</p>
+<p><strong>Usage:</strong> aperture degrees</p>
+<p>degrees (number) : degrees of viewing range</p>
+</div></blockquote>
+</div>
+<div class="section" id="focallength">
+<h3>focallength<a class="headerlink" href="#focallength" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set camera focal length (for stereo viewing)</p>
+<p><strong>Usage:</strong> focallength len</p>
+<p>len (number) : distance from camera to focal point</p>
+</div></blockquote>
+</div>
+<div class="section" id="eyeseparation">
+<h3>eyeseparation<a class="headerlink" href="#eyeseparation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set camera stereo eye separation</p>
+<p><strong>Usage:</strong> eyeseparation len</p>
+<p>len (number) : distance between left and right eye camera viewpoints</p>
+</div></blockquote>
+</div>
+<div class="section" id="nearclip">
+<h3>nearclip<a class="headerlink" href="#nearclip" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set near clip plane, before which geometry is not displayed</p>
+<p><strong>Usage:</strong> nearclip dist</p>
+<p>dist (number) : distance from camera to near clip plane</p>
+</div></blockquote>
+</div>
+<div class="section" id="farclip">
+<h3>farclip<a class="headerlink" href="#farclip" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set far clip plane, beyond which geometry is not displayed</p>
+<p><strong>Usage:</strong> farrclip dist</p>
+<p>dist (number) : distance from camera to far clip plane</p>
+</div></blockquote>
+</div>
+<div class="section" id="zoomclip">
+<h3>zoomclip<a class="headerlink" href="#zoomclip" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Adjust near clip plane relative to current value</p>
+<p><strong>Usage:</strong> zoomclip multiplier</p>
+<p>multiplier (number) : multiply current near clip plane by this value</p>
+</div></blockquote>
+</div>
+<div class="section" id="zerocam">
+<h3>zerocam<a class="headerlink" href="#zerocam" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Set the camera postiion to the origin (for scripting, not generally advisable)</div></blockquote>
+</div>
+<div class="section" id="reset">
+<h3>reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Reset the camera to the default model view</div></blockquote>
+</div>
+<div class="section" id="bounds">
+<h3>bounds<a class="headerlink" href="#bounds" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Recalculate the model bounding box from geometry</div></blockquote>
+</div>
+<div class="section" id="camera">
+<h3>camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Output camera state for use in model scripts</div></blockquote>
+</div>
+<div class="section" id="resize">
+<h3>resize<a class="headerlink" href="#resize" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Resize view window</p>
+<p><strong>Usage:</strong> resize width height</p>
+<p>width (integer) : width in pixelsheight (integer) : height in pixels</p>
+</div></blockquote>
+</div>
+<div class="section" id="fullscreen">
+<h3>fullscreen<a class="headerlink" href="#fullscreen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Switch viewer to full-screen mode and back to windowed mode</div></blockquote>
+</div>
+<div class="section" id="fit">
+<h3>fit<a class="headerlink" href="#fit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Adjust camera view to fit the model in window</div></blockquote>
+</div>
+<div class="section" id="autozoom">
+<h3>autozoom<a class="headerlink" href="#autozoom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Automatically adjust camera view to always fit the model in window (enable/disable)</div></blockquote>
+</div>
+<div class="section" id="stereo">
+<h3>stereo<a class="headerlink" href="#stereo" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Enable/disable stereo projectionIf no stereo hardware found will use side-by-side mode</div></blockquote>
+</div>
+<div class="section" id="coordsystem">
+<h3>coordsystem<a class="headerlink" href="#coordsystem" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Switch between Right-handed and Left-handed coordinate system</div></blockquote>
+</div>
+<div class="section" id="sort">
+<h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Sort geometry on demand (with idle timer)</p>
+<p><strong>Usage:</strong> sort on/off</p>
+<p>on : (default) sort after model rotationoff : no sortingIf no options passed, does immediate re-sort</p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="object-commands">
+<h2>Object commands:<a class="headerlink" href="#object-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hide">
+<h3>hide<a class="headerlink" href="#hide" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>hide objects/geometry types</p>
+<p><strong>Usage:</strong> hide object</p>
+<p>object (integer/string) : the index or name of the object to hide (see: “list objects”)</p>
+<p><strong>Usage:</strong> hide geometry_type id</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to hideeg: ‘hide points’ will hide all objects containing point datanote: ‘hide all’ will hide all objects</p>
+</div></blockquote>
+</div>
+<div class="section" id="show">
+<h3>show<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>show objects/geometry types</p>
+<p><strong>Usage:</strong> show object</p>
+<p>object (integer/string) : the index or name of the object to show (see: “list objects”)</p>
+<p><strong>Usage:</strong> show geometry_type id</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to showeg: ‘hide points’ will show all objects containing point datanote: ‘hide all’ will show all objects</p>
+</div></blockquote>
+</div>
+<div class="section" id="delete">
+<h3>delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Delete objects<strong>Usage:</strong> delete object</p>
+<p>object (integer/string) : the index or name of the object to delete (see: “list objects”)</p>
+</div></blockquote>
+</div>
+<div class="section" id="load">
+<h3>load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Load objects from databaseUsed when running with deferred loading (-N command line switch)</p>
+<p><strong>Usage:</strong> load object</p>
+<p>object (integer/string) : the index or name of the object to load (see: “list objects”)</p>
+</div></blockquote>
+</div>
+<div class="section" id="select">
+<h3>select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Select object as the active objectUsed for setting properties of objectsfollowing commands that take an object id will no longer require one)</p>
+<p><strong>Usage:</strong> select object</p>
+<p>object (integer/string) : the index or name of the object to select (see: “list objects”)Leave object parameter empty to clear selection.</p>
+</div></blockquote>
+</div>
+<div class="section" id="add">
+<h3>add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a new object and select as the active object</p>
+<p><strong>Usage:</strong> add [object_name] [data_type]</p>
+<p>object_name (string) : optional name of the object to adddata_type (string) : optional name of the default data type(points/labels/vectors/tracers/triangles/quads/shapes/lines)</p>
+</div></blockquote>
+</div>
+<div class="section" id="append">
+<h3>append<a class="headerlink" href="#append" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Append a new geometry container to an objecteg: to divide line objects into segments</p>
+<p><strong>Usage:</strong> append [object]</p>
+<p>object (integer/string) : the index or name of the object to select (see: “list objects”)</p>
+</div></blockquote>
+</div>
+<div class="section" id="read">
+<h3>read<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Read data into selected object, appends to specified data array</p>
+<p><strong>Usage:</strong> read type</p>
+<p>type (string) : data type to load vertices/vectors/normals/values/coloursBefore using this command, store the data a json array in a property of same name</p>
+</div></blockquote>
+</div>
+<div class="section" id="label">
+<h3>label<a class="headerlink" href="#label" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Label vertices of selected object</p>
+<p><strong>Usage:</strong> label “labels”</p>
+<p>labels (string) : list of newline separated label data</p>
+</div></blockquote>
+</div>
+<div class="section" id="name">
+<h3>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set object name</p>
+<p><strong>Usage:</strong> name object newname</p>
+<p>object (integer/string) : the index or name of the object to rename (see: “list objects”)newname (string) : new name to apply</p>
+</div></blockquote>
+</div>
+<div class="section" id="vertex">
+<h3>vertex<a class="headerlink" href="#vertex" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a vertex to selected object, appends to vertex array</p>
+<p><strong>Usage:</strong> vertex x y z</p>
+<p>x (number) : vertex X coordy (number) : vertex Y coordz (number) : vertex Z coord</p>
+<p>(minX/Y/Z or maxX/Y/Z can be used in place of number for model bounding box edges)</p>
+</div></blockquote>
+</div>
+<div class="section" id="normal">
+<h3>normal<a class="headerlink" href="#normal" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a normal to selected object, appends to normal array</p>
+<p><strong>Usage:</strong> normal x y z</p>
+<p>x (number) : normal X coordy (number) : normal Y coordz (number) : normal Z coord</p>
+<p>(minX/Y/Z or maxX/Y/Z can be used in place of number for model bounding box edges)</p>
+</div></blockquote>
+</div>
+<div class="section" id="vector">
+<h3>vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a vector to selected object, appends to vector array</p>
+<p><strong>Usage:</strong> vector x y z</p>
+<p>x (number) : vector X coordy (number) : vector Y coordz (number) : vector Z coord</p>
+<p>(minX/Y/Z or maxX/Y/Z can be used in place of number for model bounding box edges)</p>
+</div></blockquote>
+</div>
+<div class="section" id="value">
+<h3>value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a float value to selected object, appends to value array</p>
+<p><strong>Usage:</strong> value val label</p>
+<p>label (string) : name of data set to append toval (number) : value to append</p>
+</div></blockquote>
+</div>
+<div class="section" id="colour">
+<h3>colour<a class="headerlink" href="#colour" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a colour value to selected object, appends to colour value array</p>
+<p><strong>Usage:</strong> colour colourval</p>
+<p>colourval (string) : json [r,g,b(,a)] or hex RRGGBB(AA)</p>
+</div></blockquote>
+</div>
+<div class="section" id="isosurface">
+<h3>isosurface<a class="headerlink" href="#isosurface" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Generate an isosurface from a volume object</p>
+<p><strong>Usage:</strong> isosurface [isovalue]</p>
+<p>isovalue (number) : isovalue to draw the surface at,if not specified, will use ‘isovalues’ property</p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="display-commands">
+<h2>Display commands:<a class="headerlink" href="#display-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="background">
+<h3>background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set window background colour</p>
+<p><strong>Usage:</strong> background colour/value/white/black/grey/invert</p>
+<p>colour (string) : any valid colour stringvalue (number [0,1]) : sets to greyscale value with luminosity in range [0,1] where 1.0 is whitewhite/black/grey : sets background to specified valueinvert (or omitted value) : inverts current background colour</p>
+</div></blockquote>
+</div>
+<div class="section" id="alpha">
+<h3>alpha<a class="headerlink" href="#alpha" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set global transparency value</p>
+<p><strong>Usage:</strong> opacity/alpha value</p>
+<p>‘opacity’ is global default, applies to all objects without own opacity setting’alpha’ is global override, is combined with opacity setting of all objectsvalue (integer &gt; 1) : sets opacity as integer in range [1,255] where 255 is fully opaquevalue (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is fully opaque</p>
+</div></blockquote>
+</div>
+<div class="section" id="axis">
+<h3>axis<a class="headerlink" href="#axis" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Display/hide the axis legend</p>
+<p><strong>Usage:</strong> axis (on/off)</p>
+<p>on/off (optional) : show/hide the axis, if omitted switches state</p>
+</div></blockquote>
+</div>
+<div class="section" id="rulers">
+<h3>rulers<a class="headerlink" href="#rulers" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Enable/disable axis rulers (unfinished)</div></blockquote>
+</div>
+<div class="section" id="antialias">
+<h3>antialias<a class="headerlink" href="#antialias" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Enable/disable multi-sample anti-aliasing (if supported by OpenGL drivers)</div></blockquote>
+</div>
+<div class="section" id="valuerange">
+<h3>valuerange<a class="headerlink" href="#valuerange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Adjust colourmaps on object to fit actual value range</div></blockquote>
+</div>
+<div class="section" id="colourmap">
+<h3>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set colourmap on object</p>
+<p><strong>Usage:</strong> colourmap object [colourmap / data]</p>
+<p>object (integer/string) : the index or name of the object to set (see: “list objects”)colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
+</div></blockquote>
+</div>
+<div class="section" id="colourbar">
+<h3>colourbar<a class="headerlink" href="#colourbar" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a colour bar display to selected object</p>
+<p><strong>Usage:</strong> colourbar [alignment] [size]</p>
+<p>alignment (string) : viewport alignment (left/right/top/bottom)</p>
+</div></blockquote>
+</div>
+<div class="section" id="pointtype">
+<h3>pointtype<a class="headerlink" href="#pointtype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set point-rendering type on object</p>
+<p><strong>Usage:</strong> pointtype all/object type/up/down</p>
+<p>all : use ‘all’ to set the global default point typeobject (integer/string) : the index or name of the object to set (see: “list objects”)type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
+</div></blockquote>
+</div>
+<div class="section" id="pointsample">
+<h3>pointsample<a class="headerlink" href="#pointsample" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set point sub-sampling value</p>
+<p><strong>Usage:</strong> pointsample value/up/down</p>
+<p>value (integer) : 1=no sub-sampling=50%% sampled etc..up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</p>
+</div></blockquote>
+</div>
+<div class="section" id="border">
+<h3>border<a class="headerlink" href="#border" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model border frame</p>
+<p><strong>Usage:</strong> border on/off/filled</p>
+<p>on : line border around model bounding-boxoff : no borderfilled : filled background bounding box(no value) : switch between possible values</p>
+</div></blockquote>
+</div>
+<div class="section" id="title">
+<h3>title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Set title heading to following text</div></blockquote>
+</div>
+<div class="section" id="scale">
+<h3>scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Scale model or applicable objects</p>
+<p><strong>Usage:</strong> scale axis value</p>
+<p>axis : x/y/zvalue (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
+<p><strong>Usage:</strong> scale geometry_type value/up/down</p>
+<p>geometry_type : points/vectors/tracers/shapesvalue (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p><strong>Usage:</strong> scale object value/up/down</p>
+<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+</div></blockquote>
+</div>
+<div class="section" id="modelscale">
+<h3>modelscale<a class="headerlink" href="#modelscale" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set model scaling, multiples by existing values</p>
+<p><strong>Usage:</strong> scale xval yval zval</p>
+<p>xval (number) : scaling value applied to x axis</p>
+<p>yval (number) : scaling value applied to y axiszval (number) : scaling value applied to z axis</p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="scripting-commands">
+<h2>Scripting commands:<a class="headerlink" href="#scripting-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="next">
+<h3>next<a class="headerlink" href="#next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Go to next timestep in sequence</div></blockquote>
+</div>
+<div class="section" id="play">
+<h3>play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Display model timesteps in sequence from current timestep to specified timestep</p>
+<p><strong>Usage:</strong> play endstep</p>
+<p>endstep (integer) : last frame timestepIf endstep omitted, will loop continually until ‘stop’ command entered</p>
+</div></blockquote>
+</div>
+<div class="section" id="stop">
+<h3>stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Stop the looping ‘play’ command</div></blockquote>
+</div>
+<div class="section" id="open">
+<h3>open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Open the viewer window if not already done, for use in scripts</div></blockquote>
+</div>
+<div class="section" id="interactive">
+<h3>interactive<a class="headerlink" href="#interactive" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Switch to interactive mode, for use in scripts</p>
+<p><strong>Usage:</strong> interactive [noshow]</p>
+<p>options (string) : “noshow” default is to show visible interactive window, set this to activate event loopwithout showing window, can use browser interactive mode”noloop” : set this option to show the interactive window only,and handle events outside on returning</p>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="miscellanious-commands">
+<h2>Miscellanious commands:<a class="headerlink" href="#miscellanious-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shaders">
+<h3>shaders<a class="headerlink" href="#shaders" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Reload shader program files from disk</div></blockquote>
+</div>
+<div class="section" id="blend">
+<h3>blend<a class="headerlink" href="#blend" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Select blending type</p>
+<p><strong>Usage:</strong> blend mode</p>
+<p>mode (string) : normal: multiplicative, add: additive, png: premultiplied for png output</p>
+</div></blockquote>
+</div>
+<div class="section" id="props">
+<h3>props<a class="headerlink" href="#props" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Print properties on active object or global and view if none selected</div></blockquote>
+</div>
+<div class="section" id="defaults">
+<h3>defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Print all available properties and their default values</div></blockquote>
+</div>
+<div class="section" id="test">
+<h3>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Create and display some test data, points, lines, quads</div></blockquote>
+</div>
+<div class="section" id="voltest">
+<h3>voltest<a class="headerlink" href="#voltest" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Create and display a test volume dataset</div></blockquote>
+</div>
+<div class="section" id="newstep">
+<h3>newstep<a class="headerlink" href="#newstep" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Add a new timestep after the current one</div></blockquote>
+</div>
+<div class="section" id="filter">
+<h3>filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set a data filter on selected object</p>
+<p><strong>Usage:</strong> filter index min max [map]</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+</div></blockquote>
+</div>
+<div class="section" id="filterout">
+<h3>filterout<a class="headerlink" href="#filterout" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set a data filter on selected object</p>
+<p><strong>Usage:</strong> filter index min max [map]</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+</div></blockquote>
+</div>
+<div class="section" id="filtermin">
+<h3>filtermin<a class="headerlink" href="#filtermin" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Modify a data filter on selected object</p>
+<p><strong>Usage:</strong> filtermin index value</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the minimum value of the range to filter in or out</p>
+</div></blockquote>
+</div>
+<div class="section" id="filtermax">
+<h3>filtermax<a class="headerlink" href="#filtermax" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Modify a data filter on selected object</p>
+<p><strong>Usage:</strong> filtermax index value</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the maximum value of the range to filter in or out</p>
+</div></blockquote>
+</div>
+<div class="section" id="clearfilters">
+<h3>clearfilters<a class="headerlink" href="#clearfilters" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Clear filters on selected object</div></blockquote>
+</div>
+<div class="section" id="verbose">
+<h3>verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Switch verbose output mode on/off</p>
+<p><strong>Usage:</strong> verbose [off]</p>
+</div></blockquote>
+</div>
+<div class="section" id="toggle">
+<h3>toggle<a class="headerlink" href="#toggle" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Toggle a boolean property</p>
+<p><strong>Usage:</strong> toogle (property-name)</p>
+<p>property-name : name of property to switchIf an object is selected, will try there, then view, then global</p>
+</div></blockquote>
+</div>
+<div class="section" id="createvolume">
+<h3>createvolume<a class="headerlink" href="#createvolume" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Create a static volume object which will receive all following volumes as timesteps</div></blockquote>
+</div>
+<div class="section" id="clearvolume">
+<h3>clearvolume<a class="headerlink" href="#clearvolume" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Clear global static volume object, any future volume loads will create a new object automatically</div></blockquote>
+</div>
+<div class="section" id="palette">
+<h3>palette<a class="headerlink" href="#palette" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export colour data of selected object</p>
+<p><strong>Usage:</strong> palette [type] [filename]</p>
+<p>type (string) : type of export (image/json/text) default = textfilename (string) : defaults to palette.[png/json/txt]</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Scripting command reference</a><ul>
+<li><a class="reference internal" href="#general-commands">General commands:</a><ul>
+<li><a class="reference internal" href="#quit">quit</a></li>
+<li><a class="reference internal" href="#repeat">repeat</a></li>
+<li><a class="reference internal" href="#animate">animate</a></li>
+<li><a class="reference internal" href="#history">history</a></li>
+<li><a class="reference internal" href="#clearhistory">clearhistory</a></li>
+<li><a class="reference internal" href="#pause">pause</a></li>
+<li><a class="reference internal" href="#list">list</a></li>
+<li><a class="reference internal" href="#step">step</a></li>
+<li><a class="reference internal" href="#timestep">timestep</a></li>
+<li><a class="reference internal" href="#jump">jump</a></li>
+<li><a class="reference internal" href="#model">model</a></li>
+<li><a class="reference internal" href="#reload">reload</a></li>
+<li><a class="reference internal" href="#redraw">redraw</a></li>
+<li><a class="reference internal" href="#clear">clear</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#input-commands">Input commands:</a><ul>
+<li><a class="reference internal" href="#file">file</a></li>
+<li><a class="reference internal" href="#script">script</a></li>
+<li><a class="reference internal" href="#figure">figure</a></li>
+<li><a class="reference internal" href="#savefigure">savefigure</a></li>
+<li><a class="reference internal" href="#view">view</a></li>
+<li><a class="reference internal" href="#scan">scan</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#output-commands">Output commands:</a><ul>
+<li><a class="reference internal" href="#image">image</a></li>
+<li><a class="reference internal" href="#images">images</a></li>
+<li><a class="reference internal" href="#outwidth">outwidth</a></li>
+<li><a class="reference internal" href="#outheight">outheight</a></li>
+<li><a class="reference internal" href="#movie">movie</a></li>
+<li><a class="reference internal" href="#record">record</a></li>
+<li><a class="reference internal" href="#bake">bake</a></li>
+<li><a class="reference internal" href="#export">export</a></li>
+<li><a class="reference internal" href="#csv">csv</a></li>
+<li><a class="reference internal" href="#json">json</a></li>
+<li><a class="reference internal" href="#save">save</a></li>
+<li><a class="reference internal" href="#tiles">tiles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#view-commands">View commands:</a><ul>
+<li><a class="reference internal" href="#rotate">rotate</a></li>
+<li><a class="reference internal" href="#rotatex">rotatex</a></li>
+<li><a class="reference internal" href="#rotatey">rotatey</a></li>
+<li><a class="reference internal" href="#rotatez">rotatez</a></li>
+<li><a class="reference internal" href="#rotation">rotation</a></li>
+<li><a class="reference internal" href="#zoom">zoom</a></li>
+<li><a class="reference internal" href="#translate">translate</a></li>
+<li><a class="reference internal" href="#translatex">translatex</a></li>
+<li><a class="reference internal" href="#translatey">translatey</a></li>
+<li><a class="reference internal" href="#translatez">translatez</a></li>
+<li><a class="reference internal" href="#translation">translation</a></li>
+<li><a class="reference internal" href="#autorotate">autorotate</a></li>
+<li><a class="reference internal" href="#spin">spin</a></li>
+<li><a class="reference internal" href="#focus">focus</a></li>
+<li><a class="reference internal" href="#aperture">aperture</a></li>
+<li><a class="reference internal" href="#focallength">focallength</a></li>
+<li><a class="reference internal" href="#eyeseparation">eyeseparation</a></li>
+<li><a class="reference internal" href="#nearclip">nearclip</a></li>
+<li><a class="reference internal" href="#farclip">farclip</a></li>
+<li><a class="reference internal" href="#zoomclip">zoomclip</a></li>
+<li><a class="reference internal" href="#zerocam">zerocam</a></li>
+<li><a class="reference internal" href="#reset">reset</a></li>
+<li><a class="reference internal" href="#bounds">bounds</a></li>
+<li><a class="reference internal" href="#camera">camera</a></li>
+<li><a class="reference internal" href="#resize">resize</a></li>
+<li><a class="reference internal" href="#fullscreen">fullscreen</a></li>
+<li><a class="reference internal" href="#fit">fit</a></li>
+<li><a class="reference internal" href="#autozoom">autozoom</a></li>
+<li><a class="reference internal" href="#stereo">stereo</a></li>
+<li><a class="reference internal" href="#coordsystem">coordsystem</a></li>
+<li><a class="reference internal" href="#sort">sort</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#object-commands">Object commands:</a><ul>
+<li><a class="reference internal" href="#hide">hide</a></li>
+<li><a class="reference internal" href="#show">show</a></li>
+<li><a class="reference internal" href="#delete">delete</a></li>
+<li><a class="reference internal" href="#load">load</a></li>
+<li><a class="reference internal" href="#select">select</a></li>
+<li><a class="reference internal" href="#add">add</a></li>
+<li><a class="reference internal" href="#append">append</a></li>
+<li><a class="reference internal" href="#read">read</a></li>
+<li><a class="reference internal" href="#label">label</a></li>
+<li><a class="reference internal" href="#name">name</a></li>
+<li><a class="reference internal" href="#vertex">vertex</a></li>
+<li><a class="reference internal" href="#normal">normal</a></li>
+<li><a class="reference internal" href="#vector">vector</a></li>
+<li><a class="reference internal" href="#value">value</a></li>
+<li><a class="reference internal" href="#colour">colour</a></li>
+<li><a class="reference internal" href="#isosurface">isosurface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#display-commands">Display commands:</a><ul>
+<li><a class="reference internal" href="#background">background</a></li>
+<li><a class="reference internal" href="#alpha">alpha</a></li>
+<li><a class="reference internal" href="#axis">axis</a></li>
+<li><a class="reference internal" href="#rulers">rulers</a></li>
+<li><a class="reference internal" href="#antialias">antialias</a></li>
+<li><a class="reference internal" href="#valuerange">valuerange</a></li>
+<li><a class="reference internal" href="#colourmap">colourmap</a></li>
+<li><a class="reference internal" href="#colourbar">colourbar</a></li>
+<li><a class="reference internal" href="#pointtype">pointtype</a></li>
+<li><a class="reference internal" href="#pointsample">pointsample</a></li>
+<li><a class="reference internal" href="#border">border</a></li>
+<li><a class="reference internal" href="#title">title</a></li>
+<li><a class="reference internal" href="#scale">scale</a></li>
+<li><a class="reference internal" href="#modelscale">modelscale</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripting-commands">Scripting commands:</a><ul>
+<li><a class="reference internal" href="#next">next</a></li>
+<li><a class="reference internal" href="#play">play</a></li>
+<li><a class="reference internal" href="#stop">stop</a></li>
+<li><a class="reference internal" href="#open">open</a></li>
+<li><a class="reference internal" href="#interactive">interactive</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#miscellanious-commands">Miscellanious commands:</a><ul>
+<li><a class="reference internal" href="#shaders">shaders</a></li>
+<li><a class="reference internal" href="#blend">blend</a></li>
+<li><a class="reference internal" href="#props">props</a></li>
+<li><a class="reference internal" href="#defaults">defaults</a></li>
+<li><a class="reference internal" href="#test">test</a></li>
+<li><a class="reference internal" href="#voltest">voltest</a></li>
+<li><a class="reference internal" href="#newstep">newstep</a></li>
+<li><a class="reference internal" href="#filter">filter</a></li>
+<li><a class="reference internal" href="#filterout">filterout</a></li>
+<li><a class="reference internal" href="#filtermin">filtermin</a></li>
+<li><a class="reference internal" href="#filtermax">filtermax</a></li>
+<li><a class="reference internal" href="#clearfilters">clearfilters</a></li>
+<li><a class="reference internal" href="#verbose">verbose</a></li>
+<li><a class="reference internal" href="#toggle">toggle</a></li>
+<li><a class="reference internal" href="#createvolume">createvolume</a></li>
+<li><a class="reference internal" href="#clearvolume">clearvolume</a></li>
+<li><a class="reference internal" href="#palette">palette</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Property-Reference.html"
+                        title="previous chapter">Property reference</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lavavu.html"
+                        title="next chapter">lavavu module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Scripting-Commands-Reference.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lavavu.html" title="lavavu module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Property-Reference.html" title="Property reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

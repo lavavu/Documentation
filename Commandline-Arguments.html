@@ -1,0 +1,282 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Command line arguments &#8212; LavaVu 1.3.2 documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Setting properties" href="Setting-Properties.html" />
+    <link rel="prev" title="User Interface commands" href="Interaction.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Setting-Properties.html" title="Setting properties"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Interaction.html" title="User Interface commands"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="command-line-arguments">
+<h1>Command line arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th>General options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-#</td>
+<td>Any integer entered as a switch will be interpreted as the initial timestep to load. Any following integer switch will be interpreted as the final timestep for output. eg: -10 -20 will run all output commands on timestep 10 to 20 inclusive</td>
+</tr>
+<tr>
+<td>-c#</td>
+<td>caching, set # of timesteps to cache data in memory for</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>All objects hidden initially, use 'show object' to display</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>No load, deferred loading mode, use 'load object' to load &amp; display from database</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>Skip default script, don't run init.script</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>Verbose output, debugging info displayed to console</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>Automation mode, don't activate event processing loop</td>
+</tr>
+<tr>
+<td>-p#</td>
+<td>port, web server interface listen on port #</td>
+</tr>
+<tr>
+<td>-q#</td>
+<td>quality, web server jpeg quality (0=don't serve images)</td>
+</tr>
+<tr>
+<td>-n#</td>
+<td>number of threads to launch for web server #</td>
+</tr>
+<tr>
+<td>-Q</td>
+<td>quiet mode, no status updates to screen</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>stereo, request a quad-buffer stereo context</td>
+</tr>
+</tbody>
+</table><table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th>Model options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f#</td>
+<td>Load initial figure number # [1-n]</td>
+</tr>
+<tr>
+<td>-C</td>
+<td>Global camera, each model shares the same camera view</td>
+</tr>
+<tr>
+<td>-y</td>
+<td>Swap z/y axes of imported static models</td>
+</tr>
+<tr>
+<td>-T#</td>
+<td>Subdivide imported static model triangles into #</td>
+</tr>
+<tr>
+<td>-V#,#,#</td>
+<td>Volume data resolution in X,Y,Z</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>Each data set loaded from non time varying source has new timestep inserted</td>
+</tr>
+</tbody>
+</table><table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th>Image/Video output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-z#</td>
+<td>Render images # times larger and downsample for output</td>
+</tr>
+<tr>
+<td>-i/w</td>
+<td>Write images of all loaded timesteps/windows then exit</td>
+</tr>
+<tr>
+<td>-I/W</td>
+<td>Write images as above but using input database path as output path for images</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>Returns images encoded as string data (for library use)</td>
+</tr>
+<tr>
+<td>-U</td>
+<td>Returns json model data encoded string (for library use)</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Write transparent background png images (if supported)</td>
+</tr>
+<tr>
+<td>-m#</td>
+<td>Write movies of all loaded timesteps/windows #=fps(30) (if supported)</td>
+</tr>
+<tr>
+<td>-x#,#</td>
+<td>Set output image width, height (height will be calculated if omitted)</td>
+</tr>
+</tbody>
+</table><table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th>Data Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d#</td>
+<td>Export object id # to CSV vertices + values</td>
+</tr>
+<tr>
+<td>-j#</td>
+<td>Export object id # to JSON, if # omitted will output all compatible objects</td>
+</tr>
+<tr>
+<td>-g#</td>
+<td>Export object id # to GLDB (zlib compressed), if # omitted will output all compatible objects</td>
+</tr>
+<tr>
+<td>-G#</td>
+<td>Export object id # to GLDB (uncompressed), if # omitted will output all compatible objects</td>
+</tr>
+</tbody>
+</table><table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th>Window Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-r#,#</td>
+<td>Resize initial viewer window width, height</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>hidden window, will exit after running any provided input script and output options</td>
+</tr>
+</tbody>
+</table></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Interaction.html"
+                        title="previous chapter">User Interface commands</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Setting-Properties.html"
+                        title="next chapter">Setting properties</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Commandline-Arguments.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Setting-Properties.html" title="Setting properties"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Interaction.html" title="User Interface commands"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

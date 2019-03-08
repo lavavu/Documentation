@@ -1,0 +1,43 @@
+convert module
+==============
+
+Warning! EXPERIMENTAL:
+ these features and functions are under development, will have bugs,
+ and may be heavily modified in the future
+
+Tools for converting between 3D data types
+
+- Points to Volume
+- Triangles to OBJ file
+
+
+Module Summary
+--------------
+functions:
+~~~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    convert.default_sample_grid
+    convert.export_OBJ
+    convert.min_max_range
+    convert.points_to_volume
+    convert.points_to_volume_3D
+    convert.points_to_volume_4D
+    convert.points_to_volume_histogram
+    convert.points_to_volume_tree
+
+Module Details
+--------------
+functions:
+~~~~~~~~~~
+.. autofunction:: convert.default_sample_grid
+.. autofunction:: convert.export_OBJ
+.. autofunction:: convert.min_max_range
+.. autofunction:: convert.points_to_volume
+.. autofunction:: convert.points_to_volume_3D
+.. autofunction:: convert.points_to_volume_4D
+.. autofunction:: convert.points_to_volume_histogram
+.. autofunction:: convert.points_to_volume_tree
+

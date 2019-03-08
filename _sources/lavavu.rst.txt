@@ -1,0 +1,87 @@
+lavavu module
+=============
+
+LavaVu main module
+
+TODO: links/docs
+
+
+
+Module Summary
+--------------
+functions:
+~~~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    lavavu.cellstyle
+    lavavu.cellwidth
+    lavavu.cubeHelix
+    lavavu.download
+    lavavu.grid2d
+    lavavu.grid3d
+    lavavu.is_ipython
+    lavavu.is_notebook
+    lavavu.lerp
+    lavavu.loadCPT
+    lavavu.matplotlib_colourmap
+    lavavu.printH5
+    lavavu.style
+
+classes:
+~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    lavavu.ColourMap
+    lavavu.DrawData
+    lavavu.Fig
+    lavavu.Geometry
+    lavavu.Image
+    lavavu.Object
+    lavavu.Viewer
+
+Module Details
+--------------
+functions:
+~~~~~~~~~~
+.. autofunction:: lavavu.cellstyle
+.. autofunction:: lavavu.cellwidth
+.. autofunction:: lavavu.cubeHelix
+.. autofunction:: lavavu.download
+.. autofunction:: lavavu.grid2d
+.. autofunction:: lavavu.grid3d
+.. autofunction:: lavavu.is_ipython
+.. autofunction:: lavavu.is_notebook
+.. autofunction:: lavavu.lerp
+.. autofunction:: lavavu.loadCPT
+.. autofunction:: lavavu.matplotlib_colourmap
+.. autofunction:: lavavu.printH5
+.. autofunction:: lavavu.style
+
+classes:
+~~~~~~~~
+.. autoclass:: lavavu.ColourMap
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.DrawData
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Fig
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Geometry
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Image
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Object
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Viewer
+    :members:
+    :show-inheritance:
+

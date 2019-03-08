@@ -1,0 +1,153 @@
+control module
+==============
+
+LavaVu python interface
+
+Interactive HTML UI controls library
+
+
+
+Module Summary
+--------------
+functions:
+~~~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    control.is_ipython
+    control.is_notebook
+
+classes:
+~~~~~~~~
+
+.. autosummary::
+    :nosignatures:
+
+    control.Button
+    control.Checkbox
+    control.Colour
+    control.ColourMapList
+    control.ColourMaps
+    control.Command
+    control.Container
+    control.Control
+    control.Divider
+    control.DualRange
+    control.Entry
+    control.File
+    control.Filter
+    control.Gradient
+    control.HTML
+    control.List
+    control.Number
+    control.Number2D
+    control.Number3D
+    control.ObjectList
+    control.ObjectSelect
+    control.Panel
+    control.Range
+    control.Range2D
+    control.Range3D
+    control.Rotation
+    control.Tabs
+    control.TimeStepper
+    control.Window
+
+Module Details
+--------------
+functions:
+~~~~~~~~~~
+.. autofunction:: control.is_ipython
+.. autofunction:: control.is_notebook
+
+classes:
+~~~~~~~~
+.. autoclass:: control.Button
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Checkbox
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Colour
+    :members:
+    :show-inheritance:
+.. autoclass:: control.ColourMapList
+    :members:
+    :show-inheritance:
+.. autoclass:: control.ColourMaps
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Command
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Container
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Control
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Divider
+    :members:
+    :show-inheritance:
+.. autoclass:: control.DualRange
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Entry
+    :members:
+    :show-inheritance:
+.. autoclass:: control.File
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Filter
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Gradient
+    :members:
+    :show-inheritance:
+.. autoclass:: control.HTML
+    :members:
+    :show-inheritance:
+.. autoclass:: control.List
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Number
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Number2D
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Number3D
+    :members:
+    :show-inheritance:
+.. autoclass:: control.ObjectList
+    :members:
+    :show-inheritance:
+.. autoclass:: control.ObjectSelect
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Panel
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Range
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Range2D
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Range3D
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Rotation
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Tabs
+    :members:
+    :show-inheritance:
+.. autoclass:: control.TimeStepper
+    :members:
+    :show-inheritance:
+.. autoclass:: control.Window
+    :members:
+    :show-inheritance:
+
