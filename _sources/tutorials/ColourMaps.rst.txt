@@ -9,7 +9,7 @@ that object in a single command.
 
 It can also be called from the viewer object which just loads a
 colourmap and returns its id, which can be saved and used to set the
-“colourmap” property of a one or more or objects.
+"colourmap" property of a one or more or objects.
 
 .. code:: ipython3
 
@@ -32,10 +32,10 @@ colour will be placed, eg:
 
 ::
 
-   "red white blue"
-   "0.0=red 0.25=white 1.0=blue"
-   [(0.0, 'red'), (0.25, 'white'), (1.0, 'blue')]
-   ['red', 'white', 'blue']  
+    "red white blue"
+    "0.0=red 0.25=white 1.0=blue"
+    [(0.0, 'red'), (0.25, 'white'), (1.0, 'blue')]
+    ['red', 'white', 'blue']  
 
 To provide specific values for colours in their original scale (rather
 than positions normalized to [0,1] range), place the value in
@@ -43,12 +43,12 @@ parenthesis instead, eg:
 
 ::
 
-   "red (100)white (200)blue"
+    "red (100)white (200)blue"
 
 When specifying colours you can use either: 1. colour names from
-https://en.wikipedia.org/wiki/X11_color_names eg: ‘red’ 2. RGB hex
-values such as ‘#ff0000’ 3. HTML style rgb(a) values, eg: ‘rgb(255,0,0)’
-or ‘rgba(255,0,0,1)’
+https://en.wikipedia.org/wiki/X11\_color\_names eg: 'red' 2. RGB hex
+values such as '#ff0000' 3. HTML style rgb(a) values, eg: 'rgb(255,0,0)'
+or 'rgba(255,0,0,1)'
 
 | Colour order and positions can be reversed by passing *reverse=True*.
 | Pass *discrete=True* to produce a discrete colour map instead of a
@@ -239,7 +239,7 @@ creating a colour map.
 | Following these are further maps inspired by the default colour tables
   from the `Generic Mapping Tools <http://gmt.soest.hawaii.edu/>`__
 | Those maps that have fixed colour positions included can also be
-  loaded without the position data by preceding the name with ‘@’
+  loaded without the position data by preceding the name with '@'
 
 The colourmap data can be retrieved for modification as follows:
 

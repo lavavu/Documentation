@@ -72,12 +72,11 @@
 <div class="viewcode-block" id="trace_particles"><a class="viewcode-back" href="../tracers.html#tracers.trace_particles">[docs]</a><span class="k">def</span> <span class="nf">trace_particles</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">verts</span><span class="p">,</span> <span class="n">vecs</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs)</span>
-<span class="sd">    For each tracer:</span>
-<span class="sd">     - find the nearest velocity grid point</span>
-<span class="sd">     - if within max dist: (1 degree?)</span>
-<span class="sd">        - multiply position by velocity vector</span>
-<span class="sd">     - otherwise:</span>
-<span class="sd">        - generate a new start position for tracer</span>
+<span class="sd">    For each tracer</span>
+
+<span class="sd">    - find the nearest velocity grid point</span>
+<span class="sd">    - if within max dist: Multiply position by velocity vector</span>
+<span class="sd">    - otherwise: Generate a new start position for tracer</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>

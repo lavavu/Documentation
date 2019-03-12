@@ -50,26 +50,38 @@
   <div class="section" id="control-module">
 <h1>control module<a class="headerlink" href="#control-module" title="Permalink to this headline">¶</a></h1>
 <p>LavaVu python interface</p>
-<p>Interactive HTML UI controls library</p>
+<p>Interactive HTML UI controls library
+These functions can be called from the ControlFactory provided on</p>
+<ul class="simple">
+<li>lavavu.Viewer()</li>
+<li>lavavu.Object()</li>
+</ul>
+<p>Some work only on the viewer and some only to objects and some to both.
+Each will provide a control that allows modifying visualisation properties or executing commands interactively
+in an IPython notebook environment</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Create a Button control to execute a rotation command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;rotate x 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a Range control to adjust the pointsize property:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;pointsize&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>For convenience, controls to set visualisation properties can often be created by calling control directly with the property name
+This will create a control of the default type for for that property if one is defined, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span><span class="o">.</span><span class="n">control</span><span class="p">(</span><span class="s1">&#39;pointsize&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="module-summary">
 <h2>Module Summary<a class="headerlink" href="#module-summary" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="functions">
-<h3>functions:<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#control.is_ipython" title="control.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">control.is_ipython</span></code></a></td>
-<td>Detects if running within IPython environment</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#control.is_notebook" title="control.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">control.is_notebook</span></code></a></td>
-<td>Detects if running within an interactive IPython notebook environment</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="classes">
 <h3>classes:<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="longtable docutils">
@@ -172,74 +184,38 @@
 <div class="section" id="module-details">
 <h2>Module Details<a class="headerlink" href="#module-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<dl class="function">
-<dt id="control.is_ipython">
-<code class="descname">is_ipython</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/vutils.html#is_ipython"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.is_ipython" title="Permalink to this definition">¶</a></dt>
-<dd><p>Detects if running within IPython environment</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if IPython detected
-Does not necessarrily indicate running within a browser / notebook context</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="control.is_notebook">
-<code class="descname">is_notebook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/vutils.html#is_notebook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.is_notebook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Detects if running within an interactive IPython notebook environment</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if IPython detected and browser/notebook display capability detected</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="id2">
-<h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>classes:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="control.Button">
-<em class="property">class </em><code class="descname">Button</code><span class="sig-paren">(</span><em>target</em>, <em>command</em>, <em>label=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Button"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Button" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Button</code><span class="sig-paren">(</span><em>target</em>, <em>command</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Button" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A push button control to execute a defined command</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Checkbox">
-<em class="property">class </em><code class="descname">Checkbox</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Checkbox"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Checkbox" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Checkbox</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Checkbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A checkbox control for a boolean value</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Colour">
-<em class="property">class </em><code class="descname">Colour</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Colour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Colour" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Colour</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Colour" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A colour picker for setting colour properties</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.ColourMapList">
-<em class="property">class </em><code class="descname">ColourMapList</code><span class="sig-paren">(</span><em>target</em>, <em>selection=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#ColourMapList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.ColourMapList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">ColourMapList</code><span class="sig-paren">(</span><em>target</em>, <em>selection=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.ColourMapList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.List" title="control.List"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.List</span></code></a></p>
 <p>A colourmap list selector, populated by the default colour maps</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.ColourMaps">
-<em class="property">class </em><code class="descname">ColourMaps</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#ColourMaps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.ColourMaps" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">ColourMaps</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.ColourMaps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.List" title="control.List"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.List</span></code></a></p>
 <p>A colourmap list selector, populated by the available colour maps,
 combined with a colourmap editor for the selected colour map</p>
@@ -247,19 +223,19 @@ combined with a colourmap editor for the selected colour map</p>
 
 <dl class="class">
 <dt id="control.Command">
-<em class="property">class </em><code class="descname">Command</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Command" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Command</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A generic input control for executing command strings</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Container">
-<em class="property">class </em><code class="descname">Container</code><span class="sig-paren">(</span><em>viewer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Container</code><span class="sig-paren">(</span><em>viewer</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.HTML" title="control.HTML"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.HTML</span></code></a></p>
 <p>A container for a set of controls</p>
 <dl class="method">
 <dt id="control.Container.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Container.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Container.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.Container.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -267,7 +243,7 @@ combined with a colourmap editor for the selected colour map</p>
 
 <dl class="class">
 <dt id="control.Control">
-<em class="property">class </em><code class="descname">Control</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Control"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Control" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Control</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Control" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.HTML" title="control.HTML"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.HTML</span></code></a></p>
 <p>Control object</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -289,7 +265,7 @@ Add a control to a viewer to control global proerties and run commands</li>
 </table>
 <dl class="method">
 <dt id="control.Control.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Control.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Control.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.Control.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -297,14 +273,14 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.Divider">
-<em class="property">class </em><code class="descname">Divider</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Divider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Divider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Divider</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Divider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A divider element</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.DualRange">
-<em class="property">class </em><code class="descname">DualRange</code><span class="sig-paren">(</span><em>target, properties, values=[None, None], label=None, range=(0.0, 1.0), step=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#DualRange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.DualRange" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">DualRange</code><span class="sig-paren">(</span><em>target, properties, values=[None, None], label=None, range=(0.0, 1.0), step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.DualRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of two range slider controls for adjusting a minimum and maximum range</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -319,14 +295,14 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.Entry">
-<em class="property">class </em><code class="descname">Entry</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Entry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Entry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Entry</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Entry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A generic input control for string values</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.File">
-<em class="property">class </em><code class="descname">File</code><span class="sig-paren">(</span><em>command='file'</em>, <em>directory=False</em>, <em>multiple=False</em>, <em>accept=''</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#File"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.File" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">File</code><span class="sig-paren">(</span><em>command='file'</em>, <em>directory=False</em>, <em>multiple=False</em>, <em>accept=''</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.File" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A file picker control</p>
 <p>Unfortunately there is no way to get the file path</p>
@@ -334,7 +310,7 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.Filter">
-<em class="property">class </em><code class="descname">Filter</code><span class="sig-paren">(</span><em>target</em>, <em>filteridx</em>, <em>label=None</em>, <em>range=None</em>, <em>step=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Filter</code><span class="sig-paren">(</span><em>target</em>, <em>filteridx</em>, <em>label=None</em>, <em>range=None</em>, <em>step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of two range slider controls for adjusting a minimum and maximum filter range</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -349,19 +325,19 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.Gradient">
-<em class="property">class </em><code class="descname">Gradient</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Gradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Gradient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Gradient</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Gradient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A colourmap editor</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.HTML">
-<em class="property">class </em><code class="descname">HTML</code><a class="reference internal" href="_modules/control.html#HTML"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.HTML" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">HTML</code><a class="headerlink" href="#control.HTML" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class to output HTML controls</p>
 <dl class="method">
 <dt id="control.HTML.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#HTML.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.HTML.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.HTML.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -369,7 +345,7 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.List">
-<em class="property">class </em><code class="descname">List</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>options=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#List"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.List" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">List</code><span class="sig-paren">(</span><em>target</em>, <em>property=None</em>, <em>options=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.List" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A list of predefined input values to set properties or run commands</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -384,35 +360,35 @@ Add a control to a viewer to control global proerties and run commands</li>
 
 <dl class="class">
 <dt id="control.Number">
-<em class="property">class </em><code class="descname">Number</code><span class="sig-paren">(</span><em>target=None</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>step=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Number" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Number</code><span class="sig-paren">(</span><em>target=None</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>step=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A basic numerical input control</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Number2D">
-<em class="property">class </em><code class="descname">Number2D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Number2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Number2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Number2D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Number2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of two numeric controls for adjusting a 2D value</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Number3D">
-<em class="property">class </em><code class="descname">Number3D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Number3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Number3D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Number3D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Number3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of three numeric controls for adjusting a 3D value</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.ObjectList">
-<em class="property">class </em><code class="descname">ObjectList</code><span class="sig-paren">(</span><em>viewer</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#ObjectList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.ObjectList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">ObjectList</code><span class="sig-paren">(</span><em>viewer</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.ObjectList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of checkbox controls for controlling visibility of all visualisation objects</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.ObjectSelect">
-<em class="property">class </em><code class="descname">ObjectSelect</code><span class="sig-paren">(</span><em>viewer</em>, <em>objects=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#ObjectSelect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.ObjectSelect" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">ObjectSelect</code><span class="sig-paren">(</span><em>viewer</em>, <em>objects=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.ObjectSelect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Container" title="control.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Container</span></code></a></p>
 <p>A list selector of all visualisation objects that can be used to
 choose the target of a set of controls</p>
@@ -426,7 +402,7 @@ choose the target of a set of controls</p>
 </table>
 <dl class="method">
 <dt id="control.ObjectSelect.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#ObjectSelect.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.ObjectSelect.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.ObjectSelect.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -434,7 +410,7 @@ choose the target of a set of controls</p>
 
 <dl class="class">
 <dt id="control.Panel">
-<em class="property">class </em><code class="descname">Panel</code><span class="sig-paren">(</span><em>viewer</em>, <em>showwin=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Panel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Panel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Panel</code><span class="sig-paren">(</span><em>viewer</em>, <em>showwin=True</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Panel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Container" title="control.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Container</span></code></a></p>
 <p>Creates a control panel with an interactive viewer window and a set of controls
 By default the controls will be placed to the left with the viewer aligned to the right</p>
@@ -448,7 +424,7 @@ By default the controls will be placed to the left with the viewer aligned to th
 </table>
 <dl class="method">
 <dt id="control.Panel.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Panel.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Panel.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.Panel.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -456,7 +432,7 @@ By default the controls will be placed to the left with the viewer aligned to th
 
 <dl class="class">
 <dt id="control.Range">
-<em class="property">class </em><code class="descname">Range</code><span class="sig-paren">(</span><em>target=None</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>range=None</em>, <em>step=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Range" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Range</code><span class="sig-paren">(</span><em>target=None</em>, <em>property=None</em>, <em>command=None</em>, <em>value=None</em>, <em>label=None</em>, <em>index=None</em>, <em>range=None</em>, <em>step=None</em>, <em>readproperty=None</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A slider control for a range of values</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -471,7 +447,7 @@ By default the controls will be placed to the left with the viewer aligned to th
 
 <dl class="class">
 <dt id="control.Range2D">
-<em class="property">class </em><code class="descname">Range2D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>value=None</em>, <em>range=(0.0</em>, <em>1.0)</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Range2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Range2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Range2D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>value=None</em>, <em>range=(0.0</em>, <em>1.0)</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Range2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of two range slider controls for adjusting a 2D value</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -486,7 +462,7 @@ By default the controls will be placed to the left with the viewer aligned to th
 
 <dl class="class">
 <dt id="control.Range3D">
-<em class="property">class </em><code class="descname">Range3D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>value=None</em>, <em>range=(0.0</em>, <em>1.0)</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Range3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Range3D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Range3D</code><span class="sig-paren">(</span><em>target</em>, <em>property</em>, <em>label=None</em>, <em>value=None</em>, <em>range=(0.0</em>, <em>1.0)</em>, <em>step=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Range3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of three range slider controls for adjusting a 3D value</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -501,14 +477,14 @@ By default the controls will be placed to the left with the viewer aligned to th
 
 <dl class="class">
 <dt id="control.Rotation">
-<em class="property">class </em><code class="descname">Rotation</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Rotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Rotation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Rotation</code><span class="sig-paren">(</span><em>target</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Rotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Control" title="control.Control"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Control</span></code></a></p>
 <p>A set of six buttons for adjusting a 3D rotation</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Tabs">
-<em class="property">class </em><code class="descname">Tabs</code><span class="sig-paren">(</span><em>target</em>, <em>buttons=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Tabs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Tabs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Tabs</code><span class="sig-paren">(</span><em>target</em>, <em>buttons=True</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Tabs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Container" title="control.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Container</span></code></a></p>
 <p>Creates a group of controls with tabs that can be shown or hidden</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -521,13 +497,13 @@ By default the controls will be placed to the left with the viewer aligned to th
 </table>
 <dl class="method">
 <dt id="control.Tabs.html">
-<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Tabs.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Tabs.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#control.Tabs.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="control.Tabs.tab">
-<code class="descname">tab</code><span class="sig-paren">(</span><em>label=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Tabs.tab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Tabs.tab" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tab</code><span class="sig-paren">(</span><em>label=''</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Tabs.tab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a new tab, any controls appending will appear in the new tab
 :param label: Label for the tab, if omitted will be blank
 :type label: str</p>
@@ -537,14 +513,14 @@ By default the controls will be placed to the left with the viewer aligned to th
 
 <dl class="class">
 <dt id="control.TimeStepper">
-<em class="property">class </em><code class="descname">TimeStepper</code><span class="sig-paren">(</span><em>viewer</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#TimeStepper"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.TimeStepper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">TimeStepper</code><span class="sig-paren">(</span><em>viewer</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#control.TimeStepper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Range" title="control.Range"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Range</span></code></a></p>
 <p>A time step selection range control with up/down buttons</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="control.Window">
-<em class="property">class </em><code class="descname">Window</code><span class="sig-paren">(</span><em>viewer</em>, <em>align='left'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Window"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Window" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Window</code><span class="sig-paren">(</span><em>viewer</em>, <em>align='left'</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#control.Container" title="control.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">control.Container</span></code></a></p>
 <p>Creates an interaction window with an image of the viewer frame
 and webgl controller for rotation/translation</p>
@@ -558,7 +534,7 @@ and webgl controller for rotation/translation</p>
 </table>
 <dl class="method">
 <dt id="control.Window.html">
-<code class="descname">html</code><span class="sig-paren">(</span><em>wrapper=True</em>, <em>wrapperstyle=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/control.html#Window.html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#control.Window.html" title="Permalink to this definition">¶</a></dt>
+<code class="descname">html</code><span class="sig-paren">(</span><em>wrapper=True</em>, <em>wrapperstyle=''</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Window.html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the HTML code</p>
 </dd></dl>
 
@@ -577,14 +553,13 @@ and webgl controller for rotation/translation</p>
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">control module</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
 <li><a class="reference internal" href="#module-summary">Module Summary</a><ul>
-<li><a class="reference internal" href="#functions">functions:</a></li>
 <li><a class="reference internal" href="#classes">classes:</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-details">Module Details</a><ul>
-<li><a class="reference internal" href="#id1">functions:</a></li>
-<li><a class="reference internal" href="#id2">classes:</a></li>
+<li><a class="reference internal" href="#id1">classes:</a></li>
 </ul>
 </li>
 </ul>

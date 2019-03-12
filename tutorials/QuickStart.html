@@ -128,9 +128,9 @@ data.</p>
 converted to 32 bit single precision.</p>
 <p>3d vector data is interpreted as a list of coord triples [[x0,y0,z0],
 [x1, y1, z1]…] If passed split coord arrays arrange in a list/array
-[[x0,x1…], [y0, y1…], [z0, z1…]] this will be detected automatically if
-the first dimension of the passed array is 3 and the last dimension is
-!= 3, the array will be reshaped before loading.</p>
+[[x0,x1…], [y0, y1…], [z0, z1…]] this will be detected
+automatically if the first dimension of the passed array is 3 and the
+last dimension is != 3, the array will be reshaped before loading.</p>
 <p>Available data loading functions are:</p>
 <ul class="simple">
 <li><strong>vertices</strong>: 3d vertex data, float. The vertices to plot.</li>
@@ -231,39 +231,49 @@ view, object, colourmap</p>
 </div>
 <div class="section" id="more-about-geometry-types">
 <h2>More about geometry types<a class="headerlink" href="#more-about-geometry-types" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>points</strong> : each vertex is a point</li>
-<li><strong>lines</strong>: each pair of vertices is a line, or if “link” property is
+<ul>
+<li><p class="first"><strong>points</strong> : each vertex is a point</p>
+</li>
+<li><p class="first"><strong>lines</strong>: each pair of vertices is a line, or if “link” property is
 true, each element block of vertices is a single joined line. Element
 blocks can be defined automatically by setting the “dims” property to
 a value [N] which will cause a new block to start once N vertices are
 loaded into the active one. Blocks of different sizes can be defined
 by calling the append() function on an object to explicitly start a
-new block.</li>
-<li><strong>triangles</strong>: each vertex triple is a triangle, or if indices
+new block.</p>
+</li>
+<li><p class="first"><strong>triangles</strong>: each vertex triple is a triangle, or if indices
 provided each index triple referencing the vertex array is a
 triangle. If “dims”=[width, height] is specified, instead plotted as
-a regular grid mesh where vertices are the grid points.</li>
-<li><strong>quads</strong>: Plots a regular grid as for triangles but using quads,
-requires “dims”=[width, height] to be set</li>
-<li><strong>vectors</strong>: Plots vector arrows at each vertex, requires a vector
-field to be loaded.</li>
-<li><strong>tracers</strong>: Plots tracer lines or arrows over time-varying point
-vertices.</li>
-<li><strong>shapes</strong>: Plots ellipsoids or cuboids at each vertex. Data fields
-or properties can be used to define their dimensions.</li>
-<li><strong>volume</strong>: Volume render a cube of data or a set of slices.</li>
-<li><strong>labels</strong>: as points, but the points are hidden to allow label data
-to be displayed without other geometry being plotted.</li>
-</ul>
+a regular grid mesh where vertices are the grid points.</p>
+</li>
+<li><p class="first"><strong>quads</strong>: Plots a regular grid as for triangles but using quads,
+requires “dims”=[width, height] to be set</p>
+</li>
+<li><p class="first"><strong>vectors</strong>: Plots vector arrows at each vertex, requires a vector
+field to be loaded.</p>
+</li>
+<li><p class="first"><strong>tracers</strong>: Plots tracer lines or arrows over time-varying point
+vertices.</p>
+</li>
+<li><p class="first"><strong>shapes</strong>: Plots ellipsoids or cuboids at each vertex. Data fields
+or properties can be used to define their dimensions.</p>
+</li>
+<li><p class="first"><strong>volume</strong>: Volume render a cube of data or a set of slices.</p>
+</li>
+<li><p class="first"><strong>labels</strong>: as points, but the points are hidden to allow label data
+to be displayed without other geometry being plotted.</p>
 <blockquote>
-<div>NOTE: The function used to create the object only specifies how the
+<div><p>NOTE: The function used to create the object only specifies how the
 subsequent data loaded will be rendered, the objects themselves are
 all the same. This can be changed after object creation with the
 “geometry” property, so to load a triangle mesh into our ‘pts’
 object, we can set pts[“geometry”] = “triangles” before loading the
 mesh data. Both the points and the mesh will be plotted with the
-properties of the pts object.</div></blockquote>
+properties of the pts object.</p>
+</div></blockquote>
+</li>
+</ul>
 </div>
 <div class="section" id="time-varying-data">
 <h2>Time Varying data<a class="headerlink" href="#time-varying-data" title="Permalink to this headline">¶</a></h2>

@@ -49,8 +49,15 @@
             
   <div class="section" id="lavavu-module">
 <h1>lavavu module<a class="headerlink" href="#lavavu-module" title="Permalink to this headline">¶</a></h1>
-<p>LavaVu main module</p>
-<p>TODO: links/docs</p>
+<p>LavaVu python interface: viewer utils &amp; wrapper</p>
+<p>This module provides an interface to the LavaVu library allowing
+loading of data, rendering of static images, animation and interactive visualisation</p>
+<p>To create an instance of the LavaVu rendering engine, use the Viewer() class, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><code class="xref any py py-class docutils literal notranslate"><span class="pre">lavavu.Viewer</span></code></a> class documentation for more information.</p>
 <div class="section" id="module-summary">
 <h2>Module Summary<a class="headerlink" href="#module-summary" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="functions">
@@ -61,44 +68,38 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></td>
-<td>Override the notebook cell styles</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></td>
-<td>Override the notebook cell width</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.cubeHelix" title="lavavu.cubeHelix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cubeHelix</span></code></a></td>
-<td>Create CubeHelix spectrum colourmap with monotonically increasing/descreasing intensity</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.download" title="lavavu.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.download</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.download" title="lavavu.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.download</span></code></a></td>
 <td>Download a file from an internet URL</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.grid2d" title="lavavu.grid2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.grid2d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.grid2d" title="lavavu.grid2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.grid2d</span></code></a></td>
 <td>Generate a 2d grid of vertices</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.grid3d" title="lavavu.grid3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.grid3d</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.grid3d" title="lavavu.grid3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.grid3d</span></code></a></td>
 <td>Generate a 2d grid of vertices in 3d space</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.is_ipython" title="lavavu.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_ipython</span></code></a></td>
-<td>Detects if running within IPython environment</td>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.cubeHelix" title="lavavu.cubeHelix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cubeHelix</span></code></a></td>
+<td>Create CubeHelix spectrum colourmap with monotonically increasing/descreasing intensity</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.is_notebook" title="lavavu.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_notebook</span></code></a></td>
-<td>Detects if running within an interactive IPython notebook environment</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.lerp" title="lavavu.lerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.lerp</span></code></a></td>
-<td>Linear Interpolation between values of two lists</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.loadCPT" title="lavavu.loadCPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.loadCPT</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.loadCPT" title="lavavu.loadCPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.loadCPT</span></code></a></td>
 <td>Create a colourmap from a CPT colour table file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.matplotlib_colourmap" title="lavavu.matplotlib_colourmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.matplotlib_colourmap</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.matplotlib_colourmap" title="lavavu.matplotlib_colourmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.matplotlib_colourmap</span></code></a></td>
 <td>Import a colourmap from a matplotlib</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.printH5" title="lavavu.printH5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.printH5</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.printH5" title="lavavu.printH5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.printH5</span></code></a></td>
 <td>Print info about HDF5 data set (requires h5py)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.lerp" title="lavavu.lerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.lerp</span></code></a></td>
+<td>Linear Interpolation between values of two lists</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#lavavu.style" title="lavavu.style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.style</span></code></a></td>
 <td>Inject stylesheet</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></td>
+<td>Override the notebook cell styles</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></td>
+<td>Override the notebook cell width</td>
 </tr>
 </tbody>
 </table>
@@ -111,26 +112,26 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Viewer</span></code></a></td>
+<td>The Viewer class provides an interface to a LavaVu session</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#lavavu.Object" title="lavavu.Object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Object</span></code></a></td>
+<td>The Object class provides an interface to a LavaVu drawing object Object instances are created internally in the Viewer class and can be retrieved from the object list</td>
+</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.ColourMap</span></code></a></td>
 <td>The ColourMap class provides an interface to a LavaVu ColourMap ColourMap instances are created internally in the Viewer class and can be retrieved from the colourmaps list</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#lavavu.DrawData" title="lavavu.DrawData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.DrawData</span></code></a></td>
 <td>The DrawData class provides an interface to a single object data element DrawData instances are created internally from the Geometry class</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.Fig" title="lavavu.Fig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Fig</span></code></a></td>
-<td>The Fig class wraps a set of figure data</td>
+<tr class="row-odd"><td><a class="reference internal" href="#lavavu.Figure" title="lavavu.Figure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Figure</span></code></a></td>
+<td>The Figure class wraps a set of visualisation state data, providing a way of managing a collection of preset visualisations or “figures” of a single model</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#lavavu.Geometry" title="lavavu.Geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Geometry</span></code></a></td>
 <td>The Geometry class provides an interface to a drawing object’s internal data Geometry instances are created internally in the Object class with the data property</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#lavavu.Image" title="lavavu.Image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Image</span></code></a></td>
 <td>The Image class provides an interface to a raw image</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#lavavu.Object" title="lavavu.Object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Object</span></code></a></td>
-<td>The Object class provides an interface to a LavaVu drawing object Object instances are created internally in the Viewer class and can be retrieved from the object list</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.Viewer</span></code></a></td>
-<td><em>The Viewer class provides an interface to a LavaVu session</em></td>
 </tr>
 </tbody>
 </table>
@@ -141,20 +142,81 @@
 <div class="section" id="id1">
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
-<dt id="lavavu.cellstyle">
-<code class="descname">cellstyle</code><span class="sig-paren">(</span><em>css</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#cellstyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.cellstyle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Override the notebook cell styles</p>
+<dt id="lavavu.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>url</em>, <em>filename=None</em>, <em>overwrite=False</em>, <em>quiet=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download a file from an internet URL</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>url</strong> (<em>str</em>) – URL to request the file from</li>
+<li><strong>filename</strong> (<em>str</em>) – Filename to save, default is to keep the same name in current directory</li>
+<li><strong>overwrite</strong> (<em>boolean</em>) – Always overwrite file if it exists, default is to never overwrite</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>filename</strong> – Actual filename written to local filesystem</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
-<dt id="lavavu.cellwidth">
-<code class="descname">cellwidth</code><span class="sig-paren">(</span><em>width='99%'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#cellwidth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.cellwidth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Override the notebook cell width</p>
+<dt id="lavavu.grid2d">
+<code class="descname">grid2d</code><span class="sig-paren">(</span><em>corners=((0.0, 1.0), (1.0, 0.0)), dims=[2, 2]</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.grid2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a 2d grid of vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>corners</strong> (<em>tuple</em><em> or </em><em>list</em>) – top left and bottom right corner vertices (2d)</li>
+<li><strong>dims</strong> (<em>tuple</em><em> or </em><em>list</em>) – dimensions of grid nodes, number of vertices to generate in each direction</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>vertices</strong> – The 2d vertices of the generated grid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lavavu.grid3d">
+<code class="descname">grid3d</code><span class="sig-paren">(</span><em>corners=((0.0, 1.0, 0.0), (1.0, 1.0, 0.0), (0.0, 0.0, 0.0), (1.0, 0.0, 0.0)), dims=[2, 2]</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.grid3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a 2d grid of vertices in 3d space</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>corners</strong> (<em>tuple</em><em> or </em><em>list</em>) – 3 or 4 corner vertices (3d)</li>
+<li><strong>dims</strong> (<em>tuple</em><em> or </em><em>list</em>) – dimensions of grid nodes, number of vertices to generate in each direction</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>vertices</strong> – The 3d vertices of the generated 2d grid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="lavavu.cubeHelix">
-<code class="descname">cubeHelix</code><span class="sig-paren">(</span><em>samples=16</em>, <em>start=0.5</em>, <em>rot=-0.9</em>, <em>sat=1.0</em>, <em>gamma=1.0</em>, <em>alpha=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#cubeHelix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.cubeHelix" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cubeHelix</code><span class="sig-paren">(</span><em>samples=16</em>, <em>start=0.5</em>, <em>rot=-0.9</em>, <em>sat=1.0</em>, <em>gamma=1.0</em>, <em>alpha=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.cubeHelix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create CubeHelix spectrum colourmap with monotonically increasing/descreasing intensity</p>
 <p>Implemented from FORTRAN 77 code from D.A. Green, 2011, BASI, 39, 289.
 “A colour scheme for the display of astronomical intensity images”
@@ -184,139 +246,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="lavavu.download">
-<code class="descname">download</code><span class="sig-paren">(</span><em>url</em>, <em>filename=None</em>, <em>overwrite=False</em>, <em>quiet=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.download" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download a file from an internet URL</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>url</strong> (<em>str</em>) – URL to request the file from</li>
-<li><strong>filename</strong> (<em>str</em>) – Filename to save, default is to keep the same name in current directory</li>
-<li><strong>overwrite</strong> (<em>boolean</em>) – Always overwrite file if it exists, default is to never overwrite</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>filename</strong> – Actual filename written to local filesystem</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lavavu.grid2d">
-<code class="descname">grid2d</code><span class="sig-paren">(</span><em>corners=((0.0, 1.0), (1.0, 0.0)), dims=[2, 2]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#grid2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.grid2d" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a 2d grid of vertices</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>corners</strong> (<em>tuple</em><em> or </em><em>list</em>) – top left and bottom right corner vertices (2d)</li>
-<li><strong>dims</strong> (<em>tuple</em><em> or </em><em>list</em>) – dimensions of grid nodes, number of vertices to generate in each direction</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>vertices</strong> – The 2d vertices of the generated grid</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lavavu.grid3d">
-<code class="descname">grid3d</code><span class="sig-paren">(</span><em>corners=((0.0, 1.0, 0.0), (1.0, 1.0, 0.0), (0.0, 0.0, 0.0), (1.0, 0.0, 0.0)), dims=[2, 2]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#grid3d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.grid3d" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a 2d grid of vertices in 3d space</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>corners</strong> (<em>tuple</em><em> or </em><em>list</em>) – 3 or 4 corner vertices (3d)</li>
-<li><strong>dims</strong> (<em>tuple</em><em> or </em><em>list</em>) – dimensions of grid nodes, number of vertices to generate in each direction</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>vertices</strong> – The 3d vertices of the generated 2d grid</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lavavu.is_ipython">
-<code class="descname">is_ipython</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/vutils.html#is_ipython"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.is_ipython" title="Permalink to this definition">¶</a></dt>
-<dd><p>Detects if running within IPython environment</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if IPython detected
-Does not necessarrily indicate running within a browser / notebook context</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lavavu.is_notebook">
-<code class="descname">is_notebook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/vutils.html#is_notebook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.is_notebook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Detects if running within an interactive IPython notebook environment</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if IPython detected and browser/notebook display capability detected</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lavavu.lerp">
-<code class="descname">lerp</code><span class="sig-paren">(</span><em>first</em>, <em>second</em>, <em>mu</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#lerp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.lerp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Linear Interpolation between values of two lists</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>first</strong> (<em>tuple</em><em> or </em><em>list</em>) – first list of values</li>
-<li><strong>second</strong> (<em>tuple</em><em> or </em><em>list</em>) – second list of values</li>
-<li><strong>mu</strong> (<em>float</em>) – Interpolation factor [0,1]</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A list of the interpolated values</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
 <dt id="lavavu.loadCPT">
-<code class="descname">loadCPT</code><span class="sig-paren">(</span><em>fn</em>, <em>positions=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#loadCPT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.loadCPT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">loadCPT</code><span class="sig-paren">(</span><em>fn</em>, <em>positions=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.loadCPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a colourmap from a CPT colour table file</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -335,7 +266,7 @@ load only the colours from the file</td>
 
 <dl class="function">
 <dt id="lavavu.matplotlib_colourmap">
-<code class="descname">matplotlib_colourmap</code><span class="sig-paren">(</span><em>name</em>, <em>samples=16</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#matplotlib_colourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.matplotlib_colourmap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">matplotlib_colourmap</code><span class="sig-paren">(</span><em>name</em>, <em>samples=16</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.matplotlib_colourmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import a colourmap from a matplotlib</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -359,7 +290,7 @@ load only the colours from the file</td>
 
 <dl class="function">
 <dt id="lavavu.printH5">
-<code class="descname">printH5</code><span class="sig-paren">(</span><em>h5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#printH5"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.printH5" title="Permalink to this definition">¶</a></dt>
+<code class="descname">printH5</code><span class="sig-paren">(</span><em>h5</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.printH5" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print info about HDF5 data set (requires h5py)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -372,1019 +303,56 @@ load only the colours from the file</td>
 </dd></dl>
 
 <dl class="function">
+<dt id="lavavu.lerp">
+<code class="descname">lerp</code><span class="sig-paren">(</span><em>first</em>, <em>second</em>, <em>mu</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.lerp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear Interpolation between values of two lists</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>first</strong> (<em>tuple</em><em> or </em><em>list</em>) – first list of values</li>
+<li><strong>second</strong> (<em>tuple</em><em> or </em><em>list</em>) – second list of values</li>
+<li><strong>mu</strong> (<em>float</em>) – Interpolation factor [0,1]</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A list of the interpolated values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="lavavu.style">
-<code class="descname">style</code><span class="sig-paren">(</span><em>css</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#style"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.style" title="Permalink to this definition">¶</a></dt>
+<code class="descname">style</code><span class="sig-paren">(</span><em>css</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inject stylesheet</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lavavu.cellstyle">
+<code class="descname">cellstyle</code><span class="sig-paren">(</span><em>css</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.cellstyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override the notebook cell styles</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lavavu.cellwidth">
+<code class="descname">cellwidth</code><span class="sig-paren">(</span><em>width='99%'</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.cellwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override the notebook cell width</p>
 </dd></dl>
 
 </div>
 <div class="section" id="id2">
 <h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="lavavu.ColourMap">
-<em class="property">class </em><code class="descname">ColourMap</code><span class="sig-paren">(</span><em>ref</em>, <em>parent</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#ColourMap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.ColourMap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
-<p>The ColourMap class provides an interface to a LavaVu ColourMap
-ColourMap instances are created internally in the Viewer class and can
-be retrieved from the colourmaps list</p>
-<p>New colourmaps are also created using viewer methods</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>**kwargs</strong> – Initial set of properties passed to the created colourmap</td>
-</tr>
-</tbody>
-</table>
-<dl class="attribute">
-<dt id="lavavu.ColourMap.colours">
-<code class="descname">colours</code><a class="headerlink" href="#lavavu.ColourMap.colours" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of colours</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>colours</strong> – A list of colours</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="lavavu.ColourMap.name">
-<code class="descname">name</code><a class="headerlink" href="#lavavu.ColourMap.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the colourmap name property</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the colourmap</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="lavavu.ColourMap.positions">
-<code class="descname">positions</code><a class="headerlink" href="#lavavu.ColourMap.positions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of colour positions</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>positions</strong> – A list of colour positions [0,1]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.ColourMap.tohexstr">
-<code class="descname">tohexstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#ColourMap.tohexstr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.ColourMap.tohexstr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the colourmap colour data as a string with hex rgb:a representation,
-NOTE: ignores position data</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The colour data which can be used to re-create the colourmap</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.ColourMap.tolist">
-<code class="descname">tolist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#ColourMap.tolist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.ColourMap.tolist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the colourmap data as a python list</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The colour and position data which can be used to re-create the colourmap</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.ColourMap.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>data=None</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#ColourMap.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.ColourMap.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the colour map data</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data</strong> (<em>list</em><em>,</em><em>str</em>) – Provided colourmap data can be
-- a string,
-- list of colour strings,
-- list of position,value tuples
-- or a built in colourmap name</li>
-<li><strong>reverse</strong> (<em>boolean</em>) – Reverse the order of the colours after loading</li>
-<li><strong>monochrome</strong> (<em>boolean</em>) – Convert to greyscale</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="lavavu.DrawData">
-<em class="property">class </em><code class="descname">DrawData</code><span class="sig-paren">(</span><em>data</em>, <em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#DrawData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.DrawData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>The DrawData class provides an interface to a single object data element
-DrawData instances are created internally from the Geometry class</p>
-<p>copy(), get() and set() methods provide access to the data types</p>
-<p class="rubric">Example</p>
-<p>Get the data elements</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="go">[GeomData(&quot;points&quot;)]</span>
-</pre></div>
-</div>
-<p>Get a copy of the colours (if any)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">colours</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">colours_copy</span>
-</pre></div>
-</div>
-<p>Get a view of the vertex data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">verts</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span>
-</pre></div>
-</div>
-<p>WARNING: this reference may be deleted by other calls,
-use _copy if you are not processing the data immediately
-and relying on it continuing to exist later</p>
-<p>Get a some value data by label “myvals”
-&gt;&gt;&gt; vals = obj.data.myvals
-&gt;&gt;&gt; print(vals)
-[array([…])]</p>
-<p>Load some new values for this data, provided list must match first dimension of existing data list</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span> <span class="o">=</span> <span class="p">[</span><span class="n">newdata</span><span class="p">]</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="lavavu.DrawData.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><em>typename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#DrawData.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.DrawData.copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a copy of a data element from geometry data</p>
-<p>This is a safe version of get() that copies the data
-before returning so can be assured it will remain valid</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Type of data to be retrieved
-(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>data</strong> – Numpy array containing a copy of the data set requested</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">array</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.DrawData.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>typename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#DrawData.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.DrawData.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a data element from geometry data</p>
-<p>Warning… other than for internal use, should always
-immediately make copies of the data
-there is no guarantee memory will not be released!</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Type of data to be retrieved
-(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>data</strong> – Numpy array view of the data set requested</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">array</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.DrawData.set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>typename</em>, <em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#DrawData.set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.DrawData.set" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set a data element in geometry data</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>typename</strong> (<em>str</em>) – Type of data to set
-(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</li>
-<li><strong>array</strong> (<em>array</em>) – Numpy array holding the data to be written</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="lavavu.Fig">
-<em class="property">class </em><code class="descname">Fig</code><span class="sig-paren">(</span><em>parent</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Fig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Fig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
-<p>The Fig class wraps a set of figure data</p>
-<ul class="simple">
-<li>Figures represent a full set of visualisation settings,
-including visibility of chosen objects</li>
-<li>A single model can contain many objects and multiple figures, all of which work
-on the same set of objects, but may not use them all (ie: some are hidden)</li>
-</ul>
-</dd></dl>
-
-<dl class="class">
-<dt id="lavavu.Geometry">
-<em class="property">class </em><code class="descname">Geometry</code><span class="sig-paren">(</span><em>obj</em>, <em>timestep=-2</em>, <em>filter=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Geometry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Geometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
-<p>The Geometry class provides an interface to a drawing object’s internal data
-Geometry instances are created internally in the Object class with the data property</p>
-<p class="rubric">Example</p>
-<p>Get all object data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span>
-</pre></div>
-</div>
-<p>Get only triangle data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;triangles&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Get data at specific timestep only
-(default is current step including fixed data)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Loop through data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="class">
-<dt id="lavavu.Image">
-<em class="property">class </em><code class="descname">Image</code><span class="sig-paren">(</span><em>resolution=(640, 480), channels=4, value=[255, 255, 255, 0]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>The Image class provides an interface to a raw image</p>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>TODO: expose image loading functions, custom blend equations</p>
-<dl class="method">
-<dt id="lavavu.Image.blend">
-<code class="descname">blend</code><span class="sig-paren">(</span><em>source</em>, <em>resolution=(640</em>, <em>480)</em>, <em>position=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Image.blend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Image.blend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Render another image to a specified position with this image with alpha blending</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>source</strong> (<em>array</em><em> or </em><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a>) – Numpy array containing raw image data to paste or a Viewer instance to source the frame from</li>
-<li><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image width and height in pixels, if not provided source must be a numpy array of the correct dimensions</li>
-<li><strong>position</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image x,y offset in pixels</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Image.display">
-<code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Image.display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Image.display" title="Permalink to this definition">¶</a></dt>
-<dd><p>Show the image as inline image within an ipython notebook.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Image.paste">
-<code class="descname">paste</code><span class="sig-paren">(</span><em>source</em>, <em>resolution=(640</em>, <em>480)</em>, <em>position=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Image.paste"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Image.paste" title="Permalink to this definition">¶</a></dt>
-<dd><p>Render another image to a specified position with this image</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>source</strong> (<em>array</em><em> or </em><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a>) – Numpy array containing raw image data to paste or a Viewer instance to source the frame from</li>
-<li><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image width and height in pixels, if not provided source must be a numpy array of the correct dimensions</li>
-<li><strong>position</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image x,y offset in pixels</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Image.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Image.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Image.save" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save a raw image data to provided filename</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) – Output filename (png/jpg supported, default is png if no extension)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>path</strong> – Path to the output image</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="lavavu.Object">
-<em class="property">class </em><code class="descname">Object</code><span class="sig-paren">(</span><em>parent</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
-<p>The Object class provides an interface to a LavaVu drawing object
-Object instances are created internally in the Viewer class and can
-be retrieved from the object list</p>
-<p>New objects are also created using viewer methods</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>**kwargs</strong> – Initial set of properties passed to the created object</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Example</p>
-<p>Create a viewer, load some test data, get objects</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">objects</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Object properties can be passed in when created or set by using as a dictionary:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="p">[</span><span class="s2">&quot;pointsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
-</pre></div>
-</div>
-<p>A list of available properties can be found here: <a class="reference external" href="https://github.com/OKaluza/LavaVu/wiki/Property-Reference">https://github.com/OKaluza/LavaVu/wiki/Property-Reference</a>
-or by using the online help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="lavavu.Object.append">
-<code class="descname">append</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append a new data element to the object</p>
-<p>Object data is sometimes dependant on individual elements to
-determine where one part ends and another starts, eg: line segments, grids</p>
-<p>This allows manually closing the active element so all new data is loaded into a new element</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear all visualisation data from this object</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.cleardata">
-<code class="descname">cleardata</code><span class="sig-paren">(</span><em>typename=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.cleardata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.cleardata" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear specific visualisation data/values from this object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Optional filter naming type of data to be cleared,
-Either a built in type: (vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)
-or a user defined data label</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.colourbar">
-<code class="descname">colourbar</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.colourbar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.colourbar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new colourbar using this object’s colourmap</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>colourbar</strong> – The colourbar object created</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.Object" title="lavavu.Object">Object</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.colourmap">
-<code class="descname">colourmap</code><span class="sig-paren">(</span><em>data=None</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.colourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.colourmap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load colour map data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>data</strong> (<em>list</em><em> or </em><em>str</em><em> or </em><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap"><em>ColourMap</em></a>) – If not provided, just returns the colourmap
-(A default is created if none exists)
-Provided colourmap data can be
-- a string,
-- list of colour strings,
-- list of position,value tuples
-- a built in colourmap name
-- An existing ColourMap object
-Creates a colourmap named objectname_colourmap if object
-doesn’t already have a colourmap</li>
-<li><strong>reverse</strong> (<em>boolean</em>) – Reverse the order of the colours after loading</li>
-<li><strong>monochrome</strong> (<em>boolean</em>) – Convert to greyscale</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The wrapper object of the colourmap loaded/created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap">ColourMap</a>(dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.colours">
-<code class="descname">colours</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.colours"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.colours" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load colour data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>str</em><em> or </em><em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 array of colours
-if a string or list of strings is provided, colours are parsed as html colour string values
-if a numpy array is passed, colours are loaded as 4 byte ARGB unsigned integer values</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="lavavu.Object.data">
-<code class="descname">data</code><a class="headerlink" href="#lavavu.Object.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return internal geometry data at current timestep
-Returns a Geometry() object that can be iterated through containing all data elements
-Elements contain vertex/normal/value etc. data as numpy arrays</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An object holding the data elements retrieved</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.Geometry" title="lavavu.Geometry">Geometry</a></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="lavavu.Object.datasets">
-<code class="descname">datasets</code><a class="headerlink" href="#lavavu.Object.datasets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve available labelled data sets on this object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A dictionary containing the data objects available by label</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.exclude">
-<code class="descname">exclude</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.exclude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.exclude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter data by excluding a range of values
-shortcut for: filter(… , out=True)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
-<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
-if a single value the filter applies to only this value: x == value
-if a list  eg: [0,1] range is inclusive 0 &lt;= x &lt;= 1
-if a tuple eg: (0,1) range is exclusive 0 &lt; x &lt; 1</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.excludemap">
-<code class="descname">excludemap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.excludemap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.excludemap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter data by excluding a range of mapped values
-shortcut for: filter(… , out=True, map=True)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
-<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
-if a single value the filter applies to only this value: x == value
-if a list  eg: [0,1] range is inclusive 0 &lt;= x &lt;= 1
-if a tuple eg: (0,1) range is exclusive 0 &lt; x &lt; 1</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.file">
-<code class="descname">file</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load data from a file into this object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) – Name of the file to load</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.files">
-<code class="descname">files</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.files" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load data from a series of files into this object (using wildcards or a list)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> (<em>str</em>) – Specification of the files to load</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.filter">
-<code class="descname">filter</code><span class="sig-paren">(</span><em>label</em>, <em>values</em>, <em>out=False</em>, <em>map=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter data by including a range of values</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
-<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
-if a single value the filter applies to only this value: x == value
-if a list  eg: [0,1] range is inclusive 0 &lt;= x &lt;= 1
-if a tuple eg: (0,1) range is exclusive 0 &lt; x &lt; 1</li>
-<li><strong>out</strong> (<em>boolean</em>) – Set this flag to filter out values instead of including them</li>
-<li><strong>map</strong> (<em>boolean</em>) – Set this flag to filter by normalised values mapped to [0,1]
-instead of actual min/max of the data range</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.getcolourmap">
-<code class="descname">getcolourmap</code><span class="sig-paren">(</span><em>string=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.getcolourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.getcolourmap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the colour map data from the object as a string or list
-Either return format can be used to create/modify a colourmap
-with colourmap()</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>string</strong> (<em>boolean</em>) – The default is to return the data as a string of colours separated by semi-colons
-To instead return a list of (position,[R,G,B,A]) tuples for easier automated processing in python,
-set this to False</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>mapdata</strong> – The formatted colourmap data</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str/list</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.help">
-<code class="descname">help</code><span class="sig-paren">(</span><em>cmd=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.help" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get help on an object method or property</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmd</strong> (<em>str</em>) – Command to get help with, if ommitted displays general introductory help
-If cmd is a property or is preceded with ‘&#64;’ will display property help</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.include">
-<code class="descname">include</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.include"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.include" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter data by including a range of values
-shortcut for: filter(… , out=False)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
-<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
-if a single value the filter applies to only this value: x == value
-if a list  eg: [0,1] range is inclusive 0 &lt;= x &lt;= 1
-if a tuple eg: (0,1) range is exclusive 0 &lt; x &lt; 1</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.includemap">
-<code class="descname">includemap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.includemap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.includemap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter data by including a range of mapped values
-shortcut for: filter(… , out=False, map=True)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
-<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
-if a single value the filter applies to only this value: x == value
-if a list  eg: [0,1] range is inclusive 0 &lt;= x &lt;= 1
-if a tuple eg: (0,1) range is exclusive 0 &lt; x &lt; 1</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.indices">
-<code class="descname">indices</code><span class="sig-paren">(</span><em>data</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.indices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.indices" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load index data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 array of indices
-indices are loaded as 32 bit unsigned integer values</li>
-<li><strong>offset</strong> (<em>int</em>) – Specify an initial index offset, for 1-based indices pass offset=1
-Default is zero-based</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.isosurface">
-<code class="descname">isosurface</code><span class="sig-paren">(</span><em>isovalues=None</em>, <em>name=None</em>, <em>convert=False</em>, <em>updatedb=False</em>, <em>compress=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.isosurface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.isosurface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate an isosurface from a volume data set using the marching cubes algorithm</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>isovalues</strong> (<em>number</em><em>,</em><em>list</em>) – Isovalues to create surfaces for, number or list</li>
-<li><strong>name</strong> (<em>str</em>) – Name of the created object, automatically assigned if not provided</li>
-<li><strong>convert</strong> (<em>bool</em>) – Setting this flag to True will replace the existing volume object with the
-newly created isosurface by deleting the volume data and loading the mesh
-data into the preexisting object</li>
-<li><strong>updatedb</strong> (<em>bool</em>) – Setting this flag to True will write the newly created/modified data
-to the database when done</li>
-<li><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</li>
-<li><strong>**kwargs</strong> – Initial set of properties passed to the created object</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>obj</strong> – The isosurface object created/converted</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#lavavu.Object" title="lavavu.Object">Object</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.labels">
-<code class="descname">labels</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.labels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load label data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>str</em>) – Pass a label or list of labels to be applied, one per vertex</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.luminance">
-<code class="descname">luminance</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.luminance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.luminance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load luminance data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of luminance values
-values are loaded as 8 bit unsigned integers</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="lavavu.Object.name">
-<code class="descname">name</code><a class="headerlink" href="#lavavu.Object.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the object’s name property</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the object</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.normals">
-<code class="descname">normals</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.normals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.normals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load 3d normal data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of normals</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.opacitymap">
-<code class="descname">opacitymap</code><span class="sig-paren">(</span><em>data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.opacitymap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.opacitymap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load opacity map data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>str</em>) – If not provided, just returns the opacity map
-(A default is created if none exists)
-Provided opacity map data can be
-- list of opacity values,
-- list of position,opacity tuples
-Creates an opacity map named objectname_opacitymap if object
-doesn’t already have an opacity map</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The wrapper object of the opacity map loaded/created</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap">ColourMap</a>(dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.reload">
-<code class="descname">reload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.reload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.reload" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fully reload the object’s data, recalculating all parameters such as colours
-that may be cached on the GPU, required after changing some properties
-so the changes are reflected in the visualisation</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.rgb">
-<code class="descname">rgb</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.rgb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.rgb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load rgb data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of rgb values
-values are loaded as 8 bit unsigned integer values</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.rgba">
-<code class="descname">rgba</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.rgba"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.rgba" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load rgba data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of rgba values
-values are loaded as 8 bit unsigned integer values</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.select">
-<code class="descname">select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.select"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.select" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set this object as the selected object</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.texture">
-<code class="descname">texture</code><span class="sig-paren">(</span><em>data</em>, <em>width</em>, <em>height</em>, <em>channels=4</em>, <em>flip=True</em>, <em>mipmaps=True</em>, <em>bgr=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.texture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.texture" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load raw texture data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 or uint8 array
-texture data is loaded as raw image data</li>
-<li><strong>width</strong> (<em>int</em>) – image width in pixels</li>
-<li><strong>height</strong> (<em>int</em>) – image height in pixels</li>
-<li><strong>channels</strong> (<em>int</em>) – colour channels/depth in bytes (1=luminance, 3=RGB, 4=RGBA)</li>
-<li><strong>flip</strong> (<em>boolean</em>) – flip the texture vertically after loading
-(default is enabled as usually required for OpenGL but can be disabled)</li>
-<li><strong>mipmaps</strong> (<em>boolean</em>) – generate mipmaps (slow)</li>
-<li><strong>bgr</strong> (<em>boolean</em>) – rgb data is in BGR/BGRA format instead of RGB/RGBA</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.triangles">
-<code class="descname">triangles</code><span class="sig-paren">(</span><em>data</em>, <em>split=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.triangles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.triangles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load triangle data,</p>
-<p>This is the same as loading vertices into a triangle mesh object but allows
-decomposing the mesh into smaller triangles with the split option</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>split</strong> (<em>int</em>) – Split triangles this many times on loading</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>filter=None</em>, <em>compress=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write the objects’s visualisation data back to the database</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
-(eg: labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</li>
-<li><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.values">
-<code class="descname">values</code><span class="sig-paren">(</span><em>data</em>, <em>label='default'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.values" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load value data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 array of values</li>
-<li><strong>label</strong> (<em>str</em>) – Label for this data set</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.vectors">
-<code class="descname">vectors</code><span class="sig-paren">(</span><em>data</em>, <em>magnitude=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.vectors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.vectors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load 3d vector data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vectors</li>
-<li><strong>magnitude</strong> (<em>str</em>) – Pass a label to calculate the magnitude and save under provided name (for use in colouring etc)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Object.vertices">
-<code class="descname">vertices</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Object.vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Object.vertices" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load 3d vertex data for object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vertices</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="lavavu.Viewer">
-<em class="property">class </em><code class="descname">Viewer</code><span class="sig-paren">(</span><em>binpath=None</em>, <em>havecontext=False</em>, <em>omegalib=False</em>, <em>port=8080</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Viewer</code><span class="sig-paren">(</span><em>binpath=None</em>, <em>havecontext=False</em>, <em>omegalib=False</em>, <em>port=8080</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
-<p><em>The Viewer class provides an interface to a LavaVu session</em></p>
+<p>The Viewer class provides an interface to a LavaVu session</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1451,7 +419,7 @@ and parsed into the initial set of global properties</li>
 </div>
 <dl class="method">
 <dt id="lavavu.Viewer.ColourMap">
-<code class="descname">ColourMap</code><span class="sig-paren">(</span><em>identifier=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.ColourMap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.ColourMap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ColourMap</code><span class="sig-paren">(</span><em>identifier=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.ColourMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get or create a colourmap</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1479,7 +447,7 @@ If no matching object found and string identifier provided, creates an empty obj
 
 <dl class="method">
 <dt id="lavavu.Viewer.Figure">
-<code class="descname">Figure</code><span class="sig-paren">(</span><em>name</em>, <em>objects=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.Figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.Figure" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Figure</code><span class="sig-paren">(</span><em>name</em>, <em>objects=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.Figure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a figure</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1494,7 +462,7 @@ If no matching object found and string identifier provided, creates an empty obj
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>figure</strong> – Figure object</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Figure</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#lavavu.Figure" title="lavavu.Figure">Figure</a></p>
 </td>
 </tr>
 </tbody>
@@ -1503,7 +471,7 @@ If no matching object found and string identifier provided, creates an empty obj
 
 <dl class="method">
 <dt id="lavavu.Viewer.Object">
-<code class="descname">Object</code><span class="sig-paren">(</span><em>identifier=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.Object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.Object" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Object</code><span class="sig-paren">(</span><em>identifier=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.Object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get or create a visualisation object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1531,7 +499,7 @@ If no matching object found and string identifier provided, creates an empty obj
 
 <dl class="method">
 <dt id="lavavu.Viewer.__call__">
-<code class="descname">__call__</code><span class="sig-paren">(</span><em>cmds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.__call__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__call__</code><span class="sig-paren">(</span><em>cmds</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run a LavaVu script</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1549,7 +517,7 @@ If no matching object found and string identifier provided, creates an empty obj
 
 <dl class="method">
 <dt id="lavavu.Viewer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>binpath=None</em>, <em>havecontext=False</em>, <em>omegalib=False</em>, <em>port=8080</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>binpath=None</em>, <em>havecontext=False</em>, <em>omegalib=False</em>, <em>port=8080</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and init viewer instance</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1573,7 +541,7 @@ and parsed into the initial set of global properties</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.add">
-<code class="descname">add</code><span class="sig-paren">(</span><em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add</code><span class="sig-paren">(</span><em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a visualisation object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1592,7 +560,7 @@ If an object of this name exists, it will be returned instead of created</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.addstep">
-<code class="descname">addstep</code><span class="sig-paren">(</span><em>step=-1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.addstep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.addstep" title="Permalink to this definition">¶</a></dt>
+<code class="descname">addstep</code><span class="sig-paren">(</span><em>step=-1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.addstep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a new time step</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1610,13 +578,13 @@ If an object of this name exists, it will be returned instead of created</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.browser">
-<code class="descname">browser</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>inline=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.browser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.browser" title="Permalink to this definition">¶</a></dt>
+<code class="descname">browser</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>inline=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.browser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open web server browser interface</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lavavu.Viewer.camera">
-<code class="descname">camera</code><span class="sig-paren">(</span><em>data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.camera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.camera" title="Permalink to this definition">¶</a></dt>
+<code class="descname">camera</code><span class="sig-paren">(</span><em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.camera" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/set the current camera viewpoint</p>
 <p>Displays and returns camera in python form that can be pasted and
 executed to restore the same camera view</p>
@@ -1636,7 +604,7 @@ executed to restore the same camera view</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><em>objects=True</em>, <em>colourmaps=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.clear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clear</code><span class="sig-paren">(</span><em>objects=True</em>, <em>colourmaps=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears all data from the visualisation
 Including objects and colourmaps by default</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1656,7 +624,7 @@ but not delete them</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.colourbar">
-<code class="descname">colourbar</code><span class="sig-paren">(</span><em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.colourbar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.colourbar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">colourbar</code><span class="sig-paren">(</span><em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.colourbar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new colourbar</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1674,7 +642,7 @@ but not delete them</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.colourmap">
-<code class="descname">colourmap</code><span class="sig-paren">(</span><em>data=None</em>, <em>name=''</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.colourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.colourmap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">colourmap</code><span class="sig-paren">(</span><em>data=None</em>, <em>name=''</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.colourmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load or create a colour map</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1723,7 +691,7 @@ If none provided, a default colourmap will be loaded from lavavu.cubeHelix()</li
 
 <dl class="method">
 <dt id="lavavu.Viewer.commands">
-<code class="descname">commands</code><span class="sig-paren">(</span><em>cmds</em>, <em>queue=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.commands"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.commands" title="Permalink to this definition">¶</a></dt>
+<code class="descname">commands</code><span class="sig-paren">(</span><em>cmds</em>, <em>queue=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute viewer commands
 <a class="reference external" href="https://github.com/OKaluza/LavaVu/wiki/Scripting-Commands-Reference">https://github.com/OKaluza/LavaVu/wiki/Scripting-Commands-Reference</a>
 These commands can also be executed individually by calling them as methods of the viewer object</p>
@@ -1739,7 +707,7 @@ These commands can also be executed individually by calling them as methods of t
 
 <dl class="method">
 <dt id="lavavu.Viewer.defaultcolourmap">
-<code class="descname">defaultcolourmap</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.defaultcolourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.defaultcolourmap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">defaultcolourmap</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.defaultcolourmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get content of a default colour map</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1757,7 +725,7 @@ These commands can also be executed individually by calling them as methods of t
 
 <dl class="method">
 <dt id="lavavu.Viewer.defaultcolourmaps">
-<code class="descname">defaultcolourmaps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.defaultcolourmaps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.defaultcolourmaps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">defaultcolourmaps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.defaultcolourmaps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the list of default colour map names</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1773,7 +741,7 @@ These commands can also be executed individually by calling them as methods of t
 
 <dl class="method">
 <dt id="lavavu.Viewer.display">
-<code class="descname">display</code><span class="sig-paren">(</span><em>resolution=(0</em>, <em>0)</em>, <em>transparent=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.display" title="Permalink to this definition">¶</a></dt>
+<code class="descname">display</code><span class="sig-paren">(</span><em>resolution=(0</em>, <em>0)</em>, <em>transparent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the current display as inline image within an ipython notebook.</p>
 <p>If IPython is installed, displays the result image content inline</p>
 <p>If IPython is not installed, will save the result with
@@ -1794,10 +762,10 @@ a default filename in the current directory</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.events">
-<code class="descname">events</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.events" title="Permalink to this definition">¶</a></dt>
+<code class="descname">events</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process input events
 allows running interactive event loop while animating from python
-eg:</p>
+e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">lv</span><span class="o">.</span><span class="n">events</span><span class="p">():</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="c1">#...build next frame here...</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
@@ -1819,7 +787,7 @@ eg:</p>
 <dt id="lavavu.Viewer.figures">
 <code class="descname">figures</code><a class="headerlink" href="#lavavu.Viewer.figures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the saved figures from loaded model
-Dict returned contains Fig objects which can be used to modify the figure</p>
+Dict returned contains Figure objects which can be used to modify the figure</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1834,7 +802,7 @@ Dict returned contains Fig objects which can be used to modify the figure</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.file">
-<code class="descname">file</code><span class="sig-paren">(</span><em>filename</em>, <em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.file" title="Permalink to this definition">¶</a></dt>
+<code class="descname">file</code><span class="sig-paren">(</span><em>filename</em>, <em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a database or model file</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1853,7 +821,7 @@ if not provided a default will be created</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.files">
-<code class="descname">files</code><span class="sig-paren">(</span><em>files</em>, <em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.files" title="Permalink to this definition">¶</a></dt>
+<code class="descname">files</code><span class="sig-paren">(</span><em>files</em>, <em>obj=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load data from a series of files (using wildcards or a list)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1871,7 +839,7 @@ if not provided a default will be created</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.frame">
-<code class="descname">frame</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>quality=90</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.frame" title="Permalink to this definition">¶</a></dt>
+<code class="descname">frame</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>quality=90</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an image frame, returns current display as base64 encoded jpeg data url</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1895,19 +863,25 @@ if not provided a default will be created</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.get_all_vertices">
-<code class="descname">get_all_vertices</code><span class="sig-paren">(</span><em>objectlist</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.get_all_vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.get_all_vertices" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_all_vertices</code><span class="sig-paren">(</span><em>objectlist</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.get_all_vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract all vertex data from a list of objects</p>
-<dl class="docutils">
-<dt>pverts <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd>the vertices, numpy array</dd>
-<dt>bb_all <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
-<dd>the bounding box of the combined data</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><strong>pverts</strong> (<em>array</em>) – the vertices, numpy array</li>
+<li><strong>bb_all</strong> (<em>tuple</em>) – the bounding box of the combined data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="lavavu.Viewer.getcolourmap">
-<code class="descname">getcolourmap</code><span class="sig-paren">(</span><em>mapid</em>, <em>string=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.getcolourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.getcolourmap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getcolourmap</code><span class="sig-paren">(</span><em>mapid</em>, <em>string=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.getcolourmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return colour map data as a string or list
 Either return format can be used to create/modify a colourmap
 with colourmap()</p>
@@ -1935,7 +909,7 @@ set this to False</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.getview">
-<code class="descname">getview</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.getview"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.getview" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getview</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.getview" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get current view settings</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1957,7 +931,7 @@ set this to False</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.help">
-<code class="descname">help</code><span class="sig-paren">(</span><em>cmd=''</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.help" title="Permalink to this definition">¶</a></dt>
+<code class="descname">help</code><span class="sig-paren">(</span><em>cmd=''</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.help" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get help on a command or property</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1972,7 +946,7 @@ If cmd is a property or is preceded with ‘&#64;’ will display property help<
 
 <dl class="method">
 <dt id="lavavu.Viewer.image">
-<code class="descname">image</code><span class="sig-paren">(</span><em>filename=''</em>, <em>resolution=None</em>, <em>transparent=False</em>, <em>quality=95</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><span class="sig-paren">(</span><em>filename=''</em>, <em>resolution=None</em>, <em>transparent=False</em>, <em>quality=95</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save or get an image of current display</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1999,13 +973,13 @@ if not provided the image will be returned as a base64 encoded data url</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.init">
-<code class="descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.init" title="Permalink to this definition">¶</a></dt>
+<code class="descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Re-initialise the viewer window</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lavavu.Viewer.interact">
-<code class="descname">interact</code><span class="sig-paren">(</span><em>resolution=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.interact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.interact" title="Permalink to this definition">¶</a></dt>
+<code class="descname">interact</code><span class="sig-paren">(</span><em>resolution=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.interact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens an external interactive window
 Unless native=True is passed, will open an interactive web window
 for interactive control via web browser</p>
@@ -2022,7 +996,7 @@ for interactive control via web browser</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.jpeg">
-<code class="descname">jpeg</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>quality=90</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.jpeg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.jpeg" title="Permalink to this definition">¶</a></dt>
+<code class="descname">jpeg</code><span class="sig-paren">(</span><em>resolution=None</em>, <em>quality=90</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.jpeg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an image frame, returns current display as JPEG data in a bytearray</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2063,7 +1037,7 @@ Can be printed, iterated or accessed as a dictionary by object name</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.player">
-<code class="descname">player</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.player"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.player" title="Permalink to this definition">¶</a></dt>
+<code class="descname">player</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.player" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shows a video inline within an ipython notebook.</p>
 <p>If IPython is not running, just returns</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2078,7 +1052,7 @@ Can be printed, iterated or accessed as a dictionary by object name</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.png">
-<code class="descname">png</code><span class="sig-paren">(</span><em>resolution=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.png"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.png" title="Permalink to this definition">¶</a></dt>
+<code class="descname">png</code><span class="sig-paren">(</span><em>resolution=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.png" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an image frame, returns current display as PNG data in a bytearray</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2113,7 +1087,7 @@ Will return 0 if server is not running</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.rawimage">
-<code class="descname">rawimage</code><span class="sig-paren">(</span><em>resolution=(640</em>, <em>480)</em>, <em>channels=3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.rawimage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.rawimage" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rawimage</code><span class="sig-paren">(</span><em>resolution=(640</em>, <em>480)</em>, <em>channels=3</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.rawimage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return raw image data</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2137,7 +1111,7 @@ Will return 0 if server is not running</td>
 
 <dl class="method">
 <dt id="lavavu.Viewer.redisplay">
-<code class="descname">redisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.redisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.redisplay" title="Permalink to this definition">¶</a></dt>
+<code class="descname">redisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.redisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the display of any interactive viewer</p>
 <p>This is required after changing vis properties from python
 so the changes are reflected in the viewer</p>
@@ -2145,13 +1119,13 @@ so the changes are reflected in the viewer</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.render">
-<code class="descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.render"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.render" title="Permalink to this definition">¶</a></dt>
+<code class="descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.render" title="Permalink to this definition">¶</a></dt>
 <dd><p>Render a new frame, explicit display update</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lavavu.Viewer.restore">
-<code class="descname">restore</code><span class="sig-paren">(</span><em>filename='state.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.restore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.restore" title="Permalink to this definition">¶</a></dt>
+<code class="descname">restore</code><span class="sig-paren">(</span><em>filename='state.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.restore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restore visualisation state from a json file
 (Includes all properties, colourmaps and defined objects but not their geometry data)</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2166,7 +1140,7 @@ so the changes are reflected in the viewer</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.serve">
-<code class="descname">serve</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.serve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.serve" title="Permalink to this definition">¶</a></dt>
+<code class="descname">serve</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.serve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run a web server in python
 This uses server.py to launch a simple web server</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2186,7 +1160,7 @@ This uses server.py to launch a simple web server</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.setup">
-<code class="descname">setup</code><span class="sig-paren">(</span><em>safe=True</em>, <em>arglist=None</em>, <em>database=None</em>, <em>figure=None</em>, <em>timestep=None</em>, <em>verbose=False</em>, <em>interactive=False</em>, <em>hidden=True</em>, <em>cache=False</em>, <em>quality=3</em>, <em>writeimage=False</em>, <em>resolution=None</em>, <em>script=None</em>, <em>initscript=False</em>, <em>usequeue=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.setup" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setup</code><span class="sig-paren">(</span><em>safe=True</em>, <em>arglist=None</em>, <em>database=None</em>, <em>figure=None</em>, <em>timestep=None</em>, <em>verbose=False</em>, <em>interactive=False</em>, <em>hidden=True</em>, <em>cache=False</em>, <em>quality=3</em>, <em>writeimage=False</em>, <em>resolution=None</em>, <em>script=None</em>, <em>initscript=False</em>, <em>usequeue=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute the viewer, initialising with provided arguments and
 entering event loop if requested</p>
 <p>Parameters: see __init__ docs</p>
@@ -2194,7 +1168,7 @@ entering event loop if requested</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.setview">
-<code class="descname">setview</code><span class="sig-paren">(</span><em>view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.setview"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.setview" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setview</code><span class="sig-paren">(</span><em>view</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.setview" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set current view settings</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2239,7 +1213,7 @@ Returns current timestep</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.store">
-<code class="descname">store</code><span class="sig-paren">(</span><em>filename='state.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.store"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.store" title="Permalink to this definition">¶</a></dt>
+<code class="descname">store</code><span class="sig-paren">(</span><em>filename='state.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store current visualisation state as a json file
 (Includes all properties, colourmaps and defined objects but not their geometry data)</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2254,7 +1228,7 @@ Returns current timestep</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.testimage">
-<code class="descname">testimage</code><span class="sig-paren">(</span><em>expfile</em>, <em>outfile</em>, <em>tolerance=0.0001</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.testimage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.testimage" title="Permalink to this definition">¶</a></dt>
+<code class="descname">testimage</code><span class="sig-paren">(</span><em>expfile</em>, <em>outfile</em>, <em>tolerance=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.testimage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compare two images</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2280,7 +1254,7 @@ False if test fails, difference &gt; tolerance</p>
 
 <dl class="method">
 <dt id="lavavu.Viewer.testimages">
-<code class="descname">testimages</code><span class="sig-paren">(</span><em>imagelist=None</em>, <em>tolerance=0.0001</em>, <em>expectedPath='expected/'</em>, <em>outputPath='./'</em>, <em>clear=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.testimages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.testimages" title="Permalink to this definition">¶</a></dt>
+<code class="descname">testimages</code><span class="sig-paren">(</span><em>imagelist=None</em>, <em>tolerance=0.0001</em>, <em>expectedPath='expected/'</em>, <em>outputPath='./'</em>, <em>clear=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.testimages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compare a list of images to expected images for testing</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2302,7 +1276,7 @@ If not provided, will process all jpg and png images in working directory</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.timesteps">
-<code class="descname">timesteps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.timesteps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.timesteps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">timesteps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.timesteps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the time step data from loaded model</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2318,7 +1292,7 @@ If not provided, will process all jpg and png images in working directory</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>filter=None</em>, <em>compress=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update</code><span class="sig-paren">(</span><em>filter=None</em>, <em>compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write visualisation data back to the database</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2337,7 +1311,7 @@ If not provided, will process all jpg and png images in working directory</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.video">
-<code class="descname">video</code><span class="sig-paren">(</span><em>filename=''</em>, <em>fps=10</em>, <em>quality=1</em>, <em>resolution=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.video"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.video" title="Permalink to this definition">¶</a></dt>
+<code class="descname">video</code><span class="sig-paren">(</span><em>filename=''</em>, <em>fps=10</em>, <em>quality=1</em>, <em>resolution=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shows the generated video inline within an ipython notebook.</p>
 <p>If IPython is installed, displays the result video content inline</p>
 <p>If IPython is not installed, will save the result in the current directory</p>
@@ -2360,7 +1334,7 @@ encoding artifacts at cost of larger file size</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.webgl">
-<code class="descname">webgl</code><span class="sig-paren">(</span><em>filename='webgl.html'</em>, <em>resolution=(640</em>, <em>480)</em>, <em>inline=True</em>, <em>menu=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.webgl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.webgl" title="Permalink to this definition">¶</a></dt>
+<code class="descname">webgl</code><span class="sig-paren">(</span><em>filename='webgl.html'</em>, <em>resolution=(640</em>, <em>480)</em>, <em>inline=True</em>, <em>menu=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.webgl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a WebGL page with a 3D interactive view of the active model</p>
 <p>Result is saved with default filename “webgl.html” in the current directory</p>
 <p>If running from IPython, displays the result WebGL content inline in an IFrame</p>
@@ -2389,10 +1363,1045 @@ Set to false to open a full page viewer in a tab or new window</li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.window">
-<code class="descname">window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu/lavavu.html#Viewer.window"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lavavu.Viewer.window" title="Permalink to this definition">¶</a></dt>
+<code class="descname">window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and display an interactive viewer instance</p>
 <p>This shows an active viewer window to the visualisation
 that can be controlled with the mouse or html widgets</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.Object">
+<em class="property">class </em><code class="descname">Object</code><span class="sig-paren">(</span><em>parent</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>The Object class provides an interface to a LavaVu drawing object
+Object instances are created internally in the Viewer class and can
+be retrieved from the object list</p>
+<p>New objects are also created using viewer methods</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>**kwargs</strong> – Initial set of properties passed to the created object</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>Create a viewer, load some test data, get objects</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">objects</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Object properties can be passed in when created or set by using as a dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="p">[</span><span class="s2">&quot;pointsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>A list of available properties can be found here: <a class="reference external" href="https://github.com/OKaluza/LavaVu/wiki/Property-Reference">https://github.com/OKaluza/LavaVu/wiki/Property-Reference</a>
+or by using the online help:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="lavavu.Object.append">
+<code class="descname">append</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a new data element to the object</p>
+<p>Object data is sometimes dependant on individual elements to
+determine where one part ends and another starts, e.g. line segments, grids</p>
+<p>This allows manually closing the active element so all new data is loaded into a new element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all visualisation data from this object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.cleardata">
+<code class="descname">cleardata</code><span class="sig-paren">(</span><em>typename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.cleardata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear specific visualisation data/values from this object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Optional filter naming type of data to be cleared,
+Either a built in type: (vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)
+or a user defined data label</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.colourbar">
+<code class="descname">colourbar</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.colourbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new colourbar using this object’s colourmap</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>colourbar</strong> – The colourbar object created</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.Object" title="lavavu.Object">Object</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.colourmap">
+<code class="descname">colourmap</code><span class="sig-paren">(</span><em>data=None</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.colourmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load colour map data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> (<em>list</em><em> or </em><em>str</em><em> or </em><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap"><em>ColourMap</em></a>) – If not provided, just returns the colourmap
+(A default is created if none exists)
+Provided colourmap data can be
+- a string,
+- list of colour strings,
+- list of position,value tuples
+- a built in colourmap name
+- An existing ColourMap object
+Creates a colourmap named objectname_colourmap if object
+doesn’t already have a colourmap</li>
+<li><strong>reverse</strong> (<em>boolean</em>) – Reverse the order of the colours after loading</li>
+<li><strong>monochrome</strong> (<em>boolean</em>) – Convert to greyscale</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The wrapper object of the colourmap loaded/created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap">ColourMap</a>(dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.colours">
+<code class="descname">colours</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.colours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load colour data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>str</em><em> or </em><em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 array of colours
+if a string or list of strings is provided, colours are parsed as html colour string values
+if a numpy array is passed, colours are loaded as 4 byte ARGB unsigned integer values</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="lavavu.Object.data">
+<code class="descname">data</code><a class="headerlink" href="#lavavu.Object.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return internal geometry data at current timestep
+Returns a Geometry() object that can be iterated through containing all data elements
+Elements contain vertex/normal/value etc. data as numpy arrays</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An object holding the data elements retrieved</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.Geometry" title="lavavu.Geometry">Geometry</a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="lavavu.Object.datasets">
+<code class="descname">datasets</code><a class="headerlink" href="#lavavu.Object.datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve available labelled data sets on this object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A dictionary containing the data objects available by label</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.exclude">
+<code class="descname">exclude</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.exclude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter data by excluding a range of values
+shortcut for: filter(… , out=True)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
+<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
+if a single value the filter applies to only this value: x == value
+if a list  e.g. [0,1] range is inclusive 0 &lt;= x &lt;= 1
+if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.excludemap">
+<code class="descname">excludemap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.excludemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter data by excluding a range of mapped values
+shortcut for: filter(… , out=True, map=True)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
+<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
+if a single value the filter applies to only this value: x == value
+if a list  e.g. [0,1] range is inclusive 0 &lt;= x &lt;= 1
+if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.file">
+<code class="descname">file</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load data from a file into this object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) – Name of the file to load</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.files">
+<code class="descname">files</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load data from a series of files into this object (using wildcards or a list)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> (<em>str</em>) – Specification of the files to load</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>label</em>, <em>values</em>, <em>out=False</em>, <em>map=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter data by including a range of values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
+<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
+if a single value the filter applies to only this value: x == value
+if a list  e.g. [0,1] range is inclusive 0 &lt;= x &lt;= 1
+if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</li>
+<li><strong>out</strong> (<em>boolean</em>) – Set this flag to filter out values instead of including them</li>
+<li><strong>map</strong> (<em>boolean</em>) – Set this flag to filter by normalised values mapped to [0,1]
+instead of actual min/max of the data range</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.getcolourmap">
+<code class="descname">getcolourmap</code><span class="sig-paren">(</span><em>string=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.getcolourmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the colour map data from the object as a string or list
+Either return format can be used to create/modify a colourmap
+with colourmap()</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>string</strong> (<em>boolean</em>) – The default is to return the data as a string of colours separated by semi-colons
+To instead return a list of (position,[R,G,B,A]) tuples for easier automated processing in python,
+set this to False</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>mapdata</strong> – The formatted colourmap data</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str/list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.help">
+<code class="descname">help</code><span class="sig-paren">(</span><em>cmd=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get help on an object method or property</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmd</strong> (<em>str</em>) – Command to get help with, if ommitted displays general introductory help
+If cmd is a property or is preceded with ‘&#64;’ will display property help</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.include">
+<code class="descname">include</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.include" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter data by including a range of values
+shortcut for: filter(… , out=False)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
+<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
+if a single value the filter applies to only this value: x == value
+if a list  e.g. [0,1] range is inclusive 0 &lt;= x &lt;= 1
+if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.includemap">
+<code class="descname">includemap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.includemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter data by including a range of mapped values
+shortcut for: filter(… , out=False, map=True)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>label</strong> (<em>str</em>) – Data label to filter on</li>
+<li><strong>values</strong> (<em>number</em><em> or </em><em>list</em><em> or </em><em>tuple</em>) – value range single value, list or tuple
+if a single value the filter applies to only this value: x == value
+if a list  e.g. [0,1] range is inclusive 0 &lt;= x &lt;= 1
+if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The filter id created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.indices">
+<code class="descname">indices</code><span class="sig-paren">(</span><em>data</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load index data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 array of indices
+indices are loaded as 32 bit unsigned integer values</li>
+<li><strong>offset</strong> (<em>int</em>) – Specify an initial index offset, for 1-based indices pass offset=1
+Default is zero-based</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.isosurface">
+<code class="descname">isosurface</code><span class="sig-paren">(</span><em>isovalues=None</em>, <em>name=None</em>, <em>convert=False</em>, <em>updatedb=False</em>, <em>compress=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.isosurface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an isosurface from a volume data set using the marching cubes algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>isovalues</strong> (<em>number</em><em>,</em><em>list</em>) – Isovalues to create surfaces for, number or list</li>
+<li><strong>name</strong> (<em>str</em>) – Name of the created object, automatically assigned if not provided</li>
+<li><strong>convert</strong> (<em>bool</em>) – Setting this flag to True will replace the existing volume object with the
+newly created isosurface by deleting the volume data and loading the mesh
+data into the preexisting object</li>
+<li><strong>updatedb</strong> (<em>bool</em>) – Setting this flag to True will write the newly created/modified data
+to the database when done</li>
+<li><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</li>
+<li><strong>**kwargs</strong> – Initial set of properties passed to the created object</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>obj</strong> – The isosurface object created/converted</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#lavavu.Object" title="lavavu.Object">Object</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.labels">
+<code class="descname">labels</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load label data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>str</em>) – Pass a label or list of labels to be applied, one per vertex</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.luminance">
+<code class="descname">luminance</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.luminance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load luminance data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of luminance values
+values are loaded as 8 bit unsigned integers</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="lavavu.Object.name">
+<code class="descname">name</code><a class="headerlink" href="#lavavu.Object.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the object’s name property</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.normals">
+<code class="descname">normals</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load 3d normal data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of normals</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.opacitymap">
+<code class="descname">opacitymap</code><span class="sig-paren">(</span><em>data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.opacitymap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load opacity map data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>str</em>) – If not provided, just returns the opacity map
+(A default is created if none exists)
+Provided opacity map data can be
+- list of opacity values,
+- list of position,opacity tuples
+Creates an opacity map named objectname_opacitymap if object
+doesn’t already have an opacity map</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The wrapper object of the opacity map loaded/created</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#lavavu.ColourMap" title="lavavu.ColourMap">ColourMap</a>(dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.reload">
+<code class="descname">reload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully reload the object’s data, recalculating all parameters such as colours
+that may be cached on the GPU, required after changing some properties
+so the changes are reflected in the visualisation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.rgb">
+<code class="descname">rgb</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load rgb data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of rgb values
+values are loaded as 8 bit unsigned integer values</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.rgba">
+<code class="descname">rgba</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load rgba data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint8 array of rgba values
+values are loaded as 8 bit unsigned integer values</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.select">
+<code class="descname">select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set this object as the selected object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.texture">
+<code class="descname">texture</code><span class="sig-paren">(</span><em>data</em>, <em>width</em>, <em>height</em>, <em>channels=4</em>, <em>flip=True</em>, <em>mipmaps=True</em>, <em>bgr=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load raw texture data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 or uint8 array
+texture data is loaded as raw image data</li>
+<li><strong>width</strong> (<em>int</em>) – image width in pixels</li>
+<li><strong>height</strong> (<em>int</em>) – image height in pixels</li>
+<li><strong>channels</strong> (<em>int</em>) – colour channels/depth in bytes (1=luminance, 3=RGB, 4=RGBA)</li>
+<li><strong>flip</strong> (<em>boolean</em>) – flip the texture vertically after loading
+(default is enabled as usually required for OpenGL but can be disabled)</li>
+<li><strong>mipmaps</strong> (<em>boolean</em>) – generate mipmaps (slow)</li>
+<li><strong>bgr</strong> (<em>boolean</em>) – rgb data is in BGR/BGRA format instead of RGB/RGBA</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.triangles">
+<code class="descname">triangles</code><span class="sig-paren">(</span><em>data</em>, <em>split=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load triangle data,</p>
+<p>This is the same as loading vertices into a triangle mesh object but allows
+decomposing the mesh into smaller triangles with the split option</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>split</strong> (<em>int</em>) – Split triangles this many times on loading</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>filter=None</em>, <em>compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the objects’s visualisation data back to the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
+(eg: labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</li>
+<li><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.values">
+<code class="descname">values</code><span class="sig-paren">(</span><em>data</em>, <em>label='default'</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load value data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 array of values</li>
+<li><strong>label</strong> (<em>str</em>) – Label for this data set</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.vectors">
+<code class="descname">vectors</code><span class="sig-paren">(</span><em>data</em>, <em>magnitude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load 3d vector data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vectors</li>
+<li><strong>magnitude</strong> (<em>str</em>) – Pass a label to calculate the magnitude and save under provided name (for use in colouring etc)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load 3d vertex data for object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vertices</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.ColourMap">
+<em class="property">class </em><code class="descname">ColourMap</code><span class="sig-paren">(</span><em>ref</em>, <em>parent</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.ColourMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>The ColourMap class provides an interface to a LavaVu ColourMap
+ColourMap instances are created internally in the Viewer class and can
+be retrieved from the colourmaps list</p>
+<p>New colourmaps are also created using viewer methods</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>**kwargs</strong> – Initial set of properties passed to the created colourmap</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="lavavu.ColourMap.colours">
+<code class="descname">colours</code><a class="headerlink" href="#lavavu.ColourMap.colours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of colours</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>colours</strong> – A list of colours</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="lavavu.ColourMap.name">
+<code class="descname">name</code><a class="headerlink" href="#lavavu.ColourMap.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the colourmap name property</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the colourmap</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="lavavu.ColourMap.positions">
+<code class="descname">positions</code><a class="headerlink" href="#lavavu.ColourMap.positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of colour positions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>positions</strong> – A list of colour positions [0,1]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.ColourMap.tohexstr">
+<code class="descname">tohexstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.ColourMap.tohexstr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the colourmap colour data as a string with hex rgb:a representation,
+NOTE: ignores position data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The colour data which can be used to re-create the colourmap</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.ColourMap.tolist">
+<code class="descname">tolist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.ColourMap.tolist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the colourmap data as a python list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The colour and position data which can be used to re-create the colourmap</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.ColourMap.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>data=None</em>, <em>reverse=False</em>, <em>monochrome=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.ColourMap.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the colour map data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>list</em><em>,</em><em>str</em>) – Provided colourmap data can be
+- a string,
+- list of colour strings,
+- list of position,value tuples
+- or a built in colourmap name</li>
+<li><strong>reverse</strong> (<em>boolean</em>) – Reverse the order of the colours after loading</li>
+<li><strong>monochrome</strong> (<em>boolean</em>) – Convert to greyscale</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.DrawData">
+<em class="property">class </em><code class="descname">DrawData</code><span class="sig-paren">(</span><em>data</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.DrawData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DrawData class provides an interface to a single object data element
+DrawData instances are created internally from the Geometry class</p>
+<p>copy(), get() and set() methods provide access to the data types</p>
+<p class="rubric">Example</p>
+<p>Get the data elements</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="go">[GeomData(&quot;points&quot;)]</span>
+</pre></div>
+</div>
+<p>Get a copy of the colours (if any)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">colours</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">colours_copy</span>
+</pre></div>
+</div>
+<p>Get a view of the vertex data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">verts</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span>
+</pre></div>
+</div>
+<p>WARNING: this reference may be deleted by other calls,
+use _copy if you are not processing the data immediately
+and relying on it continuing to exist later</p>
+<p>Get a some value data by label “myvals”
+&gt;&gt;&gt; vals = obj.data.myvals
+&gt;&gt;&gt; print(vals)
+[array([…])]</p>
+<p>Load some new values for this data, provided list must match first dimension of existing data list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span> <span class="o">=</span> <span class="p">[</span><span class="n">newdata</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="lavavu.DrawData.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>typename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.DrawData.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of a data element from geometry data</p>
+<p>This is a safe version of get() that copies the data
+before returning so can be assured it will remain valid</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Type of data to be retrieved
+(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>data</strong> – Numpy array containing a copy of the data set requested</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.DrawData.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>typename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.DrawData.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a data element from geometry data</p>
+<p>Warning… other than for internal use, should always
+immediately make copies of the data
+there is no guarantee memory will not be released!</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typename</strong> (<em>str</em>) – Type of data to be retrieved
+(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>data</strong> – Numpy array view of the data set requested</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.DrawData.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>typename</em>, <em>array</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.DrawData.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a data element in geometry data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>typename</strong> (<em>str</em>) – Type of data to set
+(vertices/normals/vectors/indices/colours/texcoords/luminance/rgb/values)</li>
+<li><strong>array</strong> (<em>array</em>) – Numpy array holding the data to be written</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.Figure">
+<em class="property">class </em><code class="descname">Figure</code><span class="sig-paren">(</span><em>parent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>The Figure class wraps a set of visualisation state data, providing a way
+of managing a collection of preset visualisations or “figures” of a single model</p>
+<ul class="simple">
+<li>Figures represent a full set of visualisation settings,
+including visibility of chosen objects</li>
+<li>A single model can contain many objects and multiple figures, all of which work
+on the same set of objects, but may not use them all (ie: some are hidden)</li>
+<li>A figure object encapsulates the same data that can be stored on disk in a JSON file with
+Viewer.store(filename) and restored with Viewer.restore(filename)</li>
+</ul>
+<dl class="method">
+<dt id="lavavu.Figure.image">
+<code class="descname">image</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Figure.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render this figure to an image file:</p>
+<ul class="simple">
+<li>Load the figure state into the Viewer,</li>
+<li>Call Viewer.image(args, kwargs) to render an image to file</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Figure.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Figure.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load this figure’s state into the Viewer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Figure.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Figure.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the Viewer state to this figure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Figure.show">
+<code class="descname">show</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Figure.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render this figure</p>
+<ul class="simple">
+<li>Load the figure state into the Viewer,</li>
+<li>Call Viewer.display(args, kwargs) to render</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.Geometry">
+<em class="property">class </em><code class="descname">Geometry</code><span class="sig-paren">(</span><em>obj</em>, <em>timestep=-2</em>, <em>filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<p>The Geometry class provides an interface to a drawing object’s internal data
+Geometry instances are created internally in the Object class with the data property</p>
+<p class="rubric">Example</p>
+<p>Get all object data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>Get only triangle data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;triangles&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Get data at specific timestep only
+(default is current step including fixed data)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Loop through data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="lavavu.Image">
+<em class="property">class </em><code class="descname">Image</code><span class="sig-paren">(</span><em>resolution=(640, 480), channels=4, value=[255, 255, 255, 0]</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Image class provides an interface to a raw image</p>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>TODO: expose image loading functions, custom blend equations</p>
+<dl class="method">
+<dt id="lavavu.Image.blend">
+<code class="descname">blend</code><span class="sig-paren">(</span><em>source</em>, <em>resolution=(640</em>, <em>480)</em>, <em>position=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Image.blend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render another image to a specified position with this image with alpha blending</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>source</strong> (<em>array</em><em> or </em><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a>) – Numpy array containing raw image data to paste or a Viewer instance to source the frame from</li>
+<li><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image width and height in pixels, if not provided source must be a numpy array of the correct dimensions</li>
+<li><strong>position</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image x,y offset in pixels</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Image.display">
+<code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Image.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the image as inline image within an ipython notebook.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Image.paste">
+<code class="descname">paste</code><span class="sig-paren">(</span><em>source</em>, <em>resolution=(640</em>, <em>480)</em>, <em>position=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Image.paste" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render another image to a specified position with this image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>source</strong> (<em>array</em><em> or </em><a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a>) – Numpy array containing raw image data to paste or a Viewer instance to source the frame from</li>
+<li><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image width and height in pixels, if not provided source must be a numpy array of the correct dimensions</li>
+<li><strong>position</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Sub-image x,y offset in pixels</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Image.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Image.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a raw image data to provided filename</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) – Output filename (png/jpg supported, default is png if no extension)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>path</strong> – Path to the output image</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

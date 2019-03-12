@@ -1,9 +1,17 @@
 lavavu module
 =============
 
-LavaVu main module
+LavaVu python interface: viewer utils & wrapper
 
-TODO: links/docs
+This module provides an interface to the LavaVu library allowing
+loading of data, rendering of static images, animation and interactive visualisation
+
+To create an instance of the LavaVu rendering engine, use the Viewer() class, e.g.
+
+>>> import lavavu
+>>> lv = lavavu.Viewer()
+
+See the :any:`lavavu.Viewer` class documentation for more information.
 
 
 
@@ -15,19 +23,17 @@ functions:
 .. autosummary::
     :nosignatures:
 
-    lavavu.cellstyle
-    lavavu.cellwidth
-    lavavu.cubeHelix
     lavavu.download
     lavavu.grid2d
     lavavu.grid3d
-    lavavu.is_ipython
-    lavavu.is_notebook
-    lavavu.lerp
+    lavavu.cubeHelix
     lavavu.loadCPT
     lavavu.matplotlib_colourmap
     lavavu.printH5
+    lavavu.lerp
     lavavu.style
+    lavavu.cellstyle
+    lavavu.cellwidth
 
 classes:
 ~~~~~~~~
@@ -35,53 +41,51 @@ classes:
 .. autosummary::
     :nosignatures:
 
+    lavavu.Viewer
+    lavavu.Object
     lavavu.ColourMap
     lavavu.DrawData
-    lavavu.Fig
+    lavavu.Figure
     lavavu.Geometry
     lavavu.Image
-    lavavu.Object
-    lavavu.Viewer
 
 Module Details
 --------------
 functions:
 ~~~~~~~~~~
-.. autofunction:: lavavu.cellstyle
-.. autofunction:: lavavu.cellwidth
-.. autofunction:: lavavu.cubeHelix
 .. autofunction:: lavavu.download
 .. autofunction:: lavavu.grid2d
 .. autofunction:: lavavu.grid3d
-.. autofunction:: lavavu.is_ipython
-.. autofunction:: lavavu.is_notebook
-.. autofunction:: lavavu.lerp
+.. autofunction:: lavavu.cubeHelix
 .. autofunction:: lavavu.loadCPT
 .. autofunction:: lavavu.matplotlib_colourmap
 .. autofunction:: lavavu.printH5
+.. autofunction:: lavavu.lerp
 .. autofunction:: lavavu.style
+.. autofunction:: lavavu.cellstyle
+.. autofunction:: lavavu.cellwidth
 
 classes:
 ~~~~~~~~
+.. autoclass:: lavavu.Viewer
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Object
+    :members:
+    :show-inheritance:
 .. autoclass:: lavavu.ColourMap
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.DrawData
     :members:
     :show-inheritance:
-.. autoclass:: lavavu.Fig
+.. autoclass:: lavavu.Figure
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.Geometry
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.Image
-    :members:
-    :show-inheritance:
-.. autoclass:: lavavu.Object
-    :members:
-    :show-inheritance:
-.. autoclass:: lavavu.Viewer
     :members:
     :show-inheritance:
 

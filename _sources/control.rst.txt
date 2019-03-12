@@ -4,20 +4,39 @@ control module
 LavaVu python interface
 
 Interactive HTML UI controls library
+These functions can be called from the ControlFactory provided on
 
+- lavavu.Viewer()
+- lavavu.Object()
+
+Some work only on the viewer and some only to objects and some to both.
+Each will provide a control that allows modifying visualisation properties or executing commands interactively
+in an IPython notebook environment
+
+Example
+-------
+
+Create a Button control to execute a rotation command:
+
+>>> lv = lavavu.Viewer()
+>>> lv.control.Button('rotate x 1')
+
+Create a Range control to adjust the pointsize property:
+
+>>> lv = lavavu.Viewer()
+>>> pts = lv.points()
+>>> pts.control.Range('pointsize', range=[1, 10])
+
+For convenience, controls to set visualisation properties can often be created by calling control directly with the property name
+This will create a control of the default type for for that property if one is defined, e.g.
+
+>>> lv = lavavu.Viewer()
+>>> pts = lv.points()
+>>> pts.control('pointsize')
 
 
 Module Summary
 --------------
-functions:
-~~~~~~~~~~
-
-.. autosummary::
-    :nosignatures:
-
-    control.is_ipython
-    control.is_notebook
-
 classes:
 ~~~~~~~~
 
@@ -56,11 +75,6 @@ classes:
 
 Module Details
 --------------
-functions:
-~~~~~~~~~~
-.. autofunction:: control.is_ipython
-.. autofunction:: control.is_notebook
-
 classes:
 ~~~~~~~~
 .. autoclass:: control.Button

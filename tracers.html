@@ -70,7 +70,7 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#tracers.trace_particles" title="tracers.trace_particles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tracers.trace_particles</span></code></a></td>
-<td>Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs) For each tracer:  - find the nearest velocity grid point  - if within max dist: (1 degree?)     - multiply position by velocity vector  - otherwise:     - generate a new start position for tracer</td>
+<td>Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs) For each tracer</td>
 </tr>
 </tbody>
 </table>
@@ -96,30 +96,14 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="tracers.trace_particles">
-<code class="descname">trace_particles</code><span class="sig-paren">(</span><em>state</em>, <em>verts</em>, <em>vecs</em>, <em>N=5000</em>, <em>limit=0.5</em>, <em>speed=1.0</em>, <em>noise=0.0</em>, <em>height=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tracers.html#trace_particles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
+<code class="descname">trace_particles</code><span class="sig-paren">(</span><em>state</em>, <em>verts</em>, <em>vecs</em>, <em>N=5000</em>, <em>limit=0.5</em>, <em>speed=1.0</em>, <em>noise=0.0</em>, <em>height=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs)
-For each tracer:</p>
-<blockquote>
-<div><ul class="simple">
+For each tracer</p>
+<ul class="simple">
 <li>find the nearest velocity grid point</li>
-<li><dl class="first docutils">
-<dt>if within max dist: (1 degree?)</dt>
-<dd><ul class="first last">
-<li>multiply position by velocity vector</li>
+<li>if within max dist: Multiply position by velocity vector</li>
+<li>otherwise: Generate a new start position for tracer</li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>otherwise:</dt>
-<dd><ul class="first last">
-<li>generate a new start position for tracer</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -156,7 +140,7 @@ Pass this as first paramter on subsequent calls</p>
 <h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="tracers.TracerState">
-<em class="property">class </em><code class="descname">TracerState</code><span class="sig-paren">(</span><em>verts</em>, <em>N=5000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tracers.html#TracerState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">TracerState</code><span class="sig-paren">(</span><em>verts</em>, <em>N=5000</em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 

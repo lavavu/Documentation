@@ -103,28 +103,28 @@ and may be heavily modified in the future</dd>
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="convert.default_sample_grid">
-<code class="descname">default_sample_grid</code><span class="sig-paren">(</span><em>vrange</em>, <em>res=8</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#default_sample_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_sample_grid</code><span class="sig-paren">(</span><em>vrange</em>, <em>res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate sample grid fine enough to capture point details
 resolution of smallest dimension will be minres elements</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.export_OBJ">
-<code class="descname">export_OBJ</code><span class="sig-paren">(</span><em>filepath</em>, <em>obj</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#export_OBJ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
+<code class="descname">export_OBJ</code><span class="sig-paren">(</span><em>filepath</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export a given object to an OBJ file
 Supports only triangle mesh objects</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.min_max_range">
-<code class="descname">min_max_range</code><span class="sig-paren">(</span><em>verts</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#min_max_range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
+<code class="descname">min_max_range</code><span class="sig-paren">(</span><em>verts</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get bounding box from a list of vertices
 returns (min, max, range)</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.points_to_volume">
-<code class="descname">points_to_volume</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#points_to_volume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
+<code class="descname">points_to_volume</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert object vertices to a volume by interpolating points to a grid</p>
 <ul class="simple">
 <li>Vertex data only is used, so treated as a point cloud</li>
@@ -150,7 +150,7 @@ returns (min, max, range)</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume_3D">
-<code class="descname">points_to_volume_3D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#points_to_volume_3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
+<code class="descname">points_to_volume_3D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid and load into passed volume object</p>
 <p>Given a list of objects and a volume object, convert a point cloud
 from another object (or objects - list is supported) into a volume using
@@ -159,7 +159,7 @@ points_to_volume()</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume_4D">
-<code class="descname">points_to_volume_4D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#points_to_volume_4D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
+<code class="descname">points_to_volume_4D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid at each timestep</p>
 <p>Given a list of objects and a volume object, convert a time-varying point cloud
 from another object (or objects - list is supported) into a volume using
@@ -168,18 +168,16 @@ points_to_volume_3D()</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume_histogram">
-<code class="descname">points_to_volume_histogram</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#points_to_volume_histogram"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
+<code class="descname">points_to_volume_histogram</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using numpy.histogramdd to create 3d histogram volume grid
 (Easily the fastest, but less control over output)</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.points_to_volume_tree">
-<code class="descname">points_to_volume_tree</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convert.html#points_to_volume_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
+<code class="descname">points_to_volume_tree</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using scipy.spatial.KDTree to find nearest points on grid</p>
-<ul class="simple">
-<li>Much slower, but more control</li>
-</ul>
+<p>Much slower, but more control</p>
 <p>TODO: control parameters</p>
 </dd></dl>
 
