@@ -34,6 +34,9 @@ functions:
     lavavu.style
     lavavu.cellstyle
     lavavu.cellwidth
+    lavavu.is_ipython
+    lavavu.is_notebook
+    lavavu.getname
 
 classes:
 ~~~~~~~~
@@ -43,6 +46,7 @@ classes:
 
     lavavu.Viewer
     lavavu.Object
+    lavavu.Properties
     lavavu.ColourMap
     lavavu.DrawData
     lavavu.Figure
@@ -64,6 +68,9 @@ functions:
 .. autofunction:: lavavu.style
 .. autofunction:: lavavu.cellstyle
 .. autofunction:: lavavu.cellwidth
+.. autofunction:: lavavu.is_ipython
+.. autofunction:: lavavu.is_notebook
+.. autofunction:: lavavu.getname
 
 classes:
 ~~~~~~~~
@@ -71,6 +78,9 @@ classes:
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.Object
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Properties
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.ColourMap
