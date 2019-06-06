@@ -109,8 +109,8 @@ must be loaded first, before the time varying data.</p>
 <div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot time varying data: points</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">pointsize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;shiny&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
 
-<span class="c1">#Apply a colourmap, cubeHelix() generates a map with monotonically increasing luminance</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="n">lavavu</span><span class="o">.</span><span class="n">cubeHelix</span><span class="p">())</span> <span class="c1">#, range=[0,0.1])</span>
+<span class="c1">#Apply a colourmap, cubehelix() generates a map with monotonically increasing luminance</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="n">lavavu</span><span class="o">.</span><span class="n">cubehelix</span><span class="p">())</span> <span class="c1">#, range=[0,0.1])</span>
 
 <span class="c1">#Add a colour bar</span>
 <span class="n">points</span><span class="o">.</span><span class="n">colourbar</span><span class="p">();</span>

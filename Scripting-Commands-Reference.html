@@ -60,7 +60,7 @@
 <ul class="simple">
 <li><strong><a class="reference external" href="#output-commands">Output</a></strong></li>
 </ul>
-<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
+<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#bakecolour">bakecolour</a>, <a class="reference external" href="#glaze">glaze</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
 <ul class="simple">
 <li><strong><a class="reference external" href="#view-commands">View</a></strong></li>
 </ul>
@@ -304,6 +304,34 @@
 <div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
 <p><strong>Usage:</strong> bake [object]</p>
 <p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+</div></blockquote>
+</div>
+<div class="section" id="bakecolour">
+<h3>bakecolour<a class="headerlink" href="#bakecolour" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+</div></blockquote>
+</div>
+<div class="section" id="glaze">
+<h3>glaze<a class="headerlink" href="#glaze" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
 </div></blockquote>
 </div>
 <div class="section" id="export">
@@ -1009,6 +1037,8 @@
 <li><a class="reference internal" href="#movie">movie</a></li>
 <li><a class="reference internal" href="#record">record</a></li>
 <li><a class="reference internal" href="#bake">bake</a></li>
+<li><a class="reference internal" href="#bakecolour">bakecolour</a></li>
+<li><a class="reference internal" href="#glaze">glaze</a></li>
 <li><a class="reference internal" href="#export">export</a></li>
 <li><a class="reference internal" href="#csv">csv</a></li>
 <li><a class="reference internal" href="#json">json</a></li>

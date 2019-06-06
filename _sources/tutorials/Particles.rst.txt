@@ -81,8 +81,8 @@ must be loaded first, before the time varying data.
     #Plot time varying data: points
     points = lv.points(pointsize=5, pointtype="shiny", opacity=0.75)
     
-    #Apply a colourmap, cubeHelix() generates a map with monotonically increasing luminance
-    cmap = points.colourmap(lavavu.cubeHelix()) #, range=[0,0.1])
+    #Apply a colourmap, cubehelix() generates a map with monotonically increasing luminance
+    cmap = points.colourmap(lavavu.cubehelix()) #, range=[0,0.1])
     
     #Add a colour bar
     points.colourbar();

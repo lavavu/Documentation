@@ -26,11 +26,13 @@ functions:
     lavavu.download
     lavavu.grid2d
     lavavu.grid3d
-    lavavu.cubeHelix
+    lavavu.cubehelix
     lavavu.loadCPT
     lavavu.matplotlib_colourmap
     lavavu.printH5
     lavavu.lerp
+    lavavu.inject
+    lavavu.hidecode
     lavavu.style
     lavavu.cellstyle
     lavavu.cellwidth
@@ -60,11 +62,13 @@ functions:
 .. autofunction:: lavavu.download
 .. autofunction:: lavavu.grid2d
 .. autofunction:: lavavu.grid3d
-.. autofunction:: lavavu.cubeHelix
+.. autofunction:: lavavu.cubehelix
 .. autofunction:: lavavu.loadCPT
 .. autofunction:: lavavu.matplotlib_colourmap
 .. autofunction:: lavavu.printH5
 .. autofunction:: lavavu.lerp
+.. autofunction:: lavavu.inject
+.. autofunction:: lavavu.hidecode
 .. autofunction:: lavavu.style
 .. autofunction:: lavavu.cellstyle
 .. autofunction:: lavavu.cellwidth

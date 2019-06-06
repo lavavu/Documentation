@@ -52,10 +52,14 @@
 <ul class="simple">
 <li><a class="reference external" href="#all">all</a></li>
 <li><a class="reference external" href="#object">object</a></li>
+<li><a class="reference external" href="#objectshapes">object(shapes)</a></li>
+<li><a class="reference external" href="#object">object</a></li>
 <li><a class="reference external" href="#objectline">object(line)</a></li>
 <li><a class="reference external" href="#objectpoint">object(point)</a></li>
 <li><a class="reference external" href="#objectsurface">object(surface)</a></li>
 <li><a class="reference external" href="#objectvolume">object(volume)</a></li>
+<li><a class="reference external" href="#objectvector">object(vector)</a></li>
+<li><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></li>
 <li><a class="reference external" href="#objectvector">object(vector)</a></li>
 <li><a class="reference external" href="#objecttracer">object(tracer)</a></li>
 <li><a class="reference external" href="#objectshape">object(shape)</a></li>
@@ -79,13 +83,13 @@
 <tr>
 <td><em>renderers</em></td>
 <td>object</td>
-<td>[["labels"],["points","sortedpoints","particles","spheres"],["quads","grid"],["triangles","sortedtriangles","mesh","surface"],["vectors","arrows"],["tracers","streamlines"],["lines","sortedlines","links","tubes"],["shapes"],["volume","volumes"],["screen","fullscreen"]]</td>
+<td>[["labels"],["points","sortedpoints","particles","spheres","cuboids"],["quads","grid"],["triangles","sortedtriangles","mesh","surface"],["vectors","arrows"],["tracers","streamlines"],["lines","sortedlines","links","tubes"],["shapes"],["volume","volumes"],["screen","fullscreen"]]</td>
 <td>Holds list of available renderer types that can be created and their aliases, grouped in order of base types (label/point/grid/tri/vector/tracer/line/shape/volume/screen) read only.</td>
 </tr>
 <tr>
 <td><em>renderlist</em></td>
 <td>string</td>
-<td>"sortedtriangles quads vectors tracers shapes sortedpoints labels lines volume screen"</td>
+<td>"sortedtriangles quads vectors tracers shapes sortedpoints labels links volume screen"</td>
 <td>List of default renderers created and order they are displayed. For valid types see "renderers" property.</td>
 </tr>
 <tr>
@@ -354,6 +358,40 @@
 <td>2</td>
 <td>Glyph quality 0=none, 1=low, higher=increasing triangulation detail (arrows/shapes etc)</td>
 </tr>
+</tbody>
+</table></div>
+<div class="section" id="object-shapes">
+<h2>object(shapes)<a class="headerlink" href="#object-shapes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>segments</em></td>
+<td>integer [4,n]</td>
+<td>32</td>
+<td>Triangulation quality for spheres, number of segments to draw (minimum 4)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id1">
+<h2>object<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><em>scaling</em></td>
 <td>real</td>
@@ -377,6 +415,12 @@
 <td>boolean</td>
 <td>false</td>
 <td>Repeat texture image enabled, default is clamp to edges</td>
+</tr>
+<tr>
+<td><em>texturefilter</em></td>
+<td>integer</td>
+<td>2</td>
+<td>Type of texture filtering, 0=nearest, 1=linear, 2=mipmap (default)</td>
 </tr>
 <tr>
 <td><em>colourby</em></td>
@@ -415,6 +459,12 @@
 <td>boolean</td>
 <td>false</td>
 <td>To chain line vertices into longer lines set to true</td>
+</tr>
+<tr>
+<td><em>loop</em></td>
+<td>boolean</td>
+<td>false</td>
+<td>To join the start and end of linked lines set to true</td>
 </tr>
 <tr>
 <td><em>scalelines</em></td>
@@ -640,12 +690,40 @@
 <td>1.0</td>
 <td>Vector scaling multiplier, applies to all vector objects</td>
 </tr>
+</tbody>
+</table></div>
+<div class="section" id="object-vector-shapes">
+<h2>object(vector/shapes)<a class="headerlink" href="#object-vector-shapes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><em>radius</em></td>
 <td>real</td>
 <td>0.02</td>
-<td>Arrow shaft radius as ratio of vector length</td>
+<td>When applied to Vector Arrows: Arrow shaft radius as ratio of vector length. When applied to shapes: radius of spheres.</td>
 </tr>
+</tbody>
+</table></div>
+<div class="section" id="id2">
+<h2>object(vector)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><em>thickness</em></td>
 <td>real</td>
@@ -1074,7 +1152,7 @@
 </tr>
 <tr>
 <td><em>border</em></td>
-<td>integer</td>
+<td>real</td>
 <td>1.0</td>
 <td>Border width around model boundary, 0=disabled</td>
 </tr>
@@ -1333,11 +1411,15 @@
 <li><a class="reference internal" href="#">Property reference</a><ul>
 <li><a class="reference internal" href="#all">all</a></li>
 <li><a class="reference internal" href="#object">object</a></li>
+<li><a class="reference internal" href="#object-shapes">object(shapes)</a></li>
+<li><a class="reference internal" href="#id1">object</a></li>
 <li><a class="reference internal" href="#object-line">object(line)</a></li>
 <li><a class="reference internal" href="#object-point">object(point)</a></li>
 <li><a class="reference internal" href="#object-surface">object(surface)</a></li>
 <li><a class="reference internal" href="#object-volume">object(volume)</a></li>
 <li><a class="reference internal" href="#object-vector">object(vector)</a></li>
+<li><a class="reference internal" href="#object-vector-shapes">object(vector/shapes)</a></li>
+<li><a class="reference internal" href="#id2">object(vector)</a></li>
 <li><a class="reference internal" href="#object-tracer">object(tracer)</a></li>
 <li><a class="reference internal" href="#object-shape">object(shape)</a></li>
 <li><a class="reference internal" href="#colourbar">colourbar</a></li>

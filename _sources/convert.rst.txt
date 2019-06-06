@@ -1,16 +1,5 @@
 convert module
 ==============
-
-Warning! EXPERIMENTAL:
- these features and functions are under development, will have bugs,
- and may be heavily modified in the future
-
-Tools for converting between 3D data types
-
-- Points to Volume
-- Triangles to OBJ file
-
-
 Module Summary
 --------------
 functions:
@@ -19,9 +8,13 @@ functions:
 .. autosummary::
     :nosignatures:
 
+    convert.colour2hex
+    convert.colour2rgb
     convert.default_sample_grid
     convert.export_OBJ
+    convert.export_PLY
     convert.min_max_range
+    convert.plot_PLY
     convert.points_to_volume
     convert.points_to_volume_3D
     convert.points_to_volume_4D
@@ -32,9 +25,13 @@ Module Details
 --------------
 functions:
 ~~~~~~~~~~
+.. autofunction:: convert.colour2hex
+.. autofunction:: convert.colour2rgb
 .. autofunction:: convert.default_sample_grid
 .. autofunction:: convert.export_OBJ
+.. autofunction:: convert.export_PLY
 .. autofunction:: convert.min_max_range
+.. autofunction:: convert.plot_PLY
 .. autofunction:: convert.points_to_volume
 .. autofunction:: convert.points_to_volume_3D
 .. autofunction:: convert.points_to_volume_4D
