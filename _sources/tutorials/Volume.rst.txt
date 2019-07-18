@@ -13,7 +13,7 @@ data.
 -  Image stacks as multi-page TIFF
 -  Image mosaics containing slices as tiles in a single JPG/PNG image
 
-Of course, if the data format you use doesn't have built in support it
+Of course, if the data format you use doesn’t have built in support it
 is a simple matter to find a python library to load it and pass it
 directly to LavaVu via the numpy interface.
 

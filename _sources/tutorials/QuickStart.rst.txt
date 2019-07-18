@@ -24,13 +24,13 @@ on the viewer object or the drawing objects. These include the set of
 scripting commands understood by LavaVu which are listed here
 https://mivp.github.com/LavaVu-Documentation/Scripting-Commands-Reference
 
-These can be called as methods on the Viewer object, eg: lv.rotate('x',
+These can be called as methods on the Viewer object, eg: lv.rotate(‘x’,
 90)
 
 Create a viewer
 ^^^^^^^^^^^^^^^
 
-Additionally, let's set the background and resolution by passing them to
+Additionally, let’s set the background and resolution by passing them to
 the constructor
 
 .. code:: ipython3
@@ -119,10 +119,10 @@ Most functions expect floating point values, all of which will be
 converted to 32 bit single precision.
 
 3d vector data is interpreted as a list of coord triples [[x0,y0,z0],
-[x1, y1, z1]...] If passed split coord arrays arrange in a list/array
-[[x0,x1...], [y0, y1...], [z0, z1...]] this will be detected
-automatically if the first dimension of the passed array is 3 and the
-last dimension is != 3, the array will be reshaped before loading.
+[x1, y1, z1]…] If passed split coord arrays arrange in a list/array
+[[x0,x1…], [y0, y1…], [z0, z1…]] this will be detected automatically if
+the first dimension of the passed array is 3 and the last dimension is
+!= 3, the array will be reshaped before loading.
 
 Available data loading functions are:
 
@@ -136,22 +136,22 @@ Available data loading functions are:
 -  **colours**: either 32 bit integer data defining an array of ARGB
    colours or a list of strings that will be parsed as colours. Colour
    strings can be either names from
-   https://en.wikipedia.org/wiki/X11\_color\_names (with spaces removed)
-   or HTML style colour values in either hex "#RRGGBB" or decimal
-   "rgb(R,G,B)" or "rgba(R,G,B,A)"
+   https://en.wikipedia.org/wiki/X11_color_names (with spaces removed)
+   or HTML style colour values in either hex “#RRGGBB” or decimal
+   “rgb(R,G,B)” or “rgba(R,G,B,A)”
 -  **labels**: string data to label vertices
 -  **values**: scalar data, this function has an additional label
    argument to name the data as multiple scalar fields can be loaded
    under different labels.
 -  **texcoords**: 2d texture coord data, float. Coordinates to map
    texture to a mesh.
--  **rgb**: colour data as 8 bit integer array [r0,g0,b0, r1,g1.b1,....]
+-  **rgb**: colour data as 8 bit integer array [r0,g0,b0, r1,g1.b1,….]
 -  **luminance**: luminance values as 8 bit integer array
 
 Loading additional data arrays
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Here we'll colour our two objects in two different ways
+Here we’ll colour our two objects in two different ways
 
 .. code:: ipython3
 
@@ -168,15 +168,15 @@ In the second, we provide an additional data field containing the height
 of each vertex (y coord) and then apply a colour map.
 
 The label *height* we apply to the field can be used to switch between
-which field to use to colour the data, this is defined by the "colourby"
+which field to use to colour the data, this is defined by the “colourby”
 property and defaults to the first scalar value data set loaded. For
 example, to load and switch to colouring by a new field named
 *temperature*
 
 ::
 
-    surf.values("temperatue", [20, 16, 27, 18])
-    surf["colourby"] = "temperature"
+   surf.values("temperatue", [20, 16, 27, 18])
+   surf["colourby"] = "temperature"
 
 The colourmap() function will apply a colourmap to an object to map the
 values of the field to colours, the data passed can be:
@@ -186,19 +186,19 @@ https://mivp.github.com/LavaVu-Documentation/Tutorials/ColourMaps.ipynb
 
 ::
 
-    surf.colourmap("diverge")
+   surf.colourmap("diverge")
 
 A list of colour strings, these will be evenly spaced over the map:
 
 ::
 
-    surf.colourmap("red green blue")
+   surf.colourmap("red green blue")
 
 A list of colour positions and value strings:
 
 ::
 
-    surf.colourmap([(0, "black"), (0.25, "yellow"), (1, "red")])
+   surf.colourmap([(0, "black"), (0.25, "yellow"), (1, "red")])
 
 Colours can also include an alpha value for transparency, either by
 using the HTML rgba(R,G,B,A[0,1]) format or appending a colon and the
@@ -206,7 +206,7 @@ alpha value to a hex or X11 colour name value.
 
 ::
 
-    surf.colourmap("rgab(255,0,0,0.5) #0000ff:0.5")
+   surf.colourmap("rgab(255,0,0,0.5) #0000ff:0.5")
 
 The return value of colourmap() is a ColourMap object which can be used
 to later modify the colourmap:
@@ -243,7 +243,7 @@ https://mivp.github.com/LavaVu-Documentation/Property-Reference
 Properties can be passed as arguments to the function used to create the
 object or set using the python dictionary syntax afterwards.
 
-Property values "cascade", meaning a property that is only defined on a
+Property values “cascade”, meaning a property that is only defined on a
 specific type of object, can still be set at a broader scope (such as
 globally or on a timestep), where it will define a default value for all
 objects within that scope. If not set at any level the properties fall
@@ -254,19 +254,19 @@ More about geometry types
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **points** : each vertex is a point
--  **lines**: each pair of vertices is a line, or if "link" property is
+-  **lines**: each pair of vertices is a line, or if “link” property is
    true, each element block of vertices is a single joined line. Element
-   blocks can be defined automatically by setting the "dims" property to
+   blocks can be defined automatically by setting the “dims” property to
    a value [N] which will cause a new block to start once N vertices are
    loaded into the active one. Blocks of different sizes can be defined
    by calling the append() function on an object to explicitly start a
    new block.
 -  **triangles**: each vertex triple is a triangle, or if indices
    provided each index triple referencing the vertex array is a
-   triangle. If "dims"=[width, height] is specified, instead plotted as
+   triangle. If “dims”=[width, height] is specified, instead plotted as
    a regular grid mesh where vertices are the grid points.
 -  **quads**: Plots a regular grid as for triangles but using quads,
-   requires "dims"=[width, height] to be set
+   requires “dims”=[width, height] to be set
 -  **vectors**: Plots vector arrows at each vertex, requires a vector
    field to be loaded.
 -  **tracers**: Plots tracer lines or arrows over time-varying point
@@ -277,13 +277,15 @@ More about geometry types
 -  **labels**: as points, but the points are hidden to allow label data
    to be displayed without other geometry being plotted.
 
-    NOTE: The function used to create the object only specifies how the
-    subsequent data loaded will be rendered, the objects themselves are
-    all the same. This can be changed after object creation with the
-    "geometry" property, so to load a triangle mesh into our 'pts'
-    object, we can set pts["geometry"] = "triangles" before loading the
-    mesh data. Both the points and the mesh will be plotted with the
-    properties of the pts object.
+..
+
+   NOTE: The function used to create the object only specifies how the
+   subsequent data loaded will be rendered, the objects themselves are
+   all the same. This can be changed after object creation with the
+   “geometry” property, so to load a triangle mesh into our ‘pts’
+   object, we can set pts[“geometry”] = “triangles” before loading the
+   mesh data. Both the points and the mesh will be plotted with the
+   properties of the pts object.
 
 Time Varying data
 ~~~~~~~~~~~~~~~~~
@@ -297,7 +299,7 @@ be passed to this function which will apply to this timestep only:
 
 ::
 
-    lv.addstep(title="1/1/2018")
+   lv.addstep(title="1/1/2018")
 
 All data subsequently loaded will be considered temporal and displayed
 only when its timestep is set to the active one:

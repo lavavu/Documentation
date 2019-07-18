@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>convert module &#8212; LavaVu 1.3.4 documentation</title>
+    <meta charset="utf-8" />
+    <title>convert module &#8212; LavaVu 1.4.1 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -38,7 +36,7 @@
         <li class="right" >
           <a href="control.html" title="control module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.4 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.1 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -53,47 +51,47 @@
 <h2>Module Summary<a class="headerlink" href="#module-summary" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="functions">
 <h3>functions:<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#convert.colour2hex" title="convert.colour2hex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.colour2hex</span></code></a></td>
-<td></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.colour2hex" title="convert.colour2hex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.colour2hex</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.colour2rgb" title="convert.colour2rgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.colour2rgb</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.colour2rgb" title="convert.colour2rgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.colour2rgb</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#convert.default_sample_grid" title="convert.default_sample_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.default_sample_grid</span></code></a></td>
-<td>Calculate sample grid fine enough to capture point details resolution of smallest dimension will be minres elements</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.default_sample_grid" title="convert.default_sample_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.default_sample_grid</span></code></a></p></td>
+<td><p>Calculate sample grid fine enough to capture point details resolution of smallest dimension will be minres elements</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.export_OBJ" title="convert.export_OBJ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.export_OBJ</span></code></a></td>
-<td>Export given object(s) to an OBJ file Supports only triangle mesh object data</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.export_OBJ" title="convert.export_OBJ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.export_OBJ</span></code></a></p></td>
+<td><p>Export given object(s) to an OBJ file Supports only triangle mesh object data</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#convert.export_PLY" title="convert.export_PLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.export_PLY</span></code></a></td>
-<td>Export given object(s) to a PLY file Supports points or triangle mesh object data</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.export_PLY" title="convert.export_PLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.export_PLY</span></code></a></p></td>
+<td><p>Export given object(s) to a PLY file Supports points or triangle mesh object data</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.min_max_range" title="convert.min_max_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.min_max_range</span></code></a></td>
-<td>Get bounding box from a list of vertices returns (min, max, range)</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.min_max_range" title="convert.min_max_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.min_max_range</span></code></a></p></td>
+<td><p>Get bounding box from a list of vertices returns (min, max, range)</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#convert.plot_PLY" title="convert.plot_PLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.plot_PLY</span></code></a></td>
-<td>Plot triangles from a PlyData instance. Assumptions:</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.plot_PLY" title="convert.plot_PLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.plot_PLY</span></code></a></p></td>
+<td><p>Plot triangles from a PlyData instance. Assumptions:</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.points_to_volume" title="convert.points_to_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume</span></code></a></td>
-<td>Convert object vertices to a volume by interpolating points to a grid</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.points_to_volume" title="convert.points_to_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume</span></code></a></p></td>
+<td><p>Convert object vertices to a volume by interpolating points to a grid</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#convert.points_to_volume_3D" title="convert.points_to_volume_3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_3D</span></code></a></td>
-<td>Interpolate points to grid and load into passed volume object</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.points_to_volume_3D" title="convert.points_to_volume_3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_3D</span></code></a></p></td>
+<td><p>Interpolate points to grid and load into passed volume object</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.points_to_volume_4D" title="convert.points_to_volume_4D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_4D</span></code></a></td>
-<td>Interpolate points to grid at each timestep</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.points_to_volume_4D" title="convert.points_to_volume_4D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_4D</span></code></a></p></td>
+<td><p>Interpolate points to grid at each timestep</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#convert.points_to_volume_histogram" title="convert.points_to_volume_histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_histogram</span></code></a></td>
-<td>Using numpy.histogramdd to create 3d histogram volume grid (Easily the fastest, but less control over output)</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#convert.points_to_volume_histogram" title="convert.points_to_volume_histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_histogram</span></code></a></p></td>
+<td><p>Using numpy.histogramdd to create 3d histogram volume grid (Easily the fastest, but less control over output)</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#convert.points_to_volume_tree" title="convert.points_to_volume_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_tree</span></code></a></td>
-<td>Using scipy.spatial.KDTree to find nearest points on grid</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#convert.points_to_volume_tree" title="convert.points_to_volume_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume_tree</span></code></a></p></td>
+<td><p>Using scipy.spatial.KDTree to find nearest points on grid</p></td>
 </tr>
 </tbody>
 </table>
@@ -105,24 +103,24 @@
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="convert.colour2hex">
-<code class="descname">colour2hex</code><span class="sig-paren">(</span><em>rgb</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2hex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">colour2hex</code><span class="sig-paren">(</span><em class="sig-param">rgb</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2hex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="convert.colour2rgb">
-<code class="descname">colour2rgb</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2rgb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">colour2rgb</code><span class="sig-paren">(</span><em class="sig-param">c</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2rgb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="convert.default_sample_grid">
-<code class="descname">default_sample_grid</code><span class="sig-paren">(</span><em>vrange</em>, <em>res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_sample_grid</code><span class="sig-paren">(</span><em class="sig-param">vrange</em>, <em class="sig-param">res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate sample grid fine enough to capture point details
 resolution of smallest dimension will be minres elements</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.export_OBJ">
-<code class="descname">export_OBJ</code><span class="sig-paren">(</span><em>filepath</em>, <em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export_OBJ</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to an OBJ file
 Supports only triangle mesh object data</p>
 <p>If source is lavavu.Viewer() exports all objects
@@ -131,43 +129,38 @@ If source is lavavu.Object() exports single object</p>
 
 <dl class="function">
 <dt id="convert.export_PLY">
-<code class="descname">export_PLY</code><span class="sig-paren">(</span><em>filepath</em>, <em>source</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_PLY" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export_PLY</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_PLY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to a PLY file
 Supports points or triangle mesh object data</p>
 <p>If source is lavavu.Viewer() exports all objects
 If source is lavavu.Object() exports single object</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>filepath</strong> (<em>str</em>) – Output file to write</li>
-<li><strong>source</strong> (<a class="reference internal" href="lavavu.html#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a><em> or </em><a class="reference internal" href="lavavu.html#lavavu.Object" title="lavavu.Object"><em>lavavu.Object</em></a>) – Where to get object data to export</li>
-<li><strong>binary</strong> (<em>boolean</em>) – Write vertex/face data as binary, default True</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Output file to write</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="lavavu.html#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a><em> or </em><a class="reference internal" href="lavavu.html#lavavu.Object" title="lavavu.Object"><em>lavavu.Object</em></a>) – Where to get object data to export</p></li>
+<li><p><strong>binary</strong> (<em>boolean</em>) – Write vertex/face data as binary, default True</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.min_max_range">
-<code class="descname">min_max_range</code><span class="sig-paren">(</span><em>verts</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_max_range</code><span class="sig-paren">(</span><em class="sig-param">verts</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get bounding box from a list of vertices
 returns (min, max, range)</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.plot_PLY">
-<code class="descname">plot_PLY</code><span class="sig-paren">(</span><em>lv</em>, <em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.plot_PLY" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Plot triangles from a PlyData instance. Assumptions:</dt>
-<dd><dl class="first last docutils">
-<dt><a href="#id2"><span class="problematic" id="id3">`</span></a>ply’ has a ‘vertex’ element with ‘x’, ‘y’, and ‘z’</dt>
-<dd>properties;</dd>
-<dt><a href="#id4"><span class="problematic" id="id5">`</span></a>ply’ has a ‘face’ element with an integral list property</dt>
-<dd>‘vertex_indices’, all of whose elements have length 3.</dd>
+<code class="sig-name descname">plot_PLY</code><span class="sig-paren">(</span><em class="sig-param">lv</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.plot_PLY" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Plot triangles from a PlyData instance. Assumptions:</dt><dd><dl class="simple">
+<dt><a href="#id2"><span class="problematic" id="id3">`</span></a>ply’ has a ‘vertex’ element with ‘x’, ‘y’, and ‘z’</dt><dd><p>properties;</p>
+</dd>
+<dt><a href="#id4"><span class="problematic" id="id5">`</span></a>ply’ has a ‘face’ element with an integral list property</dt><dd><p>‘vertex_indices’, all of whose elements have length 3.</p>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -175,33 +168,30 @@ returns (min, max, range)</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume">
-<code class="descname">points_to_volume</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_volume</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em>, <em class="sig-param">boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert object vertices to a volume by interpolating points to a grid</p>
 <ul class="simple">
-<li>Vertex data only is used, so treated as a point cloud</li>
-<li>Can also be used to sample an irregular grid to a regular so volume render matches the grid dimensions</li>
-<li>Result is a density field that can be volume rendered</li>
+<li><p>Vertex data only is used, so treated as a point cloud</p></li>
+<li><p>Can also be used to sample an irregular grid to a regular so volume render matches the grid dimensions</p></li>
+<li><p>Result is a density field that can be volume rendered</p></li>
 </ul>
 <p>Default is to use numpy.histogramdd method, pass kdtree=True to use scipy.spatial.KDTree</p>
 <p>TODO: support colour data too, converted density field becomes alpha channel</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
-<li><strong>values</strong> (<em>numpy array of float32</em>) – The converted density field</li>
-<li><em>vmin</em> – the minimum 3d vertex of the bounding box</li>
-<li><em>vmax</em> – the maximum 3d vertex of the bounding box</li>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>values</strong> (<em>numpy array of float32</em>) – The converted density field</p></li>
+<li><p><em>vmin</em> – the minimum 3d vertex of the bounding box</p></li>
+<li><p><em>vmax</em> – the maximum 3d vertex of the bounding box</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.points_to_volume_3D">
-<code class="descname">points_to_volume_3D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_volume_3D</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">objects</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">blur=False</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid and load into passed volume object</p>
 <p>Given a list of objects and a volume object, convert a point cloud
 from another object (or objects - list is supported) into a volume using
@@ -210,7 +200,7 @@ points_to_volume()</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume_4D">
-<code class="descname">points_to_volume_4D</code><span class="sig-paren">(</span><em>vol</em>, <em>objects</em>, <em>res=8</em>, <em>kdtree=False</em>, <em>blur=False</em>, <em>normed=False</em>, <em>clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_volume_4D</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">objects</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">blur=False</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid at each timestep</p>
 <p>Given a list of objects and a volume object, convert a time-varying point cloud
 from another object (or objects - list is supported) into a volume using
@@ -219,14 +209,14 @@ points_to_volume_3D()</p>
 
 <dl class="function">
 <dt id="convert.points_to_volume_histogram">
-<code class="descname">points_to_volume_histogram</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em>, <em>normed=False</em>, <em>clamp=None</em>, <em>boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_volume_histogram</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em>, <em class="sig-param">boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using numpy.histogramdd to create 3d histogram volume grid
 (Easily the fastest, but less control over output)</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="convert.points_to_volume_tree">
-<code class="descname">points_to_volume_tree</code><span class="sig-paren">(</span><em>verts</em>, <em>res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_volume_tree</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using scipy.spatial.KDTree to find nearest points on grid</p>
 <p>Much slower, but more control</p>
 <p>TODO: control parameters</p>
@@ -271,13 +261,11 @@ points_to_volume_3D()</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -298,12 +286,12 @@ points_to_volume_3D()</p>
         <li class="right" >
           <a href="control.html" title="control module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.3.4 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.1 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>

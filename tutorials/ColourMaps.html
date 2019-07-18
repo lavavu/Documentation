@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Colour maps &#8212; LavaVu 1.3.4 documentation</title>
+    <meta charset="utf-8" />
+    <title>Colour maps &#8212; LavaVu 1.4.1 documentation</title>
     <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -38,7 +36,7 @@
         <li class="right" >
           <a href="QuickStart.html" title="LavaVu: python API quickstart guide"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.3.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Tutorials.html" accesskey="U">Tutorials</a> &#187;</li> 
       </ul>
     </div>  
@@ -56,7 +54,7 @@ that object in a single command.</p>
 <p>It can also be called from the viewer object which just loads a
 colourmap and returns its id, which can be saved and used to set the
 “colourmap” property of a one or more or objects.</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#First set up a basic vis so we can display the colourmaps</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First set up a basic vis so we can display the colourmaps</span>
 <span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;gray90&quot;</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -96,7 +94,7 @@ it must have its map specified at some point with colourmap(data).</p>
 <p>There are several properties that specify how the colour bar is
 displayed, see:
 <a class="reference external" href="https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourbar">https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourbar</a></p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create colour bar then load a colourmap into it</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create colour bar then load a colourmap into it</span>
 <span class="n">cbar1</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">colourbar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">)</span>
 <span class="n">cbar1</span><span class="o">.</span><span class="n">colourmap</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -107,7 +105,7 @@ displayed, see:
 <span class="sd"> &quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create another colour bar and load a map, this time with a log scale</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create another colour bar and load a map, this time with a log scale</span>
 <span class="n">cbar2</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">colourbar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="n">tickvalues</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">500</span><span class="p">])</span>
 <span class="n">cbar2</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="s1">&#39;black (100)goldenrod (101)khaki white&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span> <span class="n">logscale</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -119,10 +117,10 @@ displayed, see:
 <span class="sd"> &quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="p">[</span><span class="mi">640</span><span class="p">,</span><span class="mi">80</span><span class="p">],</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="p">[</span><span class="mi">640</span><span class="p">,</span><span class="mi">80</span><span class="p">],</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAABQCAYAAACJbMQlAAAETUlEQVR4nO3dS3LjNhQFUCDlWS8Bk2QTveheVU+wjTADW2lSAiX+BFl851TZ+vD3CFCsa4mQc601AQAQx1+vLgAAgL4EQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGA+9ixcShmOKgQAgOVqrXnrsrsCYEopDTmllNPne4mXn/yi+2ff3nfZ15515JQuf2UMaXp/7nbrtKPX88zlj9pGj1oj7WuPbUTa13eqw76es45vva+bo98nHwEDAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABPOxdwV5SCkNKaV/9xcDAMDz7Q6AtdZ8RCEAACxTShn2LO8jYACAYARAAIBgBEAAgGByrfXVNQAA0NHmdwBLKcPeCxABAFjvJYNASilDrTXXWrMQCADQzxHZyzWAAABv5Iiv4BMAAQCCEQABAIIRAAEAgtn0r+DGgz/8KzgAgPfiewABAILxETAAQDACIABAMAIgAEAwmwaBXPgvIAAAr7FnIO6uAHiRc0o5pZS+bnPOfx7fTBs/ztPHzXnz5PF4ezlPt3kz7Xp7X3U1p00e5wd1r9/H+bo/Z7xfd3s9ze2N65qdN8/WPa2z0aY3895p05l9bNd929cP2/TecXFd28J9nGxvMu/92prH81xtM212vb3J49m+b/T3zbx5vu7/l7ldz2yb3q17pk2b/TnTpo2+nq/7dh9na2sczz/+/pl+/PMzfa3lSx7d5Mlz49+TeZvLNKZfPZfz9XMPlmnUNF9fHs1yr47x+hesczx9dn9nlrkcZ0trWtCe+YCaxs8d28d/jrt+fbxu/Q/7Y+UxlBvH0JbjbrLOTTW1+ni8ti3HXXv99/u4scyDY2hpH0/bej0fAQMABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAE83HESoYhpSGlr1+TO4+WPGLzABv9Tin9enURAN3tDoC11nxEITxWShm097np4760dz/a+vz0cV+llF3vovkIGAAgGAEQACAYARAAIJhca311DQAAdLR6EMj1RZ6XixBd+Hm8ubbV5udwfQGv19XzLD1vafd91rar9n4vW85Z+nibveesJe2+KgBed/64QKN/jjXXttr8XFr9p4+PtfS8pd33Wduu2vs9rTln6eNt9p6zlrb7qmsAdV4/2jqGUsqwdyg/93kt9aGdY3DOer5er6VDvgia5/FX03ldv72vnzkDx/J5OWedi1HA35gXGPBOnLPgfQiA35QT6fn5GIUzcc46P+esc1n9NTBGAfdhhGgMRs71YRTw8xkhGoOR3n30GAXsewABAIL5D89npQzCRy//AAAAAElFTkSuQmCC'><div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cbar1</span><span class="p">)</span>
+<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAABQCAYAAACJbMQlAAAETUlEQVR4nO3dS3LjNhQFUCDlWS8Bk2QTveheVU+wjTADW2lSAiX+BFl851TZ+vD3CFCsa4mQc601AQAQx1+vLgAAgL4EQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGAEQACAYARAAIBgBEAAgGA+9ixcShmOKgQAgOVqrXnrsrsCYEopDTmllNPne4mXn/yi+2ff3nfZ15515JQuf2UMaXp/7nbrtKPX88zlj9pGj1oj7WuPbUTa13eqw76es45vva+bo98nHwEDAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABPOxdwV5SCkNKaV/9xcDAMDz7Q6AtdZ8RCEAACxTShn2LO8jYACAYARAAIBgBEAAgGByrfXVNQAA0NHmdwBLKcPeCxABAFjvJYNASilDrTXXWrMQCADQzxHZyzWAAABv5Iiv4BMAAQCCEQABAIIRAAEAgtn0r+DGgz/8KzgAgPfiewABAILxETAAQDACIABAMAIgAEAwmwaBXPgvIAAAr7FnIO6uAHiRc0o5pZS+bnPOfx7fTBs/ztPHzXnz5PF4ezlPt3kz7Xp7X3U1p00e5wd1r9/H+bo/Z7xfd3s9ze2N65qdN8/WPa2z0aY3895p05l9bNd929cP2/TecXFd28J9nGxvMu/92prH81xtM212vb3J49m+b/T3zbx5vu7/l7ldz2yb3q17pk2b/TnTpo2+nq/7dh9na2sczz/+/pl+/PMzfa3lSx7d5Mlz49+TeZvLNKZfPZfz9XMPlmnUNF9fHs1yr47x+hesczx9dn9nlrkcZ0trWtCe+YCaxs8d28d/jrt+fbxu/Q/7Y+UxlBvH0JbjbrLOTTW1+ni8ti3HXXv99/u4scyDY2hpH0/bej0fAQMABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAEIwACAAQjAAIABCMAAgAE83HESoYhpSGlr1+TO4+WPGLzABv9Tin9enURAN3tDoC11nxEITxWShm097np4760dz/a+vz0cV+llF3vovkIGAAgGAEQACAYARAAIJhca311DQAAdLR6EMj1RZ6XixBd+Hm8ubbV5udwfQGv19XzLD1vafd91rar9n4vW85Z+nibveesJe2+KgBed/64QKN/jjXXttr8XFr9p4+PtfS8pd33Wduu2vs9rTln6eNt9p6zlrb7qmsAdV4/2jqGUsqwdyg/93kt9aGdY3DOer5er6VDvgia5/FX03ldv72vnzkDx/J5OWedi1HA35gXGPBOnLPgfQiA35QT6fn5GIUzcc46P+esc1n9NTBGAfdhhGgMRs71YRTw8xkhGoOR3n30GAXsewABAIL5D89npQzCRy//AAAAAElFTkSuQmCC'><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cbar1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -139,7 +137,7 @@ displayed, see:
 <p>Custom <a class="reference external" href="https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/">cube helix</a> maps
 can be generated with cubehelix(), these will always have monotonically
 varying intensity values to be when printed in greyscale</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cbar1</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="n">lavavu</span><span class="o">.</span><span class="n">cubehelix</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rot</span><span class="o">=-</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">sat</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cbar1</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="n">lavavu</span><span class="o">.</span><span class="n">cubehelix</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rot</span><span class="o">=-</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">sat</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 <span class="n">cbar2</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="n">lavavu</span><span class="o">.</span><span class="n">cubehelix</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">sat</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">logscale</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">cbar2</span><span class="p">[</span><span class="s2">&quot;tickvalues&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -157,7 +155,7 @@ returns the map formatted as a string, .getcolourmap(string=False)
 returns a python list of (position, colour) tuples instead. Either of
 these formats are supported when creating a colourmap so the data can be
 modified and passed to a new colour map.</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cbar1</span><span class="o">.</span><span class="n">getcolourmap</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cbar1</span><span class="o">.</span><span class="n">getcolourmap</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;0.0000=rgba(0,0,0,1); 0.0625=rgba(21,21,21,1); 0.1250=rgba(38,38,38,1); 0.1875=rgba(54,54,54,1); 0.2500=rgba(73,73,73,1); 0.3125=rgba(93,93,93,1); 0.3750=rgba(114,114,114,1); 0.4375=rgba(133,133,133,1); 0.5000=rgba(147,147,147,1); 0.5625=rgba(158,158,158,1); 0.6250=rgba(168,168,168,1); 0.6875=rgba(179,179,179,1); 0.7500=rgba(192,192,192,1); 0.8125=rgba(208,208,208,1); 0.8750=rgba(222,222,222,1); 0.9375=rgba(236,236,236,1); 1.0000=rgba(255,255,255,1); &quot;&quot;&quot;</span>
@@ -171,7 +169,7 @@ modified and passed to a new colour map.</p>
 </div>
 <p>The <em>positions=False</em> argument can be passed to ignore the position data
 and load only the colours.</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="c1">#Check if file exists, if not download it from cpt-city</span>
     <span class="kn">import</span> <span class="nn">os</span>
     <span class="n">fn</span> <span class="o">=</span> <span class="s1">&#39;arctic.cpt&#39;</span>
@@ -194,7 +192,7 @@ and load only the colours.</p>
 <p>There are a number of colour maps available for convenience which can be
 accessed by passing their name instead of a list of colours when
 creating a colour map.</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get the list of colormap names</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get the list of colormap names</span>
 <span class="c1">#suggest: lv.colourmaps.(names)</span>
 <span class="n">maps</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">defaultcolourmaps</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">maps</span><span class="p">)</span>
@@ -212,7 +210,7 @@ from the <a class="reference external" href="http://gmt.soest.hawaii.edu/">Gener
 loaded without the position data by preceding the name with ‘&#64;’</div>
 </div>
 <p>The colourmap data can be retrieved for modification as follows:</p>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">defaultcolourmap</span><span class="p">(</span><span class="s1">&#39;cubelaw&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">defaultcolourmap</span><span class="p">(</span><span class="s1">&#39;cubelaw&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#440088 #831bb9 #578ee9 #3db6b6 #6ce64d #afeb56 #ffff88</span>
@@ -223,7 +221,7 @@ loaded without the position data by preceding the name with ‘&#64;’</div>
 <div class="line">Finally we will plot all the available built in colourmaps in
 continuous and discrete modes</div>
 </div>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Clear the plot and create some new colour bars</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Clear the plot and create some new colour bars</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="c1">#Default continuous colour bar</span>
 <span class="n">cbar1</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">colourbar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">)</span>
@@ -231,7 +229,7 @@ continuous and discrete modes</div>
 <span class="n">cbar2</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">colourbar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="n">binlabels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot each map in the list</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot each map in the list</span>
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
     <span class="c1">#Load as continuous colourmap</span>
@@ -407,13 +405,11 @@ continuous and discrete modes</div>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -434,13 +430,13 @@ continuous and discrete modes</div>
         <li class="right" >
           <a href="QuickStart.html" title="LavaVu: python API quickstart guide"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.3.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Tutorials.html" >Tutorials</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>
