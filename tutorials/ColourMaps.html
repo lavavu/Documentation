@@ -85,7 +85,7 @@ or ‘rgba(255,0,0,1)’</p>
 continuously varying one.</div>
 <div class="line"><em>log=True</em> will apply a logarithmic scale.</div>
 <div class="line">Addional properties to the colour map can be passed, for details see:
-<a class="reference external" href="https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourmap">https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourmap</a></div>
+<a class="reference external" href="https://lavavu.github.com/Documentation/Property-Reference#colourmap">https://lavavu.github.com/Documentation/Property-Reference#colourmap</a></div>
 </div>
 <p><strong>Colour bars</strong></p>
 <p>The colourbar() function creates a colour bar plot, it can be called
@@ -93,7 +93,7 @@ from an object and uses that objects colour map, if called on the viewer
 it must have its map specified at some point with colourmap(data).</p>
 <p>There are several properties that specify how the colour bar is
 displayed, see:
-<a class="reference external" href="https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourbar">https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourbar</a></p>
+<a class="reference external" href="https://lavavu.github.com/Documentation/Property-Reference#colourbar">https://lavavu.github.com/Documentation/Property-Reference#colourbar</a></p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create colour bar then load a colourmap into it</span>
 <span class="n">cbar1</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">colourbar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">)</span>
 <span class="n">cbar1</span><span class="o">.</span><span class="n">colourmap</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

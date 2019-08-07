@@ -48,7 +48,7 @@ or ‘rgba(255,0,0,1)’
   continuously varying one.
 | *log=True* will apply a logarithmic scale.
 | Addional properties to the colour map can be passed, for details see:
-  https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourmap
+  https://lavavu.github.com/Documentation/Property-Reference#colourmap
 
 **Colour bars**
 
@@ -58,7 +58,7 @@ it must have its map specified at some point with colourmap(data).
 
 There are several properties that specify how the colour bar is
 displayed, see:
-https://mivp.github.com/LavaVu-Documentation/Property-Reference#colourbar
+https://lavavu.github.com/Documentation/Property-Reference#colourbar
 
 .. code:: ipython3
 

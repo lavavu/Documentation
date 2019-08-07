@@ -17,12 +17,12 @@ create drawing objects that can then be used to load rendering data.
 Properties set on the Viewer control the global rendering state as well
 as the highest level scope for setting object properties. They are
 listed in the docs here by category:
-https://mivp.github.com/LavaVu-Documentation/Property-Reference
+https://lavavu.github.com/Documentation/Property-Reference
 
 Other actions that change the visualisation are possible via functions
 on the viewer object or the drawing objects. These include the set of
 scripting commands understood by LavaVu which are listed here
-https://mivp.github.com/LavaVu-Documentation/Scripting-Commands-Reference
+https://lavavu.github.com/Documentation/Scripting-Commands-Reference
 
 These can be called as methods on the Viewer object, eg: lv.rotate(‘x’,
 90)
@@ -182,7 +182,7 @@ The colourmap() function will apply a colourmap to an object to map the
 values of the field to colours, the data passed can be:
 
 A name of a predefined colourmap, see:
-https://mivp.github.com/LavaVu-Documentation/Tutorials/ColourMaps.ipynb
+https://lavavu.github.com/Documentation/Tutorials/ColourMaps.ipynb
 
 ::
 
@@ -238,7 +238,7 @@ More about properties
 ~~~~~~~~~~~~~~~~~~~~~
 
 All the available properties are listed here:
-https://mivp.github.com/LavaVu-Documentation/Property-Reference
+https://lavavu.github.com/Documentation/Property-Reference
 
 Properties can be passed as arguments to the function used to create the
 object or set using the python dictionary syntax afterwards.
