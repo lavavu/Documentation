@@ -1,10 +1,12 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>LavaVu: python API quickstart guide &#8212; LavaVu 1.4.2 documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LavaVu: python API quickstart guide &#8212; LavaVu 1.4.5 documentation</title>
     <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -36,7 +38,7 @@
         <li class="right" >
           <a href="../Tutorials.html" title="Tutorials"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.5 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Tutorials.html" accesskey="U">Tutorials</a> &#187;</li> 
       </ul>
     </div>  
@@ -71,14 +73,14 @@ scripting commands understood by LavaVu which are listed here
 <h3>Create a viewer<a class="headerlink" href="#create-a-viewer" title="Permalink to this headline">¶</a></h3>
 <p>Additionally, let’s set the background and resolution by passing them to
 the constructor</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Images and video can be created from the viewer as well as opening
 interactive views. If running in an IPython notebook, images and video
 can be displayed inline.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Save an image inline</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Save an image inline</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 
 <span class="c1">#Save an image to disk, optionally at a different resolution</span>
@@ -88,7 +90,7 @@ can be displayed inline.</p>
 <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAEsCAIAAABi1XKVAAAGxElEQVR4nO3dwYpb5xnH4deZxLhp0nwFhxbaMppVNqURIdClNcss5wrkWXWZeNNd48wNxEMvoJbuYLrKUvIVWOmiDSUQuZskJYaPNE1pbTxdTBJMKaWDdZj5o+dZCYTO+61+fJxzdM6V09PTAkjw3EUvAOD/JVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEGPwYK3+vhp6BLAlhg1Wf9T3P91ff7kedAqwJYYN1vHD4/79fvTR0aBTgC1x5fT0dKBD93/1vfVeb73+UJ+8+cmojQYaBGyJAXdYx3857td67VT9qI4+tMkCntWAO6zVV6v+Qp9fmU8fT+vLmvx4MtAgYEs8P9yhxy+Nq2r5ZDm5OqkXh5sDbAv3YQExBAuIMWCweu+Hh4dnn2ez2XK5HG4WsA0GDFZrbXd39978Xu99Pp9PJpPhZgHbYMCrhFXVe9/f3x+Px9PpVLCAZzTsOazWWnu3VZVaAc9u+JPur9Tu7u7gU4AtMHiwWmuj0WjoKcA2GPDG0TOvj1+/+cbNoacA28B9WEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiXLpg9d5Xq29eFr1arXrvF7se4PK4dMGqqsPDw7NsHR0dtdYuejnAZTH4n5/Pq7V2586ds2cr37179+mvPlsuP57Pf3H79g88/gG20mXcYU0mk977aDT6j+3VK1WvzmZ/2tv76PDw6/X6glYHXJjNPyJ5Nput1+uqWq/X4/Ev1+uH77fH5zrC79frDx88uNf7727c2H2qWU8ePPjHbHZa9aTqq9auLxbXxuPNLh64zIZ6pvvZ09yr3losftPa9877w/v3769Wq1u3bi0Wi+++erRcPtzf/1trL7799qvvvHPV6S3YMkMF6+DgYL2+vlj89ly1qqrlctlaG4/HVXVycjIajcbfbqO+Xq0+Pzn5iVTBthokWMfHx/P5B4vFyXlrBfA/bOwq4XLZ5/MvWrt648Zn8/l8sVioFbBZm9lhnZz89eDgj1XXqq5W/ermzZ+fvSlnMpl4wRewKZvZYR0d/bmqqnaqdqp+3fuV6fR6VXlfDrBBmwlW7/+ser7qharnql5r7YeTyc82cmSA72zmxtHp9KdVO1WnVY+rHk2nruIBm7eZHdZ7771WtTOff9Hatdu39yaTlzdyWICnDXUfFsDGXcb/EgL8V4IFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWECMfwPyhgEgTuQsBQAAAABJRU5ErkJggg=='><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;output.png&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="p">[</span><span class="s2">&quot;opacity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="p">[</span><span class="s2">&quot;opacity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
 </pre></div>
 </div>
 </div>
@@ -98,10 +100,10 @@ can be displayed inline.</p>
 rendering data (vertices etc)</p>
 <p>Available object creation functions are: <strong>points, lines, triangles,
 quads, shapes, vectors, tracers, volume, labels</strong></p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s2">&quot;myparticles&quot;</span><span class="p">)</span> <span class="c1">#, pointsize=10)</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s2">&quot;myparticles&quot;</span><span class="p">)</span> <span class="c1">#, pointsize=10)</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surf</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">triangles</span><span class="p">(</span><span class="s2">&quot;mymesh&quot;</span><span class="p">)</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">surf</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">triangles</span><span class="p">(</span><span class="s2">&quot;mymesh&quot;</span><span class="p">)</span>
 
 <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;opacity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
 </pre></div>
@@ -111,12 +113,12 @@ quads, shapes, vectors, tracers, volume, labels</strong></p>
 <h3>Load some data<a class="headerlink" href="#load-some-data" title="Permalink to this headline">¶</a></h3>
 <p>This can be in a python list or for numerical data - a numpy array or
 anything that can be trivially converted to a numpy array</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span><span class="o">.</span><span class="n">vertices</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span><span class="o">.</span><span class="n">vertices</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 <span class="n">surf</span><span class="o">.</span><span class="n">vertices</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.75</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]])</span>
 <span class="n">surf</span><span class="o">.</span><span class="n">indices</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span> <span class="c1">#Because we have new data since last display</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span> <span class="c1">#Because we have new data since last display</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -126,38 +128,38 @@ data.</p>
 converted to 32 bit single precision.</p>
 <p>3d vector data is interpreted as a list of coord triples [[x0,y0,z0],
 [x1, y1, z1]…] If passed split coord arrays arrange in a list/array
-[[x0,x1…], [y0, y1…], [z0, z1…]] this will be detected automatically if
-the first dimension of the passed array is 3 and the last dimension is
-!= 3, the array will be reshaped before loading.</p>
+[[x0,x1…], [y0, y1…], [z0, z1…]] this will be detected
+automatically if the first dimension of the passed array is 3 and the
+last dimension is != 3, the array will be reshaped before loading.</p>
 <p>Available data loading functions are:</p>
 <ul class="simple">
-<li><p><strong>vertices</strong>: 3d vertex data, float. The vertices to plot.</p></li>
-<li><p><strong>normals</strong>: 3d normal data, float. normals for meshes, if not
-provided will be calculated automatically</p></li>
-<li><p><strong>vectors</strong>: 3d vector data, float. Vector field data.</p></li>
-<li><p><strong>indices</strong>: integer index data referencing the indices of vertices
+<li><strong>vertices</strong>: 3d vertex data, float. The vertices to plot.</li>
+<li><strong>normals</strong>: 3d normal data, float. normals for meshes, if not
+provided will be calculated automatically</li>
+<li><strong>vectors</strong>: 3d vector data, float. Vector field data.</li>
+<li><strong>indices</strong>: integer index data referencing the indices of vertices
 to use for plotting, when provided will lookup vertices to plot from
-this array instead of just plotting them in their memory order</p></li>
-<li><p><strong>colours</strong>: either 32 bit integer data defining an array of ARGB
+this array instead of just plotting them in their memory order</li>
+<li><strong>colours</strong>: either 32 bit integer data defining an array of ARGB
 colours or a list of strings that will be parsed as colours. Colour
 strings can be either names from
 <a class="reference external" href="https://en.wikipedia.org/wiki/X11_color_names">https://en.wikipedia.org/wiki/X11_color_names</a> (with spaces removed)
 or HTML style colour values in either hex “#RRGGBB” or decimal
-“rgb(R,G,B)” or “rgba(R,G,B,A)”</p></li>
-<li><p><strong>labels</strong>: string data to label vertices</p></li>
-<li><p><strong>values</strong>: scalar data, this function has an additional label
+“rgb(R,G,B)” or “rgba(R,G,B,A)”</li>
+<li><strong>labels</strong>: string data to label vertices</li>
+<li><strong>values</strong>: scalar data, this function has an additional label
 argument to name the data as multiple scalar fields can be loaded
-under different labels.</p></li>
-<li><p><strong>texcoords</strong>: 2d texture coord data, float. Coordinates to map
-texture to a mesh.</p></li>
-<li><p><strong>rgb</strong>: colour data as 8 bit integer array [r0,g0,b0, r1,g1.b1,….]</p></li>
-<li><p><strong>luminance</strong>: luminance values as 8 bit integer array</p></li>
+under different labels.</li>
+<li><strong>texcoords</strong>: 2d texture coord data, float. Coordinates to map
+texture to a mesh.</li>
+<li><strong>rgb</strong>: colour data as 8 bit integer array [r0,g0,b0, r1,g1.b1,….]</li>
+<li><strong>luminance</strong>: luminance values as 8 bit integer array</li>
 </ul>
 </div>
 <div class="section" id="loading-additional-data-arrays">
 <h3>Loading additional data arrays<a class="headerlink" href="#loading-additional-data-arrays" title="Permalink to this headline">¶</a></h3>
 <p>Here we’ll colour our two objects in two different ways</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span><span class="o">.</span><span class="n">colours</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">])</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pts</span><span class="o">.</span><span class="n">colours</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">])</span>
 
 <span class="n">surf</span><span class="o">.</span><span class="n">values</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="s2">&quot;height&quot;</span><span class="p">)</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">surf</span><span class="o">.</span><span class="n">colourmap</span><span class="p">(</span><span class="s2">&quot;diverge&quot;</span><span class="p">)</span>
@@ -200,15 +202,15 @@ alpha value to a hex or X11 colour name value.</p>
 </div>
 <p>The return value of colourmap() is a ColourMap object which can be used
 to later modify the colourmap:</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set the opacity of the last colour to 0.0 (transparent)</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set the opacity of the last colour to 0.0 (transparent)</span>
 <span class="n">cm</span><span class="o">.</span><span class="n">colours</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
 <p>A colour bar can be plotted with the colourbar() function:</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cb</span> <span class="o">=</span> <span class="n">surf</span><span class="o">.</span><span class="n">colourbar</span><span class="p">()</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cb</span> <span class="o">=</span> <span class="n">surf</span><span class="o">.</span><span class="n">colourbar</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span> <span class="c1">#Because we have new data since last display</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span> <span class="c1">#Because we have new data since last display</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -229,31 +231,38 @@ view, object, colourmap</p>
 </div>
 <div class="section" id="more-about-geometry-types">
 <h2>More about geometry types<a class="headerlink" href="#more-about-geometry-types" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><strong>points</strong> : each vertex is a point</p></li>
-<li><p><strong>lines</strong>: each pair of vertices is a line, or if “link” property is
+<ul>
+<li><p class="first"><strong>points</strong> : each vertex is a point</p>
+</li>
+<li><p class="first"><strong>lines</strong>: each pair of vertices is a line, or if “link” property is
 true, each element block of vertices is a single joined line. Element
 blocks can be defined automatically by setting the “dims” property to
 a value [N] which will cause a new block to start once N vertices are
 loaded into the active one. Blocks of different sizes can be defined
 by calling the append() function on an object to explicitly start a
-new block.</p></li>
-<li><p><strong>triangles</strong>: each vertex triple is a triangle, or if indices
+new block.</p>
+</li>
+<li><p class="first"><strong>triangles</strong>: each vertex triple is a triangle, or if indices
 provided each index triple referencing the vertex array is a
 triangle. If “dims”=[width, height] is specified, instead plotted as
-a regular grid mesh where vertices are the grid points.</p></li>
-<li><p><strong>quads</strong>: Plots a regular grid as for triangles but using quads,
-requires “dims”=[width, height] to be set</p></li>
-<li><p><strong>vectors</strong>: Plots vector arrows at each vertex, requires a vector
-field to be loaded.</p></li>
-<li><p><strong>tracers</strong>: Plots tracer lines or arrows over time-varying point
-vertices.</p></li>
-<li><p><strong>shapes</strong>: Plots ellipsoids or cuboids at each vertex. Data fields
-or properties can be used to define their dimensions.</p></li>
-<li><p><strong>volume</strong>: Volume render a cube of data or a set of slices.</p></li>
-<li><p><strong>labels</strong>: as points, but the points are hidden to allow label data
-to be displayed without other geometry being plotted.</p></li>
-</ul>
+a regular grid mesh where vertices are the grid points.</p>
+</li>
+<li><p class="first"><strong>quads</strong>: Plots a regular grid as for triangles but using quads,
+requires “dims”=[width, height] to be set</p>
+</li>
+<li><p class="first"><strong>vectors</strong>: Plots vector arrows at each vertex, requires a vector
+field to be loaded.</p>
+</li>
+<li><p class="first"><strong>tracers</strong>: Plots tracer lines or arrows over time-varying point
+vertices.</p>
+</li>
+<li><p class="first"><strong>shapes</strong>: Plots ellipsoids or cuboids at each vertex. Data fields
+or properties can be used to define their dimensions.</p>
+</li>
+<li><p class="first"><strong>volume</strong>: Volume render a cube of data or a set of slices.</p>
+</li>
+<li><p class="first"><strong>labels</strong>: as points, but the points are hidden to allow label data
+to be displayed without other geometry being plotted.</p>
 <blockquote>
 <div><p>NOTE: The function used to create the object only specifies how the
 subsequent data loaded will be rendered, the objects themselves are
@@ -263,6 +272,8 @@ object, we can set pts[“geometry”] = “triangles” before loading the
 mesh data. Both the points and the mesh will be plotted with the
 properties of the pts object.</p>
 </div></blockquote>
+</li>
+</ul>
 </div>
 <div class="section" id="time-varying-data">
 <h2>Time Varying data<a class="headerlink" href="#time-varying-data" title="Permalink to this headline">¶</a></h2>
@@ -276,7 +287,7 @@ be passed to this function which will apply to this timestep only:</p>
 </div>
 <p>All data subsequently loaded will be considered temporal and displayed
 only when its timestep is set to the active one:</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">falling</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s2">&quot;falling&quot;</span><span class="p">,</span> <span class="n">pointsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">falling</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s2">&quot;falling&quot;</span><span class="p">,</span> <span class="n">pointsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
     <span class="n">lv</span><span class="o">.</span><span class="n">addstep</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
@@ -285,7 +296,7 @@ only when its timestep is set to the active one:</p>
 </pre></div>
 </div>
 <p>Timestep information can also be retrieved and set as follows:</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">steps</span><span class="p">)</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">steps</span><span class="p">)</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#Attempt to set timestep 5 (if not found, nearest match will be selected)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current timestep: &quot;</span><span class="p">,</span> <span class="n">lv</span><span class="p">[</span><span class="s2">&quot;timestep&quot;</span><span class="p">])</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
@@ -303,7 +314,7 @@ the background and python commands can continue to be issued.</p>
 <p>Control widgets can also be created to interactively manipulate
 rendering properties from IPython, such as active timestep</p>
 <p>An interactive window allows mouse control to adjust the viewpoint</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">TimeStepper</span><span class="p">()</span>
+<div class="code ipython3 highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lv</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">TimeStepper</span><span class="p">()</span>
 <span class="n">lv</span><span class="o">.</span><span class="n">window</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2333,11 +2344,13 @@ _wi[viewerid].actions = [
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -2358,13 +2371,13 @@ _wi[viewerid].actions = [
         <li class="right" >
           <a href="../Tutorials.html" title="Tutorials"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">LavaVu 1.4.5 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Tutorials.html" >Tutorials</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

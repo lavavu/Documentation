@@ -1,10 +1,12 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Property reference &#8212; LavaVu 1.4.2 documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Property reference &#8212; LavaVu 1.4.5 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,7 +38,7 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.2 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.5 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -48,23 +50,23 @@
   <div class="section" id="property-reference">
 <h1>Property reference<a class="headerlink" href="#property-reference" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="#all">all</a></p></li>
-<li><p><a class="reference external" href="#object">object</a></p></li>
-<li><p><a class="reference external" href="#objectshapes">object(shapes)</a></p></li>
-<li><p><a class="reference external" href="#object">object</a></p></li>
-<li><p><a class="reference external" href="#objectline">object(line)</a></p></li>
-<li><p><a class="reference external" href="#objectpoint">object(point)</a></p></li>
-<li><p><a class="reference external" href="#objectsurface">object(surface)</a></p></li>
-<li><p><a class="reference external" href="#objectvolume">object(volume)</a></p></li>
-<li><p><a class="reference external" href="#objectvector">object(vector)</a></p></li>
-<li><p><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></p></li>
-<li><p><a class="reference external" href="#objectvector">object(vector)</a></p></li>
-<li><p><a class="reference external" href="#objecttracer">object(tracer)</a></p></li>
-<li><p><a class="reference external" href="#objectshape">object(shape)</a></p></li>
-<li><p><a class="reference external" href="#colourbar">colourbar</a></p></li>
-<li><p><a class="reference external" href="#colourmap">colourmap</a></p></li>
-<li><p><a class="reference external" href="#view">view</a></p></li>
-<li><p><a class="reference external" href="#global">global</a></p></li>
+<li><a class="reference external" href="#all">all</a></li>
+<li><a class="reference external" href="#timestep">timestep</a></li>
+<li><a class="reference external" href="#object">object</a></li>
+<li><a class="reference external" href="#objectshapes">object(shapes)</a></li>
+<li><a class="reference external" href="#object">object</a></li>
+<li><a class="reference external" href="#objectline">object(line)</a></li>
+<li><a class="reference external" href="#objectpoint">object(point)</a></li>
+<li><a class="reference external" href="#objectsurface">object(surface)</a></li>
+<li><a class="reference external" href="#objectvolume">object(volume)</a></li>
+<li><a class="reference external" href="#objectvector">object(vector)</a></li>
+<li><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></li>
+<li><a class="reference external" href="#objecttracer">object(tracer)</a></li>
+<li><a class="reference external" href="#objectshape">object(shape)</a></li>
+<li><a class="reference external" href="#colourbar">colourbar</a></li>
+<li><a class="reference external" href="#colourmap">colourmap</a></li>
+<li><a class="reference external" href="#view">view</a></li>
+<li><a class="reference external" href="#global">global</a></li>
 </ul>
 <div class="section" id="all">
 <h2>all<a class="headerlink" href="#all" title="Permalink to this headline">¶</a></h2>
@@ -81,20 +83,20 @@
 <tr>
 <td><em>renderers</em></td>
 <td>object</td>
-<td>[["labels"],["points","sortedpoints","particles","spheres","cuboids"],["quads","grid"],["triangles","sortedtriangles","mesh","surface"],["vectors","arrows"],["tracers","streamlines"],["lines","sortedlines","links","tubes"],["shapes"],["volume","volumes"],["screen","fullscreen"]]</td>
+<td>[{"labels":"labels"},{"particles":"points","pointcubes":"cuboids","points":"points","pointspheres":"spheres","sortedpoints":"points"},{"grid":"quads","quads":"quads"},{"basictriangles":"basictriangles","mesh":"basictriangles","sortedtriangles":"sortedtriangles","surface":"basictriangles","triangles":"sortedtriangles"},{"arrows":"vectors","vectors":"vectors"},{"streamlines":"tracers","tracers":"tracers"},{"lines":"lines","links":"lines","simplelines":"simplelines","sortedlines":"sortedlines"},{"cubes":"cuboids","cuboids":"cuboids","shapes":"shapes","spheres":"spheres"},{"volume":"volume","volumes":"volume"},{"fullscreen":"screen","screen":"screen"}]</td>
 <td>Holds list of available renderer types that can be created and their aliases, grouped in order of base types (label/point/grid/tri/vector/tracer/line/shape/volume/screen) read only.</td>
 </tr>
 <tr>
 <td><em>renderlist</em></td>
 <td>string</td>
-<td>"sortedtriangles quads vectors tracers shapes sortedpoints labels links volume screen"</td>
-<td>List of default renderers created and order they are displayed. For valid types see "renderers" property.</td>
+<td>""</td>
+<td>Sets a list of renderers to create and order they are displayed. This allows overriding the default renderer order, defined by the object order. For valid types see "renderers" property.</td>
 </tr>
 <tr>
-<td><em>glyphrenderlist</em></td>
+<td><em>subrenderers</em></td>
 <td>string</td>
-<td>"sortedtriangles points lines"</td>
-<td>List of renderers created for glyph rendering and order they are displayed.</td>
+<td>"sortedtriangles points simplelines"</td>
+<td>List of renderers created for rendering primitives (points, lines, triangles) from more complex renderers (eg: vectors). Allows selection of different primitive rendering modes, globally or per object.</td>
 </tr>
 <tr>
 <td><em>font</em></td>
@@ -113,6 +115,26 @@
 <td>colour</td>
 <td>[0,0,0,0]</td>
 <td>Font colour RGB(A)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="timestep">
+<h2>timestep<a class="headerlink" href="#timestep" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>time</em></td>
+<td>real</td>
+<td>0.0</td>
+<td>Time value for timestep</td>
 </tr>
 </tbody>
 </table></div>
@@ -141,10 +163,16 @@
 <td>Set to false to hide object</td>
 </tr>
 <tr>
-<td><em>geometry</em></td>
-<td>string</td>
-<td>"points"</td>
-<td>Geometry renderer type to load into when adding new data</td>
+<td><em>inview</em></td>
+<td>boolean</td>
+<td>true</td>
+<td>Set to false to exclude object from bounding box calculation and the default camera view</td>
+</tr>
+<tr>
+<td><em>fixed</em></td>
+<td>boolean</td>
+<td>false</td>
+<td>Set to true to make all data fixed, not time varying, for this object</td>
 </tr>
 <tr>
 <td><em>renderer</em></td>
@@ -579,6 +607,12 @@
 <td>Power used when applying transfer function, 1.0=linear mapping</td>
 </tr>
 <tr>
+<td><em>bloom</em></td>
+<td>real</td>
+<td>0.0</td>
+<td>Bloom effect, brightens colours, particularly around edges of transparent areas, by using a more additive blend equation. Setting this to ~0.5 will replicate the old (technically incorrect) volume shader blending for lavavu pre v1.5.</td>
+</tr>
+<tr>
 <td><em>samples</em></td>
 <td>integer</td>
 <td>256</td>
@@ -688,40 +722,6 @@
 <td>1.0</td>
 <td>Vector scaling multiplier, applies to all vector objects</td>
 </tr>
-</tbody>
-</table></div>
-<div class="section" id="object-vector-shapes">
-<h2>object(vector/shapes)<a class="headerlink" href="#object-vector-shapes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>radius</em></td>
-<td>real</td>
-<td>0.02</td>
-<td>When applied to Vector Arrows: Arrow shaft radius as ratio of vector length. When applied to shapes: radius of spheres.</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section" id="id2">
-<h2>object(vector)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><em>thickness</em></td>
 <td>real</td>
@@ -745,6 +745,26 @@
 <td>boolean</td>
 <td>true</td>
 <td>Automatically scale vectors based on maximum magnitude</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="object-vector-shapes">
+<h2>object(vector/shapes)<a class="headerlink" href="#object-vector-shapes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>radius</em></td>
+<td>real</td>
+<td>0.02</td>
+<td>When applied to Vector Arrows: Arrow shaft radius as ratio of vector length. When applied to shapes: radius of spheres.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1057,10 +1077,10 @@
 <td>Far clip plane position, adjusts where far geometry is clipped</td>
 </tr>
 <tr>
-<td><em>aperture</em></td>
+<td><em>fov</em></td>
 <td>real</td>
 <td>45.0</td>
-<td>Aperture or Field-Of-View in degrees</td>
+<td>Field-Of-View (horizontal) in degrees</td>
 </tr>
 <tr>
 <td><em>orthographic</em></td>
@@ -1147,6 +1167,12 @@
 <td>real</td>
 <td>1.5</td>
 <td>Width of ruler lines</td>
+</tr>
+<tr>
+<td><em>rulerscale</em></td>
+<td>real</td>
+<td>1.0</td>
+<td>Scaling of ruler label text</td>
 </tr>
 <tr>
 <td><em>border</em></td>
@@ -1408,6 +1434,7 @@
   <ul>
 <li><a class="reference internal" href="#">Property reference</a><ul>
 <li><a class="reference internal" href="#all">all</a></li>
+<li><a class="reference internal" href="#timestep">timestep</a></li>
 <li><a class="reference internal" href="#object">object</a></li>
 <li><a class="reference internal" href="#object-shapes">object(shapes)</a></li>
 <li><a class="reference internal" href="#id1">object</a></li>
@@ -1417,7 +1444,6 @@
 <li><a class="reference internal" href="#object-volume">object(volume)</a></li>
 <li><a class="reference internal" href="#object-vector">object(vector)</a></li>
 <li><a class="reference internal" href="#object-vector-shapes">object(vector/shapes)</a></li>
-<li><a class="reference internal" href="#id2">object(vector)</a></li>
 <li><a class="reference internal" href="#object-tracer">object(tracer)</a></li>
 <li><a class="reference internal" href="#object-shape">object(shape)</a></li>
 <li><a class="reference internal" href="#colourbar">colourbar</a></li>
@@ -1442,11 +1468,13 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1467,12 +1495,12 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.2 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.5 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>
