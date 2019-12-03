@@ -2282,7 +2282,7 @@ viewpoint as follows:
 
 .. code:: ipython3
 
-    #lv.video(resolution=(500,400), fps=30)
+    lv.video_steps(resolution=(500,400), fps=30)
 
 .. code:: ipython3
 
