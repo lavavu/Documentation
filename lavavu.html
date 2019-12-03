@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>lavavu module &#8212; LavaVu 1.4.12 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.4.14 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="Scripting-Commands-Reference.html" title="Scripting command reference"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.12 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -90,28 +90,31 @@ loading of data, rendering of static images, animation and interactive visualisa
 <tr class="row-even"><td><p><a class="reference internal" href="#lavavu.lerp" title="lavavu.lerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.lerp</span></code></a></p></td>
 <td><p>Linear Interpolation between values of two lists</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.inject" title="lavavu.inject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.inject</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.player" title="lavavu.player"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.player</span></code></a></p></td>
+<td><p>Shows a video inline within an ipython notebook.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.inject" title="lavavu.inject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.inject</span></code></a></p></td>
 <td><p>Inject HTML into a notebook cell</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.hidecode" title="lavavu.hidecode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.hidecode</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.hidecode" title="lavavu.hidecode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.hidecode</span></code></a></p></td>
 <td><p>Allow toggle of code cells</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.style" title="lavavu.style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.style</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.style" title="lavavu.style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.style</span></code></a></p></td>
 <td><p>Inject stylesheet</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></p></td>
 <td><p>Override the notebook cell styles</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></p></td>
 <td><p>Override the notebook cell width</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.is_ipython" title="lavavu.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_ipython</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.is_ipython" title="lavavu.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_ipython</span></code></a></p></td>
 <td><p>Detects if running within IPython environment</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.is_notebook" title="lavavu.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_notebook</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.is_notebook" title="lavavu.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_notebook</span></code></a></p></td>
 <td><p>Detects if running within an interactive IPython notebook environment</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.getname" title="lavavu.getname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.getname</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.getname" title="lavavu.getname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.getname</span></code></a></p></td>
 <td><p>Attempt to find the name of a variable from the main module namespace</p></td>
 </tr>
 </tbody>
@@ -319,6 +322,18 @@ load only the colours from the file</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lavavu.player">
+<code class="sig-name descname">player</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.player" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows a video inline within an ipython notebook.</p>
+<p>If IPython is not running, just returns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Path and name of the file to play</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="lavavu.inject">
 <code class="sig-name descname">inject</code><span class="sig-paren">(</span><em class="sig-param">html</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.inject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inject HTML into a notebook cell</p>
@@ -436,7 +451,7 @@ and parsed into the initial set of global properties</p></li>
 <p>Objects can be added by loading files:
 #&gt;&gt;&gt; lavavu.download(source + ‘Mandible.obj’) # doctest: +ELLIPSIS</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
 </pre></div>
 </div>
 <p>Or creating empty objects and loading data:</p>
@@ -460,8 +475,8 @@ and parsed into the initial set of global properties</p></li>
 </ul>
 </div></blockquote>
 <p>or by using the online help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span> 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
 <span class="go">(...)</span>
 </pre></div>
 </div>
@@ -810,7 +825,7 @@ e.g.</p>
 <span class="gp">... </span>    <span class="k">while</span> <span class="n">lv</span><span class="o">.</span><span class="n">events</span><span class="p">():</span>
 <span class="gp">... </span>        <span class="c1">#...build next frame here...</span>
 <span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span> 
+<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span> <span class="c1"># doctest: +SKIP</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1354,7 +1369,7 @@ encoding artifacts at cost of larger file size</p></li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.video_steps">
-<code class="sig-name descname">video_steps</code><span class="sig-paren">(</span><em class="sig-param">filename=''</em>, <em class="sig-param">fps=10</em>, <em class="sig-param">quality=1</em>, <em class="sig-param">resolution=(0</em>, <em class="sig-param">0)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.video_steps" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">video_steps</code><span class="sig-paren">(</span><em class="sig-param">filename=''</em>, <em class="sig-param">start=0</em>, <em class="sig-param">end=0</em>, <em class="sig-param">fps=10</em>, <em class="sig-param">quality=1</em>, <em class="sig-param">resolution=(0</em>, <em class="sig-param">0)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.video_steps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Record a video of the model by looping through all time steps</p>
 <p>Shows the generated video inline within an ipython notebook.</p>
 <p>If IPython is installed, displays the result video content inline</p>
@@ -1363,6 +1378,8 @@ encoding artifacts at cost of larger file size</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em>) – Name of the file to save, if not provided a default will be used</p></li>
+<li><p><strong>start</strong> (<em>int</em>) – First timestep to record, if not specified will use first available</p></li>
+<li><p><strong>end</strong> (<em>int</em>) – Last timestep to record, if not specified will use last available</p></li>
 <li><p><strong>fps</strong> (<em>int</em>) – Frames to output per second of video</p></li>
 <li><p><strong>quality</strong> (<em>int</em>) – Encoding quality, 1=low(default), 2=medium, 3=high, higher quality reduces
 encoding artifacts at cost of larger file size</p></li>
@@ -1444,7 +1461,7 @@ be retrieved from the object list</p>
 </div>
 <p>A list of available properties can be found here: <a class="reference external" href="https://lavavu.github.io/Documentation/Property-Reference">https://lavavu.github.io/Documentation/Property-Reference</a>
 or by using the online help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -2450,8 +2467,8 @@ Geometry instances are created internally in the Object class with the data prop
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span> 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span> <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
 </pre></div>
 </div>
 <p>TODO: control blend equations</p>
@@ -2553,10 +2570,10 @@ otherwise will use default viewer dimensions</p></li>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>           
-<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>   
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> 
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>        
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>           <span class="c1"># doctest: +SKIP</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>   <span class="c1"># doctest: +SKIP</span>
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>        <span class="c1"># doctest: +SKIP</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -2658,12 +2675,12 @@ values are loaded as 8 bit unsigned integer values</p>
         <li class="right" >
           <a href="Scripting-Commands-Reference.html" title="Scripting command reference"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.12 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
     </div>
   </body>
 </html>
