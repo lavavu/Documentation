@@ -54,6 +54,7 @@ classes:
     lavavu.Figure
     lavavu.Geometry
     lavavu.Image
+    lavavu.Video
 
 Module Details
 --------------
@@ -100,6 +101,9 @@ classes:
     :members:
     :show-inheritance:
 .. autoclass:: lavavu.Image
+    :members:
+    :show-inheritance:
+.. autoclass:: lavavu.Video
     :members:
     :show-inheritance:
 

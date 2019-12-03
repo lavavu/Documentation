@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Property reference &#8212; LavaVu 1.4.6 documentation</title>
+    <meta charset="utf-8" />
+    <title>Property reference &#8212; LavaVu 1.4.9 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -38,7 +36,7 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.6 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.9 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -50,23 +48,23 @@
   <div class="section" id="property-reference">
 <h1>Property reference<a class="headerlink" href="#property-reference" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="#all">all</a></li>
-<li><a class="reference external" href="#timestep">timestep</a></li>
-<li><a class="reference external" href="#object">object</a></li>
-<li><a class="reference external" href="#objectshapes">object(shapes)</a></li>
-<li><a class="reference external" href="#object">object</a></li>
-<li><a class="reference external" href="#objectline">object(line)</a></li>
-<li><a class="reference external" href="#objectpoint">object(point)</a></li>
-<li><a class="reference external" href="#objectsurface">object(surface)</a></li>
-<li><a class="reference external" href="#objectvolume">object(volume)</a></li>
-<li><a class="reference external" href="#objectvector">object(vector)</a></li>
-<li><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></li>
-<li><a class="reference external" href="#objecttracer">object(tracer)</a></li>
-<li><a class="reference external" href="#objectshape">object(shape)</a></li>
-<li><a class="reference external" href="#colourbar">colourbar</a></li>
-<li><a class="reference external" href="#colourmap">colourmap</a></li>
-<li><a class="reference external" href="#view">view</a></li>
-<li><a class="reference external" href="#global">global</a></li>
+<li><p><a class="reference external" href="#all">all</a></p></li>
+<li><p><a class="reference external" href="#timestep">timestep</a></p></li>
+<li><p><a class="reference external" href="#object">object</a></p></li>
+<li><p><a class="reference external" href="#objectshapes">object(shapes)</a></p></li>
+<li><p><a class="reference external" href="#object">object</a></p></li>
+<li><p><a class="reference external" href="#objectline">object(line)</a></p></li>
+<li><p><a class="reference external" href="#objectpoint">object(point)</a></p></li>
+<li><p><a class="reference external" href="#objectsurface">object(surface)</a></p></li>
+<li><p><a class="reference external" href="#objectvolume">object(volume)</a></p></li>
+<li><p><a class="reference external" href="#objectvector">object(vector)</a></p></li>
+<li><p><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></p></li>
+<li><p><a class="reference external" href="#objecttracer">object(tracer)</a></p></li>
+<li><p><a class="reference external" href="#objectshape">object(shape)</a></p></li>
+<li><p><a class="reference external" href="#colourbar">colourbar</a></p></li>
+<li><p><a class="reference external" href="#colourmap">colourmap</a></p></li>
+<li><p><a class="reference external" href="#view">view</a></p></li>
+<li><p><a class="reference external" href="#global">global</a></p></li>
 </ul>
 <div class="section" id="all">
 <h2>all<a class="headerlink" href="#all" title="Permalink to this headline">¶</a></h2>
@@ -102,13 +100,19 @@
 <td><em>font</em></td>
 <td>string</td>
 <td>"vector"</td>
-<td>Font typeface vector/small/fixed/sans/serif</td>
+<td>Font typeface vector (thicker, better for larger text) or line (better for small labels)</td>
 </tr>
 <tr>
 <td><em>fontscale</em></td>
 <td>real</td>
 <td>1.0</td>
-<td>Font scaling, note that only the 'vector' font scales well</td>
+<td>Font scaling, applied by multiplying with any existing calculated scaling.</td>
+</tr>
+<tr>
+<td><em>fontsize</em></td>
+<td>real</td>
+<td>1.0</td>
+<td>Font size, absolute scaling that overrides all automatic calculations of the font size</td>
 </tr>
 <tr>
 <td><em>fontcolour</em></td>
@@ -238,7 +242,7 @@
 <td><em>dims</em></td>
 <td>integer[3]</td>
 <td>[0,0,0]</td>
-<td>width/height/depth override for geometry</td>
+<td>Width,Height,Depth override for geometry. Usually this data will be determined from the numpy array shape when loaded from python but setting this property overrides the shape, unless it doesn't match the data size. Note this property is the reverse of the numpy array shape (Depth,Height,Width) or (Height,Width).</td>
 </tr>
 <tr>
 <td><em>rotatable</em></td>
@@ -250,7 +254,7 @@
 <td><em>shift</em></td>
 <td>real</td>
 <td>0.0</td>
-<td>Apply a shift to object position by this amount multiplied by model size, to fix depth fighting when visualising objects drawn at same depth</td>
+<td>Apply a shift to object position by this amount multiplied by model size*10^-7, to fix depth fighting when visualising objects drawn at same depth</td>
 </tr>
 <tr>
 <td><em>colour</em></td>
@@ -272,49 +276,49 @@
 </tr>
 <tr>
 <td><em>opacity</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>1.0</td>
 <td>Opacity of object where 0 is transparent and 1 is opaque</td>
 </tr>
 <tr>
 <td><em>brightness</em></td>
-<td>real [-1,1]</td>
+<td>real</td>
 <td>0.0</td>
 <td>Brightness of object from -1 (full dark) to 0 (default) to 1 (full light)</td>
 </tr>
 <tr>
 <td><em>contrast</em></td>
-<td>real [0,2]</td>
+<td>real</td>
 <td>1.0</td>
 <td>Contrast of object from 0 (none, grey) to 2 (max)</td>
 </tr>
 <tr>
 <td><em>saturation</em></td>
-<td>real [0,2]</td>
+<td>real</td>
 <td>1.0</td>
 <td>Saturation of object from 0 (greyscale) to 2 (fully saturated)</td>
 </tr>
 <tr>
 <td><em>ambient</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>0.4</td>
 <td>Ambient lighting level (background constant light)</td>
 </tr>
 <tr>
 <td><em>diffuse</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>0.65</td>
 <td>Diffuse lighting level (shading light/dark)</td>
 </tr>
 <tr>
 <td><em>specular</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>0.0</td>
 <td>Specular highlight lighting level (spot highlights)</td>
 </tr>
 <tr>
 <td><em>shininess</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>0.5</td>
 <td>Specular shininess factor, controls size of highlight</td>
 </tr>
@@ -337,40 +341,52 @@
 <td>Clipping mapped to range normalised [0,1]</td>
 </tr>
 <tr>
+<td><em>clipmin</em></td>
+<td>real[3]</td>
+<td>[0.0,0.0,0.0]</td>
+<td>Object clipping minimum [x,y,z]</td>
+</tr>
+<tr>
+<td><em>clipmax</em></td>
+<td>real[3]</td>
+<td>[1.0,1.0,1.0]</td>
+<td>Object clipping maximum [x,y,z]</td>
+</tr>
+<tr>
 <td><em>xmin</em></td>
-<td>real [0,1]</td>
-<td>1.0</td>
-<td>Object clipping, minimum x</td>
+<td>real</td>
+<td>0.0</td>
+<td>(legacy) Object clipping, minimum x</td>
 </tr>
 <tr>
 <td><em>ymin</em></td>
-<td>real [0,1]</td>
-<td>1.0</td>
-<td>Object clipping, maximum y</td>
+<td>real</td>
+<td>0.0</td>
+<td>(legacy) Object clipping, maximum y</td>
 </tr>
 <tr>
 <td><em>zmin</em></td>
-<td>real [0,1]</td>
-<td>1.0</td>
-<td>Object clipping, minimum z</td>
+<td>real</td>
+<td>0.0</td>
+<td>(legacy) Object clipping, minimum z</td>
 </tr>
 <tr>
 <td><em>xmax</em></td>
-<td>real [0,1]</td>
-<td>0.0</td>
-<td>Object clipping, maximum x</td>
+<td>real</td>
+<td>1.0</td>
+<td>(legacy) Object clipping, maximum x</td>
 </tr>
 <tr>
 <td><em>ymax</em></td>
-<td>real [0,1]</td>
-<td>0.0</td>
-<td>Object clipping, maximum y</td>
+<td>real</td>
+<td>1.0</td>
+<td>(legacy) Object clipping, maximum y</td>
 </tr>
 <tr>
 <td><em>zmax</em></td>
-<td>real [0,1]</td>
-<td>0.0</td>
-<td>Object clipping, maximum z</td>
+<td>real</td>
+<td>1.0</td>
+<td>(legacy) Object clipping, maximum z</td>
 </tr>
 <tr>
 <td><em>filters</em></td>
@@ -581,6 +597,12 @@
 <td>Disable this flag to skip calculating vertex normals</td>
 </tr>
 <tr>
+<td><em>smoothangle</em></td>
+<td>int</td>
+<td>90</td>
+<td>Angle between surface normals (in degrees) below which normals will be smoothed. Reduce this to preserve hard edges.</td>
+</tr>
+<tr>
 <td><em>flip</em></td>
 <td>boolean</td>
 <td>false</td>
@@ -628,7 +650,7 @@
 <td><em>isovalue</em></td>
 <td>real</td>
 <td>0.0</td>
-<td>Isovalue for dynamic isosurface</td>
+<td>Isovalue for dynamic isosurface (normalised to [0,1] over actual data range)</td>
 </tr>
 <tr>
 <td><em>isovalues</em></td>
@@ -638,7 +660,7 @@
 </tr>
 <tr>
 <td><em>isoalpha</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>1.0</td>
 <td>Transparency value for isosurface</td>
 </tr>
@@ -661,16 +683,22 @@
 <td>Apply a tricubic filter for increased smoothness</td>
 </tr>
 <tr>
+<td><em>densityclip</em></td>
+<td>real[2]</td>
+<td>[0.0,1.0]</td>
+<td>Density range [min,max] to map, values outside the range are discarded</td>
+</tr>
+<tr>
 <td><em>minclip</em></td>
 <td>real</td>
 <td>0.0</td>
-<td>Minimum density value to map, lower discarded</td>
+<td>(legacy) Minimum density value to map, lower discarded</td>
 </tr>
 <tr>
 <td><em>maxclip</em></td>
 <td>real</td>
 <td>1.0</td>
-<td>Maximum density value to map, higher discarded</td>
+<td>(legacy) Maximum density value to map, higher discarded</td>
 </tr>
 <tr>
 <td><em>compresstextures</em></td>
@@ -926,7 +954,7 @@
 <td><em>format</em></td>
 <td>string</td>
 <td>"%.5g"</td>
-<td>Format specifier for tick values, eg: %.3[f/e/g] standard, scientific, both</td>
+<td>Format specifier for label values, eg: %.3[f/e/g] standard, scientific, both</td>
 </tr>
 <tr>
 <td><em>scalevalue</em></td>
@@ -994,7 +1022,7 @@
 <td><em>colours</em></td>
 <td>colours</td>
 <td>[]</td>
-<td>Colour list (or string), see [Colour map lists] for more information</td>
+<td>Colour list (or string), X11 colour names, rgb(a) colours or html hex colours</td>
 </tr>
 <tr>
 <td><em>range</em></td>
@@ -1266,7 +1294,7 @@
 </tr>
 <tr>
 <td><em>alpha</em></td>
-<td>real [0,1]</td>
+<td>real</td>
 <td>1.0</td>
 <td>Global opacity multiplier where 0 is transparent and 1 is opaque, this is combined with "opacity" prop</td>
 </tr>
@@ -1289,28 +1317,22 @@
 <td>Enable transparent png output</td>
 </tr>
 <tr>
-<td><em>swapyz</em></td>
-<td>boolean</td>
-<td>false</td>
-<td>Enable imported model y/z axis swap</td>
-</tr>
-<tr>
 <td><em>trisplit</em></td>
 <td>integer</td>
 <td>0</td>
 <td>Imported model triangle subdivision level. Can also be set to 1 to force vertex normals to be recalculated by ignoring any present in the loaded model data.</td>
 </tr>
 <tr>
+<td><em>trilimit</em></td>
+<td>real</td>
+<td>0</td>
+<td>Imported model triangle edge size limit. Triangles will be split until edges below this threashold.</td>
+</tr>
+<tr>
 <td><em>globalcam</em></td>
 <td>boolean</td>
 <td>false</td>
 <td>Enable global camera for all models (default is separate cam for each)</td>
-</tr>
-<tr>
-<td><em>vectorfont</em></td>
-<td>boolean</td>
-<td>false</td>
-<td>Always use vector font regardless of individual object properties</td>
 </tr>
 <tr>
 <td><em>volchannels</em></td>
@@ -1415,6 +1437,12 @@
 <td>Holds the current model timestep, read only, -1 indicates no time varying data loaded</td>
 </tr>
 <tr>
+<td><em>validate</em></td>
+<td>boolean</td>
+<td>true</td>
+<td>Disable to turn off validation of property names from the dictionary. Allows setting/reading custom properties.</td>
+</tr>
+<tr>
 <td><em>data</em></td>
 <td>dict</td>
 <td>null</td>
@@ -1468,13 +1496,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1495,12 +1521,12 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.6 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.9 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.2.
     </div>
   </body>
 </html>

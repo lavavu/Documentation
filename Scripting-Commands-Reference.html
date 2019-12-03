@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Scripting command reference &#8212; LavaVu 1.4.6 documentation</title>
+    <meta charset="utf-8" />
+    <title>Scripting command reference &#8212; LavaVu 1.4.9 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -38,7 +36,7 @@
         <li class="right" >
           <a href="Property-Reference.html" title="Property reference"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.6 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.9 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -50,35 +48,35 @@
   <div class="section" id="scripting-command-reference">
 <h1>Scripting command reference<a class="headerlink" href="#scripting-command-reference" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><strong><a class="reference external" href="#general-commands">General</a></strong></li>
+<li><p><strong><a class="reference external" href="#general-commands">General</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#quit">quit</a>, <a class="reference external" href="#repeat">repeat</a>, <a class="reference external" href="#animate">animate</a>, <a class="reference external" href="#history">history</a>, <a class="reference external" href="#clearhistory">clearhistory</a>, <a class="reference external" href="#pause">pause</a>, <a class="reference external" href="#list">list</a>, <a class="reference external" href="#step">step</a>, <a class="reference external" href="#timestep">timestep</a>, <a class="reference external" href="#jump">jump</a>, <a class="reference external" href="#model">model</a>, <a class="reference external" href="#reload">reload</a>, <a class="reference external" href="#redraw">redraw</a>, <a class="reference external" href="#clear">clear</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#input-commands">Input</a></strong></li>
+<li><p><strong><a class="reference external" href="#input-commands">Input</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#file">file</a>, <a class="reference external" href="#script">script</a>, <a class="reference external" href="#figure">figure</a>, <a class="reference external" href="#savefigure">savefigure</a>, <a class="reference external" href="#view">view</a>, <a class="reference external" href="#scan">scan</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#output-commands">Output</a></strong></li>
+<li><p><strong><a class="reference external" href="#output-commands">Output</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#bakecolour">bakecolour</a>, <a class="reference external" href="#glaze">glaze</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#view-commands">View</a></strong></li>
+<li><p><strong><a class="reference external" href="#view-commands">View</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#rotate">rotate</a>, <a class="reference external" href="#rotatex">rotatex</a>, <a class="reference external" href="#rotatey">rotatey</a>, <a class="reference external" href="#rotatez">rotatez</a>, <a class="reference external" href="#rotation">rotation</a>, <a class="reference external" href="#zoom">zoom</a>, <a class="reference external" href="#translate">translate</a>, <a class="reference external" href="#translatex">translatex</a>, <a class="reference external" href="#translatey">translatey</a>, <a class="reference external" href="#translatez">translatez</a>, <a class="reference external" href="#translation">translation</a>, <a class="reference external" href="#autorotate">autorotate</a>, <a class="reference external" href="#spin">spin</a>, <a class="reference external" href="#focus">focus</a>, <a class="reference external" href="#fov">fov</a>, <a class="reference external" href="#focallength">focallength</a>, <a class="reference external" href="#eyeseparation">eyeseparation</a>, <a class="reference external" href="#nearclip">nearclip</a>, <a class="reference external" href="#farclip">farclip</a>, <a class="reference external" href="#zoomclip">zoomclip</a>, <a class="reference external" href="#zerocam">zerocam</a>, <a class="reference external" href="#reset">reset</a>, <a class="reference external" href="#bounds">bounds</a>, <a class="reference external" href="#fixbb">fixbb</a>, <a class="reference external" href="#camera">camera</a>, <a class="reference external" href="#resize">resize</a>, <a class="reference external" href="#fullscreen">fullscreen</a>, <a class="reference external" href="#fit">fit</a>, <a class="reference external" href="#autozoom">autozoom</a>, <a class="reference external" href="#stereo">stereo</a>, <a class="reference external" href="#coordsystem">coordsystem</a>, <a class="reference external" href="#sort">sort</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#object-commands">Object</a></strong></li>
+<li><p><strong><a class="reference external" href="#object-commands">Object</a></strong></p></li>
 </ul>
-<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#isosurface">isosurface</a></p>
+<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#isosurface">isosurface</a>, <a class="reference external" href="#texture">texture</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#display-commands">Display</a></strong></li>
+<li><p><strong><a class="reference external" href="#display-commands">Display</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#background">background</a>, <a class="reference external" href="#alpha">alpha</a>, <a class="reference external" href="#axis">axis</a>, <a class="reference external" href="#rulers">rulers</a>, <a class="reference external" href="#antialias">antialias</a>, <a class="reference external" href="#valuerange">valuerange</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#colourbar">colourbar</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#pointsample">pointsample</a>, <a class="reference external" href="#border">border</a>, <a class="reference external" href="#title">title</a>, <a class="reference external" href="#scale">scale</a>, <a class="reference external" href="#modelscale">modelscale</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#scripting-commands">Scripting</a></strong></li>
+<li><p><strong><a class="reference external" href="#scripting-commands">Scripting</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#next">next</a>, <a class="reference external" href="#play">play</a>, <a class="reference external" href="#stop">stop</a>, <a class="reference external" href="#open">open</a>, <a class="reference external" href="#interactive">interactive</a>, <a class="reference external" href="#display">display</a></p>
 <ul class="simple">
-<li><strong><a class="reference external" href="#miscellanious-commands">Miscellanious</a></strong></li>
+<li><p><strong><a class="reference external" href="#miscellanious-commands">Miscellanious</a></strong></p></li>
 </ul>
 <p><a class="reference external" href="#shaders">shaders</a>, <a class="reference external" href="#blend">blend</a>, <a class="reference external" href="#props">props</a>, <a class="reference external" href="#defaults">defaults</a>, <a class="reference external" href="#test">test</a>, <a class="reference external" href="#voltest">voltest</a>, <a class="reference external" href="#newstep">newstep</a>, <a class="reference external" href="#filter">filter</a>, <a class="reference external" href="#filterout">filterout</a>, <a class="reference external" href="#filtermin">filtermin</a>, <a class="reference external" href="#filtermax">filtermax</a>, <a class="reference external" href="#clearfilters">clearfilters</a>, <a class="reference external" href="#verbose">verbose</a>, <a class="reference external" href="#toggle">toggle</a>, <a class="reference external" href="#createvolume">createvolume</a>, <a class="reference external" href="#clearvolume">clearvolume</a>, <a class="reference external" href="#palette">palette</a></p>
 <hr class="docutils" />
@@ -87,14 +85,15 @@
 <div class="section" id="quit">
 <h3>quit<a class="headerlink" href="#quit" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Quit the program</div></blockquote>
+<div><p>Quit the program</p>
+</div></blockquote>
 </div>
 <div class="section" id="repeat">
 <h3>repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Repeat commands from history</p>
 <p><strong>Usage:</strong> repeat [count=1] [N=1]</p>
-<p>count (integer) : repeat commands count timesN (integer) : repeat the last N commands</p>
+<p>count (integer) : repeat commands count times<br />N (integer) : repeat the last N commands</p>
 </div></blockquote>
 </div>
 <div class="section" id="animate">
@@ -102,7 +101,7 @@
 <blockquote>
 <div><p>Update display between each command</p>
 <p><strong>Usage:</strong> animate rate</p>
-<p>rate (integer) : animation timer to fire every (rate) msec (default: 50)When on, if multiple commands are issued the frame is re-rendered at set framerateWhen off, all commands will be processed before the display is updated</p>
+<p>rate (integer) : animation timer to fire every (rate) msec (default: 50)<br />When on, if multiple commands are issued the frame is re-rendered at set framerate<br />When off, all commands will be processed before the display is updated</p>
 </div></blockquote>
 </div>
 <div class="section" id="history">
@@ -116,7 +115,8 @@
 <div class="section" id="clearhistory">
 <h3>clearhistory<a class="headerlink" href="#clearhistory" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Clear command history</div></blockquote>
+<div><p>Clear command history</p>
+</div></blockquote>
 </div>
 <div class="section" id="pause">
 <h3>pause<a class="headerlink" href="#pause" title="Permalink to this headline">¶</a></h3>
@@ -131,7 +131,7 @@
 <blockquote>
 <div><p>List available data</p>
 <p><strong>Usage:</strong> list objects/colourmaps/elements</p>
-<p>objects : enable object list (stays on screen until disabled)(dimmed objects are hidden or not in selected viewport)colourmaps : show colourmap listelements : show geometry elements by id in terminaldata : show available data sets in selected object or all</p>
+<p>objects : enable object list (stays on screen until disabled)<br />(dimmed objects are hidden or not in selected viewport)<br />colourmaps : show colourmap list<br />elements : show geometry elements by id in terminal<br />data : show available data sets in selected object or all</p>
 </div></blockquote>
 </div>
 <div class="section" id="step">
@@ -141,10 +141,10 @@
 <p><strong>Usage:</strong> timestep -/+/value</p>
 <p>value (integer) : the timestep to view</p>
 <ul class="simple">
-<li>: switch to previous timestep if available</li>
+<li><p>: switch to previous timestep if available</p></li>
 </ul>
 <ul class="simple">
-<li>: switch to next timestep if available</li>
+<li><p>: switch to next timestep if available</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -155,10 +155,10 @@
 <p><strong>Usage:</strong> timestep -/+/value</p>
 <p>value (integer) : the timestep to view</p>
 <ul class="simple">
-<li>: switch to previous timestep if available</li>
+<li><p>: switch to previous timestep if available</p></li>
 </ul>
 <ul class="simple">
-<li>: switch to next timestep if available</li>
+<li><p>: switch to next timestep if available</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -175,7 +175,7 @@
 <blockquote>
 <div><p>Set model to view (when multiple models loaded)</p>
 <p><strong>Usage:</strong> model up/down/value</p>
-<p>value (integer) : the model index to view [1,n]up : switch to previous model if availabledown : switch to next model if availableadd : add a new model</p>
+<p>value (integer) : the model index to view [1,n]<br />up : switch to previous model if available<br />down : switch to next model if available<br />add : add a new model</p>
 </div></blockquote>
 </div>
 <div class="section" id="reload">
@@ -183,20 +183,21 @@
 <blockquote>
 <div><p>Reload all data of current model/timestep from database</p>
 <p><strong>Usage:</strong> reload [object_id]</p>
-<p>If an object is selected, reload will apply to that object only(If no database, will still reload data to gpu)</p>
+<p>If an object is selected, reload will apply to that object only<br />(If no database, will still reload data to gpu)</p>
 </div></blockquote>
 </div>
 <div class="section" id="redraw">
 <h3>redraw<a class="headerlink" href="#redraw" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Redraw all object data, required after changing some parameters but may be slow</div></blockquote>
+<div><p>Redraw all object data, required after changing some parameters but may be slow</p>
+</div></blockquote>
 </div>
 <div class="section" id="clear">
 <h3>clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Clear all data of current model/timestep</p>
 <p><strong>Usage:</strong> clear [objects]</p>
-<p>objects : optionally clear all object entries(if omitted, only the objects geometry data is cleared)</p>
+<p>objects : optionally clear all object entries<br />(if omitted, only the objects geometry data is cleared)</p>
 </div></blockquote>
 </div>
 </div>
@@ -206,14 +207,14 @@
 <div class="section" id="file">
 <h3>file<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Load database or model file<strong>Usage:</strong> file “filename”</p>
+<div><p>Load database or model file<br /><strong>Usage:</strong> file “filename”</p>
 <p>filename (string) : the path to the file, quotes necessary if path contains spaces</p>
 </div></blockquote>
 </div>
 <div class="section" id="script">
 <h3>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Run script fileLoad a saved script of viewer commands from a file</p>
+<div><p>Run script file<br />Load a saved script of viewer commands from a file</p>
 <p><strong>Usage:</strong> script filename</p>
 <p>filename (string) : path and name of the script file to load</p>
 </div></blockquote>
@@ -223,7 +224,7 @@
 <blockquote>
 <div><p>Set figure to view</p>
 <p><strong>Usage:</strong> figure up/down/value</p>
-<p>value (integer/string) : the figure index or name to viewup : switch to previous figure if availabledown : switch to next figure if available</p>
+<p>value (integer/string) : the figure index or name to view<br />up : switch to previous figure if available<br />down : switch to next figure if available</p>
 </div></blockquote>
 </div>
 <div class="section" id="savefigure">
@@ -231,7 +232,7 @@
 <blockquote>
 <div><p>Store current vis settings in a figure</p>
 <p><strong>Usage:</strong> figure name</p>
-<p>name (string) : the figure name to saveif ommitted, currently active or default figure will be savedif it doesn’t exist it will be created</p>
+<p>name (string) : the figure name to save<br />if ommitted, currently active or default figure will be saved<br />if it doesn’t exist it will be created</p>
 </div></blockquote>
 </div>
 <div class="section" id="view">
@@ -239,13 +240,14 @@
 <blockquote>
 <div><p>Set view (when available)</p>
 <p><strong>Usage:</strong> view up/down/value</p>
-<p>value (integer) : the view index to switch toup : switch to previous view if availabledown : switch to next view if available</p>
+<p>value (integer) : the view index to switch to<br />up : switch to previous view if available<br />down : switch to next view if available</p>
 </div></blockquote>
 </div>
 <div class="section" id="scan">
 <h3>scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Rescan the current directory for timestep database filesbased on currently loaded filename</div></blockquote>
+<div><p>Rescan the current directory for timestep database files<br />based on currently loaded filename</p>
+</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
@@ -254,7 +256,7 @@
 <div class="section" id="image">
 <h3>image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Save an image of the current view<strong>Usage:</strong> image [filename]</p>
+<div><p>Save an image of the current view<br /><strong>Usage:</strong> image [filename]</p>
 <p>filename (string) : optional base filename without extension</p>
 </div></blockquote>
 </div>
@@ -285,23 +287,23 @@
 <div class="section" id="movie">
 <h3>movie<a class="headerlink" href="#movie" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Encode video of model running from current timestep to specified timestep(Requires libavcodec)</p>
-<p><strong>Usage:</strong> movie [endstep]<strong>Usage:</strong> movie [startstep] [endstep]<strong>Usage:</strong> movie [startstep] [endstep] [fps]</p>
-<p>startstep (integer) : first frame timestep (defaults to first)endstep (integer) : last frame timestep (defaults to final)fps (integer) : fps, default=30</p>
+<div><p>Encode video of model running from current timestep to specified timestep<br />(Requires libavcodec)</p>
+<p><strong>Usage:</strong> movie [endstep]<br /><strong>Usage:</strong> movie [startstep] [endstep]<br /><strong>Usage:</strong> movie [startstep] [endstep] [fps]</p>
+<p>startstep (integer) : first frame timestep (defaults to first)<br />endstep (integer) : last frame timestep (defaults to final)<br />fps (integer) : fps, default=30</p>
 </div></blockquote>
 </div>
 <div class="section" id="record">
 <h3>record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Encode video of all frames displayed at specified framerate(Requires libavcodec)</p>
+<div><p>Encode video of all frames displayed at specified framerate<br />(Requires libavcodec)</p>
 <p><strong>Usage:</strong> record (framerate) (quality)</p>
-<p>framerate (integer): frames per second (default 30)quality (integer): 1=low/2=medium/3=high (default 1)</p>
+<p>framerate (integer): frames per second (default 30)<br />quality (integer): 1=low/2=medium/3=high (default 1)</p>
 </div></blockquote>
 </div>
 <div class="section" id="bake">
 <h3>bake<a class="headerlink" href="#bake" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />This removes the ability to change the glyph properties used to create primitives,<br />but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
 <p><strong>Usage:</strong> bake [object]</p>
 <p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
 <p><strong>Usage:</strong> bakecolour [object]</p>
@@ -313,7 +315,7 @@
 <div class="section" id="bakecolour">
 <h3>bakecolour<a class="headerlink" href="#bakecolour" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />This removes the ability to change the glyph properties used to create primitives,<br />but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
 <p><strong>Usage:</strong> bake [object]</p>
 <p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
 <p><strong>Usage:</strong> bakecolour [object]</p>
@@ -325,7 +327,7 @@
 <div class="section" id="glaze">
 <h3>glaze<a class="headerlink" href="#glaze" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />This removes the ability to change the glyph properties used to create primitives,<br />but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
 <p><strong>Usage:</strong> bake [object]</p>
 <p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
 <p><strong>Usage:</strong> bakecolour [object]</p>
@@ -339,7 +341,7 @@
 <blockquote>
 <div><p>Export model database</p>
 <p><strong>Usage:</strong> export [filename] [objects] [uncompressed]</p>
-<p>filename (string) : the name of the file to export to, extension must be .gldbobjects (integer/string) : the indices or names of the objects to export (see: “list objects”)uncompressed : add this to skip the zlib compression step in the export processIf object ommitted all will be exported</p>
+<p>filename (string) : the name of the file to export to, extension must be .gldb<br />objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />uncompressed : add this to skip the zlib compression step in the export process<br />If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="csv">
@@ -347,7 +349,7 @@
 <blockquote>
 <div><p>Export CSV data</p>
 <p><strong>Usage:</strong> csv [objects]</p>
-<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="json">
@@ -355,7 +357,7 @@
 <blockquote>
 <div><p>Export json data</p>
 <p><strong>Usage:</strong> json [object]</p>
-<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="save">
@@ -363,13 +365,14 @@
 <blockquote>
 <div><p>Export all settings as json state file that can be reloaded later</p>
 <p><strong>Usage:</strong> save [“filename”]</p>
-<p>file (string) : name of file to importIf filename omitted and database loaded, will save the stateto the active figure in the database instead</p>
+<p>file (string) : name of file to import<br />If filename omitted and database loaded, will save the state<br />to the active figure in the database instead</p>
 </div></blockquote>
 </div>
 <div class="section" id="tiles">
 <h3>tiles<a class="headerlink" href="#tiles" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Save a tiled image of selected volume dataset<strong>Usage:</strong> tiles (object)</div></blockquote>
+<div><p>Save a tiled image of selected volume dataset<br /><strong>Usage:</strong> tiles (object)</p>
+</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
@@ -380,9 +383,9 @@
 <blockquote>
 <div><p>Rotate model</p>
 <p><strong>Usage:</strong> rotate axis degrees</p>
-<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation</p>
+<p>axis (x/y/z) : axis of rotation<br />degrees (number) : degrees of rotation</p>
 <p><strong>Usage:</strong> rotate x y z</p>
-<p>x (number) : x axis degrees of rotationy (number) : y axis degrees of rotationz (number) : z axis degrees of rotation</p>
+<p>x (number) : x axis degrees of rotation<br />y (number) : y axis degrees of rotation<br />z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </div>
 <div class="section" id="rotatex">
@@ -414,7 +417,7 @@
 <blockquote>
 <div><p>Set model rotation (replaces any previous rotation)</p>
 <p><strong>Usage:</strong> rotation x y z [w]</p>
-<p>x (number) : rotation x componenty (number) : rotation y componentz (number) : rotation z componentw (number) : rotation w componentIf only x,y,z are provided they determine the rotationabout these axis (roll/pitch/yaw)If x,y,z,w are provided, the rotation is loadedas a quaternion with these components</p>
+<p>x (number) : rotation x component<br />y (number) : rotation y component<br />z (number) : rotation z component<br />w (number) : rotation w component<br />If only x,y,z are provided they determine the rotation<br />about these axis (roll/pitch/yaw)<br />If x,y,z,w are provided, the rotation is loaded<br />as a quaternion with these components</p>
 </div></blockquote>
 </div>
 <div class="section" id="zoom">
@@ -422,7 +425,7 @@
 <blockquote>
 <div><p>Translate model in Z direction (zoom)</p>
 <p><strong>Usage:</strong> zoom units</p>
-<p>units (number) : distance to zoom, units are based on model size1 unit is approx the model bounding box sizenegative to zoom out, positive in</p>
+<p>units (number) : distance to zoom, units are based on model size<br />1 unit is approx the model bounding box size<br />negative to zoom out, positive in</p>
 </div></blockquote>
 </div>
 <div class="section" id="translate">
@@ -430,9 +433,9 @@
 <blockquote>
 <div><p>Translate model in 3 dimensions</p>
 <p><strong>Usage:</strong> translate dir shift</p>
-<p>dir (x/y/z) : direction to translateshift (number) : amount of translation</p>
+<p>dir (x/y/z) : direction to translate<br />shift (number) : amount of translation</p>
 <p><strong>Usage:</strong> translation x y z</p>
-<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+<p>x (number) : x axis shift<br />y (number) : y axis shift<br />z (number) : z axis shift</p>
 </div></blockquote>
 </div>
 <div class="section" id="translatex">
@@ -464,20 +467,21 @@
 <blockquote>
 <div><p>Set model translation in 3d coords (replaces any previous translation)</p>
 <p><strong>Usage:</strong> translation x y z</p>
-<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+<p>x (number) : x axis shift<br />y (number) : y axis shift<br />z (number) : z axis shift</p>
 </div></blockquote>
 </div>
 <div class="section" id="autorotate">
 <h3>autorotate<a class="headerlink" href="#autorotate" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Auto-Rotate model to face camera if flat in X or Y dimensions</div></blockquote>
+<div><p>Auto-Rotate model to face camera if flat in X or Y dimensions</p>
+</div></blockquote>
 </div>
 <div class="section" id="spin">
 <h3>spin<a class="headerlink" href="#spin" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Auto-spin model, animates</p>
 <p><strong>Usage:</strong> spin axis degrees</p>
-<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation per frame</p>
+<p>axis (x/y/z) : axis of rotation<br />degrees (number) : degrees of rotation per frame</p>
 </div></blockquote>
 </div>
 <div class="section" id="focus">
@@ -485,7 +489,7 @@
 <blockquote>
 <div><p>Set model focal point in 3d coords</p>
 <p><strong>Usage:</strong> focus x y z</p>
-<p>x (number) : x coordy (number) : y coordz (number) : z coord</p>
+<p>x (number) : x coord<br />y (number) : y coord<br />z (number) : z coord</p>
 </div></blockquote>
 </div>
 <div class="section" id="fov">
@@ -539,67 +543,77 @@
 <div class="section" id="zerocam">
 <h3>zerocam<a class="headerlink" href="#zerocam" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Set the camera postiion to the origin (for scripting, not generally advisable)</div></blockquote>
+<div><p>Set the camera postiion to the origin (for scripting, not generally advisable)</p>
+</div></blockquote>
 </div>
 <div class="section" id="reset">
 <h3>reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Reset the camera to the default model view</div></blockquote>
+<div><p>Reset the camera to the default model view</p>
+</div></blockquote>
 </div>
 <div class="section" id="bounds">
 <h3>bounds<a class="headerlink" href="#bounds" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Recalculate the model bounding box from geometry</div></blockquote>
+<div><p>Recalculate the model bounding box from geometry</p>
+</div></blockquote>
 </div>
 <div class="section" id="fixbb">
 <h3>fixbb<a class="headerlink" href="#fixbb" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Fix the model bounding box to it’s current size, will no longer be elastic</div></blockquote>
+<div><p>Fix the model bounding box to it’s current size, will no longer be elastic</p>
+</div></blockquote>
 </div>
 <div class="section" id="camera">
 <h3>camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Output camera state for use in model scripts</div></blockquote>
+<div><p>Output camera state for use in model scripts</p>
+</div></blockquote>
 </div>
 <div class="section" id="resize">
 <h3>resize<a class="headerlink" href="#resize" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Resize view window</p>
 <p><strong>Usage:</strong> resize width height</p>
-<p>width (integer) : width in pixelsheight (integer) : height in pixels</p>
+<p>width (integer) : width in pixels<br />height (integer) : height in pixels</p>
 </div></blockquote>
 </div>
 <div class="section" id="fullscreen">
 <h3>fullscreen<a class="headerlink" href="#fullscreen" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Switch viewer to full-screen mode and back to windowed mode</div></blockquote>
+<div><p>Switch viewer to full-screen mode and back to windowed mode</p>
+</div></blockquote>
 </div>
 <div class="section" id="fit">
 <h3>fit<a class="headerlink" href="#fit" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Adjust camera view to fit the model in window</div></blockquote>
+<div><p>Adjust camera view to fit the model in window</p>
+</div></blockquote>
 </div>
 <div class="section" id="autozoom">
 <h3>autozoom<a class="headerlink" href="#autozoom" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Automatically adjust camera view to always fit the model in window (enable/disable)</div></blockquote>
+<div><p>Automatically adjust camera view to always fit the model in window (enable/disable)</p>
+</div></blockquote>
 </div>
 <div class="section" id="stereo">
 <h3>stereo<a class="headerlink" href="#stereo" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Enable/disable stereo projectionIf no stereo hardware found will use side-by-side mode</div></blockquote>
+<div><p>Enable/disable stereo projection<br />If no stereo hardware found will use side-by-side mode</p>
+</div></blockquote>
 </div>
 <div class="section" id="coordsystem">
 <h3>coordsystem<a class="headerlink" href="#coordsystem" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Switch between Right-handed and Left-handed coordinate system</div></blockquote>
+<div><p>Switch between Right-handed and Left-handed coordinate system</p>
+</div></blockquote>
 </div>
 <div class="section" id="sort">
 <h3>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Sort geometry on demand (with idle timer)</p>
 <p><strong>Usage:</strong> sort on/off</p>
-<p>on : (default) sort after model rotationoff : no sortingIf no options passed, does immediate re-sort</p>
+<p>on : (default) sort after model rotation<br />off : no sorting<br />If no options passed, does immediate re-sort</p>
 </div></blockquote>
 </div>
 </div>
@@ -613,7 +627,7 @@
 <p><strong>Usage:</strong> hide object</p>
 <p>object (integer/string) : the index or name of the object to hide (see: “list objects”)</p>
 <p><strong>Usage:</strong> hide geometry_type id</p>
-<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to hideeg: ‘hide points’ will hide all point datanote: ‘hide all’ will hide all objects</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumes<br />id (integer, optional) : id of geometry to hide<br />eg: ‘hide points’ will hide all point data<br />note: ‘hide all’ will hide all objects</p>
 </div></blockquote>
 </div>
 <div class="section" id="show">
@@ -623,20 +637,20 @@
 <p><strong>Usage:</strong> show object</p>
 <p>object (integer/string) : the index or name of the object to show (see: “list objects”)</p>
 <p><strong>Usage:</strong> show geometry_type id</p>
-<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to showeg: ‘hide points’ will show all point datanote: ‘hide all’ will show all objects</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumes<br />id (integer, optional) : id of geometry to show<br />eg: ‘hide points’ will show all point data<br />note: ‘hide all’ will show all objects</p>
 </div></blockquote>
 </div>
 <div class="section" id="delete">
 <h3>delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Delete objects<strong>Usage:</strong> delete object</p>
+<div><p>Delete objects<br /><strong>Usage:</strong> delete object</p>
 <p>object (integer/string) : the index or name of the object to delete (see: “list objects”)</p>
 </div></blockquote>
 </div>
 <div class="section" id="load">
 <h3>load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Load objects from databaseUsed when running with deferred loading (-N command line switch)</p>
+<div><p>Load objects from database<br />Used when running with deferred loading (-N command line switch)</p>
 <p><strong>Usage:</strong> load object</p>
 <p>object (integer/string) : the index or name of the object to load (see: “list objects”)</p>
 </div></blockquote>
@@ -644,9 +658,9 @@
 <div class="section" id="select">
 <h3>select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Select object as the active objectUsed for setting properties of objectsfollowing commands that take an object id will no longer require one)</p>
+<div><p>Select object as the active object<br />Used for setting properties of objects<br />following commands that take an object id will no longer require one)</p>
 <p><strong>Usage:</strong> select object</p>
-<p>object (integer/string) : the index or name of the object to select (see: “list objects”)Leave object parameter empty to clear selection.</p>
+<p>object (integer/string) : the index or name of the object to select (see: “list objects”)<br />Leave object parameter empty to clear selection.</p>
 </div></blockquote>
 </div>
 <div class="section" id="add">
@@ -654,13 +668,13 @@
 <blockquote>
 <div><p>Add a new object and select as the active object</p>
 <p><strong>Usage:</strong> add [object_name] [data_type]</p>
-<p>object_name (string) : optional name of the object to adddata_type (string) : optional name of the default data type(points/labels/vectors/tracers/triangles/quads/shapes/lines)</p>
+<p>object_name (string) : optional name of the object to add<br />data_type (string) : optional name of the default data type<br />(points/labels/vectors/tracers/triangles/quads/shapes/lines)</p>
 </div></blockquote>
 </div>
 <div class="section" id="append">
 <h3>append<a class="headerlink" href="#append" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Append a new geometry container to an objecteg: to divide line objects into segments</p>
+<div><p>Append a new geometry container to an object<br />eg: to divide line objects into segments</p>
 <p><strong>Usage:</strong> append [object]</p>
 <p>object (integer/string) : the index or name of the object to select (see: “list objects”)</p>
 </div></blockquote>
@@ -670,7 +684,7 @@
 <blockquote>
 <div><p>Set object name</p>
 <p><strong>Usage:</strong> name object newname</p>
-<p>object (integer/string) : the index or name of the object to rename (see: “list objects”)newname (string) : new name to apply</p>
+<p>object (integer/string) : the index or name of the object to rename (see: “list objects”)<br />newname (string) : new name to apply</p>
 </div></blockquote>
 </div>
 <div class="section" id="isosurface">
@@ -678,7 +692,13 @@
 <blockquote>
 <div><p>Generate an isosurface from a volume object</p>
 <p><strong>Usage:</strong> isosurface [isovalue]</p>
-<p>isovalue (number) : isovalue to draw the surface at,if not specified, will use ‘isovalues’ property</p>
+<p>isovalue (number) : isovalue to draw the surface at,<br />if not specified, will use ‘isovalues’ property</p>
+</div></blockquote>
+</div>
+<div class="section" id="texture">
+<h3>texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set or clear object texture data</p>
 </div></blockquote>
 </div>
 </div>
@@ -690,7 +710,7 @@
 <blockquote>
 <div><p>Set window background colour</p>
 <p><strong>Usage:</strong> background colour/value/white/black/grey/invert</p>
-<p>colour (string) : any valid colour stringvalue (number [0,1]) : sets to greyscale value with luminosity in range [0,1] where 1.0 is whitewhite/black/grey : sets background to specified valueinvert (or omitted value) : inverts current background colour</p>
+<p>colour (string) : any valid colour string<br />value (number [0,1]) : sets to greyscale value with luminosity in range [0,1] where 1.0 is white<br />white/black/grey : sets background to specified value<br />invert (or omitted value) : inverts current background colour</p>
 </div></blockquote>
 </div>
 <div class="section" id="alpha">
@@ -698,7 +718,7 @@
 <blockquote>
 <div><p>Set global transparency value</p>
 <p><strong>Usage:</strong> opacity/alpha value</p>
-<p>‘opacity’ is global default, applies to all objects without own opacity setting’alpha’ is global override, is combined with opacity setting of all objectsvalue (integer &gt; 1) : sets opacity as integer in range [1,255] where 255 is fully opaquevalue (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is fully opaque</p>
+<p>‘opacity’ is global default, applies to all objects without own opacity setting<br />’alpha’ is global override, is combined with opacity setting of all objects<br />value (integer &gt; 1) : sets opacity as integer in range [1,255] where 255 is fully opaque<br />value (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is fully opaque</p>
 </div></blockquote>
 </div>
 <div class="section" id="axis">
@@ -712,24 +732,27 @@
 <div class="section" id="rulers">
 <h3>rulers<a class="headerlink" href="#rulers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Enable/disable axis rulers (unfinished)</div></blockquote>
+<div><p>Enable/disable axis rulers (unfinished)</p>
+</div></blockquote>
 </div>
 <div class="section" id="antialias">
 <h3>antialias<a class="headerlink" href="#antialias" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Enable/disable multi-sample anti-aliasing (if supported by OpenGL drivers)</div></blockquote>
+<div><p>Enable/disable multi-sample anti-aliasing (if supported by OpenGL drivers)</p>
+</div></blockquote>
 </div>
 <div class="section" id="valuerange">
 <h3>valuerange<a class="headerlink" href="#valuerange" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Adjust colourmaps on object to fit actual value range</div></blockquote>
+<div><p>Adjust colourmaps on object to fit actual value range</p>
+</div></blockquote>
 </div>
 <div class="section" id="colourmap">
 <h3>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Set colourmap on object</p>
-<p><strong>Usage:</strong> colourmap object [colourmap / data]</p>
-<p>object (integer/string) : the index or name of the object to set (see: “list objects”)colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
+<div><p>Set colourmap on object or create a new colourmap</p>
+<p><strong>Usage:</strong> colourmap [colourmap / data]<br />If an object is selected, the colourmap will be set on that object, otherwise a new colourmap will be created</p>
+<p>colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)<br />data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
 </div></blockquote>
 </div>
 <div class="section" id="colourbar">
@@ -745,7 +768,7 @@
 <blockquote>
 <div><p>Set point-rendering type on object</p>
 <p><strong>Usage:</strong> pointtype all/object type/up/down</p>
-<p>all : use ‘all’ to set the global default point typeobject (integer/string) : the index or name of the object to set (see: “list objects”)type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
+<p>all : use ‘all’ to set the global default point type<br />object (integer/string) : the index or name of the object to set (see: “list objects”)<br />type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)<br />up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
 </div></blockquote>
 </div>
 <div class="section" id="pointsample">
@@ -753,7 +776,7 @@
 <blockquote>
 <div><p>Set point sub-sampling value</p>
 <p><strong>Usage:</strong> pointsample value/up/down</p>
-<p>value (integer) : 1=no sub-sampling=50%% sampled etc..up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</p>
+<p>value (integer) : 1=no sub-sampling=50%% sampled etc..<br />up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</p>
 </div></blockquote>
 </div>
 <div class="section" id="border">
@@ -761,24 +784,25 @@
 <blockquote>
 <div><p>Set model border frame</p>
 <p><strong>Usage:</strong> border on/off/filled</p>
-<p>on : line border around model bounding-boxoff : no borderfilled : filled background bounding box(no value) : switch between possible values</p>
+<p>on : line border around model bounding-box<br />off : no border<br />filled : filled background bounding box<br />(no value) : switch between possible values</p>
 </div></blockquote>
 </div>
 <div class="section" id="title">
 <h3>title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Set title heading to following text</div></blockquote>
+<div><p>Set title heading to following text</p>
+</div></blockquote>
 </div>
 <div class="section" id="scale">
 <h3>scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Scale model or applicable objects</p>
 <p><strong>Usage:</strong> scale axis value</p>
-<p>axis : x/y/zvalue (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
+<p>axis : x/y/z<br />value (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
 <p><strong>Usage:</strong> scale geometry_type value/up/down</p>
-<p>geometry_type : points/vectors/tracers/shapesvalue (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p>geometry_type : points/vectors/tracers/shapes<br />value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
 <p><strong>Usage:</strong> scale object value/up/down</p>
-<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)<br />value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
 </div></blockquote>
 </div>
 <div class="section" id="modelscale">
@@ -787,7 +811,7 @@
 <div><p>Set model scaling, multiples by existing values</p>
 <p><strong>Usage:</strong> scale xval yval zval</p>
 <p>xval (number) : scaling value applied to x axis</p>
-<p>yval (number) : scaling value applied to y axiszval (number) : scaling value applied to z axis</p>
+<p>yval (number) : scaling value applied to y axis<br />zval (number) : scaling value applied to z axis</p>
 </div></blockquote>
 </div>
 </div>
@@ -797,32 +821,35 @@
 <div class="section" id="next">
 <h3>next<a class="headerlink" href="#next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Go to next timestep in sequence</div></blockquote>
+<div><p>Go to next timestep in sequence</p>
+</div></blockquote>
 </div>
 <div class="section" id="play">
 <h3>play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Display model timesteps in sequence from current timestep to specified timestep</p>
 <p><strong>Usage:</strong> play endstep</p>
-<p>endstep (integer) : last frame timestepIf endstep omitted, will loop continually until ‘stop’ command entered</p>
+<p>endstep (integer) : last frame timestep<br />If endstep omitted, will loop continually until ‘stop’ command entered</p>
 </div></blockquote>
 </div>
 <div class="section" id="stop">
 <h3>stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Stop the looping ‘play’ command</div></blockquote>
+<div><p>Stop the looping ‘play’ command</p>
+</div></blockquote>
 </div>
 <div class="section" id="open">
 <h3>open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Open the viewer window if not already done, for use in scripts</div></blockquote>
+<div><p>Open the viewer window if not already done, for use in scripts</p>
+</div></blockquote>
 </div>
 <div class="section" id="interactive">
 <h3>interactive<a class="headerlink" href="#interactive" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Switch to interactive mode, for use in scripts</p>
 <p><strong>Usage:</strong> interactive [noshow]</p>
-<p>options (string) : “noshow” default is to show visible interactive window, set this to activate event loopwithout showing window, can use browser interactive mode”noloop” : set this option to show the interactive window only,and handle events outside on returning</p>
+<p>options (string) : “noshow” default is to show visible interactive window, set this to activate event loop<br />without showing window, can use browser interactive mode<br />”noloop” : set this option to show the interactive window only,<br />and handle events outside on returning</p>
 </div></blockquote>
 </div>
 </div>
@@ -832,7 +859,8 @@
 <div class="section" id="shaders">
 <h3>shaders<a class="headerlink" href="#shaders" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Reload shader program files from disk</div></blockquote>
+<div><p>Reload shader program files from disk</p>
+</div></blockquote>
 </div>
 <div class="section" id="blend">
 <h3>blend<a class="headerlink" href="#blend" title="Permalink to this headline">¶</a></h3>
@@ -845,34 +873,39 @@
 <div class="section" id="props">
 <h3>props<a class="headerlink" href="#props" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Print properties on active object or global and view if none selected</div></blockquote>
+<div><p>Print properties on active object or global and view if none selected</p>
+</div></blockquote>
 </div>
 <div class="section" id="defaults">
 <h3>defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Print all available properties and their default values</div></blockquote>
+<div><p>Print all available properties and their default values</p>
+</div></blockquote>
 </div>
 <div class="section" id="test">
 <h3>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Create and display some test data, points, lines, quads</div></blockquote>
+<div><p>Create and display some test data, points, lines, quads</p>
+</div></blockquote>
 </div>
 <div class="section" id="voltest">
 <h3>voltest<a class="headerlink" href="#voltest" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Create and display a test volume dataset</div></blockquote>
+<div><p>Create and display a test volume dataset</p>
+</div></blockquote>
 </div>
 <div class="section" id="newstep">
 <h3>newstep<a class="headerlink" href="#newstep" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Add a new timestep after the current one</div></blockquote>
+<div><p>Add a new timestep after the current one</p>
+</div></blockquote>
 </div>
 <div class="section" id="filter">
 <h3>filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
-<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)<br />min (number) : the minimum value of the range to filter in or out<br />max (number) : the maximum value of the range to filter in or out<br />map (literal) : add map keyword for min/max [0,1] on available data range<br />eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </div>
 <div class="section" id="filterout">
@@ -880,7 +913,7 @@
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
-<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)<br />min (number) : the minimum value of the range to filter in or out<br />max (number) : the maximum value of the range to filter in or out<br />map (literal) : add map keyword for min/max [0,1] on available data range<br />eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </div>
 <div class="section" id="filtermin">
@@ -888,7 +921,7 @@
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermin index value</p>
-<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the minimum value of the range to filter in or out</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters added<br />value (number) : the minimum value of the range to filter in or out</p>
 </div></blockquote>
 </div>
 <div class="section" id="filtermax">
@@ -896,13 +929,14 @@
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermax index value</p>
-<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the maximum value of the range to filter in or out</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters added<br />value (number) : the maximum value of the range to filter in or out</p>
 </div></blockquote>
 </div>
 <div class="section" id="clearfilters">
 <h3>clearfilters<a class="headerlink" href="#clearfilters" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Clear filters on selected object</div></blockquote>
+<div><p>Clear filters on selected object</p>
+</div></blockquote>
 </div>
 <div class="section" id="verbose">
 <h3>verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
@@ -916,25 +950,27 @@
 <blockquote>
 <div><p>Toggle a boolean property</p>
 <p><strong>Usage:</strong> toogle (property-name)</p>
-<p>property-name : name of property to switchIf an object is selected, will try there, then view, then global</p>
+<p>property-name : name of property to switch<br />If an object is selected, will try there, then view, then global</p>
 </div></blockquote>
 </div>
 <div class="section" id="createvolume">
 <h3>createvolume<a class="headerlink" href="#createvolume" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Create a static volume object which will receive all following volumes as timesteps</div></blockquote>
+<div><p>Create a static volume object which will receive all following volumes as timesteps</p>
+</div></blockquote>
 </div>
 <div class="section" id="clearvolume">
 <h3>clearvolume<a class="headerlink" href="#clearvolume" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Clear global static volume object, any future volume loads will create a new object automatically</div></blockquote>
+<div><p>Clear global static volume object, any future volume loads will create a new object automatically</p>
+</div></blockquote>
 </div>
 <div class="section" id="palette">
 <h3>palette<a class="headerlink" href="#palette" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Export colour data of selected object</p>
 <p><strong>Usage:</strong> palette [type] [filename]</p>
-<p>type (string) : type of export (image/json/text) default = textfilename (string) : defaults to palette.[png/json/txt]</p>
+<p>type (string) : type of export (image/json/text) default = text<br />filename (string) : defaults to palette.[png/json/txt]</p>
 </div></blockquote>
 </div>
 </div>
@@ -1037,6 +1073,7 @@
 <li><a class="reference internal" href="#append">append</a></li>
 <li><a class="reference internal" href="#name">name</a></li>
 <li><a class="reference internal" href="#isosurface">isosurface</a></li>
+<li><a class="reference internal" href="#texture">texture</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#display-commands">Display commands:</a><ul>
@@ -1102,13 +1139,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1129,12 +1164,12 @@
         <li class="right" >
           <a href="Property-Reference.html" title="Property reference"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.6 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.9 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.2.
     </div>
   </body>
 </html>
