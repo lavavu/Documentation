@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>convert module &#8212; LavaVu 1.4.14 documentation</title>
+    <title>convert module &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="points module" href="points.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="control.html" title="control module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -76,7 +76,7 @@
 <td><p>Get bounding box from a list of vertices returns (min, max, range)</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#convert.plot_PLY" title="convert.plot_PLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.plot_PLY</span></code></a></p></td>
-<td><p>Plot triangles from a PlyData instance. Assumptions:</p></td>
+<td><p>Plot triangles from a PlyData instance.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#convert.points_to_volume" title="convert.points_to_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert.points_to_volume</span></code></a></p></td>
 <td><p>Convert object vertices to a volume by interpolating points to a grid</p></td>
@@ -120,7 +120,7 @@ resolution of smallest dimension will be minres elements</p>
 
 <dl class="function">
 <dt id="convert.export_OBJ">
-<code class="sig-name descname">export_OBJ</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export_OBJ</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to an OBJ file
 Supports only triangle mesh object data</p>
 <p>If source is lavavu.Viewer() exports all objects
@@ -155,15 +155,10 @@ returns (min, max, range)</p>
 <dl class="function">
 <dt id="convert.plot_PLY">
 <code class="sig-name descname">plot_PLY</code><span class="sig-paren">(</span><em class="sig-param">lv</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.plot_PLY" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Plot triangles from a PlyData instance. Assumptions:</dt><dd><dl class="simple">
-<dt><a href="#id2"><span class="problematic" id="id3">`</span></a>ply’ has a ‘vertex’ element with ‘x’, ‘y’, and ‘z’</dt><dd><p>properties;</p>
-</dd>
-<dt><a href="#id4"><span class="problematic" id="id5">`</span></a>ply’ has a ‘face’ element with an integral list property</dt><dd><p>‘vertex_indices’, all of whose elements have length 3.</p>
-</dd>
-</dl>
-</dd>
-</dl>
+<dd><p>Plot triangles from a PlyData instance. Assumptions:
+has a ‘vertex’ element with ‘x’, ‘y’, and ‘z’ properties,
+has a ‘face’ element with an integral list property ‘vertex_indices’,
+all of whose elements have length 3.</p>
 </dd></dl>
 
 <dl class="function">
@@ -181,8 +176,8 @@ returns (min, max, range)</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><ul class="simple">
 <li><p><strong>values</strong> (<em>numpy array of float32</em>) – The converted density field</p></li>
-<li><p><em>vmin</em> – the minimum 3d vertex of the bounding box</p></li>
-<li><p><em>vmax</em> – the maximum 3d vertex of the bounding box</p></li>
+<li><p><strong>boundingbox</strong> (<em>2,3</em>) – the minimum 3d vertex of the bounding box
+the maximum 3d vertex of the bounding box</p></li>
 </ul>
 </p>
 </dd>
@@ -269,7 +264,7 @@ points_to_volume_3D()</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -286,12 +281,12 @@ points_to_volume_3D()</p>
         <li class="right" >
           <a href="control.html" title="control module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>

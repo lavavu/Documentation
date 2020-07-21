@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Property reference &#8212; LavaVu 1.4.14 documentation</title>
+    <title>Property reference &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Scripting command reference" href="Scripting-Commands-Reference.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -51,16 +51,13 @@
 <li><p><a class="reference external" href="#all">all</a></p></li>
 <li><p><a class="reference external" href="#timestep">timestep</a></p></li>
 <li><p><a class="reference external" href="#object">object</a></p></li>
-<li><p><a class="reference external" href="#objectshapes">object(shapes)</a></p></li>
-<li><p><a class="reference external" href="#object">object</a></p></li>
-<li><p><a class="reference external" href="#objectline">object(line)</a></p></li>
-<li><p><a class="reference external" href="#objectpoint">object(point)</a></p></li>
-<li><p><a class="reference external" href="#objectsurface">object(surface)</a></p></li>
-<li><p><a class="reference external" href="#objectvolume">object(volume)</a></p></li>
-<li><p><a class="reference external" href="#objectvector">object(vector)</a></p></li>
-<li><p><a class="reference external" href="#objectvectorshapes">object(vector/shapes)</a></p></li>
-<li><p><a class="reference external" href="#objecttracer">object(tracer)</a></p></li>
-<li><p><a class="reference external" href="#objectshape">object(shape)</a></p></li>
+<li><p><a class="reference external" href="#object-line">object,line</a></p></li>
+<li><p><a class="reference external" href="#object-point">object,point</a></p></li>
+<li><p><a class="reference external" href="#object-surface">object,surface</a></p></li>
+<li><p><a class="reference external" href="#object-volume">object,volume</a></p></li>
+<li><p><a class="reference external" href="#object-vector">object,vector</a></p></li>
+<li><p><a class="reference external" href="#object-tracer">object,tracer</a></p></li>
+<li><p><a class="reference external" href="#object-shape">object,shape</a></p></li>
 <li><p><a class="reference external" href="#colourbar">colourbar</a></p></li>
 <li><p><a class="reference external" href="#colourmap">colourmap</a></p></li>
 <li><p><a class="reference external" href="#view">view</a></p></li>
@@ -81,7 +78,7 @@
 <tr>
 <td><em>renderers</em></td>
 <td>object</td>
-<td>[{"labels":"labels"},{"particles":"points","pointcubes":"cuboids","points":"points","pointspheres":"spheres","sortedpoints":"points"},{"grid":"quads","quads":"quads"},{"basictriangles":"basictriangles","mesh":"basictriangles","sortedtriangles":"sortedtriangles","surface":"basictriangles","triangles":"sortedtriangles"},{"arrows":"vectors","vectors":"vectors"},{"streamlines":"tracers","tracers":"tracers"},{"lines":"lines","links":"lines","simplelines":"simplelines","sortedlines":"sortedlines"},{"cubes":"cuboids","cuboids":"cuboids","shapes":"shapes","spheres":"spheres"},{"volume":"volume","volumes":"volume"},{"fullscreen":"screen","screen":"screen"}]</td>
+<td>[...]</td>
 <td>Holds list of available renderer types that can be created and their aliases, grouped in order of base types (label/point/grid/tri/vector/tracer/line/shape/volume/screen) read only.</td>
 </tr>
 <tr>
@@ -121,7 +118,8 @@
 <td>Font colour RGB(A)</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="timestep">
 <h2>timestep<a class="headerlink" href="#timestep" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -141,7 +139,8 @@
 <td>Time value for timestep</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object">
 <h2>object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -323,10 +322,16 @@
 <td>Specular shininess factor, controls size of highlight</td>
 </tr>
 <tr>
+<td><em>light</em></td>
+<td>real[4]</td>
+<td>[1.0,1.0,1.0,0.0]</td>
+<td>Light properties, colour Red,Green,Blue values and fourth component if provided is two-sided lighting flag, set to 1.0 to switch to single-sided lighting</td>
+</tr>
+<tr>
 <td><em>lightpos</em></td>
-<td>real[3]</td>
-<td>[0.1,-0.1,2.0]</td>
-<td>Light position X Y Z relative to camera position (follows camera)</td>
+<td>real[4]</td>
+<td>[0.1,-0.1,2.0,0.0]</td>
+<td>Light position X Y Z. Default is relative to camera (light moves follows camera, rotating the scene changes the illuminated area). Fourth component, if provided, is scene light flag, set to 1.0 to switch to a position in the scene, regardless of camera/view position the same parts of the scene will be illuminated.</td>
 </tr>
 <tr>
 <td><em>clip</em></td>
@@ -396,44 +401,10 @@
 </tr>
 <tr>
 <td><em>glyphs</em></td>
-<td>integer [0,n]</td>
+<td>integer</td>
 <td>2</td>
 <td>Glyph quality 0=none, 1=low, higher=increasing triangulation detail (arrows/shapes etc)</td>
 </tr>
-</tbody>
-</table></div>
-<div class="section" id="object-shapes">
-<h2>object(shapes)<a class="headerlink" href="#object-shapes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>segments</em></td>
-<td>integer [4,n]</td>
-<td>32</td>
-<td>Triangulation quality for spheres, number of segments to draw (minimum 4)</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section" id="id1">
-<h2>object<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><em>scaling</em></td>
 <td>real</td>
@@ -477,9 +448,10 @@
 <td>Index or label of data set to apply transparency to object by (requires opacity map)</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-line">
-<h2>object(line)<a class="headerlink" href="#object-line" title="Permalink to this headline">¶</a></h2>
+<h2>object,line<a class="headerlink" href="#object-line" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -527,9 +499,10 @@
 <td>Draw lines as 3D tubes</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-point">
-<h2>object(point)<a class="headerlink" href="#object-point" title="Permalink to this headline">¶</a></h2>
+<h2>object,point<a class="headerlink" href="#object-point" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -565,9 +538,10 @@
 <td>Index or label of data set to apply to point sizes</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-surface">
-<h2>object(surface)<a class="headerlink" href="#object-surface" title="Permalink to this headline">¶</a></h2>
+<h2>object,surface<a class="headerlink" href="#object-surface" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -609,9 +583,10 @@
 <td>Set this flag to reverse the surface faces (currently implemented for grids only)</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-volume">
-<h2>object(volume)<a class="headerlink" href="#object-volume" title="Permalink to this headline">¶</a></h2>
+<h2>object,volume<a class="headerlink" href="#object-volume" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -719,9 +694,10 @@
 <td>Volume texture offset (for crop)</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-vector">
-<h2>object(vector)<a class="headerlink" href="#object-vector" title="Permalink to this headline">¶</a></h2>
+<h2>object,vector<a class="headerlink" href="#object-vector" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -774,20 +750,6 @@
 <td>true</td>
 <td>Automatically scale vectors based on maximum magnitude</td>
 </tr>
-</tbody>
-</table></div>
-<div class="section" id="object-vector-shapes">
-<h2>object(vector/shapes)<a class="headerlink" href="#object-vector-shapes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><em>radius</em></td>
 <td>real</td>
@@ -795,9 +757,10 @@
 <td>When applied to Vector Arrows: Arrow shaft radius as ratio of vector length. When applied to shapes: radius of spheres.</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-tracer">
-<h2>object(tracer)<a class="headerlink" href="#object-tracer" title="Permalink to this headline">¶</a></h2>
+<h2>object,tracer<a class="headerlink" href="#object-tracer" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -839,9 +802,10 @@
 <td>Tracer scaling multiplier, applies to all tracer objects</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="object-shape">
-<h2>object(shape)<a class="headerlink" href="#object-shape" title="Permalink to this headline">¶</a></h2>
+<h2>object,shape<a class="headerlink" href="#object-shape" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -900,8 +864,15 @@
 <td>"lengths"</td>
 <td>Index or label of data set to apply to shape lengths</td>
 </tr>
+<tr>
+<td><em>segments</em></td>
+<td>integer</td>
+<td>32</td>
+<td>Triangulation quality for spheres, number of segments to draw (minimum 4)</td>
+</tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="colourbar">
 <h2>colourbar<a class="headerlink" href="#colourbar" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -987,7 +958,8 @@
 <td>Set to true to label discrete bins rather than tick points</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="colourmap">
 <h2>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -1037,7 +1009,8 @@
 <td>Set to true to lock colourmap ranges to current values</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="view">
 <h2>view<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -1129,7 +1102,8 @@
 <td>Enable to follow the model bounding box centre with camera as it changes</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <div class="section" id="global">
 <h2>global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -1407,6 +1381,12 @@
 <td>Point distance size attenuation (points shrink when further from viewer ie: perspective)</td>
 </tr>
 <tr>
+<td><em>pointpixelscale</em></td>
+<td>int</td>
+<td>1</td>
+<td>Set to zero for constant point size in pixels, set to 1 to scale points when the viewport is resized after storing the initial render size. If set to &gt; 1, this is the viewport height where pointsize = pixels. As the viewport height is adjusted points are scaled relative to this height - so points will appear the same regardless of render size</td>
+</tr>
+<tr>
 <td><em>sort</em></td>
 <td>boolean</td>
 <td>true</td>
@@ -1464,16 +1444,13 @@
 <li><a class="reference internal" href="#all">all</a></li>
 <li><a class="reference internal" href="#timestep">timestep</a></li>
 <li><a class="reference internal" href="#object">object</a></li>
-<li><a class="reference internal" href="#object-shapes">object(shapes)</a></li>
-<li><a class="reference internal" href="#id1">object</a></li>
-<li><a class="reference internal" href="#object-line">object(line)</a></li>
-<li><a class="reference internal" href="#object-point">object(point)</a></li>
-<li><a class="reference internal" href="#object-surface">object(surface)</a></li>
-<li><a class="reference internal" href="#object-volume">object(volume)</a></li>
-<li><a class="reference internal" href="#object-vector">object(vector)</a></li>
-<li><a class="reference internal" href="#object-vector-shapes">object(vector/shapes)</a></li>
-<li><a class="reference internal" href="#object-tracer">object(tracer)</a></li>
-<li><a class="reference internal" href="#object-shape">object(shape)</a></li>
+<li><a class="reference internal" href="#object-line">object,line</a></li>
+<li><a class="reference internal" href="#object-point">object,point</a></li>
+<li><a class="reference internal" href="#object-surface">object,surface</a></li>
+<li><a class="reference internal" href="#object-volume">object,volume</a></li>
+<li><a class="reference internal" href="#object-vector">object,vector</a></li>
+<li><a class="reference internal" href="#object-tracer">object,tracer</a></li>
+<li><a class="reference internal" href="#object-shape">object,shape</a></li>
 <li><a class="reference internal" href="#colourbar">colourbar</a></li>
 <li><a class="reference internal" href="#colourmap">colourmap</a></li>
 <li><a class="reference internal" href="#view">view</a></li>
@@ -1504,7 +1481,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1521,12 +1498,12 @@
         <li class="right" >
           <a href="tutorials/Volume.html" title="Loading Volume Data"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>

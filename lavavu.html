@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>lavavu module &#8212; LavaVu 1.4.14 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="control module" href="control.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="Scripting-Commands-Reference.html" title="Scripting command reference"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -51,7 +51,7 @@
 <p>This module provides an interface to the LavaVu library allowing
 loading of data, rendering of static images, animation and interactive visualisation</p>
 <p>To create an instance of the LavaVu rendering engine, use the Viewer() class, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -324,8 +324,8 @@ load only the colours from the file</p>
 <dl class="function">
 <dt id="lavavu.player">
 <code class="sig-name descname">player</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.player" title="Permalink to this definition">¶</a></dt>
-<dd><p>Shows a video inline within an ipython notebook.</p>
-<p>If IPython is not running, just returns</p>
+<dd><p>Shows a video inline within an ipython notebook.
+If IPython is not running, just returns</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Path and name of the file to play</p>
@@ -414,7 +414,7 @@ Does not necessarrily indicate running within a browser / notebook context</p>
 <h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="lavavu.Viewer">
-<em class="property">class </em><code class="sig-name descname">Viewer</code><span class="sig-paren">(</span><em class="sig-param">binpath=None</em>, <em class="sig-param">havecontext=False</em>, <em class="sig-param">omegalib=False</em>, <em class="sig-param">port=8080</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Viewer</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">binpath=None</em>, <em class="sig-param">context='default'</em>, <em class="sig-param">port=8080</em>, <em class="sig-param">threads=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The Viewer class provides an interface to a LavaVu session</p>
 <dl class="field-list simple">
@@ -432,7 +432,6 @@ Does not necessarrily indicate running within a browser / notebook context</p>
 <li><p><strong>quality</strong> (<em>int</em>) – Render sampling quality, render 2^N times larger image and downsample output
 For anti-aliasing image rendering where GPU multisample anti-aliasing is not available</p></li>
 <li><p><strong>writeimage</strong> (<em>boolean</em>) – Write images and quit, create images for all figures/timesteps in loaded database then exit</p></li>
-<li><p><strong>resolution</strong> (<em>list</em><em>, </em><em>tuple</em>) – Window/image resolution in pixels [x,y]</p></li>
 <li><p><strong>script</strong> (<em>list</em>) – List of script commands to run after initialising</p></li>
 <li><p><strong>initscript</strong> (<em>boolean</em>) – Set to False to disable loading any “init.script” file found in current directory</p></li>
 <li><p><strong>usequeue</strong> (<em>boolean</em>) – Set to True to add all commands to a background queue for processing rather than
@@ -444,27 +443,27 @@ and parsed into the initial set of global properties</p></li>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a viewer, setting the initial background colour to white</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Objects can be added by loading files:
 #&gt;&gt;&gt; lavavu.download(source + ‘Mandible.obj’) # doctest: +ELLIPSIS</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 <p>Or creating empty objects and loading data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s1">&#39;mypoints&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s1">&#39;mypoints&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 </pre></div>
 </div>
 <p>Viewer commands can be called as methods on the viewer object:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Viewer properties can be set by using it like a dictionary:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;grey50&quot;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;grey50&quot;</span>
 </pre></div>
 </div>
 <p>A list of available commands and properties can be found in the docs</p>
@@ -475,8 +474,8 @@ and parsed into the initial set of global properties</p></li>
 </ul>
 </div></blockquote>
 <p>or by using the online help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
 <span class="go">(...)</span>
 </pre></div>
 </div>
@@ -583,7 +582,7 @@ the new values whenever the control value is updated.</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="p">(</span><span class="s1">&#39;reset; translate -2&#39;</span><span class="p">)</span>
@@ -595,19 +594,24 @@ the new values whenever the control value is updated.</p></li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">binpath=None</em>, <em class="sig-param">havecontext=False</em>, <em class="sig-param">omegalib=False</em>, <em class="sig-param">port=8080</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">binpath=None</em>, <em class="sig-param">context='default'</em>, <em class="sig-param">port=8080</em>, <em class="sig-param">threads=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and init viewer instance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Viewer class docs for setup args</strong><strong>)</strong> (<em>(</em><em>see</em>) – </p></li>
+<li><p><strong>resolution</strong> (<em>list</em><em>, </em><em>tuple</em>) – Window/image resolution in pixels [x,y]
+For off-screen/windowless rendering this sets the default image output and viewer widget size
+For interactive windows this sets the window size.</p></li>
+<li><p><strong>binpath</strong> (<em>str</em>) – Override the executable path</p></li>
+<li><p><strong>context</strong> (<em>str</em>) – OpenGL context type, <em>“default”</em> will create a context and window based on available configurations.
+<em>“provided”</em> specifies a user provided context, set this if you have already created and activated the context.
+<em>“moderngl”</em> creates a context in python using the moderngl module (experimental).
+<em>“moderngl.”</em> creates a context and a window in python using the moderngl module (experimental) specify class after separator, eg: moderngl.headless, moderngl.pyglet, moderngl.pyqt5. <em>“omegalib”</em> is for use in multi-display VR mode.</p></li>
 <li><p><strong>port</strong> (<em>int</em>) – Web server port, open server on specific port for control/interaction
 Viewer will be run in a separate thread, all rendering will be done in this thread
 When disabled (None) creates the viewer in the current(main) thread and disables the server</p></li>
-<li><p><strong>binpath</strong> (<em>str</em>) – Override the executable path</p></li>
-<li><p><strong>havecontext</strong> (<em>boolean</em>) – OpenGL context provided by user, set this if you have already setup the context</p></li>
-<li><p><strong>omegalib</strong> (<em>boolean</em>) – For use in VR mode, disables some conflicting functionality
-and parsed into the initial set of global properties</p></li>
+<li><p><strong>threads</strong> (<em>bool</em>) – Use threads instead of asyncio</p></li>
 </ul>
 </dd>
 </dl>
@@ -643,6 +647,16 @@ If an object of this name exists, it will be returned instead of created</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Viewer.args">
+<code class="sig-name descname">args</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">arglist=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">figure=None</em>, <em class="sig-param">timestep=None</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">interactive=False</em>, <em class="sig-param">hidden=True</em>, <em class="sig-param">cache=False</em>, <em class="sig-param">quality=3</em>, <em class="sig-param">writeimage=False</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">script=None</em>, <em class="sig-param">initscript=False</em>, <em class="sig-param">usequeue=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the viewer, initialising with provided arguments and
+entering event loop if requested</p>
+<p>Parameters: see __init__ docs</p>
+<p>args : passed directly to viewer, eg: filenames or initial script commands
+kwargs: parsed as below to specific switches</p>
 </dd></dl>
 
 <dl class="method">
@@ -819,13 +833,13 @@ a default filename in the current directory</p>
 <dd><p>Process input events
 allows running interactive event loop while animating from python
 e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">event_loop</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="k">while</span> <span class="n">lv</span><span class="o">.</span><span class="n">events</span><span class="p">():</span>
 <span class="gp">... </span>        <span class="c1">#...build next frame here...</span>
 <span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span> <span class="c1"># doctest: +SKIP</span>
+<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span> 
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -850,6 +864,20 @@ provided JavaScript, allowing execution of viewer functions in the following scr
 <li><p><strong>code</strong> (<em>str</em>) – A JavaScript string to execute after getting the viewer object</p></li>
 <li><p><strong>ID</strong> (<em>int</em>) – A specific webgl ID number, if multiple are active this allows specifying which
 to execute code with, the first being ID=0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Viewer.export">
+<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">filepath='exported.gldb'</em>, <em class="sig-param">compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export model and state to a database snapshot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Specification of the files to load</p></li>
+<li><p><strong>compress</strong> (<em>boolean</em>) – Set flag to false to disable zlib compression of database</p></li>
 </ul>
 </dd>
 </dl>
@@ -900,6 +928,23 @@ if not provided a default will be created</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="lavavu.Viewer.fillwindow">
+<code class="sig-name descname">fillwindow</code><span class="sig-paren">(</span><em class="sig-param">aspect_ratio=(16</em>, <em class="sig-param">9)</em>, <em class="sig-param">menu=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.fillwindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and display an interactive viewer instance</p>
+<p>This shows an active viewer window to the visualisation
+that can be controlled with the mouse or html widgets</p>
+<p>Unlike window(), fillwindow() automatically resizes the window to the width of the parent element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aspect_ratio</strong> (<em>tuple</em><em> (</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Aspect ratio to calculate the height, eg: (16,9) (default) or (4,3)</p></li>
+<li><p><strong>menu</strong> (<em>boolean</em>) – Adds a menu to the top right allowing control of vis parameters, defaults to on</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="lavavu.Viewer.frame">
 <code class="sig-name descname">frame</code><span class="sig-paren">(</span><em class="sig-param">resolution=None</em>, <em class="sig-param">quality=90</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an image frame, returns current display as base64 encoded jpeg data url</p>
@@ -921,13 +966,20 @@ if not provided a default will be created</p></li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.get_all_vertices">
-<code class="sig-name descname">get_all_vertices</code><span class="sig-paren">(</span><em class="sig-param">objectlist</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.get_all_vertices" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_all_vertices</code><span class="sig-paren">(</span><em class="sig-param">objectlist=None</em>, <em class="sig-param">values=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.get_all_vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract all vertex data from a list of objects</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objectlist</strong> (<em>list</em>) – List of objects, defaults to all</p></li>
+<li><p><strong>values</strong> (<em>str</em>) – Optional label of a value data set to collect alongside the vertices</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
 <li><p><strong>pverts</strong> (<em>array</em>) – the vertices, numpy array</p></li>
 <li><p><strong>bb_all</strong> (<em>tuple</em>) – the bounding box of the combined data</p></li>
+<li><p><strong>pvals</strong> (<em>array</em>) – the values, numpy array (only returned if values != None)</p></li>
 </ul>
 </p>
 </dd>
@@ -1111,7 +1163,7 @@ Can be printed, iterated or accessed as a dictionary by object name</p>
 </dl>
 <p class="rubric">Example</p>
 <p>Parse a colour string</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">parse_colour</span><span class="p">(</span><span class="s1">&#39;rgba(255,24,128,1.0)&#39;</span><span class="p">)</span>
 <span class="go">array([1.  , 0.09, 0.5 , 1.  ], dtype=float32)</span>
@@ -1211,14 +1263,6 @@ This uses server.py to launch a simple web server</p>
 </ul>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Viewer.setup">
-<code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param">safe=True</em>, <em class="sig-param">arglist=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">figure=None</em>, <em class="sig-param">timestep=None</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">interactive=False</em>, <em class="sig-param">hidden=True</em>, <em class="sig-param">cache=False</em>, <em class="sig-param">quality=3</em>, <em class="sig-param">writeimage=False</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">script=None</em>, <em class="sig-param">initscript=False</em>, <em class="sig-param">usequeue=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.setup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute the viewer, initialising with provided arguments and
-entering event loop if requested</p>
-<p>Parameters: see __init__ docs</p>
 </dd></dl>
 
 <dl class="method">
@@ -1414,17 +1458,15 @@ defaults are: interactive=True, immediatesort=False, sortenabled=True</p></li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.window">
-<code class="sig-name descname">window</code><span class="sig-paren">(</span><em class="sig-param">menu=True</em>, <em class="sig-param">fill=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.window" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">window</code><span class="sig-paren">(</span><em class="sig-param">resolution=None</em>, <em class="sig-param">menu=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and display an interactive viewer instance</p>
 <p>This shows an active viewer window to the visualisation
 that can be controlled with the mouse or html widgets</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Frame size in pixels: width, height. Defaults to the viewer default output resolution, usually (640,480)</p></li>
 <li><p><strong>menu</strong> (<em>boolean</em>) – Adds a menu to the top right allowing control of vis parameters, defaults to on</p></li>
-<li><p><strong>fill</strong> (<em>boolean</em>) – By default the window will be of a fixed size (set by the Viewer resolution)
-If fill is set to true, the window will take up the maximum available space and images will be requested
-to match the resulting resolution.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1447,7 +1489,7 @@ be retrieved from the object list</p>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a viewer, load some test data, get objects</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">objects</span><span class="p">)</span>
@@ -1455,13 +1497,13 @@ be retrieved from the object list</p>
 </pre></div>
 </div>
 <p>Object properties can be passed in when created or set by using as a dictionary:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">pointtype</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="p">[</span><span class="s2">&quot;pointsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
 </div>
 <p>A list of available properties can be found here: <a class="reference external" href="https://lavavu.github.io/Documentation/Property-Reference">https://lavavu.github.io/Documentation/Property-Reference</a>
 or by using the online help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 <dl class="method">
@@ -1508,7 +1550,7 @@ or a user defined data label</p>
 
 <dl class="method">
 <dt id="lavavu.Object.colourmap">
-<code class="sig-name descname">colourmap</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">reverse=False</em>, <em class="sig-param">monochrome=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.colourmap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">colourmap</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">reverse=False</em>, <em class="sig-param">monochrome=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.colourmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load colour map data for object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1523,6 +1565,7 @@ Provided colourmap data can be
 - An existing ColourMap object
 Creates a colourmap named objectname_colourmap if object
 doesn’t already have a colourmap</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of colourmap, when creating a new one</p></li>
 <li><p><strong>reverse</strong> (<em>boolean</em>) – Reverse the order of the colours after loading</p></li>
 <li><p><strong>monochrome</strong> (<em>boolean</em>) – Convert to greyscale</p></li>
 </ul>
@@ -1545,6 +1588,18 @@ doesn’t already have a colourmap</p></li>
 <dd class="field-odd"><p><strong>data</strong> (<em>str</em><em> or </em><em>list</em><em> or </em><em>array</em>) – Pass a list or numpy uint32 array of colours
 if a string or list of strings is provided, colours are parsed as html colour string values
 if a numpy array is passed, colours are loaded as 4 byte ARGB unsigned integer values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Object.commands">
+<code class="sig-name descname">commands</code><span class="sig-paren">(</span><em class="sig-param">cmds</em>, <em class="sig-param">queue=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute viewer commands with this object as the target
+<a class="reference external" href="https://lavavu.github.io/Documentation/Scripting-Commands-Reference">https://lavavu.github.io/Documentation/Scripting-Commands-Reference</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmds</strong> (<em>list</em><em> or </em><em>str</em>) – Command(s) to execute</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1592,7 +1647,7 @@ Elements contain vertex/normal/value etc. data as numpy arrays</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
@@ -1688,7 +1743,7 @@ if a tuple e.g. (0,1) range is exclusive 0 &lt; x &lt; 1</p></li>
 
 <dl class="method">
 <dt id="lavavu.Object.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">values</em>, <em class="sig-param">out=False</em>, <em class="sig-param">map=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">values=None</em>, <em class="sig-param">out=False</em>, <em class="sig-param">map=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter data by including a range of values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2002,12 +2057,13 @@ This replaces the swapyz property/feature that only applied to OBJ import</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – (If data is not provided, the object’s texture data will be cleared)
+<li><p><strong>data</strong> (<em>list</em><em> or </em><em>array</em><em> or </em><em>string</em>) – (If data is not provided, the object’s texture data will be cleared)
 Pass a list or numpy uint32 or uint8 array
 texture data is loaded as raw image data
 shape of array must be 2d or 3d,
 either (height, width, channels) for RGB(A) image
-or (height, width) for single channel grayscale image</p></li>
+or (height, width) for single channel grayscale image
+Pass a string to load a texture from given filename</p></li>
 <li><p><strong>flip</strong> (<em>boolean</em>) – flip the texture vertically after loading
 (default is enabled as usually required for OpenGL but can be disabled)</p></li>
 <li><p><strong>filter</strong> (<em>int</em>) – type of filtering, 0=None/nearest, 1=linear, 2=mipmap linear</p></li>
@@ -2061,14 +2117,11 @@ decomposing the mesh into smaller triangles with the split option</p>
 
 <dl class="method">
 <dt id="lavavu.Object.vectors">
-<code class="sig-name descname">vectors</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">magnitude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.vectors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vectors</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load 3d vector data for object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vectors</p></li>
-<li><p><strong>magnitude</strong> (<em>str</em>) – Pass a label to calculate the magnitude and save under provided name (for use in colouring etc)</p></li>
-</ul>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em><em> or </em><em>array</em>) – Pass a list or numpy float32 3d array of vectors</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2107,7 +2160,7 @@ the new values whenever the control value is updated.</p></li>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a property set, load some test data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">props</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">Properties</span><span class="p">(</span><span class="n">floatprop</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;boolprop&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
@@ -2116,7 +2169,7 @@ the new values whenever the control value is updated.</p></li>
 </pre></div>
 </div>
 <p>Now create some controls to manipulate them</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">props</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;floatprop&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">props</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;floatprop&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">props</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="s1">&#39;boolprop&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2235,25 +2288,25 @@ NOTE: ignores position data</p>
 DrawData instances are created internally from the Geometry class</p>
 <p>copy(), get() and set() methods provide access to the data types</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]],</span> <span class="n">colours</span><span class="o">=</span><span class="s2">&quot;red blue&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">values</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;myvals&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Get the data elements</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 <span class="go">[DrawData(&quot;points&quot;) ==&gt; {&#39;vertices&#39;: (2, 3), &#39;colours&#39;: (2,), &#39;myvals&#39;: (2,)}]</span>
 </pre></div>
 </div>
 <p>Get a copy of the colours (if any)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">colours</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">colours_copy</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">colours</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">colours_copy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">colours</span><span class="p">)</span>
 <span class="go">[array([4278190335, 4294901760], dtype=uint32)]</span>
 </pre></div>
 </div>
 <p>Get a view of the vertex data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">verts</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">verts</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">verts</span><span class="p">)</span>
 <span class="go">[array([[0., 1., 0.],</span>
 <span class="go">       [1., 0., 0.]], dtype=float32)]</span>
@@ -2267,7 +2320,7 @@ and relying on it continuing to exist later</p>
 &gt;&gt;&gt; print(vals)
 [array([2., 3.], dtype=float32)]</p>
 <p>Load some new values for this data, provided list must match first dimension of existing data list</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span><span class="p">)</span>
 <span class="go">[array([2., 3.], dtype=float32)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">myvals</span><span class="p">)</span>
@@ -2388,7 +2441,7 @@ Viewer.store(filename) and restored with Viewer.restore(filename)</p></li>
 Geometry instances are created internally in the Object class with the data property</p>
 <p class="rubric">Example</p>
 <p>Get all object data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#Fixed points, always plotted regardless of timestep</span>
@@ -2408,7 +2461,7 @@ Geometry instances are created internally in the Object class with the data prop
 </pre></div>
 </div>
 <p>Loop through all elements of an object (at current timestep)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">el</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
 <span class="go">0 DrawData(&quot;points&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}</span>
@@ -2422,7 +2475,7 @@ Geometry instances are created internally in the Object class with the data prop
 </pre></div>
 </div>
 <p>Get only triangle data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;triangles&quot;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;triangles&quot;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="go">[DrawData(&quot;triangles&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
@@ -2433,7 +2486,7 @@ Geometry instances are created internally in the Object class with the data prop
 </div>
 <p>Get data at specific timestep only
 (default is current step including fixed data)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="go">[DrawData(&quot;triangles&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}, DrawData(&quot;triangles&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
@@ -2445,14 +2498,14 @@ Geometry instances are created internally in the Object class with the data prop
 </pre></div>
 </div>
 <p>Loop through data elements</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
 <span class="go">DrawData(&quot;triangles&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}</span>
 <span class="go">DrawData(&quot;triangles&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}</span>
 </pre></div>
 </div>
 <p>Show the fixed data (timestep -1)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;-1&quot;</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;-1&quot;</span><span class="p">])</span>
 <span class="go">[DrawData(&quot;points&quot;) ==&gt; {&#39;vertices&#39;: (3, 3)}]</span>
 </pre></div>
 </div>
@@ -2464,11 +2517,11 @@ Geometry instances are created internally in the Object class with the data prop
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Image class provides an interface to a raw image</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span> <span class="c1"># doctest: +SKIP</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 <p>TODO: control blend equations</p>
@@ -2567,13 +2620,13 @@ otherwise will use default viewer dimensions</p></li>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Video class provides an interface to record animations</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>           <span class="c1"># doctest: +SKIP</span>
-<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>   <span class="c1"># doctest: +SKIP</span>
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>        <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>           
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>   
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> 
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>        
 </pre></div>
 </div>
 <dl class="method">
@@ -2658,7 +2711,7 @@ values are loaded as 8 bit unsigned integer values</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -2675,12 +2728,12 @@ values are loaded as 8 bit unsigned integer values</p>
         <li class="right" >
           <a href="Scripting-Commands-Reference.html" title="Scripting command reference"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>

@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>control module &#8212; LavaVu 1.4.14 documentation</title>
+    <title>control module &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="convert module" href="convert.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="lavavu.html" title="lavavu module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -61,19 +61,19 @@ in an IPython notebook environment</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>Create a Button control to execute a rotation command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;rotate x 1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Create a Range control to adjust the pointsize property:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;pointsize&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>For convenience, controls to set visualisation properties can often be created by calling control directly with the property name
 This will create a control of the default type for for that property if one is defined, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pts</span><span class="o">.</span><span class="n">control</span><span class="p">(</span><span class="s1">&#39;pointsize&#39;</span><span class="p">)</span>
 </pre></div>
@@ -416,7 +416,7 @@ placed to the left with the viewer aligned to the right</p>
 
 <dl class="class">
 <dt id="control.Window">
-<em class="property">class </em><code class="sig-name descname">Window</code><span class="sig-paren">(</span><em class="sig-param">viewer</em>, <em class="sig-param">align='left'</em>, <em class="sig-param">wrapper=''</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Window" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Window</code><span class="sig-paren">(</span><em class="sig-param">viewer</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">align='left'</em>, <em class="sig-param">wrapper=''</em><span class="sig-paren">)</span><a class="headerlink" href="#control.Window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">control._Container</span></code></p>
 <p>Creates an interaction window with an image of the viewer frame
 and webgl controller for rotation/translation</p>
@@ -485,7 +485,7 @@ Set to None to disable wrapper</p></li>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -502,12 +502,12 @@ Set to None to disable wrapper</p></li>
         <li class="right" >
           <a href="lavavu.html" title="lavavu module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>

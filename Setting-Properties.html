@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Setting properties &#8212; LavaVu 1.4.14 documentation</title>
+    <title>Setting properties &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="GLDB file format" href="GLDB-file-format.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="Commandline-Arguments.html" title="Command line arguments"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -52,38 +52,38 @@
 None of the properties are case sensitive and will be converted to lower case when processing.</p>
 <p>These properties can be changed interactively or in a script by entering the property name followed by = then the desired value</p>
 <p>If an object is selected the property is applied to that object</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">myobj</span>
-<span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>select myobj
+opacity=0.5
 </pre></div>
 </div>
 <p>If no object is selected, either the property is applicable to the current view/camera and it is applied there, or otherwise a global property is set.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">border</span><span class="o">=</span><span class="mi">0</span>    <span class="c1">#Applies to view, disabling border</span>
-<span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span> <span class="c1">#Applies globally, default opacity</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>border=0    #Applies to view, disabling border
+opacity=0.7 #Applies globally, default opacity
 </pre></div>
 </div>
 <p>Properties that apply to objects can also be set globally, if the object doesn’t have a value set, it will use the global value if found, falling back to a default value if not.</p>
 <p>Numerical properties can be incremented or decremented as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pointsize</span><span class="o">+=</span><span class="mi">1</span>
-<span class="n">opacity</span><span class="o">-=</span><span class="mf">0.1</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pointsize+=1
+opacity-=0.1
 </pre></div>
 </div>
 <p>Boolean properties can be set to 1/0 or true/false</p>
 <p>Colour properties can be specified by html style strings, <a class="reference external" href="https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart">X11 colour names</a> or json RGBA arrays</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colour</span><span class="o">=</span><span class="c1">#ff0000</span>
-<span class="n">colour</span><span class="o">=</span><span class="n">red</span>
-<span class="n">colour</span><span class="o">=</span><span class="n">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">colour</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>colour=#ff0000
+colour=red
+colour=rgba(255,0,0,1)
+colour=[1,0,0,1]
 </pre></div>
 </div>
 <p>From Underworld 2, properties are passed to LavaVu as additional arguments when creating figures or objects.
 To set a property, pass to the object (for individual object properties) or figure (for global/view properties):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">glucifer</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">arrows</span> <span class="o">=</span> <span class="n">glucifer</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">VectorArrows</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">velocityField</span><span class="p">,</span> <span class="n">arrowhead</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>fig = glucifer.Figure(margin=50)
+arrows = glucifer.objects.VectorArrows(mesh, velocityField, arrowhead=2)
 </pre></div>
 </div>
 <p>To update the properties of an existing object, simply modify as you would a python dict:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">arrows</span><span class="p">[</span><span class="s2">&quot;arrowhead&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">fig</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;New Title&quot;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arrows[&quot;arrowhead&quot;] = 3
+fig[&quot;title&quot;] = &quot;New Title&quot;
 </pre></div>
 </div>
 </div>
@@ -116,7 +116,7 @@ To set a property, pass to the object (for individual object properties) or figu
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -133,12 +133,12 @@ To set a property, pass to the object (for individual object properties) or figu
         <li class="right" >
           <a href="Commandline-Arguments.html" title="Command line arguments"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>

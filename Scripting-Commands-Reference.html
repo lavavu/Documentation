@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Scripting command reference &#8212; LavaVu 1.4.14 documentation</title>
+    <title>Scripting command reference &#8212; LavaVu 1.6 documentation</title>
     <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="lavavu module" href="lavavu.html" />
@@ -36,7 +36,7 @@
         <li class="right" >
           <a href="Property-Reference.html" title="Property reference"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -58,7 +58,7 @@
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#output-commands">Output</a></strong></p></li>
 </ul>
-<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#bakecolour">bakecolour</a>, <a class="reference external" href="#glaze">glaze</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
+<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#view-commands">View</a></strong></p></li>
 </ul>
@@ -66,11 +66,11 @@
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#object-commands">Object</a></strong></p></li>
 </ul>
-<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#isosurface">isosurface</a>, <a class="reference external" href="#texture">texture</a></p>
+<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#isosurface">isosurface</a>, <a class="reference external" href="#texture">texture</a>, <a class="reference external" href="#populate">populate</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#bakecolour">bakecolour</a>, <a class="reference external" href="#glaze">glaze</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#tiles">tiles</a>, <a class="reference external" href="#valuerange">valuerange</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#colourbar">colourbar</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#scale">scale</a></p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#display-commands">Display</a></strong></p></li>
 </ul>
-<p><a class="reference external" href="#background">background</a>, <a class="reference external" href="#alpha">alpha</a>, <a class="reference external" href="#axis">axis</a>, <a class="reference external" href="#rulers">rulers</a>, <a class="reference external" href="#antialias">antialias</a>, <a class="reference external" href="#valuerange">valuerange</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#colourbar">colourbar</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#pointsample">pointsample</a>, <a class="reference external" href="#border">border</a>, <a class="reference external" href="#title">title</a>, <a class="reference external" href="#scale">scale</a>, <a class="reference external" href="#modelscale">modelscale</a></p>
+<p><a class="reference external" href="#background">background</a>, <a class="reference external" href="#alpha">alpha</a>, <a class="reference external" href="#axis">axis</a>, <a class="reference external" href="#rulers">rulers</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#antialias">antialias</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#pointsample">pointsample</a>, <a class="reference external" href="#border">border</a>, <a class="reference external" href="#title">title</a>, <a class="reference external" href="#scale">scale</a>, <a class="reference external" href="#modelscale">modelscale</a></p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#scripting-commands">Scripting</a></strong></p></li>
 </ul>
@@ -93,7 +93,8 @@
 <blockquote>
 <div><p>Repeat commands from history</p>
 <p><strong>Usage:</strong> repeat [count=1] [N=1]</p>
-<p>count (integer) : repeat commands count timesN (integer) : repeat the last N commands</p>
+<p>count (integer) : repeat commands count times<br />
+N (integer) : repeat the last N commands</p>
 </div></blockquote>
 </div>
 <div class="section" id="animate">
@@ -101,7 +102,9 @@
 <blockquote>
 <div><p>Update display between each command</p>
 <p><strong>Usage:</strong> animate rate</p>
-<p>rate (integer) : animation timer to fire every (rate) msec (default: 50)When on, if multiple commands are issued the frame is re-rendered at set framerateWhen off, all commands will be processed before the display is updated</p>
+<p>rate (integer) : animation timer to fire every (rate) msec (default: 50)<br />
+When on, if multiple commands are issued the frame is re-rendered at set framerate<br />
+When off, all commands will be processed before the display is updated</p>
 </div></blockquote>
 </div>
 <div class="section" id="history">
@@ -131,7 +134,11 @@
 <blockquote>
 <div><p>List available data</p>
 <p><strong>Usage:</strong> list objects/colourmaps/elements</p>
-<p>objects : enable object list (stays on screen until disabled)(dimmed objects are hidden or not in selected viewport)colourmaps : show colourmap listelements : show geometry elements by id in terminaldata : show available data sets in selected object or all</p>
+<p>objects : enable object list (stays on screen until disabled)<br />
+(dimmed objects are hidden or not in selected viewport)<br />
+colourmaps : show colourmap list<br />
+elements : show geometry elements by id in terminal<br />
+data : show available data sets in selected object or all</p>
 </div></blockquote>
 </div>
 <div class="section" id="step">
@@ -175,7 +182,10 @@
 <blockquote>
 <div><p>Set model to view (when multiple models loaded)</p>
 <p><strong>Usage:</strong> model up/down/value</p>
-<p>value (integer) : the model index to view [1,n]up : switch to previous model if availabledown : switch to next model if availableadd : add a new model</p>
+<p>value (integer) : the model index to view [1,n]<br />
+up : switch to previous model if available<br />
+down : switch to next model if available<br />
+add : add a new model</p>
 </div></blockquote>
 </div>
 <div class="section" id="reload">
@@ -183,7 +193,8 @@
 <blockquote>
 <div><p>Reload all data of current model/timestep from database</p>
 <p><strong>Usage:</strong> reload [object_id]</p>
-<p>If an object is selected, reload will apply to that object only(If no database, will still reload data to gpu)</p>
+<p>If an object is selected, reload will apply to that object only<br />
+(If no database, will still reload data to gpu)</p>
 </div></blockquote>
 </div>
 <div class="section" id="redraw">
@@ -195,9 +206,11 @@
 <div class="section" id="clear">
 <h3>clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Clear all data of current model/timestep</p>
-<p><strong>Usage:</strong> clear [objects]</p>
-<p>objects : optionally clear all object entries(if omitted, only the objects geometry data is cleared)</p>
+<div><p>Clear data from current model/timestep</p>
+<p><strong>Usage:</strong> clear [type/”objects”]</p>
+<p>type (string) : clear only data of this type, eg: “indices”, applies to selected object.<br />
+objects : optionally clear all object entries<br />
+(if omitted, only the object’s geometry data is cleared)</p>
 </div></blockquote>
 </div>
 </div>
@@ -207,14 +220,16 @@
 <div class="section" id="file">
 <h3>file<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Load database or model file<strong>Usage:</strong> file “filename”</p>
+<div><p>Load database or model file<br />
+<strong>Usage:</strong> file “filename”</p>
 <p>filename (string) : the path to the file, quotes necessary if path contains spaces</p>
 </div></blockquote>
 </div>
 <div class="section" id="script">
 <h3>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Run script fileLoad a saved script of viewer commands from a file</p>
+<div><p>Run script file<br />
+Load a saved script of viewer commands from a file</p>
 <p><strong>Usage:</strong> script filename</p>
 <p>filename (string) : path and name of the script file to load</p>
 </div></blockquote>
@@ -224,7 +239,9 @@
 <blockquote>
 <div><p>Set figure to view</p>
 <p><strong>Usage:</strong> figure up/down/value</p>
-<p>value (integer/string) : the figure index or name to viewup : switch to previous figure if availabledown : switch to next figure if available</p>
+<p>value (integer/string) : the figure index or name to view<br />
+up : switch to previous figure if available<br />
+down : switch to next figure if available</p>
 </div></blockquote>
 </div>
 <div class="section" id="savefigure">
@@ -232,7 +249,9 @@
 <blockquote>
 <div><p>Store current vis settings in a figure</p>
 <p><strong>Usage:</strong> figure name</p>
-<p>name (string) : the figure name to saveif ommitted, currently active or default figure will be savedif it doesn’t exist it will be created</p>
+<p>name (string) : the figure name to save<br />
+if ommitted, currently active or default figure will be saved<br />
+if it doesn’t exist it will be created</p>
 </div></blockquote>
 </div>
 <div class="section" id="view">
@@ -240,13 +259,16 @@
 <blockquote>
 <div><p>Set view (when available)</p>
 <p><strong>Usage:</strong> view up/down/value</p>
-<p>value (integer) : the view index to switch toup : switch to previous view if availabledown : switch to next view if available</p>
+<p>value (integer) : the view index to switch to<br />
+up : switch to previous view if available<br />
+down : switch to next view if available</p>
 </div></blockquote>
 </div>
 <div class="section" id="scan">
 <h3>scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Rescan the current directory for timestep database filesbased on currently loaded filename</p>
+<div><p>Rescan the current directory for timestep database files<br />
+based on currently loaded filename</p>
 </div></blockquote>
 </div>
 </div>
@@ -256,7 +278,8 @@
 <div class="section" id="image">
 <h3>image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Save an image of the current view<strong>Usage:</strong> image [filename]</p>
+<div><p>Save an image of the current view<br />
+<strong>Usage:</strong> image [filename]</p>
 <p>filename (string) : optional base filename without extension</p>
 </div></blockquote>
 </div>
@@ -287,53 +310,24 @@
 <div class="section" id="movie">
 <h3>movie<a class="headerlink" href="#movie" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Encode video of model running from current timestep to specified timestep(Requires libavcodec)</p>
-<p><strong>Usage:</strong> movie [endstep]<strong>Usage:</strong> movie [startstep] [endstep]<strong>Usage:</strong> movie [startstep] [endstep] [fps]</p>
-<p>startstep (integer) : first frame timestep (defaults to first)endstep (integer) : last frame timestep (defaults to final)fps (integer) : fps, default=30</p>
+<div><p>Encode video of model running from current timestep to specified timestep<br />
+(Requires libavcodec)</p>
+<p><strong>Usage:</strong> movie [endstep]<br />
+<strong>Usage:</strong> movie [startstep] [endstep]<br />
+<strong>Usage:</strong> movie [startstep] [endstep] [fps]</p>
+<p>startstep (integer) : first frame timestep (defaults to first)<br />
+endstep (integer) : last frame timestep (defaults to final)<br />
+fps (integer) : fps, default=30</p>
 </div></blockquote>
 </div>
 <div class="section" id="record">
 <h3>record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Encode video of all frames displayed at specified framerate(Requires libavcodec)</p>
+<div><p>Encode video of all frames displayed at specified framerate<br />
+(Requires libavcodec)</p>
 <p><strong>Usage:</strong> record (framerate) (quality)</p>
-<p>framerate (integer): frames per second (default 30)quality (integer): 1=low/2=medium/3=high (default 1)</p>
-</div></blockquote>
-</div>
-<div class="section" id="bake">
-<h3>bake<a class="headerlink" href="#bake" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
-<p><strong>Usage:</strong> bake [object]</p>
-<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
-<p><strong>Usage:</strong> bakecolour [object]</p>
-<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
-<p><strong>Usage:</strong> glaze [object]</p>
-<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
-</div></blockquote>
-</div>
-<div class="section" id="bakecolour">
-<h3>bakecolour<a class="headerlink" href="#bakecolour" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
-<p><strong>Usage:</strong> bake [object]</p>
-<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
-<p><strong>Usage:</strong> bakecolour [object]</p>
-<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
-<p><strong>Usage:</strong> glaze [object]</p>
-<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
-</div></blockquote>
-</div>
-<div class="section" id="glaze">
-<h3>glaze<a class="headerlink" href="#glaze" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher levelglyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)This removes the ability to change the glyph properties used to create primitives,but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
-<p><strong>Usage:</strong> bake [object]</p>
-<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
-<p><strong>Usage:</strong> bakecolour [object]</p>
-<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
-<p><strong>Usage:</strong> glaze [object]</p>
-<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+<p>framerate (integer): frames per second (default 30)<br />
+quality (integer): 1=low/2=medium/3=high (default 1)</p>
 </div></blockquote>
 </div>
 <div class="section" id="export">
@@ -341,7 +335,10 @@
 <blockquote>
 <div><p>Export model database</p>
 <p><strong>Usage:</strong> export [filename] [objects] [uncompressed]</p>
-<p>filename (string) : the name of the file to export to, extension must be .gldbobjects (integer/string) : the indices or names of the objects to export (see: “list objects”)uncompressed : add this to skip the zlib compression step in the export processIf object ommitted all will be exported</p>
+<p>filename (string) : the name of the file to export to, extension must be .gldb<br />
+objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
+uncompressed : add this to skip the zlib compression step in the export process<br />
+If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="csv">
@@ -349,7 +346,8 @@
 <blockquote>
 <div><p>Export CSV data</p>
 <p><strong>Usage:</strong> csv [objects]</p>
-<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
+If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="json">
@@ -357,7 +355,8 @@
 <blockquote>
 <div><p>Export json data</p>
 <p><strong>Usage:</strong> json [object]</p>
-<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)If object ommitted all will be exported</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
+If object ommitted all will be exported</p>
 </div></blockquote>
 </div>
 <div class="section" id="save">
@@ -365,13 +364,16 @@
 <blockquote>
 <div><p>Export all settings as json state file that can be reloaded later</p>
 <p><strong>Usage:</strong> save [“filename”]</p>
-<p>file (string) : name of file to importIf filename omitted and database loaded, will save the stateto the active figure in the database instead</p>
+<p>file (string) : name of file to import<br />
+If filename omitted and database loaded, will save the state<br />
+to the active figure in the database instead</p>
 </div></blockquote>
 </div>
 <div class="section" id="tiles">
 <h3>tiles<a class="headerlink" href="#tiles" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Save a tiled image of selected volume dataset<strong>Usage:</strong> tiles (object)</p>
+<div><p>Save a tiled image of selected volume dataset<br />
+<strong>Usage:</strong> tiles (object)</p>
 </div></blockquote>
 </div>
 </div>
@@ -383,9 +385,12 @@
 <blockquote>
 <div><p>Rotate model</p>
 <p><strong>Usage:</strong> rotate axis degrees</p>
-<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation</p>
+<p>axis (x/y/z) : axis of rotation<br />
+degrees (number) : degrees of rotation</p>
 <p><strong>Usage:</strong> rotate x y z</p>
-<p>x (number) : x axis degrees of rotationy (number) : y axis degrees of rotationz (number) : z axis degrees of rotation</p>
+<p>x (number) : x axis degrees of rotation<br />
+y (number) : y axis degrees of rotation<br />
+z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </div>
 <div class="section" id="rotatex">
@@ -417,7 +422,14 @@
 <blockquote>
 <div><p>Set model rotation (replaces any previous rotation)</p>
 <p><strong>Usage:</strong> rotation x y z [w]</p>
-<p>x (number) : rotation x componenty (number) : rotation y componentz (number) : rotation z componentw (number) : rotation w componentIf only x,y,z are provided they determine the rotationabout these axis (roll/pitch/yaw)If x,y,z,w are provided, the rotation is loadedas a quaternion with these components</p>
+<p>x (number) : rotation x component<br />
+y (number) : rotation y component<br />
+z (number) : rotation z component<br />
+w (number) : rotation w component<br />
+If only x,y,z are provided they determine the rotation<br />
+about these axis (roll/pitch/yaw)<br />
+If x,y,z,w are provided, the rotation is loaded<br />
+as a quaternion with these components</p>
 </div></blockquote>
 </div>
 <div class="section" id="zoom">
@@ -425,7 +437,9 @@
 <blockquote>
 <div><p>Translate model in Z direction (zoom)</p>
 <p><strong>Usage:</strong> zoom units</p>
-<p>units (number) : distance to zoom, units are based on model size1 unit is approx the model bounding box sizenegative to zoom out, positive in</p>
+<p>units (number) : distance to zoom, units are based on model size<br />
+1 unit is approx the model bounding box size<br />
+negative to zoom out, positive in</p>
 </div></blockquote>
 </div>
 <div class="section" id="translate">
@@ -433,9 +447,12 @@
 <blockquote>
 <div><p>Translate model in 3 dimensions</p>
 <p><strong>Usage:</strong> translate dir shift</p>
-<p>dir (x/y/z) : direction to translateshift (number) : amount of translation</p>
+<p>dir (x/y/z) : direction to translate<br />
+shift (number) : amount of translation</p>
 <p><strong>Usage:</strong> translation x y z</p>
-<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+<p>x (number) : x axis shift<br />
+y (number) : y axis shift<br />
+z (number) : z axis shift</p>
 </div></blockquote>
 </div>
 <div class="section" id="translatex">
@@ -467,7 +484,9 @@
 <blockquote>
 <div><p>Set model translation in 3d coords (replaces any previous translation)</p>
 <p><strong>Usage:</strong> translation x y z</p>
-<p>x (number) : x axis shifty (number) : y axis shiftz (number) : z axis shift</p>
+<p>x (number) : x axis shift<br />
+y (number) : y axis shift<br />
+z (number) : z axis shift</p>
 </div></blockquote>
 </div>
 <div class="section" id="autorotate">
@@ -481,7 +500,8 @@
 <blockquote>
 <div><p>Auto-spin model, animates</p>
 <p><strong>Usage:</strong> spin axis degrees</p>
-<p>axis (x/y/z) : axis of rotationdegrees (number) : degrees of rotation per frame</p>
+<p>axis (x/y/z) : axis of rotation<br />
+degrees (number) : degrees of rotation per frame</p>
 </div></blockquote>
 </div>
 <div class="section" id="focus">
@@ -489,7 +509,9 @@
 <blockquote>
 <div><p>Set model focal point in 3d coords</p>
 <p><strong>Usage:</strong> focus x y z</p>
-<p>x (number) : x coordy (number) : y coordz (number) : z coord</p>
+<p>x (number) : x coord<br />
+y (number) : y coord<br />
+z (number) : z coord</p>
 </div></blockquote>
 </div>
 <div class="section" id="fov">
@@ -575,7 +597,8 @@
 <blockquote>
 <div><p>Resize view window</p>
 <p><strong>Usage:</strong> resize width height</p>
-<p>width (integer) : width in pixelsheight (integer) : height in pixels</p>
+<p>width (integer) : width in pixels<br />
+height (integer) : height in pixels</p>
 </div></blockquote>
 </div>
 <div class="section" id="fullscreen">
@@ -599,7 +622,8 @@
 <div class="section" id="stereo">
 <h3>stereo<a class="headerlink" href="#stereo" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Enable/disable stereo projectionIf no stereo hardware found will use side-by-side mode</p>
+<div><p>Enable/disable stereo projection<br />
+If no stereo hardware found will use side-by-side mode</p>
 </div></blockquote>
 </div>
 <div class="section" id="coordsystem">
@@ -613,7 +637,9 @@
 <blockquote>
 <div><p>Sort geometry on demand (with idle timer)</p>
 <p><strong>Usage:</strong> sort on/off</p>
-<p>on : (default) sort after model rotationoff : no sortingIf no options passed, does immediate re-sort</p>
+<p>on : (default) sort after model rotation<br />
+off : no sorting<br />
+If no options passed, does immediate re-sort</p>
 </div></blockquote>
 </div>
 </div>
@@ -627,7 +653,10 @@
 <p><strong>Usage:</strong> hide object</p>
 <p>object (integer/string) : the index or name of the object to hide (see: “list objects”)</p>
 <p><strong>Usage:</strong> hide geometry_type id</p>
-<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to hideeg: ‘hide points’ will hide all point datanote: ‘hide all’ will hide all objects</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumes<br />
+id (integer, optional) : id of geometry to hide<br />
+eg: ‘hide points’ will hide all point data<br />
+note: ‘hide all’ will hide all objects</p>
 </div></blockquote>
 </div>
 <div class="section" id="show">
@@ -637,20 +666,25 @@
 <p><strong>Usage:</strong> show object</p>
 <p>object (integer/string) : the index or name of the object to show (see: “list objects”)</p>
 <p><strong>Usage:</strong> show geometry_type id</p>
-<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumesid (integer, optional) : id of geometry to showeg: ‘hide points’ will show all point datanote: ‘hide all’ will show all objects</p>
+<p>geometry_type : points/labels/vectors/tracers/triangles/quads/shapes/lines/volumes<br />
+id (integer, optional) : id of geometry to show<br />
+eg: ‘hide points’ will show all point data<br />
+note: ‘hide all’ will show all objects</p>
 </div></blockquote>
 </div>
 <div class="section" id="delete">
 <h3>delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Delete objects<strong>Usage:</strong> delete object</p>
+<div><p>Delete objects<br />
+<strong>Usage:</strong> delete object</p>
 <p>object (integer/string) : the index or name of the object to delete (see: “list objects”)</p>
 </div></blockquote>
 </div>
 <div class="section" id="load">
 <h3>load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Load objects from databaseUsed when running with deferred loading (-N command line switch)</p>
+<div><p>Load objects from database<br />
+Used when running with deferred loading (-N command line switch)</p>
 <p><strong>Usage:</strong> load object</p>
 <p>object (integer/string) : the index or name of the object to load (see: “list objects”)</p>
 </div></blockquote>
@@ -658,9 +692,12 @@
 <div class="section" id="select">
 <h3>select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Select object as the active objectUsed for setting properties of objectsfollowing commands that take an object id will no longer require one)</p>
+<div><p>Select object as the active object<br />
+Used for setting properties of objects<br />
+following commands that take an object id will no longer require one)</p>
 <p><strong>Usage:</strong> select object</p>
-<p>object (integer/string) : the index or name of the object to select (see: “list objects”)Leave object parameter empty to clear selection.</p>
+<p>object (integer/string) : the index or name of the object to select (see: “list objects”)<br />
+Leave object parameter empty to clear selection.</p>
 </div></blockquote>
 </div>
 <div class="section" id="add">
@@ -668,13 +705,16 @@
 <blockquote>
 <div><p>Add a new object and select as the active object</p>
 <p><strong>Usage:</strong> add [object_name] [data_type]</p>
-<p>object_name (string) : optional name of the object to adddata_type (string) : optional name of the default data type(points/labels/vectors/tracers/triangles/quads/shapes/lines)</p>
+<p>object_name (string) : optional name of the object to add<br />
+data_type (string) : optional name of the default data type<br />
+(points/labels/vectors/tracers/triangles/quads/shapes/lines)</p>
 </div></blockquote>
 </div>
 <div class="section" id="append">
 <h3>append<a class="headerlink" href="#append" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Append a new geometry container to an objecteg: to divide line objects into segments</p>
+<div><p>Append a new geometry container to an object<br />
+eg: to divide line objects into segments</p>
 <p><strong>Usage:</strong> append [object]</p>
 <p>object (integer/string) : the index or name of the object to select (see: “list objects”)</p>
 </div></blockquote>
@@ -684,7 +724,8 @@
 <blockquote>
 <div><p>Set object name</p>
 <p><strong>Usage:</strong> name object newname</p>
-<p>object (integer/string) : the index or name of the object to rename (see: “list objects”)newname (string) : new name to apply</p>
+<p>object (integer/string) : the index or name of the object to rename (see: “list objects”)<br />
+newname (string) : new name to apply</p>
 </div></blockquote>
 </div>
 <div class="section" id="isosurface">
@@ -692,13 +733,146 @@
 <blockquote>
 <div><p>Generate an isosurface from a volume object</p>
 <p><strong>Usage:</strong> isosurface [isovalue]</p>
-<p>isovalue (number) : isovalue to draw the surface at,if not specified, will use ‘isovalues’ property</p>
+<p>isovalue (number) : isovalue to draw the surface at,<br />
+if not specified, will use ‘isovalues’ property</p>
 </div></blockquote>
 </div>
 <div class="section" id="texture">
 <h3>texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set or clear object texture data</p>
+</div></blockquote>
+</div>
+<div class="section" id="populate">
+<h3>populate<a class="headerlink" href="#populate" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Populate generated data set</p>
+<p><strong>Usage:</strong> populate label</p>
+<p>label (string) : the label of the built in data to copy to a value data set, one of:<br />
+x,y,z,index,count,width,height,length,size,x0,y0,z0,x1,y1,z1,magnitude,nx,ny,nz,nmean</p>
+</div></blockquote>
+</div>
+<div class="section" id="bake">
+<h3>bake<a class="headerlink" href="#bake" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
+glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
+This removes the ability to change the glyph properties used to create primitives,<br />
+but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+</div></blockquote>
+</div>
+<div class="section" id="bakecolour">
+<h3>bakecolour<a class="headerlink" href="#bakecolour" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
+glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
+This removes the ability to change the glyph properties used to create primitives,<br />
+but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+</div></blockquote>
+</div>
+<div class="section" id="glaze">
+<h3>glaze<a class="headerlink" href="#glaze" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
+glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
+This removes the ability to change the glyph properties used to create primitives,<br />
+but makes the meshes render much faster in animations as they don’t need to be regenerated</p>
+<p><strong>Usage:</strong> bake [object]</p>
+<p>object (integer/string) : the index or name of object to bake, defaults to all (see: “list objects”)</p>
+<p><strong>Usage:</strong> bakecolour [object]</p>
+<p>As above, but also convert colourmap + value data into calculated RGBA values</p>
+<p><strong>Usage:</strong> glaze [object]</p>
+<p>As above, but also convert colourmap + value data into a texture image and associated texcoords</p>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h3>csv<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export CSV data</p>
+<p><strong>Usage:</strong> csv [objects]</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
+If object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>json<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Export json data</p>
+<p><strong>Usage:</strong> json [object]</p>
+<p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
+If object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>tiles<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Save a tiled image of selected volume dataset<br />
+<strong>Usage:</strong> tiles (object)</p>
+</div></blockquote>
+</div>
+<div class="section" id="valuerange">
+<h3>valuerange<a class="headerlink" href="#valuerange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Adjust colourmaps on object to fit actual value range or provided min/max</p>
+<p><strong>Usage:</strong> valuerange [min max]<br />
+min (number) : minimum of user defined range, default is to use the data minimum<br />
+max (number) : maximum of user defined range, default is to use the data maximum</p>
+</div></blockquote>
+</div>
+<div class="section" id="colourmap">
+<h3>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set colourmap on object or create a new colourmap</p>
+<p><strong>Usage:</strong> colourmap [colourmap / data]<br />
+If an object is selected, the colourmap will be set on that object, otherwise a new colourmap will be created</p>
+<p>colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)<br />
+data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
+</div></blockquote>
+</div>
+<div class="section" id="colourbar">
+<h3>colourbar<a class="headerlink" href="#colourbar" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Add a colour bar display to selected object</p>
+<p><strong>Usage:</strong> colourbar [alignment] [size]</p>
+<p>alignment (string) : viewport alignment (left/right/top/bottom)</p>
+</div></blockquote>
+</div>
+<div class="section" id="pointtype">
+<h3>pointtype<a class="headerlink" href="#pointtype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set point-rendering type on object</p>
+<p><strong>Usage:</strong> pointtype all/object type/up/down</p>
+<p>all : use ‘all’ to set the global default point type<br />
+object (integer/string) : the index or name of the object to set (see: “list objects”)<br />
+type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)<br />
+up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
+</div></blockquote>
+</div>
+<div class="section" id="scale">
+<h3>scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Scale model or applicable objects</p>
+<p><strong>Usage:</strong> scale axis value</p>
+<p>axis : x/y/z<br />
+value (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
+<p><strong>Usage:</strong> scale geometry_type value/up/down</p>
+<p>geometry_type : points/vectors/tracers/shapes<br />
+value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p><strong>Usage:</strong> scale object value/up/down</p>
+<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)<br />
+value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
 </div></blockquote>
 </div>
 </div>
@@ -710,7 +884,10 @@
 <blockquote>
 <div><p>Set window background colour</p>
 <p><strong>Usage:</strong> background colour/value/white/black/grey/invert</p>
-<p>colour (string) : any valid colour stringvalue (number [0,1]) : sets to greyscale value with luminosity in range [0,1] where 1.0 is whitewhite/black/grey : sets background to specified valueinvert (or omitted value) : inverts current background colour</p>
+<p>colour (string) : any valid colour string<br />
+value (number [0,1]) : sets to greyscale value with luminosity in range [0,1] where 1.0 is white<br />
+white/black/grey : sets background to specified value<br />
+invert (or omitted value) : inverts current background colour</p>
 </div></blockquote>
 </div>
 <div class="section" id="alpha">
@@ -718,7 +895,10 @@
 <blockquote>
 <div><p>Set global transparency value</p>
 <p><strong>Usage:</strong> opacity/alpha value</p>
-<p>‘opacity’ is global default, applies to all objects without own opacity setting’alpha’ is global override, is combined with opacity setting of all objectsvalue (integer &gt; 1) : sets opacity as integer in range [1,255] where 255 is fully opaquevalue (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is fully opaque</p>
+<p>‘opacity’ is global default, applies to all objects without own opacity setting<br />
+‘alpha’ is global override, is combined with opacity setting of all objects<br />
+value (integer &gt; 1) : sets opacity as integer in range [1,255] where 255 is fully opaque<br />
+value (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is fully opaque</p>
 </div></blockquote>
 </div>
 <div class="section" id="axis">
@@ -735,40 +915,31 @@
 <div><p>Enable/disable axis rulers (unfinished)</p>
 </div></blockquote>
 </div>
+<div class="section" id="id4">
+<h3>colourmap<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Set colourmap on object or create a new colourmap</p>
+<p><strong>Usage:</strong> colourmap [colourmap / data]<br />
+If an object is selected, the colourmap will be set on that object, otherwise a new colourmap will be created</p>
+<p>colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)<br />
+data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
+</div></blockquote>
+</div>
 <div class="section" id="antialias">
 <h3>antialias<a class="headerlink" href="#antialias" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Enable/disable multi-sample anti-aliasing (if supported by OpenGL drivers)</p>
 </div></blockquote>
 </div>
-<div class="section" id="valuerange">
-<h3>valuerange<a class="headerlink" href="#valuerange" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Adjust colourmaps on object to fit actual value range</p>
-</div></blockquote>
-</div>
-<div class="section" id="colourmap">
-<h3>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Set colourmap on object or create a new colourmap</p>
-<p><strong>Usage:</strong> colourmap [colourmap / data]If an object is selected, the colourmap will be set on that object, otherwise a new colourmap will be created</p>
-<p>colourmap (integer/string) : the index or name of the colourmap to apply (see: “list colourmaps”)data (string) : data to load into selected object’s colourmap, if no colourmap one will be added</p>
-</div></blockquote>
-</div>
-<div class="section" id="colourbar">
-<h3>colourbar<a class="headerlink" href="#colourbar" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Add a colour bar display to selected object</p>
-<p><strong>Usage:</strong> colourbar [alignment] [size]</p>
-<p>alignment (string) : viewport alignment (left/right/top/bottom)</p>
-</div></blockquote>
-</div>
-<div class="section" id="pointtype">
-<h3>pointtype<a class="headerlink" href="#pointtype" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>pointtype<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Set point-rendering type on object</p>
 <p><strong>Usage:</strong> pointtype all/object type/up/down</p>
-<p>all : use ‘all’ to set the global default point typeobject (integer/string) : the index or name of the object to set (see: “list objects”)type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
+<p>all : use ‘all’ to set the global default point type<br />
+object (integer/string) : the index or name of the object to set (see: “list objects”)<br />
+type (integer) : Point type [0,3] to apply (gaussian/flat/sphere/highlight sphere)<br />
+up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list</p>
 </div></blockquote>
 </div>
 <div class="section" id="pointsample">
@@ -776,7 +947,8 @@
 <blockquote>
 <div><p>Set point sub-sampling value</p>
 <p><strong>Usage:</strong> pointsample value/up/down</p>
-<p>value (integer) : 1=no sub-sampling=50%% sampled etc..up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</p>
+<p>value (integer) : 1=no sub-sampling=50%% sampled etc..<br />
+up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</p>
 </div></blockquote>
 </div>
 <div class="section" id="border">
@@ -784,7 +956,10 @@
 <blockquote>
 <div><p>Set model border frame</p>
 <p><strong>Usage:</strong> border on/off/filled</p>
-<p>on : line border around model bounding-boxoff : no borderfilled : filled background bounding box(no value) : switch between possible values</p>
+<p>on : line border around model bounding-box<br />
+off : no border<br />
+filled : filled background bounding box<br />
+(no value) : switch between possible values</p>
 </div></blockquote>
 </div>
 <div class="section" id="title">
@@ -793,16 +968,19 @@
 <div><p>Set title heading to following text</p>
 </div></blockquote>
 </div>
-<div class="section" id="scale">
-<h3>scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>scale<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Scale model or applicable objects</p>
 <p><strong>Usage:</strong> scale axis value</p>
-<p>axis : x/y/zvalue (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
+<p>axis : x/y/z<br />
+value (number) : scaling value applied to all geometry on specified axis (multiplies existing)</p>
 <p><strong>Usage:</strong> scale geometry_type value/up/down</p>
-<p>geometry_type : points/vectors/tracers/shapesvalue (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p>geometry_type : points/vectors/tracers/shapes<br />
+value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
 <p><strong>Usage:</strong> scale object value/up/down</p>
-<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
+<p>object (integer/string) : the index or name of the object to scale (see: “list objects”)<br />
+value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to reduce/increase scaling</p>
 </div></blockquote>
 </div>
 <div class="section" id="modelscale">
@@ -811,7 +989,8 @@
 <div><p>Set model scaling, multiples by existing values</p>
 <p><strong>Usage:</strong> scale xval yval zval</p>
 <p>xval (number) : scaling value applied to x axis</p>
-<p>yval (number) : scaling value applied to y axiszval (number) : scaling value applied to z axis</p>
+<p>yval (number) : scaling value applied to y axis<br />
+zval (number) : scaling value applied to z axis</p>
 </div></blockquote>
 </div>
 </div>
@@ -829,7 +1008,8 @@
 <blockquote>
 <div><p>Display model timesteps in sequence from current timestep to specified timestep</p>
 <p><strong>Usage:</strong> play endstep</p>
-<p>endstep (integer) : last frame timestepIf endstep omitted, will loop continually until ‘stop’ command entered</p>
+<p>endstep (integer) : last frame timestep<br />
+If endstep omitted, will loop continually until ‘stop’ command entered</p>
 </div></blockquote>
 </div>
 <div class="section" id="stop">
@@ -849,7 +1029,10 @@
 <blockquote>
 <div><p>Switch to interactive mode, for use in scripts</p>
 <p><strong>Usage:</strong> interactive [noshow]</p>
-<p>options (string) : “noshow” default is to show visible interactive window, set this to activate event loopwithout showing window, can use browser interactive mode”noloop” : set this option to show the interactive window only,and handle events outside on returning</p>
+<p>options (string) : “noshow” default is to show visible interactive window, set this to activate event loop<br />
+without showing window, can use browser interactive mode<br />
+“noloop” : set this option to show the interactive window only,<br />
+and handle events outside on returning</p>
 </div></blockquote>
 </div>
 </div>
@@ -905,7 +1088,11 @@
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
-<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)<br />
+min (number) : the minimum value of the range to filter in or out<br />
+max (number) : the maximum value of the range to filter in or out<br />
+map (literal) : add map keyword for min/max [0,1] on available data range<br />
+eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </div>
 <div class="section" id="filterout">
@@ -913,7 +1100,11 @@
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
-<p>index (integer) : the index of the data set to filter on (see: “list data”)min (number) : the minimum value of the range to filter in or outmax (number) : the maximum value of the range to filter in or outmap (literal) : add map keyword for min/max [0,1] on available data rangeeg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
+<p>index (integer) : the index of the data set to filter on (see: “list data”)<br />
+min (number) : the minimum value of the range to filter in or out<br />
+max (number) : the maximum value of the range to filter in or out<br />
+map (literal) : add map keyword for min/max [0,1] on available data range<br />
+eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </div>
 <div class="section" id="filtermin">
@@ -921,7 +1112,8 @@
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermin index value</p>
-<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the minimum value of the range to filter in or out</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters added<br />
+value (number) : the minimum value of the range to filter in or out</p>
 </div></blockquote>
 </div>
 <div class="section" id="filtermax">
@@ -929,7 +1121,8 @@
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermax index value</p>
-<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters addedvalue (number) : the maximum value of the range to filter in or out</p>
+<p>index (integer) : the index filter to set [0 - N-1] where N = # of filters added<br />
+value (number) : the maximum value of the range to filter in or out</p>
 </div></blockquote>
 </div>
 <div class="section" id="clearfilters">
@@ -950,7 +1143,8 @@
 <blockquote>
 <div><p>Toggle a boolean property</p>
 <p><strong>Usage:</strong> toogle (property-name)</p>
-<p>property-name : name of property to switchIf an object is selected, will try there, then view, then global</p>
+<p>property-name : name of property to switch<br />
+If an object is selected, will try there, then view, then global</p>
 </div></blockquote>
 </div>
 <div class="section" id="createvolume">
@@ -970,7 +1164,8 @@
 <blockquote>
 <div><p>Export colour data of selected object</p>
 <p><strong>Usage:</strong> palette [type] [filename]</p>
-<p>type (string) : type of export (image/json/text) default = textfilename (string) : defaults to palette.[png/json/txt]</p>
+<p>type (string) : type of export (image/json/text) default = text<br />
+filename (string) : defaults to palette.[png/json/txt]</p>
 </div></blockquote>
 </div>
 </div>
@@ -1018,9 +1213,6 @@
 <li><a class="reference internal" href="#outheight">outheight</a></li>
 <li><a class="reference internal" href="#movie">movie</a></li>
 <li><a class="reference internal" href="#record">record</a></li>
-<li><a class="reference internal" href="#bake">bake</a></li>
-<li><a class="reference internal" href="#bakecolour">bakecolour</a></li>
-<li><a class="reference internal" href="#glaze">glaze</a></li>
 <li><a class="reference internal" href="#export">export</a></li>
 <li><a class="reference internal" href="#csv">csv</a></li>
 <li><a class="reference internal" href="#json">json</a></li>
@@ -1074,6 +1266,18 @@
 <li><a class="reference internal" href="#name">name</a></li>
 <li><a class="reference internal" href="#isosurface">isosurface</a></li>
 <li><a class="reference internal" href="#texture">texture</a></li>
+<li><a class="reference internal" href="#populate">populate</a></li>
+<li><a class="reference internal" href="#bake">bake</a></li>
+<li><a class="reference internal" href="#bakecolour">bakecolour</a></li>
+<li><a class="reference internal" href="#glaze">glaze</a></li>
+<li><a class="reference internal" href="#id1">csv</a></li>
+<li><a class="reference internal" href="#id2">json</a></li>
+<li><a class="reference internal" href="#id3">tiles</a></li>
+<li><a class="reference internal" href="#valuerange">valuerange</a></li>
+<li><a class="reference internal" href="#colourmap">colourmap</a></li>
+<li><a class="reference internal" href="#colourbar">colourbar</a></li>
+<li><a class="reference internal" href="#pointtype">pointtype</a></li>
+<li><a class="reference internal" href="#scale">scale</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#display-commands">Display commands:</a><ul>
@@ -1081,15 +1285,13 @@
 <li><a class="reference internal" href="#alpha">alpha</a></li>
 <li><a class="reference internal" href="#axis">axis</a></li>
 <li><a class="reference internal" href="#rulers">rulers</a></li>
+<li><a class="reference internal" href="#id4">colourmap</a></li>
 <li><a class="reference internal" href="#antialias">antialias</a></li>
-<li><a class="reference internal" href="#valuerange">valuerange</a></li>
-<li><a class="reference internal" href="#colourmap">colourmap</a></li>
-<li><a class="reference internal" href="#colourbar">colourbar</a></li>
-<li><a class="reference internal" href="#pointtype">pointtype</a></li>
+<li><a class="reference internal" href="#id5">pointtype</a></li>
 <li><a class="reference internal" href="#pointsample">pointsample</a></li>
 <li><a class="reference internal" href="#border">border</a></li>
 <li><a class="reference internal" href="#title">title</a></li>
-<li><a class="reference internal" href="#scale">scale</a></li>
+<li><a class="reference internal" href="#id6">scale</a></li>
 <li><a class="reference internal" href="#modelscale">modelscale</a></li>
 </ul>
 </li>
@@ -1147,7 +1349,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1164,12 +1366,12 @@
         <li class="right" >
           <a href="Property-Reference.html" title="Property reference"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.4.14 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+        &#169; Copyright 2020, Monash University.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>
