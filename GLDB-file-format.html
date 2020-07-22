@@ -22,8 +22,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  <div class="document">
-    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="gldb-file-format">
+<h1>GLDB file format<a class="headerlink" href="#gldb-file-format" title="Permalink to this headline">¶</a></h1>
+<p>LavaVu supports reading and writing it’s own <strong>.gldb</strong> format files for storing visualisations.
+These are simply SQLite3 databases with the bulk of the vis data stored as binary blobs. So they can be opened with the sqlite3 command line tool to inspect or modify the data.</p>
+<p>The “export” command (Viewer.export() in python) can be used to store the current visualisation in this compact single file format which can then be loaded rapidly for later viewing.</p>
+<p>The full schema will not be described here but the most important tables are:</p>
+<ul class="simple">
+<li><p>“object” : Definitions of objects to draw and all their properties and settings.</p></li>
+<li><p>“colourmap” : Colour maps available for use when drawing field data with objects.</p></li>
+<li><p>“geometry” : The actual geometry and field datasets. Along with a few metadata fields the actual data is stored in 32-bit floating point blocks in the “data” field. This is usually zlib compressed.</p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="index.html">LavaVu</a></h1>
@@ -83,32 +108,8 @@
 
         </div>
       </div>
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <div class="section" id="gldb-file-format">
-<h1>GLDB file format<a class="headerlink" href="#gldb-file-format" title="Permalink to this headline">¶</a></h1>
-<p>LavaVu supports reading and writing it’s own <strong>.gldb</strong> format files for storing visualisations.
-These are simply SQLite3 databases with the bulk of the vis data stored as binary blobs. So they can be opened with the sqlite3 command line tool to inspect or modify the data.</p>
-<p>The “export” command (Viewer.export() in python) can be used to store the current visualisation in this compact single file format which can then be loaded rapidly for later viewing.</p>
-<p>The full schema will not be described here but the most important tables are:</p>
-<ul class="simple">
-<li><p>“object” : Definitions of objects to draw and all their properties and settings.</p></li>
-<li><p>“colourmap” : Colour maps available for use when drawing field data with objects.</p></li>
-<li><p>“geometry” : The actual geometry and field datasets. Along with a few metadata fields the actual data is stored in 32-bit floating point blocks in the “data” field. This is usually zlib compressed.</p></li>
-</ul>
-</div>
-
-
-          </div>
-          
-        </div>
-      </div>
-    <div class="clearer"></div>
-  </div>
+      <div class="clearer"></div>
+    </div>
     <div class="footer">
       &copy;2020, Monash University.
       
