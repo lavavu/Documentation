@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Scripting command reference &#8212; LavaVu 1.6.0 documentation</title>
-    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -16,33 +16,224 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="lavavu module" href="lavavu.html" />
     <link rel="prev" title="Property reference" href="Property-Reference.html" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">LavaVu</a></h1>
 
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="lavavu.html" title="lavavu module"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="Property-Reference.html" title="Property reference"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>  
 
-    <div class="document">
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Python Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Property-Reference.html">Property Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scripting Commands Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-commands">General commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quit">quit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repeat">repeat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animate">animate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#history">history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearhistory">clearhistory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pause">pause</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list">list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step">step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timestep">timestep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jump">jump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model">model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reload">reload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#redraw">redraw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear">clear</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#input-commands">Input commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file">file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script">script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figure">figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#savefigure">savefigure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view">view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scan">scan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#output-commands">Output commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image">image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#images">images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#outwidth">outwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#outheight">outheight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#movie">movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#record">record</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export">export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv">csv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#json">json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save">save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tiles">tiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#view-commands">View commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rotate">rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotatex">rotatex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotatey">rotatey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotatez">rotatez</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotation">rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zoom">zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translate">translate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translatex">translatex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translatey">translatey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translatez">translatez</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translation">translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autorotate">autorotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spin">spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#focus">focus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fov">fov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#focallength">focallength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eyeseparation">eyeseparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nearclip">nearclip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#farclip">farclip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zoomclip">zoomclip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zerocam">zerocam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset">reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bounds">bounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixbb">fixbb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#camera">camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resize">resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fullscreen">fullscreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit">fit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autozoom">autozoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stereo">stereo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coordsystem">coordsystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort">sort</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#object-commands">Object commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hide">hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show">show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete">delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load">load</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select">select</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add">add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#append">append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#name">name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isosurface">isosurface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#texture">texture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#populate">populate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bake">bake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bakecolour">bakecolour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glaze">glaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">csv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">tiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#valuerange">valuerange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colourmap">colourmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colourbar">colourbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pointtype">pointtype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scale">scale</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#display-commands">Display commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alpha">alpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#axis">axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rulers">rulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">colourmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#antialias">antialias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">pointtype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pointsample">pointsample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#border">border</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#title">title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modelscale">modelscale</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scripting-commands">Scripting commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#next">next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#play">play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop">stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open">open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interactive">interactive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellanious-commands">Miscellanious commands:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shaders">shaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blend">blend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#props">props</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defaults">defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test">test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voltest">voltest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#newstep">newstep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter">filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filterout">filterout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtermin">filtermin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtermax">filtermax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearfilters">clearfilters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verbose">verbose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toggle">toggle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#createvolume">createvolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearvolume">clearvolume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#palette">palette</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lavavu.html">API Reference: lavavu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">API Reference: control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert.html">API Reference: convert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">API Reference: points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracers.html">API Reference: tracers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interaction.html">Interaction with keyboard/mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Commandline-Arguments.html">Running from command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Setting-Properties.html">Setting Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GLDB-file-format.html">GLDB File Format</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu">LavaVu Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu/wiki">LavaVu Wiki</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu/issues">LavaVu Issue Tracker</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Property-Reference.html" title="previous chapter">Property reference</a></li>
+      <li>Next: <a href="lavavu.html" title="next chapter">lavavu module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="scripting-command-reference">
@@ -1173,205 +1364,25 @@ filename (string) : defaults to palette.[png/json/txt]</p>
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Scripting command reference</a><ul>
-<li><a class="reference internal" href="#general-commands">General commands:</a><ul>
-<li><a class="reference internal" href="#quit">quit</a></li>
-<li><a class="reference internal" href="#repeat">repeat</a></li>
-<li><a class="reference internal" href="#animate">animate</a></li>
-<li><a class="reference internal" href="#history">history</a></li>
-<li><a class="reference internal" href="#clearhistory">clearhistory</a></li>
-<li><a class="reference internal" href="#pause">pause</a></li>
-<li><a class="reference internal" href="#list">list</a></li>
-<li><a class="reference internal" href="#step">step</a></li>
-<li><a class="reference internal" href="#timestep">timestep</a></li>
-<li><a class="reference internal" href="#jump">jump</a></li>
-<li><a class="reference internal" href="#model">model</a></li>
-<li><a class="reference internal" href="#reload">reload</a></li>
-<li><a class="reference internal" href="#redraw">redraw</a></li>
-<li><a class="reference internal" href="#clear">clear</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#input-commands">Input commands:</a><ul>
-<li><a class="reference internal" href="#file">file</a></li>
-<li><a class="reference internal" href="#script">script</a></li>
-<li><a class="reference internal" href="#figure">figure</a></li>
-<li><a class="reference internal" href="#savefigure">savefigure</a></li>
-<li><a class="reference internal" href="#view">view</a></li>
-<li><a class="reference internal" href="#scan">scan</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#output-commands">Output commands:</a><ul>
-<li><a class="reference internal" href="#image">image</a></li>
-<li><a class="reference internal" href="#images">images</a></li>
-<li><a class="reference internal" href="#outwidth">outwidth</a></li>
-<li><a class="reference internal" href="#outheight">outheight</a></li>
-<li><a class="reference internal" href="#movie">movie</a></li>
-<li><a class="reference internal" href="#record">record</a></li>
-<li><a class="reference internal" href="#export">export</a></li>
-<li><a class="reference internal" href="#csv">csv</a></li>
-<li><a class="reference internal" href="#json">json</a></li>
-<li><a class="reference internal" href="#save">save</a></li>
-<li><a class="reference internal" href="#tiles">tiles</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#view-commands">View commands:</a><ul>
-<li><a class="reference internal" href="#rotate">rotate</a></li>
-<li><a class="reference internal" href="#rotatex">rotatex</a></li>
-<li><a class="reference internal" href="#rotatey">rotatey</a></li>
-<li><a class="reference internal" href="#rotatez">rotatez</a></li>
-<li><a class="reference internal" href="#rotation">rotation</a></li>
-<li><a class="reference internal" href="#zoom">zoom</a></li>
-<li><a class="reference internal" href="#translate">translate</a></li>
-<li><a class="reference internal" href="#translatex">translatex</a></li>
-<li><a class="reference internal" href="#translatey">translatey</a></li>
-<li><a class="reference internal" href="#translatez">translatez</a></li>
-<li><a class="reference internal" href="#translation">translation</a></li>
-<li><a class="reference internal" href="#autorotate">autorotate</a></li>
-<li><a class="reference internal" href="#spin">spin</a></li>
-<li><a class="reference internal" href="#focus">focus</a></li>
-<li><a class="reference internal" href="#fov">fov</a></li>
-<li><a class="reference internal" href="#focallength">focallength</a></li>
-<li><a class="reference internal" href="#eyeseparation">eyeseparation</a></li>
-<li><a class="reference internal" href="#nearclip">nearclip</a></li>
-<li><a class="reference internal" href="#farclip">farclip</a></li>
-<li><a class="reference internal" href="#zoomclip">zoomclip</a></li>
-<li><a class="reference internal" href="#zerocam">zerocam</a></li>
-<li><a class="reference internal" href="#reset">reset</a></li>
-<li><a class="reference internal" href="#bounds">bounds</a></li>
-<li><a class="reference internal" href="#fixbb">fixbb</a></li>
-<li><a class="reference internal" href="#camera">camera</a></li>
-<li><a class="reference internal" href="#resize">resize</a></li>
-<li><a class="reference internal" href="#fullscreen">fullscreen</a></li>
-<li><a class="reference internal" href="#fit">fit</a></li>
-<li><a class="reference internal" href="#autozoom">autozoom</a></li>
-<li><a class="reference internal" href="#stereo">stereo</a></li>
-<li><a class="reference internal" href="#coordsystem">coordsystem</a></li>
-<li><a class="reference internal" href="#sort">sort</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#object-commands">Object commands:</a><ul>
-<li><a class="reference internal" href="#hide">hide</a></li>
-<li><a class="reference internal" href="#show">show</a></li>
-<li><a class="reference internal" href="#delete">delete</a></li>
-<li><a class="reference internal" href="#load">load</a></li>
-<li><a class="reference internal" href="#select">select</a></li>
-<li><a class="reference internal" href="#add">add</a></li>
-<li><a class="reference internal" href="#append">append</a></li>
-<li><a class="reference internal" href="#name">name</a></li>
-<li><a class="reference internal" href="#isosurface">isosurface</a></li>
-<li><a class="reference internal" href="#texture">texture</a></li>
-<li><a class="reference internal" href="#populate">populate</a></li>
-<li><a class="reference internal" href="#bake">bake</a></li>
-<li><a class="reference internal" href="#bakecolour">bakecolour</a></li>
-<li><a class="reference internal" href="#glaze">glaze</a></li>
-<li><a class="reference internal" href="#id1">csv</a></li>
-<li><a class="reference internal" href="#id2">json</a></li>
-<li><a class="reference internal" href="#id3">tiles</a></li>
-<li><a class="reference internal" href="#valuerange">valuerange</a></li>
-<li><a class="reference internal" href="#colourmap">colourmap</a></li>
-<li><a class="reference internal" href="#colourbar">colourbar</a></li>
-<li><a class="reference internal" href="#pointtype">pointtype</a></li>
-<li><a class="reference internal" href="#scale">scale</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#display-commands">Display commands:</a><ul>
-<li><a class="reference internal" href="#background">background</a></li>
-<li><a class="reference internal" href="#alpha">alpha</a></li>
-<li><a class="reference internal" href="#axis">axis</a></li>
-<li><a class="reference internal" href="#rulers">rulers</a></li>
-<li><a class="reference internal" href="#id4">colourmap</a></li>
-<li><a class="reference internal" href="#antialias">antialias</a></li>
-<li><a class="reference internal" href="#id5">pointtype</a></li>
-<li><a class="reference internal" href="#pointsample">pointsample</a></li>
-<li><a class="reference internal" href="#border">border</a></li>
-<li><a class="reference internal" href="#title">title</a></li>
-<li><a class="reference internal" href="#id6">scale</a></li>
-<li><a class="reference internal" href="#modelscale">modelscale</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#scripting-commands">Scripting commands:</a><ul>
-<li><a class="reference internal" href="#next">next</a></li>
-<li><a class="reference internal" href="#play">play</a></li>
-<li><a class="reference internal" href="#stop">stop</a></li>
-<li><a class="reference internal" href="#open">open</a></li>
-<li><a class="reference internal" href="#interactive">interactive</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#miscellanious-commands">Miscellanious commands:</a><ul>
-<li><a class="reference internal" href="#shaders">shaders</a></li>
-<li><a class="reference internal" href="#blend">blend</a></li>
-<li><a class="reference internal" href="#props">props</a></li>
-<li><a class="reference internal" href="#defaults">defaults</a></li>
-<li><a class="reference internal" href="#test">test</a></li>
-<li><a class="reference internal" href="#voltest">voltest</a></li>
-<li><a class="reference internal" href="#newstep">newstep</a></li>
-<li><a class="reference internal" href="#filter">filter</a></li>
-<li><a class="reference internal" href="#filterout">filterout</a></li>
-<li><a class="reference internal" href="#filtermin">filtermin</a></li>
-<li><a class="reference internal" href="#filtermax">filtermax</a></li>
-<li><a class="reference internal" href="#clearfilters">clearfilters</a></li>
-<li><a class="reference internal" href="#verbose">verbose</a></li>
-<li><a class="reference internal" href="#toggle">toggle</a></li>
-<li><a class="reference internal" href="#createvolume">createvolume</a></li>
-<li><a class="reference internal" href="#clearvolume">clearvolume</a></li>
-<li><a class="reference internal" href="#palette">palette</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Monash University.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Scripting-Commands-Reference.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Property-Reference.html"
-                        title="previous chapter">Property reference</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="lavavu.html"
-                        title="next chapter">lavavu module</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/Scripting-Commands-Reference.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="lavavu.html" title="lavavu module"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="Property-Reference.html" title="Property reference"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
-    </div>
+    
+
+    
   </body>
 </html>

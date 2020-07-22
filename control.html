@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <title>control module &#8212; LavaVu 1.6.0 documentation</title>
-    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -16,33 +16,90 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="convert module" href="convert.html" />
     <link rel="prev" title="lavavu module" href="lavavu.html" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">LavaVu</a></h1>
 
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="convert.html" title="convert module"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="lavavu.html" title="lavavu module"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>  
 
-    <div class="document">
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Python Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Property-Reference.html">Property Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scripting-Commands-Reference.html">Scripting Commands Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lavavu.html">API Reference: lavavu</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference: control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-summary">Module Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">classes:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-details">Module Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">classes:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="convert.html">API Reference: convert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">API Reference: points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracers.html">API Reference: tracers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interaction.html">Interaction with keyboard/mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Commandline-Arguments.html">Running from command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Setting-Properties.html">Setting Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GLDB-file-format.html">GLDB File Format</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu">LavaVu Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu/wiki">LavaVu Wiki</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/lavavu/LavaVu/issues">LavaVu Issue Tracker</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="lavavu.html" title="previous chapter">lavavu module</a></li>
+      <li>Next: <a href="convert.html" title="next chapter">convert module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="control-module">
@@ -443,71 +500,25 @@ Set to None to disable wrapper</p></li>
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">control module</a><ul>
-<li><a class="reference internal" href="#example">Example</a></li>
-<li><a class="reference internal" href="#module-summary">Module Summary</a><ul>
-<li><a class="reference internal" href="#classes">classes:</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-details">Module Details</a><ul>
-<li><a class="reference internal" href="#id1">classes:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Monash University.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/control.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="lavavu.html"
-                        title="previous chapter">lavavu module</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="convert.html"
-                        title="next chapter">convert module</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/control.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="convert.html" title="convert module"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="lavavu.html" title="lavavu module"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">LavaVu 1.6.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Monash University.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
-    </div>
+    
+
+    
   </body>
 </html>
