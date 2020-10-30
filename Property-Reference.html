@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Property reference &#8212; LavaVu 1.6.1 documentation</title>
+    <title>Property reference &#8212; LavaVu 1.6.2 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -229,12 +229,6 @@
 <td>integer[3]</td>
 <td>[0,0,0]</td>
 <td>Width,Height,Depth override for geometry. Usually this data will be determined from the numpy array shape when loaded from python but setting this property overrides the shape, unless it doesn't match the data size. Note this property is the reverse of the numpy array shape (Depth,Height,Width) or (Height,Width).</td>
-</tr>
-<tr>
-<td><em>rotatable</em></td>
-<td>boolean</td>
-<td>false</td>
-<td>Set to true to apply the view rotation to this object</td>
 </tr>
 <tr>
 <td><em>shift</em></td>
@@ -1045,6 +1039,12 @@
 <td>real[3]</td>
 <td>[0.0,0.0,0.0]</td>
 <td>Camera focal point [x,y,z]</td>
+</tr>
+<tr>
+<td><em>origin</em></td>
+<td>real[3]</td>
+<td>[0.0,0.0,0.0]</td>
+<td>Origin / centre of rotation [x,y,z] if not set, defaults to same as focal point.</td>
 </tr>
 <tr>
 <td><em>scale</em></td>
