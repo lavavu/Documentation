@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Scripting command reference &#8212; LavaVu 1.6.7 documentation</title>
+    <title>Scripting command reference &#8212; LavaVu 1.7.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -45,7 +45,7 @@
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#output-commands">Output</a></strong></p></li>
 </ul>
-<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
+<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#cache">cache</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="#view-commands">View</a></strong></p></li>
 </ul>
@@ -194,10 +194,11 @@ add : add a new model</p>
 <h3>clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Clear data from current model/timestep</p>
-<p><strong>Usage:</strong> clear [type/”objects”]</p>
+<p><strong>Usage:</strong> clear [type/”objects”/”all”]</p>
 <p>type (string) : clear only data of this type, eg: “indices”, applies to selected object.<br />
 objects : optionally clear all object entries<br />
-(if omitted, only the object’s geometry data is cleared)</p>
+(if omitted, only the object’s geometry data is cleared)<br />
+all : clear everything, including models</p>
 </div></blockquote>
 </div>
 </div>
@@ -321,11 +322,10 @@ quality (integer): 1=low/2=medium/3=high (default 1)</p>
 <h3>export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Export model database</p>
-<p><strong>Usage:</strong> export [filename] [objects] [uncompressed]</p>
-<p>filename (string) : the name of the file to export to, extension must be .gldb<br />
+<p><strong>Usage:</strong> export [filename] [objects]</p>
+<p>filename (string) : the name of the file to export to, extension defaults to .gldb<br />
 objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
-uncompressed : add this to skip the zlib compression step in the export process<br />
-If object ommitted all will be exported</p>
+If object ommitted all will be exported, hidden objects will be skipped.</p>
 </div></blockquote>
 </div>
 <div class="section" id="csv">
@@ -344,6 +344,13 @@ If object ommitted all will be exported</p>
 <p><strong>Usage:</strong> json [object]</p>
 <p>objects (integer/string) : the indices or names of the objects to export (see: “list objects”)<br />
 If object ommitted all will be exported</p>
+</div></blockquote>
+</div>
+<div class="section" id="cache">
+<h3>cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Load all timesteps into cache</p>
+<p><strong>Usage:</strong> cache</p>
 </div></blockquote>
 </div>
 <div class="section" id="save">
@@ -1216,6 +1223,7 @@ filename (string) : defaults to palette.[png/json/txt]</p>
 <li class="toctree-l3"><a class="reference internal" href="#export">export</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#csv">csv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#json">json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cache">cache</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#save">save</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tiles">tiles</a></li>
 </ul>

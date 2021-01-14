@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>lavavu module &#8212; LavaVu 1.6.7 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.7.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -864,13 +864,13 @@ to execute code with, the first being ID=0</p></li>
 
 <dl class="method">
 <dt id="lavavu.Viewer.export">
-<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">filepath='exported.gldb'</em>, <em class="sig-param">compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.export" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">filepath='exported.gldb'</em>, <em class="sig-param">compress=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export model and state to a database snapshot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filepath</strong> (<em>str</em>) – Specification of the files to load</p></li>
-<li><p><strong>compress</strong> (<em>boolean</em>) – Set flag to false to disable zlib compression of database</p></li>
+<li><p><strong>compress</strong> (<em>int</em>) – Set flag override default zlib compression of database (0=None, 1=fast, 6=standard, 9=best compression)</p></li>
 </ul>
 </dd>
 </dl>
@@ -915,23 +915,6 @@ if not provided a default will be created</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>files</strong> (<em>str</em>) – Specification of the files to load, either a list of full paths or a file spec string such as <cite>*.gldb</cite></p></li>
 <li><p><strong>obj</strong> (<a class="reference internal" href="#lavavu.Object" title="lavavu.Object"><em>Object</em></a>) – Vis object to load the data into, if not provided a default will be created</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="lavavu.Viewer.fillwindow">
-<code class="sig-name descname">fillwindow</code><span class="sig-paren">(</span><em class="sig-param">aspect_ratio=(16</em>, <em class="sig-param">9)</em>, <em class="sig-param">menu=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.fillwindow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and display an interactive viewer instance</p>
-<p>This shows an active viewer window to the visualisation
-that can be controlled with the mouse or html widgets</p>
-<p>Unlike window(), fillwindow() automatically resizes the window to the width of the parent element</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>aspect_ratio</strong> (<em>tuple</em><em> (</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Aspect ratio to calculate the height, eg: (16,9) (default) or (4,3)</p></li>
-<li><p><strong>menu</strong> (<em>boolean</em>) – Adds a menu to the top right allowing control of vis parameters, defaults to on</p></li>
 </ul>
 </dd>
 </dl>
@@ -1363,15 +1346,12 @@ If not provided, will process all jpg and png images in working directory</p></l
 
 <dl class="method">
 <dt id="lavavu.Viewer.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write visualisation data back to the database</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
-(labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</p></li>
-<li><p><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</p></li>
-</ul>
+<dd class="field-odd"><p><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
+(labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1447,6 +1427,18 @@ Otherwise, content will be written to “webgl.html” if not provided.</p></li>
 <li><p><strong>kwargs</strong> – Additional named arguments passed will be added to the global WebGL viewer settings,
 defaults are: interactive=True, immediatesort=False, sortenabled=True</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lavavu.Viewer.webview">
+<code class="sig-name descname">webview</code><span class="sig-paren">(</span><em class="sig-param">resolution=(640</em>, <em class="sig-param">480)</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Viewer.webview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a full WebGL2 view of the model</p>
+<p>If running from IPython, displays the result WebGL2 content inline in the cell in an iframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resolution</strong> (<em>list</em><em> or </em><em>tuple</em>) – Display window resolution in pixels [x,y] for inline viewer</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1601,7 +1593,7 @@ if a numpy array is passed, colours are loaded as 4 byte ARGB unsigned integer v
 
 <dl class="method">
 <dt id="lavavu.Object.contours">
-<code class="sig-name descname">contours</code><span class="sig-paren">(</span><em class="sig-param">isovalues=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">labels=True</em>, <em class="sig-param">convert=False</em>, <em class="sig-param">updatedb=False</em>, <em class="sig-param">compress=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.contours" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">contours</code><span class="sig-paren">(</span><em class="sig-param">isovalues=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">labels=True</em>, <em class="sig-param">convert=False</em>, <em class="sig-param">updatedb=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.contours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a contours from a surface/grid data set using the marching squares algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1614,7 +1606,6 @@ newly created contours by deleting the grid data and loading the line
 data into the preexisting object</p></li>
 <li><p><strong>updatedb</strong> (<em>bool</em>) – Setting this flag to True will write the newly created/modified data
 to the database when done</p></li>
-<li><p><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</p></li>
 <li><p><strong>**kwargs</strong> – Initial set of properties passed to the created object</p></li>
 </ul>
 </dd>
@@ -1861,7 +1852,7 @@ Default is zero-based</p></li>
 
 <dl class="method">
 <dt id="lavavu.Object.isosurface">
-<code class="sig-name descname">isosurface</code><span class="sig-paren">(</span><em class="sig-param">isovalues=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">convert=False</em>, <em class="sig-param">updatedb=False</em>, <em class="sig-param">compress=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.isosurface" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">isosurface</code><span class="sig-paren">(</span><em class="sig-param">isovalues=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">convert=False</em>, <em class="sig-param">updatedb=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.isosurface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate an isosurface from a volume data set using the marching cubes algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1873,7 +1864,6 @@ newly created isosurface by deleting the volume data and loading the mesh
 data into the preexisting object</p></li>
 <li><p><strong>updatedb</strong> (<em>bool</em>) – Setting this flag to True will write the newly created/modified data
 to the database when done</p></li>
-<li><p><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</p></li>
 <li><p><strong>**kwargs</strong> – Initial set of properties passed to the created object</p></li>
 </ul>
 </dd>
@@ -2083,15 +2073,12 @@ decomposing the mesh into smaller triangles with the split option</p>
 
 <dl class="method">
 <dt id="lavavu.Object.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">compress=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lavavu.Object.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the objects’s visualisation data back to the database</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
-(eg: labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</p></li>
-<li><p><strong>compress</strong> (<em>boolean</em>) – Use zlib compression when writing the geometry data</p></li>
-</ul>
+<dd class="field-odd"><p><strong>filter</strong> (<em>str</em>) – Optional filter to type of geometry to be updated, if omitted all will be written
+(eg: labels, points, grid, triangles, vectors, tracers, lines, shapes, volume)</p>
 </dd>
 </dl>
 </dd></dl>
