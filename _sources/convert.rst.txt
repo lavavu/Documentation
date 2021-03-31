@@ -13,6 +13,7 @@ functions:
     convert.default_sample_grid
     convert.export_OBJ
     convert.export_PLY
+    convert.export_any
     convert.min_max_range
     convert.plot_PLY
     convert.points_to_volume
@@ -20,6 +21,8 @@ functions:
     convert.points_to_volume_4D
     convert.points_to_volume_histogram
     convert.points_to_volume_tree
+    convert.read_any
+    convert.try_import
 
 Module Details
 --------------
@@ -30,6 +33,7 @@ functions:
 .. autofunction:: convert.default_sample_grid
 .. autofunction:: convert.export_OBJ
 .. autofunction:: convert.export_PLY
+.. autofunction:: convert.export_any
 .. autofunction:: convert.min_max_range
 .. autofunction:: convert.plot_PLY
 .. autofunction:: convert.points_to_volume
@@ -37,4 +41,6 @@ functions:
 .. autofunction:: convert.points_to_volume_4D
 .. autofunction:: convert.points_to_volume_histogram
 .. autofunction:: convert.points_to_volume_tree
+.. autofunction:: convert.read_any
+.. autofunction:: convert.try_import
 
