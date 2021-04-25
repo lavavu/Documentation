@@ -1,17 +1,17 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>tracers module &#8212; LavaVu 1.8.9 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tracers module &#8212; LavaVu 1.8.11 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="User Interface commands" href="Interaction.html" />
@@ -79,9 +79,9 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 <h2>Module Details<a class="headerlink" href="#module-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<dl class="function">
+<dl class="py function">
 <dt id="tracers.trace_particles">
-<code class="sig-name descname">trace_particles</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">verts</em>, <em class="sig-param">vecs</em>, <em class="sig-param">N=5000</em>, <em class="sig-param">limit=0.5</em>, <em class="sig-param">speed=1.0</em>, <em class="sig-param">noise=0.0</em>, <em class="sig-param">height=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">trace_particles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vecs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs)
 For each tracer</p>
 <ul class="simple">
@@ -119,9 +119,9 @@ Pass this as first paramter on subsequent calls</p>
 </div>
 <div class="section" id="id2">
 <h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<dl class="class">
+<dl class="py class">
 <dt id="tracers.TracerState">
-<em class="property">class </em><code class="sig-name descname">TracerState</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">N=5000</em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">TracerState</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
@@ -212,7 +212,7 @@ Pass this as first paramter on subsequent calls</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

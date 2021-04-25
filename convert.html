@@ -1,17 +1,17 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>convert module &#8212; LavaVu 1.8.9 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>convert module &#8212; LavaVu 1.8.11 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="points module" href="points.html" />
@@ -97,26 +97,26 @@
 <h2>Module Details<a class="headerlink" href="#module-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<dl class="function">
+<dl class="py function">
 <dt id="convert.colour2hex">
-<code class="sig-name descname">colour2hex</code><span class="sig-paren">(</span><em class="sig-param">rgb</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2hex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">colour2hex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2hex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.colour2rgb">
-<code class="sig-name descname">colour2rgb</code><span class="sig-paren">(</span><em class="sig-param">c</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2rgb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">colour2rgb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.colour2rgb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.default_sample_grid">
-<code class="sig-name descname">default_sample_grid</code><span class="sig-paren">(</span><em class="sig-param">vrange</em>, <em class="sig-param">res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">default_sample_grid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vrange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.default_sample_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate sample grid fine enough to capture point details
 resolution of smallest dimension will be minres elements</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.export_OBJ">
-<code class="sig-name descname">export_OBJ</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">vertexcolours=True</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">export_OBJ</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertexcolours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_OBJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to an OBJ file
 Supports only triangle mesh object data</p>
 <p>If source is lavavu.Viewer() exports all objects
@@ -125,9 +125,9 @@ If source is lavavu.Object() exports single object</p>
 (not part of OBJ standard but supported in some software)</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.export_PLY">
-<code class="sig-name descname">export_PLY</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_PLY" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">export_PLY</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_PLY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to a PLY file
 Supports points or triangle mesh object data</p>
 <p>If source is lavavu.Viewer() exports all objects
@@ -143,9 +143,9 @@ If source is lavavu.Object() exports single object</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.export_any">
-<code class="sig-name descname">export_any</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">source</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_any" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">export_any</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.export_any" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export given object(s) to a file format supproted by trimesh, eg: GLTF or GLB file
 See: <a class="reference external" href="https://trimsh.org/trimesh.exchange.html">https://trimsh.org/trimesh.exchange.html</a>
 Requires “trimesh” module
@@ -162,25 +162,25 @@ If source is lavavu.Object() exports single object</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.min_max_range">
-<code class="sig-name descname">min_max_range</code><span class="sig-paren">(</span><em class="sig-param">verts</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">min_max_range</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.min_max_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get bounding box from a list of vertices
 returns (min, max, range)</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.plot_PLY">
-<code class="sig-name descname">plot_PLY</code><span class="sig-paren">(</span><em class="sig-param">lv</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.plot_PLY" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">plot_PLY</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.plot_PLY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot triangles from a PlyData instance. Assumptions:
 has a ‘vertex’ element with ‘x’, ‘y’, and ‘z’ properties,
 has a ‘face’ element with an integral list property ‘vertex_indices’,
 all of whose elements have length 3.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.points_to_volume">
-<code class="sig-name descname">points_to_volume</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em>, <em class="sig-param">boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">points_to_volume</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kdtree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundingbox</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert object vertices to a volume by interpolating points to a grid</p>
 <ul class="simple">
 <li><p>Vertex data only is used, so treated as a point cloud</p></li>
@@ -201,50 +201,50 @@ the maximum 3d vertex of the bounding box</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.points_to_volume_3D">
-<code class="sig-name descname">points_to_volume_3D</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">objects</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">blur=0</em>, <em class="sig-param">pad=None</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">points_to_volume_3D</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kdtree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid and load into passed volume object</p>
 <p>Given a list of objects and a volume object, convert a point cloud
 from another object (or objects - list is supported) into a volume using
 points_to_volume()</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.points_to_volume_4D">
-<code class="sig-name descname">points_to_volume_4D</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">objects</em>, <em class="sig-param">res=8</em>, <em class="sig-param">kdtree=False</em>, <em class="sig-param">blur=False</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">points_to_volume_4D</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kdtree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_4D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate points to grid at each timestep</p>
 <p>Given a list of objects and a volume object, convert a time-varying point cloud
 from another object (or objects - list is supported) into a volume using
 points_to_volume_3D()</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.points_to_volume_histogram">
-<code class="sig-name descname">points_to_volume_histogram</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em>, <em class="sig-param">normed=False</em>, <em class="sig-param">clamp=None</em>, <em class="sig-param">boundingbox=None</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">points_to_volume_histogram</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundingbox</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using numpy.histogramdd to create 3d histogram volume grid
 (Easily the fastest, but less control over output)</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.points_to_volume_tree">
-<code class="sig-name descname">points_to_volume_tree</code><span class="sig-paren">(</span><em class="sig-param">verts</em>, <em class="sig-param">res=8</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">points_to_volume_tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.points_to_volume_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Using scipy.spatial.KDTree to find nearest points on grid</p>
 <p>Much slower, but more control</p>
 <p>TODO: control parameters</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.read_any">
-<code class="sig-name descname">read_any</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">lv</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.read_any" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">read_any</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.read_any" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load using trimesh, supports GLTF etc</p>
 <p>See: <a class="reference external" href="https://trimsh.org/trimesh.exchange.html">https://trimsh.org/trimesh.exchange.html</a>
 Requires “trimesh” module</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="convert.try_import">
-<code class="sig-name descname">try_import</code><span class="sig-paren">(</span><em class="sig-param">module_name</em>, <em class="sig-param">second_try=False</em><span class="sig-paren">)</span><a class="headerlink" href="#convert.try_import" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">try_import</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_try</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#convert.try_import" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempts to import a module, then runs pip install if not found and attempts again</p>
 </dd></dl>
 
@@ -333,7 +333,7 @@ Requires “trimesh” module</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
