@@ -1,17 +1,17 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>points module &#8212; LavaVu 1.8.12 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>points module &#8212; LavaVu 1.8.13 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tracers module" href="tracers.html" />
@@ -67,18 +67,22 @@ More tools can be found there, including a ptx reader which handles transformati
 <h2>Module Details<a class="headerlink" href="#module-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<dl class="function">
+<dl class="py function">
 <dt id="points.loadpointcloud">
-<code class="sig-name descname">loadpointcloud</code><span class="sig-paren">(</span><em class="sig-param">filename, subsample=1, dtype=&lt;class 'numpy.float32'&gt;, components=['x', 'y', 'z', 'red', 'green', 'blue', 'alpha']</em><span class="sig-paren">)</span><a class="headerlink" href="#points.loadpointcloud" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">loadpointcloud</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">filename,</span> <span class="pre">subsample=1,</span> <span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float32'&gt;,</span> <span class="pre">components=['x',</span> <span class="pre">'y',</span> <span class="pre">'z',</span> <span class="pre">'red',</span> <span class="pre">'green',</span> <span class="pre">'blue',</span> <span class="pre">'alpha']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#points.loadpointcloud" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempt to load the passed point cloud file based
 Pick loader based on extension</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>str</strong> (<em>filename</em><em>,</em>) – Full path to file to load</p></li>
-<li><p><strong>int</strong> (<em>subsample</em><em>,</em>) – Subsample factor, sample every Nth point</p></li>
-<li><p><strong>numpy.dtype</strong> (<em>dtype</em><em>,</em>) – Type of data</p></li>
-<li><p><strong>list</strong> (<em>components</em><em>,</em>) – List of components per point</p></li>
+<li><p><strong>filename</strong> – Full path to file to load</p></li>
+<li><p><strong>str</strong> – Full path to file to load</p></li>
+<li><p><strong>subsample</strong> – Subsample factor, sample every Nth point</p></li>
+<li><p><strong>int</strong> – Subsample factor, sample every Nth point</p></li>
+<li><p><strong>dtype</strong> – Type of data</p></li>
+<li><p><strong>numpy.dtype</strong> – Type of data</p></li>
+<li><p><strong>components</strong> – List of components per point</p></li>
+<li><p><strong>list</strong> – List of components per point</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -176,7 +180,7 @@ Pick loader based on extension</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
