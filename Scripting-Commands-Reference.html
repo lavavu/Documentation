@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scripting command reference &#8212; LavaVu 1.8.16 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <title>Scripting command reference &#8212; LavaVu 1.8.20 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -35,37 +35,37 @@
   <div class="section" id="scripting-command-reference">
 <h1>Scripting command reference<a class="headerlink" href="#scripting-command-reference" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#general-commands">General</a></strong></p></li>
+<li><p><strong><span class="xref myst">General</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#quit">quit</a>, <a class="reference external" href="#repeat">repeat</a>, <a class="reference external" href="#animate">animate</a>, <a class="reference external" href="#history">history</a>, <a class="reference external" href="#clearhistory">clearhistory</a>, <a class="reference external" href="#pause">pause</a>, <a class="reference external" href="#list">list</a>, <a class="reference external" href="#step">step</a>, <a class="reference external" href="#timestep">timestep</a>, <a class="reference external" href="#jump">jump</a>, <a class="reference external" href="#model">model</a>, <a class="reference external" href="#reload">reload</a>, <a class="reference external" href="#redraw">redraw</a>, <a class="reference external" href="#clear">clear</a></p>
+<p><span class="xref myst">quit</span>, <span class="xref myst">repeat</span>, <span class="xref myst">animate</span>, <span class="xref myst">history</span>, <span class="xref myst">clearhistory</span>, <span class="xref myst">pause</span>, <span class="xref myst">list</span>, <span class="xref myst">step</span>, <span class="xref myst">timestep</span>, <span class="xref myst">jump</span>, <span class="xref myst">model</span>, <span class="xref myst">reload</span>, <span class="xref myst">redraw</span>, <span class="xref myst">clear</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#input-commands">Input</a></strong></p></li>
+<li><p><strong><span class="xref myst">Input</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#file">file</a>, <a class="reference external" href="#script">script</a>, <a class="reference external" href="#figure">figure</a>, <a class="reference external" href="#savefigure">savefigure</a>, <a class="reference external" href="#view">view</a>, <a class="reference external" href="#scan">scan</a></p>
+<p><span class="xref myst">file</span>, <span class="xref myst">script</span>, <span class="xref myst">figure</span>, <span class="xref myst">savefigure</span>, <span class="xref myst">view</span>, <span class="xref myst">scan</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#output-commands">Output</a></strong></p></li>
+<li><p><strong><span class="xref myst">Output</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#image">image</a>, <a class="reference external" href="#images">images</a>, <a class="reference external" href="#outwidth">outwidth</a>, <a class="reference external" href="#outheight">outheight</a>, <a class="reference external" href="#movie">movie</a>, <a class="reference external" href="#record">record</a>, <a class="reference external" href="#export">export</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#cache">cache</a>, <a class="reference external" href="#save">save</a>, <a class="reference external" href="#tiles">tiles</a></p>
+<p><span class="xref myst">image</span>, <span class="xref myst">images</span>, <span class="xref myst">outwidth</span>, <span class="xref myst">outheight</span>, <span class="xref myst">movie</span>, <span class="xref myst">record</span>, <span class="xref myst">export</span>, <span class="xref myst">csv</span>, <span class="xref myst">json</span>, <span class="xref myst">cache</span>, <span class="xref myst">save</span>, <span class="xref myst">tiles</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#view-commands">View</a></strong></p></li>
+<li><p><strong><span class="xref myst">View</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#rotate">rotate</a>, <a class="reference external" href="#rotatex">rotatex</a>, <a class="reference external" href="#rotatey">rotatey</a>, <a class="reference external" href="#rotatez">rotatez</a>, <a class="reference external" href="#rotation">rotation</a>, <a class="reference external" href="#zoom">zoom</a>, <a class="reference external" href="#translate">translate</a>, <a class="reference external" href="#translatex">translatex</a>, <a class="reference external" href="#translatey">translatey</a>, <a class="reference external" href="#translatez">translatez</a>, <a class="reference external" href="#translation">translation</a>, <a class="reference external" href="#autorotate">autorotate</a>, <a class="reference external" href="#spin">spin</a>, <a class="reference external" href="#focus">focus</a>, <a class="reference external" href="#fov">fov</a>, <a class="reference external" href="#focallength">focallength</a>, <a class="reference external" href="#eyeseparation">eyeseparation</a>, <a class="reference external" href="#nearclip">nearclip</a>, <a class="reference external" href="#farclip">farclip</a>, <a class="reference external" href="#zoomclip">zoomclip</a>, <a class="reference external" href="#zerocam">zerocam</a>, <a class="reference external" href="#reset">reset</a>, <a class="reference external" href="#bounds">bounds</a>, <a class="reference external" href="#fixbb">fixbb</a>, <a class="reference external" href="#camera">camera</a>, <a class="reference external" href="#resize">resize</a>, <a class="reference external" href="#fullscreen">fullscreen</a>, <a class="reference external" href="#fit">fit</a>, <a class="reference external" href="#autozoom">autozoom</a>, <a class="reference external" href="#stereo">stereo</a>, <a class="reference external" href="#coordsystem">coordsystem</a>, <a class="reference external" href="#sort">sort</a></p>
+<p><span class="xref myst">rotate</span>, <span class="xref myst">rotatex</span>, <span class="xref myst">rotatey</span>, <span class="xref myst">rotatez</span>, <span class="xref myst">rotation</span>, <span class="xref myst">zoom</span>, <span class="xref myst">translate</span>, <span class="xref myst">translatex</span>, <span class="xref myst">translatey</span>, <span class="xref myst">translatez</span>, <span class="xref myst">translation</span>, <span class="xref myst">autorotate</span>, <span class="xref myst">spin</span>, <span class="xref myst">focus</span>, <span class="xref myst">fov</span>, <span class="xref myst">focallength</span>, <span class="xref myst">eyeseparation</span>, <span class="xref myst">nearclip</span>, <span class="xref myst">farclip</span>, <span class="xref myst">zoomclip</span>, <span class="xref myst">zerocam</span>, <span class="xref myst">reset</span>, <span class="xref myst">bounds</span>, <span class="xref myst">fixbb</span>, <span class="xref myst">camera</span>, <span class="xref myst">resize</span>, <span class="xref myst">fullscreen</span>, <span class="xref myst">fit</span>, <span class="xref myst">autozoom</span>, <span class="xref myst">stereo</span>, <span class="xref myst">coordsystem</span>, <span class="xref myst">sort</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#object-commands">Object</a></strong></p></li>
+<li><p><strong><span class="xref myst">Object</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#hide">hide</a>, <a class="reference external" href="#show">show</a>, <a class="reference external" href="#delete">delete</a>, <a class="reference external" href="#load">load</a>, <a class="reference external" href="#select">select</a>, <a class="reference external" href="#add">add</a>, <a class="reference external" href="#append">append</a>, <a class="reference external" href="#name">name</a>, <a class="reference external" href="#isosurface">isosurface</a>, <a class="reference external" href="#texture">texture</a>, <a class="reference external" href="#populate">populate</a>, <a class="reference external" href="#bake">bake</a>, <a class="reference external" href="#bakecolour">bakecolour</a>, <a class="reference external" href="#glaze">glaze</a>, <a class="reference external" href="#csv">csv</a>, <a class="reference external" href="#json">json</a>, <a class="reference external" href="#tiles">tiles</a>, <a class="reference external" href="#valuerange">valuerange</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#colourbar">colourbar</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#scale">scale</a></p>
+<p><span class="xref myst">hide</span>, <span class="xref myst">show</span>, <span class="xref myst">delete</span>, <span class="xref myst">load</span>, <span class="xref myst">select</span>, <span class="xref myst">add</span>, <span class="xref myst">append</span>, <span class="xref myst">name</span>, <span class="xref myst">isosurface</span>, <span class="xref myst">texture</span>, <span class="xref myst">populate</span>, <span class="xref myst">bake</span>, <span class="xref myst">bakecolour</span>, <span class="xref myst">glaze</span>, <span class="xref myst">csv</span>, <span class="xref myst">json</span>, <span class="xref myst">tiles</span>, <span class="xref myst">valuerange</span>, <span class="xref myst">colourmap</span>, <span class="xref myst">colourbar</span>, <span class="xref myst">pointtype</span>, <span class="xref myst">scale</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#display-commands">Display</a></strong></p></li>
+<li><p><strong><span class="xref myst">Display</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#background">background</a>, <a class="reference external" href="#alpha">alpha</a>, <a class="reference external" href="#axis">axis</a>, <a class="reference external" href="#rulers">rulers</a>, <a class="reference external" href="#colourmap">colourmap</a>, <a class="reference external" href="#antialias">antialias</a>, <a class="reference external" href="#pointtype">pointtype</a>, <a class="reference external" href="#pointsample">pointsample</a>, <a class="reference external" href="#border">border</a>, <a class="reference external" href="#title">title</a>, <a class="reference external" href="#scale">scale</a>, <a class="reference external" href="#modelscale">modelscale</a></p>
+<p><span class="xref myst">background</span>, <span class="xref myst">alpha</span>, <span class="xref myst">axis</span>, <span class="xref myst">rulers</span>, <span class="xref myst">colourmap</span>, <span class="xref myst">antialias</span>, <span class="xref myst">pointtype</span>, <span class="xref myst">pointsample</span>, <span class="xref myst">border</span>, <span class="xref myst">title</span>, <span class="xref myst">scale</span>, <span class="xref myst">modelscale</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#scripting-commands">Scripting</a></strong></p></li>
+<li><p><strong><span class="xref myst">Scripting</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#next">next</a>, <a class="reference external" href="#play">play</a>, <a class="reference external" href="#stop">stop</a>, <a class="reference external" href="#open">open</a>, <a class="reference external" href="#interactive">interactive</a>, <a class="reference external" href="#display">display</a></p>
+<p><span class="xref myst">next</span>, <span class="xref myst">play</span>, <span class="xref myst">stop</span>, <span class="xref myst">open</span>, <span class="xref myst">interactive</span>, <span class="xref myst">display</span></p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="#miscellanious-commands">Miscellanious</a></strong></p></li>
+<li><p><strong><span class="xref myst">Miscellanious</span></strong></p></li>
 </ul>
-<p><a class="reference external" href="#shaders">shaders</a>, <a class="reference external" href="#blend">blend</a>, <a class="reference external" href="#props">props</a>, <a class="reference external" href="#defaults">defaults</a>, <a class="reference external" href="#test">test</a>, <a class="reference external" href="#voltest">voltest</a>, <a class="reference external" href="#newstep">newstep</a>, <a class="reference external" href="#filter">filter</a>, <a class="reference external" href="#filterout">filterout</a>, <a class="reference external" href="#filtermin">filtermin</a>, <a class="reference external" href="#filtermax">filtermax</a>, <a class="reference external" href="#clearfilters">clearfilters</a>, <a class="reference external" href="#verbose">verbose</a>, <a class="reference external" href="#toggle">toggle</a>, <a class="reference external" href="#createvolume">createvolume</a>, <a class="reference external" href="#clearvolume">clearvolume</a>, <a class="reference external" href="#palette">palette</a></p>
+<p><span class="xref myst">shaders</span>, <span class="xref myst">blend</span>, <span class="xref myst">props</span>, <span class="xref myst">defaults</span>, <span class="xref myst">test</span>, <span class="xref myst">voltest</span>, <span class="xref myst">newstep</span>, <span class="xref myst">filter</span>, <span class="xref myst">filterout</span>, <span class="xref myst">filtermin</span>, <span class="xref myst">filtermax</span>, <span class="xref myst">clearfilters</span>, <span class="xref myst">verbose</span>, <span class="xref myst">toggle</span>, <span class="xref myst">createvolume</span>, <span class="xref myst">clearvolume</span>, <span class="xref myst">palette</span></p>
 <hr class="docutils" />
 <div class="section" id="general-commands">
 <h2>General commands:<a class="headerlink" href="#general-commands" title="Permalink to this headline">¶</a></h2>
@@ -1361,7 +1361,7 @@ filename (string) : defaults to palette.[png/json/txt]</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -1383,7 +1383,7 @@ filename (string) : defaults to palette.[png/json/txt]</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
