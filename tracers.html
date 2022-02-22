@@ -4,12 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>tracers module &#8212; LavaVu 1.8.24 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tracers module &#8212; LavaVu 1.8.25 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -33,7 +32,7 @@
 
           <div class="body" role="main">
             
-  <section id="tracers-module">
+  <div class="section" id="tracers-module">
 <h1>tracers module<a class="headerlink" href="#tracers-module" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
 <dt>Warning! EXPERIMENTAL:</dt><dd><p>these features and functions are under development, will have bugs,
@@ -45,9 +44,9 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 <ul class="simple">
 <li><p>Requires scipy.spatial</p></li>
 </ul>
-<section id="module-summary">
+<div class="section" id="module-summary">
 <h2>Module Summary<a class="headerlink" href="#module-summary" title="Permalink to this headline">¶</a></h2>
-<section id="functions">
+<div class="section" id="functions">
 <h3>functions:<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -60,8 +59,8 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="classes">
+</div>
+<div class="section" id="classes">
 <h3>classes:<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -74,15 +73,15 @@ Uses a KDTree to find nearest vector to advect the particles</p>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="module-details">
+</div>
+</div>
+<div class="section" id="module-details">
 <h2>Module Details<a class="headerlink" href="#module-details" title="Permalink to this headline">¶</a></h2>
-<section id="id1">
+<div class="section" id="id1">
 <h3>functions:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
-<dt class="sig sig-object py" id="tracers.trace_particles">
-<span class="sig-name descname"><span class="pre">trace_particles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vecs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tracers.html#trace_particles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
+<dt id="tracers.trace_particles">
+<code class="sig-name descname"><span class="pre">trace_particles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vecs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.trace_particles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take a list of tracer vertices and matching velocity grid points (verts) &amp; vectors (vecs)
 For each tracer</p>
 <ul class="simple">
@@ -117,18 +116,18 @@ Pass this as first paramter on subsequent calls</p>
 </dl>
 </dd></dl>
 
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h3>classes:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="tracers.TracerState">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TracerState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tracers.html#TracerState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
+<dt id="tracers.TracerState">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">TracerState</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tracers.TracerState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
           </div>
@@ -191,7 +190,7 @@ Pass this as first paramter on subsequent calls</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -213,7 +212,7 @@ Pass this as first paramter on subsequent calls</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
