@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scripting command reference &#8212; LavaVu 1.8.45 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <title>Scripting command reference &#8212; LavaVu 1.8.51 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d1089404" />
+    <script src="_static/documentation_options.js?v=4d795528"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="lavavu module" href="lavavu.html" />
@@ -33,7 +32,7 @@
           <div class="body" role="main">
             
   <section id="scripting-command-reference">
-<h1>Scripting command reference<a class="headerlink" href="#scripting-command-reference" title="Permalink to this heading">¶</a></h1>
+<h1>Scripting command reference<a class="headerlink" href="#scripting-command-reference" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><strong><a class="reference internal" href="#general-commands">General</a></strong></p></li>
 </ul>
@@ -68,15 +67,15 @@
 <p><a class="reference internal" href="#shaders">shaders</a>, <a class="reference internal" href="#blend">blend</a>, <a class="reference internal" href="#props">props</a>, <a class="reference internal" href="#defaults">defaults</a>, <a class="reference internal" href="#test">test</a>, <a class="reference internal" href="#voltest">voltest</a>, <a class="reference internal" href="#newstep">newstep</a>, <a class="reference internal" href="#filter">filter</a>, <a class="reference internal" href="#filterout">filterout</a>, <a class="reference internal" href="#filtermin">filtermin</a>, <a class="reference internal" href="#filtermax">filtermax</a>, <a class="reference internal" href="#clearfilters">clearfilters</a>, <a class="reference internal" href="#verbose">verbose</a>, <a class="reference internal" href="#toggle">toggle</a>, <a class="reference internal" href="#createvolume">createvolume</a>, <a class="reference internal" href="#clearvolume">clearvolume</a>, <a class="reference internal" href="#palette">palette</a></p>
 <hr class="docutils" />
 <section id="general-commands">
-<h2>General commands:<a class="headerlink" href="#general-commands" title="Permalink to this heading">¶</a></h2>
+<h2>General commands:<a class="headerlink" href="#general-commands" title="Link to this heading">¶</a></h2>
 <section id="quit">
-<h3>quit<a class="headerlink" href="#quit" title="Permalink to this heading">¶</a></h3>
+<h3>quit<a class="headerlink" href="#quit" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Quit the program</p>
 </div></blockquote>
 </section>
 <section id="repeat">
-<h3>repeat<a class="headerlink" href="#repeat" title="Permalink to this heading">¶</a></h3>
+<h3>repeat<a class="headerlink" href="#repeat" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Repeat commands from history</p>
 <p><strong>Usage:</strong> repeat [count=1] [N=1]</p>
@@ -85,7 +84,7 @@ N (integer) : repeat the last N commands</p>
 </div></blockquote>
 </section>
 <section id="animate">
-<h3>animate<a class="headerlink" href="#animate" title="Permalink to this heading">¶</a></h3>
+<h3>animate<a class="headerlink" href="#animate" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Update display between each command</p>
 <p><strong>Usage:</strong> animate rate</p>
@@ -95,7 +94,7 @@ When off, all commands will be processed before the display is updated</p>
 </div></blockquote>
 </section>
 <section id="history">
-<h3>history<a class="headerlink" href="#history" title="Permalink to this heading">¶</a></h3>
+<h3>history<a class="headerlink" href="#history" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Write command history to output (eg: terminal)</p>
 <p><strong>Usage:</strong> history [filename]</p>
@@ -103,13 +102,13 @@ When off, all commands will be processed before the display is updated</p>
 </div></blockquote>
 </section>
 <section id="clearhistory">
-<h3>clearhistory<a class="headerlink" href="#clearhistory" title="Permalink to this heading">¶</a></h3>
+<h3>clearhistory<a class="headerlink" href="#clearhistory" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Clear command history</p>
 </div></blockquote>
 </section>
 <section id="pause">
-<h3>pause<a class="headerlink" href="#pause" title="Permalink to this heading">¶</a></h3>
+<h3>pause<a class="headerlink" href="#pause" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Pause execution (for scripting)</p>
 <p><strong>Usage:</strong> pause msecs</p>
@@ -117,7 +116,7 @@ When off, all commands will be processed before the display is updated</p>
 </div></blockquote>
 </section>
 <section id="list">
-<h3>list<a class="headerlink" href="#list" title="Permalink to this heading">¶</a></h3>
+<h3>list<a class="headerlink" href="#list" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>List available data</p>
 <p><strong>Usage:</strong> list objects/colourmaps/elements</p>
@@ -129,7 +128,7 @@ data : show available data sets in selected object or all</p>
 </div></blockquote>
 </section>
 <section id="step">
-<h3>step<a class="headerlink" href="#step" title="Permalink to this heading">¶</a></h3>
+<h3>step<a class="headerlink" href="#step" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set timestep to view</p>
 <p><strong>Usage:</strong> timestep -/+/value</p>
@@ -143,7 +142,7 @@ data : show available data sets in selected object or all</p>
 </div></blockquote>
 </section>
 <section id="timestep">
-<h3>timestep<a class="headerlink" href="#timestep" title="Permalink to this heading">¶</a></h3>
+<h3>timestep<a class="headerlink" href="#timestep" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set timestep to view</p>
 <p><strong>Usage:</strong> timestep -/+/value</p>
@@ -157,7 +156,7 @@ data : show available data sets in selected object or all</p>
 </div></blockquote>
 </section>
 <section id="jump">
-<h3>jump<a class="headerlink" href="#jump" title="Permalink to this heading">¶</a></h3>
+<h3>jump<a class="headerlink" href="#jump" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Jump from current timestep forward/backwards</p>
 <p><strong>Usage:</strong> jump value</p>
@@ -165,7 +164,7 @@ data : show available data sets in selected object or all</p>
 </div></blockquote>
 </section>
 <section id="model">
-<h3>model<a class="headerlink" href="#model" title="Permalink to this heading">¶</a></h3>
+<h3>model<a class="headerlink" href="#model" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model to view (when multiple models loaded)</p>
 <p><strong>Usage:</strong> model up/down/value</p>
@@ -176,7 +175,7 @@ add : add a new model</p>
 </div></blockquote>
 </section>
 <section id="reload">
-<h3>reload<a class="headerlink" href="#reload" title="Permalink to this heading">¶</a></h3>
+<h3>reload<a class="headerlink" href="#reload" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Reload all data of current model/timestep from database</p>
 <p><strong>Usage:</strong> reload [object_id]</p>
@@ -185,13 +184,13 @@ add : add a new model</p>
 </div></blockquote>
 </section>
 <section id="redraw">
-<h3>redraw<a class="headerlink" href="#redraw" title="Permalink to this heading">¶</a></h3>
+<h3>redraw<a class="headerlink" href="#redraw" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Redraw all object data, required after changing some parameters but may be slow</p>
 </div></blockquote>
 </section>
 <section id="clear">
-<h3>clear<a class="headerlink" href="#clear" title="Permalink to this heading">¶</a></h3>
+<h3>clear<a class="headerlink" href="#clear" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Clear data from current model/timestep</p>
 <p><strong>Usage:</strong> clear [type/”objects”/”all”]</p>
@@ -204,9 +203,9 @@ all : clear everything, including models</p>
 </section>
 <hr class="docutils" />
 <section id="input-commands">
-<h2>Input commands:<a class="headerlink" href="#input-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Input commands:<a class="headerlink" href="#input-commands" title="Link to this heading">¶</a></h2>
 <section id="file">
-<h3>file<a class="headerlink" href="#file" title="Permalink to this heading">¶</a></h3>
+<h3>file<a class="headerlink" href="#file" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Load database or model file<br />
 <strong>Usage:</strong> file “filename”</p>
@@ -214,7 +213,7 @@ all : clear everything, including models</p>
 </div></blockquote>
 </section>
 <section id="script">
-<h3>script<a class="headerlink" href="#script" title="Permalink to this heading">¶</a></h3>
+<h3>script<a class="headerlink" href="#script" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Run script file<br />
 Load a saved script of viewer commands from a file</p>
@@ -223,7 +222,7 @@ Load a saved script of viewer commands from a file</p>
 </div></blockquote>
 </section>
 <section id="figure">
-<h3>figure<a class="headerlink" href="#figure" title="Permalink to this heading">¶</a></h3>
+<h3>figure<a class="headerlink" href="#figure" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set figure to view</p>
 <p><strong>Usage:</strong> figure up/down/value</p>
@@ -233,7 +232,7 @@ down : switch to next figure if available</p>
 </div></blockquote>
 </section>
 <section id="savefigure">
-<h3>savefigure<a class="headerlink" href="#savefigure" title="Permalink to this heading">¶</a></h3>
+<h3>savefigure<a class="headerlink" href="#savefigure" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Store current vis settings in a figure</p>
 <p><strong>Usage:</strong> figure name</p>
@@ -243,7 +242,7 @@ if it doesn’t exist it will be created</p>
 </div></blockquote>
 </section>
 <section id="view">
-<h3>view<a class="headerlink" href="#view" title="Permalink to this heading">¶</a></h3>
+<h3>view<a class="headerlink" href="#view" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set view (when available)</p>
 <p><strong>Usage:</strong> view up/down/value</p>
@@ -253,7 +252,7 @@ down : switch to next view if available</p>
 </div></blockquote>
 </section>
 <section id="scan">
-<h3>scan<a class="headerlink" href="#scan" title="Permalink to this heading">¶</a></h3>
+<h3>scan<a class="headerlink" href="#scan" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Rescan the current directory for timestep database files<br />
 based on currently loaded filename</p>
@@ -262,9 +261,9 @@ based on currently loaded filename</p>
 </section>
 <hr class="docutils" />
 <section id="output-commands">
-<h2>Output commands:<a class="headerlink" href="#output-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Output commands:<a class="headerlink" href="#output-commands" title="Link to this heading">¶</a></h2>
 <section id="image">
-<h3>image<a class="headerlink" href="#image" title="Permalink to this heading">¶</a></h3>
+<h3>image<a class="headerlink" href="#image" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Save an image of the current view<br />
 <strong>Usage:</strong> image [filename]</p>
@@ -272,7 +271,7 @@ based on currently loaded filename</p>
 </div></blockquote>
 </section>
 <section id="images">
-<h3>images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h3>
+<h3>images<a class="headerlink" href="#images" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Write images in sequence from current timestep to specified timestep</p>
 <p><strong>Usage:</strong> images endstep</p>
@@ -280,7 +279,7 @@ based on currently loaded filename</p>
 </div></blockquote>
 </section>
 <section id="outwidth">
-<h3>outwidth<a class="headerlink" href="#outwidth" title="Permalink to this heading">¶</a></h3>
+<h3>outwidth<a class="headerlink" href="#outwidth" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set output image width (height calculated to match window aspect)</p>
 <p><strong>Usage:</strong> outwidth value</p>
@@ -288,7 +287,7 @@ based on currently loaded filename</p>
 </div></blockquote>
 </section>
 <section id="outheight">
-<h3>outheight<a class="headerlink" href="#outheight" title="Permalink to this heading">¶</a></h3>
+<h3>outheight<a class="headerlink" href="#outheight" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set output image height</p>
 <p><strong>Usage:</strong> outheight value</p>
@@ -296,7 +295,7 @@ based on currently loaded filename</p>
 </div></blockquote>
 </section>
 <section id="movie">
-<h3>movie<a class="headerlink" href="#movie" title="Permalink to this heading">¶</a></h3>
+<h3>movie<a class="headerlink" href="#movie" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Encode video of model running from current timestep to specified timestep<br />
 (Requires libavcodec)</p>
@@ -309,7 +308,7 @@ fps (integer) : fps, default=30</p>
 </div></blockquote>
 </section>
 <section id="record">
-<h3>record<a class="headerlink" href="#record" title="Permalink to this heading">¶</a></h3>
+<h3>record<a class="headerlink" href="#record" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Encode video of all frames displayed at specified framerate<br />
 (Requires libavcodec)</p>
@@ -319,7 +318,7 @@ quality (integer): 1=low/2=medium/3=high (default 1)</p>
 </div></blockquote>
 </section>
 <section id="export">
-<h3>export<a class="headerlink" href="#export" title="Permalink to this heading">¶</a></h3>
+<h3>export<a class="headerlink" href="#export" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export model database</p>
 <p><strong>Usage:</strong> export [filename] [objects]</p>
@@ -330,7 +329,7 @@ If object(s) provided, filename must also be provided.</p>
 </div></blockquote>
 </section>
 <section id="csv">
-<h3>csv<a class="headerlink" href="#csv" title="Permalink to this heading">¶</a></h3>
+<h3>csv<a class="headerlink" href="#csv" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export CSV data</p>
 <p><strong>Usage:</strong> csv [objects]</p>
@@ -339,7 +338,7 @@ If object ommitted all will be exported</p>
 </div></blockquote>
 </section>
 <section id="json">
-<h3>json<a class="headerlink" href="#json" title="Permalink to this heading">¶</a></h3>
+<h3>json<a class="headerlink" href="#json" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export json data</p>
 <p><strong>Usage:</strong> json [object]</p>
@@ -348,14 +347,14 @@ If object ommitted all will be exported</p>
 </div></blockquote>
 </section>
 <section id="cache">
-<h3>cache<a class="headerlink" href="#cache" title="Permalink to this heading">¶</a></h3>
+<h3>cache<a class="headerlink" href="#cache" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Load all timesteps into cache</p>
 <p><strong>Usage:</strong> cache</p>
 </div></blockquote>
 </section>
 <section id="save">
-<h3>save<a class="headerlink" href="#save" title="Permalink to this heading">¶</a></h3>
+<h3>save<a class="headerlink" href="#save" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export all settings as json state file that can be reloaded later</p>
 <p><strong>Usage:</strong> save [“filename”]</p>
@@ -365,7 +364,7 @@ to the active figure in the database instead</p>
 </div></blockquote>
 </section>
 <section id="tiles">
-<h3>tiles<a class="headerlink" href="#tiles" title="Permalink to this heading">¶</a></h3>
+<h3>tiles<a class="headerlink" href="#tiles" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Save a tiled image of selected volume dataset<br />
 <strong>Usage:</strong> tiles (object)</p>
@@ -374,9 +373,9 @@ to the active figure in the database instead</p>
 </section>
 <hr class="docutils" />
 <section id="view-commands">
-<h2>View commands:<a class="headerlink" href="#view-commands" title="Permalink to this heading">¶</a></h2>
+<h2>View commands:<a class="headerlink" href="#view-commands" title="Link to this heading">¶</a></h2>
 <section id="rotate">
-<h3>rotate<a class="headerlink" href="#rotate" title="Permalink to this heading">¶</a></h3>
+<h3>rotate<a class="headerlink" href="#rotate" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Rotate model</p>
 <p><strong>Usage:</strong> rotate axis degrees</p>
@@ -389,7 +388,7 @@ z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </section>
 <section id="rotatex">
-<h3>rotatex<a class="headerlink" href="#rotatex" title="Permalink to this heading">¶</a></h3>
+<h3>rotatex<a class="headerlink" href="#rotatex" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Rotate model about x-axis</p>
 <p><strong>Usage:</strong> rotatex degrees</p>
@@ -397,7 +396,7 @@ z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </section>
 <section id="rotatey">
-<h3>rotatey<a class="headerlink" href="#rotatey" title="Permalink to this heading">¶</a></h3>
+<h3>rotatey<a class="headerlink" href="#rotatey" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Rotate model about y-axis</p>
 <p><strong>Usage:</strong> rotatey degrees</p>
@@ -405,7 +404,7 @@ z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </section>
 <section id="rotatez">
-<h3>rotatez<a class="headerlink" href="#rotatez" title="Permalink to this heading">¶</a></h3>
+<h3>rotatez<a class="headerlink" href="#rotatez" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Rotate model about z-axis</p>
 <p><strong>Usage:</strong> rotatez degrees</p>
@@ -413,7 +412,7 @@ z (number) : z axis degrees of rotation</p>
 </div></blockquote>
 </section>
 <section id="rotation">
-<h3>rotation<a class="headerlink" href="#rotation" title="Permalink to this heading">¶</a></h3>
+<h3>rotation<a class="headerlink" href="#rotation" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model rotation (replaces any previous rotation)</p>
 <p><strong>Usage:</strong> rotation x y z [w]</p>
@@ -428,7 +427,7 @@ as a quaternion with these components</p>
 </div></blockquote>
 </section>
 <section id="zoom">
-<h3>zoom<a class="headerlink" href="#zoom" title="Permalink to this heading">¶</a></h3>
+<h3>zoom<a class="headerlink" href="#zoom" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Translate model in Z direction (zoom)</p>
 <p><strong>Usage:</strong> zoom units</p>
@@ -438,7 +437,7 @@ negative to zoom out, positive in</p>
 </div></blockquote>
 </section>
 <section id="translate">
-<h3>translate<a class="headerlink" href="#translate" title="Permalink to this heading">¶</a></h3>
+<h3>translate<a class="headerlink" href="#translate" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Translate model in 3 dimensions</p>
 <p><strong>Usage:</strong> translate dir shift</p>
@@ -451,7 +450,7 @@ z (number) : z axis shift</p>
 </div></blockquote>
 </section>
 <section id="translatex">
-<h3>translatex<a class="headerlink" href="#translatex" title="Permalink to this heading">¶</a></h3>
+<h3>translatex<a class="headerlink" href="#translatex" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Translate model in X direction</p>
 <p><strong>Usage:</strong> translationx shift</p>
@@ -459,7 +458,7 @@ z (number) : z axis shift</p>
 </div></blockquote>
 </section>
 <section id="translatey">
-<h3>translatey<a class="headerlink" href="#translatey" title="Permalink to this heading">¶</a></h3>
+<h3>translatey<a class="headerlink" href="#translatey" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Translate model in Y direction</p>
 <p><strong>Usage:</strong> translationy shift</p>
@@ -467,7 +466,7 @@ z (number) : z axis shift</p>
 </div></blockquote>
 </section>
 <section id="translatez">
-<h3>translatez<a class="headerlink" href="#translatez" title="Permalink to this heading">¶</a></h3>
+<h3>translatez<a class="headerlink" href="#translatez" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Translate model in Z direction</p>
 <p><strong>Usage:</strong> translationz shift</p>
@@ -475,7 +474,7 @@ z (number) : z axis shift</p>
 </div></blockquote>
 </section>
 <section id="translation">
-<h3>translation<a class="headerlink" href="#translation" title="Permalink to this heading">¶</a></h3>
+<h3>translation<a class="headerlink" href="#translation" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model translation in 3d coords (replaces any previous translation)</p>
 <p><strong>Usage:</strong> translation x y z</p>
@@ -485,13 +484,13 @@ z (number) : z axis shift</p>
 </div></blockquote>
 </section>
 <section id="autorotate">
-<h3>autorotate<a class="headerlink" href="#autorotate" title="Permalink to this heading">¶</a></h3>
+<h3>autorotate<a class="headerlink" href="#autorotate" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Auto-Rotate model to face camera if flat in X or Y dimensions</p>
 </div></blockquote>
 </section>
 <section id="spin">
-<h3>spin<a class="headerlink" href="#spin" title="Permalink to this heading">¶</a></h3>
+<h3>spin<a class="headerlink" href="#spin" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Auto-spin model, animates</p>
 <p><strong>Usage:</strong> spin axis degrees</p>
@@ -500,7 +499,7 @@ degrees (number) : degrees of rotation per frame</p>
 </div></blockquote>
 </section>
 <section id="focus">
-<h3>focus<a class="headerlink" href="#focus" title="Permalink to this heading">¶</a></h3>
+<h3>focus<a class="headerlink" href="#focus" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model focal point in 3d coords</p>
 <p><strong>Usage:</strong> focus x y z</p>
@@ -510,7 +509,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="fov">
-<h3>fov<a class="headerlink" href="#fov" title="Permalink to this heading">¶</a></h3>
+<h3>fov<a class="headerlink" href="#fov" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set camera fov (field-of-view)</p>
 <p><strong>Usage:</strong> fov degrees</p>
@@ -518,7 +517,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="focallength">
-<h3>focallength<a class="headerlink" href="#focallength" title="Permalink to this heading">¶</a></h3>
+<h3>focallength<a class="headerlink" href="#focallength" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set camera focal length (for stereo viewing)</p>
 <p><strong>Usage:</strong> focallength len</p>
@@ -526,7 +525,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="eyeseparation">
-<h3>eyeseparation<a class="headerlink" href="#eyeseparation" title="Permalink to this heading">¶</a></h3>
+<h3>eyeseparation<a class="headerlink" href="#eyeseparation" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set camera stereo eye separation</p>
 <p><strong>Usage:</strong> eyeseparation len</p>
@@ -534,7 +533,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="nearclip">
-<h3>nearclip<a class="headerlink" href="#nearclip" title="Permalink to this heading">¶</a></h3>
+<h3>nearclip<a class="headerlink" href="#nearclip" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set near clip plane, before which geometry is not displayed</p>
 <p><strong>Usage:</strong> nearclip dist</p>
@@ -542,7 +541,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="farclip">
-<h3>farclip<a class="headerlink" href="#farclip" title="Permalink to this heading">¶</a></h3>
+<h3>farclip<a class="headerlink" href="#farclip" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set far clip plane, beyond which geometry is not displayed</p>
 <p><strong>Usage:</strong> farrclip dist</p>
@@ -550,7 +549,7 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="zoomclip">
-<h3>zoomclip<a class="headerlink" href="#zoomclip" title="Permalink to this heading">¶</a></h3>
+<h3>zoomclip<a class="headerlink" href="#zoomclip" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Adjust near clip plane relative to current value</p>
 <p><strong>Usage:</strong> zoomclip multiplier</p>
@@ -558,37 +557,37 @@ z (number) : z coord</p>
 </div></blockquote>
 </section>
 <section id="zerocam">
-<h3>zerocam<a class="headerlink" href="#zerocam" title="Permalink to this heading">¶</a></h3>
+<h3>zerocam<a class="headerlink" href="#zerocam" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set the camera postiion to the origin (for scripting, not generally advisable)</p>
 </div></blockquote>
 </section>
 <section id="reset">
-<h3>reset<a class="headerlink" href="#reset" title="Permalink to this heading">¶</a></h3>
+<h3>reset<a class="headerlink" href="#reset" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Reset the camera to the default model view</p>
 </div></blockquote>
 </section>
 <section id="bounds">
-<h3>bounds<a class="headerlink" href="#bounds" title="Permalink to this heading">¶</a></h3>
+<h3>bounds<a class="headerlink" href="#bounds" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Recalculate the model bounding box from geometry</p>
 </div></blockquote>
 </section>
 <section id="fixbb">
-<h3>fixbb<a class="headerlink" href="#fixbb" title="Permalink to this heading">¶</a></h3>
+<h3>fixbb<a class="headerlink" href="#fixbb" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Fix the model bounding box to it’s current size, will no longer be elastic</p>
 </div></blockquote>
 </section>
 <section id="camera">
-<h3>camera<a class="headerlink" href="#camera" title="Permalink to this heading">¶</a></h3>
+<h3>camera<a class="headerlink" href="#camera" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Output camera state for use in model scripts</p>
 </div></blockquote>
 </section>
 <section id="resize">
-<h3>resize<a class="headerlink" href="#resize" title="Permalink to this heading">¶</a></h3>
+<h3>resize<a class="headerlink" href="#resize" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Resize view window</p>
 <p><strong>Usage:</strong> resize width height</p>
@@ -597,38 +596,38 @@ height (integer) : height in pixels</p>
 </div></blockquote>
 </section>
 <section id="fullscreen">
-<h3>fullscreen<a class="headerlink" href="#fullscreen" title="Permalink to this heading">¶</a></h3>
+<h3>fullscreen<a class="headerlink" href="#fullscreen" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Switch viewer to full-screen mode and back to windowed mode</p>
 </div></blockquote>
 </section>
 <section id="fit">
-<h3>fit<a class="headerlink" href="#fit" title="Permalink to this heading">¶</a></h3>
+<h3>fit<a class="headerlink" href="#fit" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Adjust camera view to fit the model in window</p>
 </div></blockquote>
 </section>
 <section id="autozoom">
-<h3>autozoom<a class="headerlink" href="#autozoom" title="Permalink to this heading">¶</a></h3>
+<h3>autozoom<a class="headerlink" href="#autozoom" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Automatically adjust camera view to always fit the model in window (enable/disable)</p>
 </div></blockquote>
 </section>
 <section id="stereo">
-<h3>stereo<a class="headerlink" href="#stereo" title="Permalink to this heading">¶</a></h3>
+<h3>stereo<a class="headerlink" href="#stereo" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Enable/disable stereo projection<br />
 If no stereo hardware found will use side-by-side mode</p>
 </div></blockquote>
 </section>
 <section id="coordsystem">
-<h3>coordsystem<a class="headerlink" href="#coordsystem" title="Permalink to this heading">¶</a></h3>
+<h3>coordsystem<a class="headerlink" href="#coordsystem" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Switch between Right-handed and Left-handed coordinate system</p>
 </div></blockquote>
 </section>
 <section id="sort">
-<h3>sort<a class="headerlink" href="#sort" title="Permalink to this heading">¶</a></h3>
+<h3>sort<a class="headerlink" href="#sort" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Sort geometry on demand (with idle timer)</p>
 <p><strong>Usage:</strong> sort on/off</p>
@@ -640,9 +639,9 @@ If no options passed, does immediate re-sort</p>
 </section>
 <hr class="docutils" />
 <section id="object-commands">
-<h2>Object commands:<a class="headerlink" href="#object-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Object commands:<a class="headerlink" href="#object-commands" title="Link to this heading">¶</a></h2>
 <section id="hide">
-<h3>hide<a class="headerlink" href="#hide" title="Permalink to this heading">¶</a></h3>
+<h3>hide<a class="headerlink" href="#hide" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>hide objects/geometry types</p>
 <p><strong>Usage:</strong> hide object</p>
@@ -655,7 +654,7 @@ note: ‘hide all’ will hide all objects</p>
 </div></blockquote>
 </section>
 <section id="show">
-<h3>show<a class="headerlink" href="#show" title="Permalink to this heading">¶</a></h3>
+<h3>show<a class="headerlink" href="#show" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>show objects/geometry types</p>
 <p><strong>Usage:</strong> show object</p>
@@ -668,7 +667,7 @@ note: ‘hide all’ will show all objects</p>
 </div></blockquote>
 </section>
 <section id="delete">
-<h3>delete<a class="headerlink" href="#delete" title="Permalink to this heading">¶</a></h3>
+<h3>delete<a class="headerlink" href="#delete" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Delete objects<br />
 <strong>Usage:</strong> delete object</p>
@@ -676,7 +675,7 @@ note: ‘hide all’ will show all objects</p>
 </div></blockquote>
 </section>
 <section id="load">
-<h3>load<a class="headerlink" href="#load" title="Permalink to this heading">¶</a></h3>
+<h3>load<a class="headerlink" href="#load" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Load objects from database<br />
 Used when running with deferred loading (-N command line switch)</p>
@@ -685,7 +684,7 @@ Used when running with deferred loading (-N command line switch)</p>
 </div></blockquote>
 </section>
 <section id="select">
-<h3>select<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h3>
+<h3>select<a class="headerlink" href="#select" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Select object as the active object<br />
 Used for setting properties of objects<br />
@@ -696,7 +695,7 @@ Leave object parameter empty to clear selection.</p>
 </div></blockquote>
 </section>
 <section id="add">
-<h3>add<a class="headerlink" href="#add" title="Permalink to this heading">¶</a></h3>
+<h3>add<a class="headerlink" href="#add" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Add a new object and select as the active object</p>
 <p><strong>Usage:</strong> add [object_name] [data_type]</p>
@@ -706,7 +705,7 @@ data_type (string) : optional name of the default data type<br />
 </div></blockquote>
 </section>
 <section id="append">
-<h3>append<a class="headerlink" href="#append" title="Permalink to this heading">¶</a></h3>
+<h3>append<a class="headerlink" href="#append" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Append a new geometry container to an object<br />
 eg: to divide line objects into segments</p>
@@ -715,7 +714,7 @@ eg: to divide line objects into segments</p>
 </div></blockquote>
 </section>
 <section id="name">
-<h3>name<a class="headerlink" href="#name" title="Permalink to this heading">¶</a></h3>
+<h3>name<a class="headerlink" href="#name" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set object name</p>
 <p><strong>Usage:</strong> name object newname</p>
@@ -724,7 +723,7 @@ newname (string) : new name to apply</p>
 </div></blockquote>
 </section>
 <section id="isosurface">
-<h3>isosurface<a class="headerlink" href="#isosurface" title="Permalink to this heading">¶</a></h3>
+<h3>isosurface<a class="headerlink" href="#isosurface" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Generate an isosurface from a volume object</p>
 <p><strong>Usage:</strong> isosurface [isovalue]</p>
@@ -733,13 +732,13 @@ if not specified, will use ‘isovalues’ property</p>
 </div></blockquote>
 </section>
 <section id="texture">
-<h3>texture<a class="headerlink" href="#texture" title="Permalink to this heading">¶</a></h3>
+<h3>texture<a class="headerlink" href="#texture" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set or clear object texture data</p>
 </div></blockquote>
 </section>
 <section id="populate">
-<h3>populate<a class="headerlink" href="#populate" title="Permalink to this heading">¶</a></h3>
+<h3>populate<a class="headerlink" href="#populate" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Populate generated data set</p>
 <p><strong>Usage:</strong> populate label</p>
@@ -748,7 +747,7 @@ x,y,z,index,count,width,height,length,size,x0,y0,z0,x1,y1,z1,magnitude,nx,ny,nz,
 </div></blockquote>
 </section>
 <section id="bake">
-<h3>bake<a class="headerlink" href="#bake" title="Permalink to this heading">¶</a></h3>
+<h3>bake<a class="headerlink" href="#bake" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
 glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
@@ -763,7 +762,7 @@ but makes the meshes render much faster in animations as they don’t need to be
 </div></blockquote>
 </section>
 <section id="bakecolour">
-<h3>bakecolour<a class="headerlink" href="#bakecolour" title="Permalink to this heading">¶</a></h3>
+<h3>bakecolour<a class="headerlink" href="#bakecolour" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
 glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
@@ -778,7 +777,7 @@ but makes the meshes render much faster in animations as they don’t need to be
 </div></blockquote>
 </section>
 <section id="glaze">
-<h3>glaze<a class="headerlink" href="#glaze" title="Permalink to this heading">¶</a></h3>
+<h3>glaze<a class="headerlink" href="#glaze" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>‘Bake’ model geometry, turns dynamic meshes into static by permanently replacing higher level<br />
 glyph types (vector/tracer/shape) with generated low-level primitives (point/line/triangle)<br />
@@ -793,7 +792,7 @@ but makes the meshes render much faster in animations as they don’t need to be
 </div></blockquote>
 </section>
 <section id="id1">
-<h3>csv<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<h3>csv<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export CSV data</p>
 <p><strong>Usage:</strong> csv [objects]</p>
@@ -802,7 +801,7 @@ If object ommitted all will be exported</p>
 </div></blockquote>
 </section>
 <section id="id2">
-<h3>json<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3>json<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export json data</p>
 <p><strong>Usage:</strong> json [object]</p>
@@ -811,14 +810,14 @@ If object ommitted all will be exported</p>
 </div></blockquote>
 </section>
 <section id="id3">
-<h3>tiles<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<h3>tiles<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Save a tiled image of selected volume dataset<br />
 <strong>Usage:</strong> tiles (object)</p>
 </div></blockquote>
 </section>
 <section id="valuerange">
-<h3>valuerange<a class="headerlink" href="#valuerange" title="Permalink to this heading">¶</a></h3>
+<h3>valuerange<a class="headerlink" href="#valuerange" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Adjust colourmaps on object to fit actual value range or provided min/max</p>
 <p><strong>Usage:</strong> valuerange [min max]<br />
@@ -827,7 +826,7 @@ max (number) : maximum of user defined range, default is to use the data maximum
 </div></blockquote>
 </section>
 <section id="colourmap">
-<h3>colourmap<a class="headerlink" href="#colourmap" title="Permalink to this heading">¶</a></h3>
+<h3>colourmap<a class="headerlink" href="#colourmap" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set colourmap on object or create a new colourmap</p>
 <p><strong>Usage:</strong> colourmap [colourmap / data]<br />
@@ -837,7 +836,7 @@ data (string) : data to load into selected object’s colourmap, if no colourmap
 </div></blockquote>
 </section>
 <section id="colourbar">
-<h3>colourbar<a class="headerlink" href="#colourbar" title="Permalink to this heading">¶</a></h3>
+<h3>colourbar<a class="headerlink" href="#colourbar" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Add a colour bar display to selected object</p>
 <p><strong>Usage:</strong> colourbar [alignment] [size]</p>
@@ -845,7 +844,7 @@ data (string) : data to load into selected object’s colourmap, if no colourmap
 </div></blockquote>
 </section>
 <section id="pointtype">
-<h3>pointtype<a class="headerlink" href="#pointtype" title="Permalink to this heading">¶</a></h3>
+<h3>pointtype<a class="headerlink" href="#pointtype" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set point-rendering type on object</p>
 <p><strong>Usage:</strong> pointtype all/object type/up/down</p>
@@ -856,7 +855,7 @@ up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list
 </div></blockquote>
 </section>
 <section id="scale">
-<h3>scale<a class="headerlink" href="#scale" title="Permalink to this heading">¶</a></h3>
+<h3>scale<a class="headerlink" href="#scale" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Scale model or applicable objects</p>
 <p><strong>Usage:</strong> scale axis value</p>
@@ -873,9 +872,9 @@ value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to
 </section>
 <hr class="docutils" />
 <section id="display-commands">
-<h2>Display commands:<a class="headerlink" href="#display-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Display commands:<a class="headerlink" href="#display-commands" title="Link to this heading">¶</a></h2>
 <section id="background">
-<h3>background<a class="headerlink" href="#background" title="Permalink to this heading">¶</a></h3>
+<h3>background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set window background colour</p>
 <p><strong>Usage:</strong> background colour/value/white/black/grey/invert</p>
@@ -886,7 +885,7 @@ invert (or omitted value) : inverts current background colour</p>
 </div></blockquote>
 </section>
 <section id="alpha">
-<h3>alpha<a class="headerlink" href="#alpha" title="Permalink to this heading">¶</a></h3>
+<h3>alpha<a class="headerlink" href="#alpha" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set global transparency value</p>
 <p><strong>Usage:</strong> opacity/alpha value</p>
@@ -897,7 +896,7 @@ value (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is f
 </div></blockquote>
 </section>
 <section id="axis">
-<h3>axis<a class="headerlink" href="#axis" title="Permalink to this heading">¶</a></h3>
+<h3>axis<a class="headerlink" href="#axis" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Display/hide the axis legend</p>
 <p><strong>Usage:</strong> axis (on/off)</p>
@@ -905,13 +904,13 @@ value (number [0,1]) : sets opacity as real number in range [0,1] where 1.0 is f
 </div></blockquote>
 </section>
 <section id="rulers">
-<h3>rulers<a class="headerlink" href="#rulers" title="Permalink to this heading">¶</a></h3>
+<h3>rulers<a class="headerlink" href="#rulers" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Enable/disable axis rulers (unfinished)</p>
 </div></blockquote>
 </section>
 <section id="id4">
-<h3>colourmap<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<h3>colourmap<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set colourmap on object or create a new colourmap</p>
 <p><strong>Usage:</strong> colourmap [colourmap / data]<br />
@@ -921,13 +920,13 @@ data (string) : data to load into selected object’s colourmap, if no colourmap
 </div></blockquote>
 </section>
 <section id="antialias">
-<h3>antialias<a class="headerlink" href="#antialias" title="Permalink to this heading">¶</a></h3>
+<h3>antialias<a class="headerlink" href="#antialias" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Enable/disable multi-sample anti-aliasing (if supported by OpenGL drivers)</p>
 </div></blockquote>
 </section>
 <section id="id5">
-<h3>pointtype<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<h3>pointtype<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set point-rendering type on object</p>
 <p><strong>Usage:</strong> pointtype all/object type/up/down</p>
@@ -938,7 +937,7 @@ up/down : use ‘up’ or ‘down’ to switch to the previous/next type in list
 </div></blockquote>
 </section>
 <section id="pointsample">
-<h3>pointsample<a class="headerlink" href="#pointsample" title="Permalink to this heading">¶</a></h3>
+<h3>pointsample<a class="headerlink" href="#pointsample" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set point sub-sampling value</p>
 <p><strong>Usage:</strong> pointsample value/up/down</p>
@@ -947,7 +946,7 @@ up/down : use ‘up’ or ‘down’ to sample more (up) or less (down) points</
 </div></blockquote>
 </section>
 <section id="border">
-<h3>border<a class="headerlink" href="#border" title="Permalink to this heading">¶</a></h3>
+<h3>border<a class="headerlink" href="#border" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model border frame</p>
 <p><strong>Usage:</strong> border on/off/filled</p>
@@ -958,13 +957,13 @@ filled : filled background bounding box<br />
 </div></blockquote>
 </section>
 <section id="title">
-<h3>title<a class="headerlink" href="#title" title="Permalink to this heading">¶</a></h3>
+<h3>title<a class="headerlink" href="#title" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set title heading to following text</p>
 </div></blockquote>
 </section>
 <section id="id6">
-<h3>scale<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<h3>scale<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Scale model or applicable objects</p>
 <p><strong>Usage:</strong> scale axis value</p>
@@ -979,7 +978,7 @@ value (number) or ‘up/down’ : scaling value or use ‘up’ or ‘down’ to
 </div></blockquote>
 </section>
 <section id="modelscale">
-<h3>modelscale<a class="headerlink" href="#modelscale" title="Permalink to this heading">¶</a></h3>
+<h3>modelscale<a class="headerlink" href="#modelscale" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set model scaling, multiples by existing values</p>
 <p><strong>Usage:</strong> scale xval yval zval</p>
@@ -991,15 +990,15 @@ zval (number) : scaling value applied to z axis</p>
 </section>
 <hr class="docutils" />
 <section id="scripting-commands">
-<h2>Scripting commands:<a class="headerlink" href="#scripting-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Scripting commands:<a class="headerlink" href="#scripting-commands" title="Link to this heading">¶</a></h2>
 <section id="next">
-<h3>next<a class="headerlink" href="#next" title="Permalink to this heading">¶</a></h3>
+<h3>next<a class="headerlink" href="#next" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Go to next timestep in sequence</p>
 </div></blockquote>
 </section>
 <section id="play">
-<h3>play<a class="headerlink" href="#play" title="Permalink to this heading">¶</a></h3>
+<h3>play<a class="headerlink" href="#play" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Display model timesteps in sequence from current timestep to specified timestep</p>
 <p><strong>Usage:</strong> play endstep</p>
@@ -1008,19 +1007,19 @@ If endstep omitted, will loop continually until ‘stop’ command entered</p>
 </div></blockquote>
 </section>
 <section id="stop">
-<h3>stop<a class="headerlink" href="#stop" title="Permalink to this heading">¶</a></h3>
+<h3>stop<a class="headerlink" href="#stop" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Stop the looping ‘play’ command</p>
 </div></blockquote>
 </section>
 <section id="open">
-<h3>open<a class="headerlink" href="#open" title="Permalink to this heading">¶</a></h3>
+<h3>open<a class="headerlink" href="#open" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Open the viewer window if not already done, for use in scripts</p>
 </div></blockquote>
 </section>
 <section id="interactive">
-<h3>interactive<a class="headerlink" href="#interactive" title="Permalink to this heading">¶</a></h3>
+<h3>interactive<a class="headerlink" href="#interactive" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Switch to interactive mode, for use in scripts</p>
 <p><strong>Usage:</strong> interactive [noshow]</p>
@@ -1033,53 +1032,53 @@ and handle events outside on returning</p>
 </section>
 <hr class="docutils" />
 <section id="miscellanious-commands">
-<h2>Miscellanious commands:<a class="headerlink" href="#miscellanious-commands" title="Permalink to this heading">¶</a></h2>
+<h2>Miscellanious commands:<a class="headerlink" href="#miscellanious-commands" title="Link to this heading">¶</a></h2>
 <section id="shaders">
-<h3>shaders<a class="headerlink" href="#shaders" title="Permalink to this heading">¶</a></h3>
+<h3>shaders<a class="headerlink" href="#shaders" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Reload shader program files from disk</p>
 </div></blockquote>
 </section>
 <section id="blend">
-<h3>blend<a class="headerlink" href="#blend" title="Permalink to this heading">¶</a></h3>
+<h3>blend<a class="headerlink" href="#blend" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Select blending type</p>
 <p><strong>Usage:</strong> blend mode</p>
-<p>mode (string) : normal: multiplicative, add: additive, png: premultiplied for png output</p>
+<p>mode (string) : normal: multiplicative, add: additive, pre: premultiplied alpha, png: premultiplied for png output</p>
 </div></blockquote>
 </section>
 <section id="props">
-<h3>props<a class="headerlink" href="#props" title="Permalink to this heading">¶</a></h3>
+<h3>props<a class="headerlink" href="#props" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Print properties on active object or global and view if none selected</p>
 </div></blockquote>
 </section>
 <section id="defaults">
-<h3>defaults<a class="headerlink" href="#defaults" title="Permalink to this heading">¶</a></h3>
+<h3>defaults<a class="headerlink" href="#defaults" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Print all available properties and their default values</p>
 </div></blockquote>
 </section>
 <section id="test">
-<h3>test<a class="headerlink" href="#test" title="Permalink to this heading">¶</a></h3>
+<h3>test<a class="headerlink" href="#test" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Create and display some test data, points, lines, quads</p>
 </div></blockquote>
 </section>
 <section id="voltest">
-<h3>voltest<a class="headerlink" href="#voltest" title="Permalink to this heading">¶</a></h3>
+<h3>voltest<a class="headerlink" href="#voltest" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Create and display a test volume dataset</p>
 </div></blockquote>
 </section>
 <section id="newstep">
-<h3>newstep<a class="headerlink" href="#newstep" title="Permalink to this heading">¶</a></h3>
+<h3>newstep<a class="headerlink" href="#newstep" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Add a new timestep after the current one</p>
 </div></blockquote>
 </section>
 <section id="filter">
-<h3>filter<a class="headerlink" href="#filter" title="Permalink to this heading">¶</a></h3>
+<h3>filter<a class="headerlink" href="#filter" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
@@ -1091,7 +1090,7 @@ eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </section>
 <section id="filterout">
-<h3>filterout<a class="headerlink" href="#filterout" title="Permalink to this heading">¶</a></h3>
+<h3>filterout<a class="headerlink" href="#filterout" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Set a data filter on selected object</p>
 <p><strong>Usage:</strong> filter index min max [map]</p>
@@ -1103,7 +1102,7 @@ eg: 0.1-0.9 will filter the lowest and highest 10% of values</p>
 </div></blockquote>
 </section>
 <section id="filtermin">
-<h3>filtermin<a class="headerlink" href="#filtermin" title="Permalink to this heading">¶</a></h3>
+<h3>filtermin<a class="headerlink" href="#filtermin" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermin index value</p>
@@ -1112,7 +1111,7 @@ value (number) : the minimum value of the range to filter in or out</p>
 </div></blockquote>
 </section>
 <section id="filtermax">
-<h3>filtermax<a class="headerlink" href="#filtermax" title="Permalink to this heading">¶</a></h3>
+<h3>filtermax<a class="headerlink" href="#filtermax" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Modify a data filter on selected object</p>
 <p><strong>Usage:</strong> filtermax index value</p>
@@ -1121,20 +1120,20 @@ value (number) : the maximum value of the range to filter in or out</p>
 </div></blockquote>
 </section>
 <section id="clearfilters">
-<h3>clearfilters<a class="headerlink" href="#clearfilters" title="Permalink to this heading">¶</a></h3>
+<h3>clearfilters<a class="headerlink" href="#clearfilters" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Clear filters on selected object</p>
 </div></blockquote>
 </section>
 <section id="verbose">
-<h3>verbose<a class="headerlink" href="#verbose" title="Permalink to this heading">¶</a></h3>
+<h3>verbose<a class="headerlink" href="#verbose" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Switch verbose output mode on/off</p>
 <p><strong>Usage:</strong> verbose [off]</p>
 </div></blockquote>
 </section>
 <section id="toggle">
-<h3>toggle<a class="headerlink" href="#toggle" title="Permalink to this heading">¶</a></h3>
+<h3>toggle<a class="headerlink" href="#toggle" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Toggle a boolean property</p>
 <p><strong>Usage:</strong> toogle (property-name)</p>
@@ -1143,19 +1142,19 @@ If an object is selected, will try there, then view, then global</p>
 </div></blockquote>
 </section>
 <section id="createvolume">
-<h3>createvolume<a class="headerlink" href="#createvolume" title="Permalink to this heading">¶</a></h3>
+<h3>createvolume<a class="headerlink" href="#createvolume" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Create a static volume object which will receive all following volumes as timesteps</p>
 </div></blockquote>
 </section>
 <section id="clearvolume">
-<h3>clearvolume<a class="headerlink" href="#clearvolume" title="Permalink to this heading">¶</a></h3>
+<h3>clearvolume<a class="headerlink" href="#clearvolume" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Clear global static volume object, any future volume loads will create a new object automatically</p>
 </div></blockquote>
 </section>
 <section id="palette">
-<h3>palette<a class="headerlink" href="#palette" title="Permalink to this heading">¶</a></h3>
+<h3>palette<a class="headerlink" href="#palette" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Export colour data of selected object</p>
 <p><strong>Usage:</strong> palette [type] [filename]</p>
@@ -1383,7 +1382,7 @@ filename (string) : defaults to palette.[png/json/txt]</p>
       &copy;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
