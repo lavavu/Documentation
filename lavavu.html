@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.53 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <title>lavavu module &#8212; LavaVu 1.8.61 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d1089404" />
-    <script src="_static/documentation_options.js?v=def95b5b"></script>
+    <script src="_static/documentation_options.js?v=e02925e4"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -1427,6 +1427,24 @@ encoding artifacts at cost of larger file size</p></li>
 encoding artifacts at cost of larger file size</p></li>
 <li><p><strong>resolution</strong> (<em>list</em><em> or </em><em>tuple</em>) – Video resolution in pixels [x,y]</p></li>
 <li><p><strong>**kwargs</strong> – Any additional keyword args will be passed to lavavu.player()</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.viewport">
+<span class="sig-name descname"><span class="pre">viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.viewport"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.viewport" title="Link to this definition">¶</a></dt>
+<dd><p>Add a viewport object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x offset as fraction of window size [0,1]</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y offset as fraction of window size [0,1]</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – width as fraction of window size [0,1]</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – height as fraction of window size [0,1]</p></li>
+<li><p><strong>replace</strong> (<em>bool</em>) – Set to True to replace the active viewport instead of adding a new viewport</p></li>
+<li><p><strong>dict</strong> (<em>Subsequent kwargs are passed as properties</em>) – </p></li>
 </ul>
 </dd>
 </dl>
