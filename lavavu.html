@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.62 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d1089404" />
-    <script src="_static/documentation_options.js?v=d7d1af8e"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <title>lavavu module &#8212; LavaVu 1.8.76 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
+    <script src="_static/documentation_options.js?v=4f6f656d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -18,8 +18,9 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
 
   </head><body>
   
@@ -583,7 +584,7 @@ the new values whenever the control value is updated.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>args</strong><strong>)</strong> (<em>(</em><em>see Viewer class docs for setup</em>) – </p></li>
+<li><p><strong>args</strong><strong>)</strong> (<em>(</em><em>see Viewer class docs for setup</em>)</p></li>
 <li><p><strong>resolution</strong> (<em>list</em><em>, </em><em>tuple</em>) – Window/image resolution in pixels [x,y]
 For off-screen/windowless rendering this sets the default image output and viewer widget size
 For interactive windows this sets the window size.</p></li>
@@ -641,6 +642,27 @@ entering event loop if requested</p>
 <p>Parameters: see __init__ docs</p>
 <p>args : passed directly to viewer, eg: filenames or initial script commands
 kwargs: parsed as below to specific switches</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.brightness_contrast_saturation">
+<span class="sig-name descname"><span class="pre">brightness_contrast_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.brightness_contrast_saturation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.brightness_contrast_saturation" title="Link to this definition">¶</a></dt>
+<dd><p>Set brightness, contrast and saturation in the range [0,1]
+Zero is minimum level
+0.5 is default, normal setting
+1 is maximum level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>brightness</strong> (<em>float</em>) – Brightness level from 0 to 1, converts to lavavu brightness in range [-1,1]
+0 is full black, 0.5 is normal and 1.0 is full white</p></li>
+<li><p><strong>contrast</strong> (<em>float</em>) – Contrast level from 0 to 1, converts to lavavu contrast in range [0,2]
+0 is grey, 0.5 is normal and 1.0 is maximum contrast</p></li>
+<li><p><strong>saturation</strong> (<em>float</em>) – Saturation level from 0 to 1, converts to lavavu saturation in range [0,2]
+0 is greyscale, 0.5 is normal and 1.0 is maximum over-saturation</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1266,6 +1288,36 @@ This uses server.py to launch a simple web server</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.set_properties">
+<span class="sig-name descname"><span class="pre">set_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.set_properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.set_properties" title="Link to this definition">¶</a></dt>
+<dd><p>Set properties on viewer or on a set of objects by name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objects</strong> (<em>list</em>) – List of objects or object names, if not provided the properties will be applied globally to the Viewer itself</p></li>
+<li><p><strong>**kwargs</strong> – key=value property names and values to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.set_uniforms">
+<span class="sig-name descname"><span class="pre">set_uniforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.set_uniforms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.set_uniforms" title="Link to this definition">¶</a></dt>
+<dd><p>Set uniform variables on a set of objects by name or all objects
+Uniforms are parameters sent directly to the shader program and can have any
+valid GLSL variable name, it just needs to match the declaration in the shader</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objects</strong> (<em>list</em>) – List of objects or object names, if not provided the full object list will be iterated</p></li>
+<li><p><strong>**kwargs</strong> – key=value uniform names and values to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Viewer.setview">
 <span class="sig-name descname"><span class="pre">setview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.setview"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.setview" title="Link to this definition">¶</a></dt>
 <dd><p>Set current view settings</p>
@@ -1444,7 +1496,7 @@ encoding artifacts at cost of larger file size</p></li>
 <li><p><strong>width</strong> (<em>float</em>) – width as fraction of window size [0,1]</p></li>
 <li><p><strong>height</strong> (<em>float</em>) – height as fraction of window size [0,1]</p></li>
 <li><p><strong>replace</strong> (<em>bool</em>) – Set to True to replace the active viewport instead of adding a new viewport</p></li>
-<li><p><strong>dict</strong> (<em>Subsequent kwargs are passed as properties</em>) – </p></li>
+<li><p><strong>dict</strong> (<em>Subsequent kwargs are passed as properties</em>)</p></li>
 </ul>
 </dd>
 </dl>
@@ -1542,6 +1594,27 @@ or by using the online help:</p>
 <p>Object data is sometimes dependant on individual elements to
 determine where one part ends and another starts, e.g. line segments, grids</p>
 <p>This allows manually closing the active element so all new data is loaded into a new element</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Object.brightness_contrast_saturation">
+<span class="sig-name descname"><span class="pre">brightness_contrast_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Object.brightness_contrast_saturation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Object.brightness_contrast_saturation" title="Link to this definition">¶</a></dt>
+<dd><p>Set brightness, contrast and saturation in the range [0,1]
+Zero is minimum level
+0.5 is default, normal setting
+1 is maximum level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>brightness</strong> (<em>float</em>) – Brightness level from 0 to 1, converts to lavavu brightness in range [-1,1]
+0 is full black, 0.5 is normal and 1.0 is full white</p></li>
+<li><p><strong>contrast</strong> (<em>float</em>) – Contrast level from 0 to 1, converts to lavavu contrast in range [0,2]
+0 is grey, 0.5 is normal and 1.0 is maximum contrast</p></li>
+<li><p><strong>saturation</strong> (<em>float</em>) – Saturation level from 0 to 1, converts to lavavu saturation in range [0,2]
+0 is greyscale, 0.5 is normal and 1.0 is maximum over-saturation</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2110,7 +2183,7 @@ This replaces the swapyz property/feature that only applied to OBJ import</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Object.texture">
-<span class="sig-name descname"><span class="pre">texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bgr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Object.texture"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Object.texture" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bgr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Object.texture"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Object.texture" title="Link to this definition">¶</a></dt>
 <dd><p>Load or clear texture data for object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2122,6 +2195,9 @@ shape of array must be 2d or 3d,
 either (height, width, channels) for RGB(A) image
 or (height, width) for single channel grayscale image
 Pass a string to load a texture from given filename</p></li>
+<li><p><strong>label</strong> (<em>string</em>) – Optional label to load a custom texture by name of uniform used
+If provided, will attempt to find the texture by this label and replace its data
+If not provided, will use the default/primary texture for the object</p></li>
 <li><p><strong>flip</strong> (<em>boolean</em>) – flip the texture vertically after loading
 (default is enabled as usually required for OpenGL but can be disabled)</p></li>
 <li><p><strong>filter</strong> (<em>int</em>) – type of filtering, 0=None/nearest, 1=linear, 2=mipmap linear</p></li>
@@ -2749,7 +2825,7 @@ values are loaded as 8 bit unsigned integer values</p>
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="index.html">LavaVu</a></h1>
 
@@ -2801,7 +2877,7 @@ values are loaded as 8 bit unsigned integer values</p>
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -2809,7 +2885,7 @@ values are loaded as 8 bit unsigned integer values</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -2824,11 +2900,11 @@ values are loaded as 8 bit unsigned integer values</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2020, Monash University.
+      &#169;2020, Monash University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.4</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
       <a href="_sources/lavavu.rst.txt"
