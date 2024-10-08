@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.76 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.8.77 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
-    <script src="_static/documentation_options.js?v=4f6f656d"></script>
+    <script src="_static/documentation_options.js?v=eb17e174"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -1401,6 +1401,31 @@ If not provided, will process all jpg and png images in working directory</p></l
 <li><p><strong>expectedPath</strong> (<em>str</em>) – Where to find the expected result images (should have the same filenames as output images)</p></li>
 <li><p><strong>outputPath</strong> (<em>str</em>) – Where to find the output images</p></li>
 <li><p><strong>clear</strong> (<em>boolean</em>) – If the test passes the output images will be deleted, set to False to disable deletion</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.texture">
+<span class="sig-name descname"><span class="pre">texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bgr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.texture"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.texture" title="Link to this definition">¶</a></dt>
+<dd><p>Load or clear global/shared texture data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>string</em>) – Label to load a custom texture by name of uniform used
+Will attempt to find the texture by this label and replace its data</p></li>
+<li><p><strong>data</strong> (<em>list</em><em> or </em><em>array</em><em> or </em><em>string</em>) – (If data is not provided, the object’s texture data will be cleared)
+Pass a list or numpy uint32 or uint8 array
+texture data is loaded as raw image data
+shape of array must be 2d or 3d,
+either (height, width, channels) for RGB(A) image
+or (height, width) for single channel grayscale image
+Pass a string to load a texture from given filename</p></li>
+<li><p><strong>flip</strong> (<em>boolean</em>) – flip the texture vertically after loading
+(default is enabled as usually required for OpenGL but can be disabled)</p></li>
+<li><p><strong>filter</strong> (<em>int</em>) – type of filtering, 0=None/nearest, 1=linear, 2=mipmap linear</p></li>
+<li><p><strong>bgr</strong> (<em>boolean</em>) – rgb data is in BGR/BGRA format instead of RGB/RGBA</p></li>
 </ul>
 </dd>
 </dl>
