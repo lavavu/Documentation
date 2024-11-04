@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.81 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.8.82 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
-    <script src="_static/documentation_options.js?v=f1644c9f"></script>
+    <script src="_static/documentation_options.js?v=c69cc6f5"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -302,16 +302,18 @@ load only the colours from the file</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lavavu.player">
-<span class="sig-name descname"><span class="pre">player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#player"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.player" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'controls</span> <span class="pre">autoplay</span> <span class="pre">loop'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#player"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.player" title="Link to this definition">¶</a></dt>
 <dd><p>Shows a video inline within an ipython notebook.
 If IPython is not running, just returns</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em>) – Path and name of the file to play</p></li>
-<li><p><strong>width</strong> (<em>int</em>) – Fixed width of player window, otherwise will use video resolution</p></li>
-<li><p><strong>height</strong> (<em>int</em>) – Fixed height of player window, otherwise will use video resolution</p></li>
-<li><p><strong>params</strong> (<em>str</em>) – Any other parameters to add to the &lt;video&gt; tag, eg: “autoplay”</p></li>
+<li><p><strong>params</strong> (<em>str</em>) – Additional html attributes for the video control, see:
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video</a></p></li>
+<li><p><strong>**kwargs</strong> – width=W,height=H will set fixed size of player window
+See further player arguments at
+<a class="reference external" href="https://ipython.readthedocs.io/en/latest/api/generated/IPython.display.html#IPython.display.Video">https://ipython.readthedocs.io/en/latest/api/generated/IPython.display.html#IPython.display.Video</a></p></li>
 </ul>
 </dd>
 </dl>
