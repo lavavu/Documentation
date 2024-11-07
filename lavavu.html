@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.83 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.8.84 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
-    <script src="_static/documentation_options.js?v=62e442ec"></script>
+    <script src="_static/documentation_options.js?v=a96dd221"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -1572,7 +1572,9 @@ that can be controlled with the mouse or html widgets</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resolution</strong> (<em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Frame size in pixels: width, height. Defaults to the viewer default output resolution, usually (640,480)</p></li>
+<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>tuple</em><em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Frame size in pixels: width, height.
+Defaults to half the viewer default output resolution with a minimum width of 640 pixels
+If a single integer is passed, will use as the width while maintaining output aspect ratio</p></li>
 <li><p><strong>menu</strong> (<em>boolean</em>) – Adds a menu to the top right allowing control of vis parameters, defaults to on</p></li>
 </ul>
 </dd>
