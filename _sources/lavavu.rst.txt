@@ -31,6 +31,9 @@ functions:
     lavavu.matplotlib_colourmap
     lavavu.printH5
     lavavu.lerp
+    lavavu.vector_magnitude
+    lavavu.vector_normalise
+    lavavu.vector_align
     lavavu.player
     lavavu.inject
     lavavu.hidecode
@@ -69,6 +72,9 @@ functions:
 .. autofunction:: lavavu.matplotlib_colourmap
 .. autofunction:: lavavu.printH5
 .. autofunction:: lavavu.lerp
+.. autofunction:: lavavu.vector_magnitude
+.. autofunction:: lavavu.vector_normalise
+.. autofunction:: lavavu.vector_align
 .. autofunction:: lavavu.player
 .. autofunction:: lavavu.inject
 .. autofunction:: lavavu.hidecode

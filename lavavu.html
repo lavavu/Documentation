@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.8.84 documentation</title>
+    <title>lavavu module &#8212; LavaVu 1.9.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
-    <script src="_static/documentation_options.js?v=a96dd221"></script>
+    <script src="_static/documentation_options.js?v=c4cb232b"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -73,31 +73,40 @@ loading of data, rendering of static images, animation and interactive visualisa
 <tr class="row-even"><td><p><a class="reference internal" href="#lavavu.lerp" title="lavavu.lerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.lerp</span></code></a></p></td>
 <td><p>Linear Interpolation between values of two lists</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.player" title="lavavu.player"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.player</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.vector_magnitude" title="lavavu.vector_magnitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.vector_magnitude</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.vector_normalise" title="lavavu.vector_normalise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.vector_normalise</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.vector_align" title="lavavu.vector_align"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.vector_align</span></code></a></p></td>
+<td><p>Get a rotation quaterion to align vectors v1 with v2</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.player" title="lavavu.player"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.player</span></code></a></p></td>
 <td><p>Shows a video inline within an ipython notebook.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.inject" title="lavavu.inject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.inject</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.inject" title="lavavu.inject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.inject</span></code></a></p></td>
 <td><p>Inject HTML into a notebook cell</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.hidecode" title="lavavu.hidecode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.hidecode</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.hidecode" title="lavavu.hidecode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.hidecode</span></code></a></p></td>
 <td><p>Allow toggle of code cells</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.style" title="lavavu.style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.style</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.style" title="lavavu.style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.style</span></code></a></p></td>
 <td><p>Inject stylesheet</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.cellstyle" title="lavavu.cellstyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellstyle</span></code></a></p></td>
 <td><p>Override the notebook cell styles</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.cellwidth" title="lavavu.cellwidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.cellwidth</span></code></a></p></td>
 <td><p>Override the notebook cell width</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.is_ipython" title="lavavu.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_ipython</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.is_ipython" title="lavavu.is_ipython"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_ipython</span></code></a></p></td>
 <td><p>Detects if running within IPython environment</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.is_notebook" title="lavavu.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_notebook</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.is_notebook" title="lavavu.is_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.is_notebook</span></code></a></p></td>
 <td><p>Detects if running within an interactive IPython notebook environment</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lavavu.getname" title="lavavu.getname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.getname</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lavavu.getname" title="lavavu.getname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lavavu.getname</span></code></a></p></td>
 <td><p>Attempt to find the name of a variable from the main module namespace</p></td>
 </tr>
 </tbody>
@@ -296,6 +305,36 @@ load only the colours from the file</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lavavu.vector_magnitude">
+<span class="sig-name descname"><span class="pre">vector_magnitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#vector_magnitude"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.vector_magnitude" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lavavu.vector_normalise">
+<span class="sig-name descname"><span class="pre">vector_normalise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#vector_normalise"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.vector_normalise" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lavavu.vector_align">
+<span class="sig-name descname"><span class="pre">vector_align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lvformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#vector_align"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.vector_align" title="Link to this definition">¶</a></dt>
+<dd><p>Get a rotation quaterion to align vectors v1 with v2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v1</strong> (<em>list/numpy.ndarray</em>) – First 3 component vector</p></li>
+<li><p><strong>v2</strong> (<em>list/numpy.ndarray</em>) – Second 3 component vector to align the first to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>list</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>quaternion to rotate v1 to v2 (in lavavu format)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -592,6 +631,7 @@ For interactive windows this sets the window size.</p></li>
 <li><p><strong>binpath</strong> (<em>str</em>) – Override the executable path</p></li>
 <li><p><strong>context</strong> (<em>str</em>) – OpenGL context type, <em>“default”</em> will create a context and window based on available configurations.
 <em>“provided”</em> specifies a user provided context, set this if you have already created and activated the context.
+<em>“osmesa”</em> if built with the osmesa module, will use the self-contained software renderer to render without a window or GPU, needs to be set in LV_CONTEXT to work
 <em>“moderngl”</em> creates a context in python using the moderngl module (experimental).
 <em>“moderngl.”</em> creates a context and a window in python using the moderngl module (experimental) specify class after separator, eg: moderngl.headless, moderngl.pyglet, moderngl.pyqt5.</p></li>
 <li><p><strong>port</strong> (<em>int</em>) – Web server port, open server on specific port for control/interaction
@@ -674,13 +714,16 @@ Zero is minimum level
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Viewer.camera">
-<span class="sig-name descname"><span class="pre">camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.camera" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.camera" title="Link to this definition">¶</a></dt>
 <dd><p>Get/set the current camera viewpoint</p>
 <p>Displays and returns camera in python form that can be pasted and
 executed to restore the same camera view</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Camera view to apply if any</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Camera view to apply if any</p></li>
+<li><p><strong>quiet</strong> (<em>bool</em>) – Skip print and calling “camera” script command which produces noisy terminal output</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>result</strong> – Current camera view or previous if applying a new view</p>
@@ -689,6 +732,13 @@ executed to restore the same camera view</p>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.camlerp">
+<span class="sig-name descname"><span class="pre">camlerp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.camlerp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.camlerp" title="Link to this definition">¶</a></dt>
+<dd><p>Linearly Interpolate between two camera positions/orientations and
+set the camera to the resulting position/orientation</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1142,6 +1192,21 @@ this starts an event handling loop which blocks python execution until the windo
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Viewer.lookat">
+<span class="sig-name descname"><span class="pre">lookat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.lookat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.lookat" title="Link to this definition">¶</a></dt>
+<dd><p>Set the camera with a position coord and lookat coord</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos</strong> (<em>list/numpy.ndarray</em>) – Camera position in world coords</p></li>
+<li><p><strong>lookat</strong> (<em>list/numpy.ndarray</em>) – Look at position in world coords, defaults to model origin</p></li>
+<li><p><strong>up</strong> (<em>list/numpy.ndarray</em>) – Up vector, defaults to Y axis [0,1,0]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.objects">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">objects</span></span><a class="headerlink" href="#lavavu.Viewer.objects" title="Link to this definition">¶</a></dt>
@@ -1460,7 +1525,7 @@ Pass a string to load a texture from given filename</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Viewer.video">
-<span class="sig-name descname"><span class="pre">video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.video" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h264'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.video" title="Link to this definition">¶</a></dt>
 <dd><p>Record and show the generated video inline within an ipython notebook.</p>
 <p>If IPython is installed, displays the result video content inline</p>
 <p>If IPython is not installed, will save the result in the current directory</p>
@@ -1471,11 +1536,17 @@ Alternatively recording can be manually started, stopped and the video displayed
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em>) – Name of the file to save, if not provided a default will be used</p></li>
-<li><p><strong>fps</strong> (<em>int</em>) – Frames to output per second of video</p></li>
-<li><p><strong>quality</strong> (<em>int</em>) – Encoding quality, 1=low(default), 2=medium, 3=high, higher quality reduces
-encoding artifacts at cost of larger file size</p></li>
 <li><p><strong>resolution</strong> (<em>list</em><em> or </em><em>tuple</em>) – Video resolution in pixels [x,y]</p></li>
-<li><p><strong>**kwargs</strong> – Any additional keyword args will be passed to lavavu.player()</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – Frames to output per second of video</p></li>
+<li><p><strong>quality</strong> (<em>int</em>) – Encoding quality, 1=low, 2=medium, 3=high, higher quality reduces
+encoding artifacts at cost of larger file size
+If omitted will use default settings, can fine tune settings in kwargs</p></li>
+<li><p><strong>encoder</strong> (<em>str</em>) – Name of encoder to use, eg: “h264” (default), “mpeg”</p></li>
+<li><p><strong>player</strong> (<em>dict</em>) – Args to pass to the player when the video is finished, eg:
+{“width” : 800, “height”, 400, “params”: “controls autoplay”}</p></li>
+<li><p><strong>options</strong> (<em>dict</em>) – Args to pass to the encoder, eg: see
+<a class="reference external" href="https://trac.ffmpeg.org/wiki/Encode/H.264">https://trac.ffmpeg.org/wiki/Encode/H.264</a></p></li>
+<li><p><strong>**kwargs</strong> – Any additional keyword args will also be passed as options to the encoder</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1490,7 +1561,8 @@ encoding artifacts at cost of larger file size</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Viewer.video_steps">
 <span class="sig-name descname"><span class="pre">video_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer.video_steps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer.video_steps" title="Link to this definition">¶</a></dt>
-<dd><p>Record a video of the model by looping through all time steps</p>
+<dd><p>TODO: Fix to use pyAV</p>
+<p>Record a video of the model by looping through all time steps</p>
 <p>Shows the generated video inline within an ipython notebook.</p>
 <p>If IPython is installed, displays the result video content inline</p>
 <p>If IPython is not installed, will save the result in the current directory</p>
@@ -2775,9 +2847,10 @@ otherwise will use default viewer dimensions</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Video">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h264'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Video class provides an interface to record animations</p>
+<p>This now uses pyAV avoiding the need to build LavaVu with ffmpeg support</p>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
@@ -2790,7 +2863,7 @@ otherwise will use default viewer dimensions</p></li>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Video.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h264'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Record and show the generated video inline within an ipython notebook.</p>
 <p>If IPython is installed, displays the result video content inline</p>
 <p>If IPython is not installed, will save the result in the current directory</p>
@@ -2802,13 +2875,26 @@ Alternatively recording can be manually started, stopped and the video displayed
 <li><p><strong>viewer</strong> (<a class="reference internal" href="#lavavu.Viewer" title="lavavu.Viewer"><em>lavavu.Viewer</em></a><em>(</em><em>)</em>) – Viewer object</p></li>
 <li><p><strong>filename</strong> (<em>str</em>) – Name of the file to save, if not provided a default will be used</p></li>
 <li><p><strong>fps</strong> (<em>int</em>) – Frames to output per second of video</p></li>
-<li><p><strong>quality</strong> (<em>int</em>) – Encoding quality, 1=low(default), 2=medium, 3=high, higher quality reduces
-encoding artifacts at cost of larger file size</p></li>
+<li><p><strong>quality</strong> (<em>int</em>) – Encoding quality, 1=low, 2=medium, 3=high, higher quality reduces
+encoding artifacts at cost of larger file size
+If omitted will use default settings, can fine tune settings in kwargs</p></li>
 <li><p><strong>resolution</strong> (<em>list</em><em> or </em><em>tuple</em>) – Video resolution in pixels [x,y]</p></li>
-<li><p><strong>**kwargs</strong> – Any additional keyword args will be passed to lavavu.player()</p></li>
+<li><p><strong>encoder</strong> (<em>str</em>) – Name of encoder to use, eg: “h264” (default), “mpeg”</p></li>
+<li><p><strong>player</strong> (<em>dict</em>) – Args to pass to the player when the video is finished, eg:
+{“width” : 800, “height”, 400, “params”: “controls autoplay”}</p></li>
+<li><p><strong>options</strong> (<em>dict</em>) – Args to pass to the encoder, eg: see
+<a class="reference external" href="https://trac.ffmpeg.org/wiki/Encode/H.264">https://trac.ffmpeg.org/wiki/Encode/H.264</a></p></li>
+<li><p><strong>**kwargs</strong> – Any additional keyword args will also be passed as options to the encoder</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lavavu.Video.frame">
+<span class="sig-name descname"><span class="pre">frame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video.frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video.frame" title="Link to this definition">¶</a></dt>
+<dd><p>Write a frame, called when viewer.render() is called
+while a recording is in progress</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2839,7 +2925,7 @@ No further frames will be added to the video</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="lavavu.Video.write">
 <span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video.write" title="Link to this definition">¶</a></dt>
-<dd><p>Add a frame to the video (when writing custom video frames rather than rendering them within lavavu)</p>
+<dd><p>Add a frame to the video</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>image</strong> (<em>list</em><em> or </em><em>array</em><em> or </em><a class="reference internal" href="#lavavu.Image" title="lavavu.Image"><em>Image</em></a>) – Pass a list or numpy uint8 array of rgba values or an Image object
