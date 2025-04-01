@@ -1,14 +1,9 @@
 tracers module
 ==============
 
-Warning! EXPERIMENTAL:
- these features and functions are under development, will have bugs,
- and may be heavily modified in the future
-
 Tracer particles in a vector field
-Uses a KDTree to find nearest vector to advect the particles
 
-- Requires scipy.spatial
+- Requires scipy.interpolate
 
 
 Module Summary
@@ -19,7 +14,7 @@ functions:
 .. autosummary::
     :nosignatures:
 
-    tracers.trace_particles
+    tracers.random_particles
 
 classes:
 ~~~~~~~~
@@ -27,17 +22,21 @@ classes:
 .. autosummary::
     :nosignatures:
 
-    tracers.TracerState
+    tracers.RegularGridInterpolator
+    tracers.Tracers
 
 Module Details
 --------------
 functions:
 ~~~~~~~~~~
-.. autofunction:: tracers.trace_particles
+.. autofunction:: tracers.random_particles
 
 classes:
 ~~~~~~~~
-.. autoclass:: tracers.TracerState
+.. autoclass:: tracers.RegularGridInterpolator
+    :members:
+    :show-inheritance:
+.. autoclass:: tracers.Tracers
     :members:
     :show-inheritance:
 
