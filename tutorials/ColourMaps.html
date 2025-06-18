@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Colour maps &#8212; LavaVu 1.9.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=4066f3b2" />
-    <script src="../_static/documentation_options.js?v=0f42b3e6"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <title>Colour maps &#8212; LavaVu 1.9.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=0b839110" />
+    <script src="../_static/documentation_options.js?v=e7581024"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -41,7 +42,7 @@ that object in a single command.</p>
 colourmap and returns its id, which can be saved and used to set the
 “colourmap” property of a one or more or objects.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First set up a basic vis so we can display the colourmaps</span>
-<span class="kn">import</span> <span class="nn">lavavu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;gray90&quot;</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontscale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -157,10 +158,10 @@ modified and passed to a new colour map.</p>
 and load only the colours.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="c1">#Check if file exists, if not download it from cpt-city</span>
-    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
     <span class="n">fn</span> <span class="o">=</span> <span class="s1">&#39;arctic.cpt&#39;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
-        <span class="kn">import</span> <span class="nn">urllib</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">urllib</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://soliton.vm.bytemark.co.uk/pub/cpt-city/arendal/arctic.cpt&#39;</span>
         <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
 
@@ -376,7 +377,7 @@ continuous and discrete modes</div>
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../index.html">LavaVu</a></h1>
 
@@ -451,8 +452,8 @@ continuous and discrete modes</div>
       &#169;2020, Monash University.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
       |
       <a href="../_sources/tutorials/ColourMaps.rst.txt"

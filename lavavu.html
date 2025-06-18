@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>lavavu module &#8212; LavaVu 1.9.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4066f3b2" />
-    <script src="_static/documentation_options.js?v=0f42b3e6"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <title>lavavu module &#8212; LavaVu 1.9.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=0b839110" />
+    <script src="_static/documentation_options.js?v=e7581024"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -38,7 +39,7 @@
 <p>This module provides an interface to the LavaVu library allowing
 loading of data, rendering of static images, animation and interactive visualisation</p>
 <p>To create an instance of the LavaVu rendering engine, use the Viewer() class, e.g.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -439,7 +440,7 @@ Does not necessarrily indicate running within a browser / notebook context</p>
 <h3>classes:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Viewer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8080</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8080</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Viewer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Viewer" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The Viewer class provides an interface to a LavaVu session</p>
 <dl class="field-list simple">
@@ -468,14 +469,14 @@ and parsed into the initial set of global properties</p></li>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a viewer, setting the initial background colour to white</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Objects can be added by loading files:
 #&gt;&gt;&gt; lavavu.download(source + ‘Mandible.obj’) # doctest: +ELLIPSIS</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span> 
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;model.obj&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Or creating empty objects and loading data:</p>
@@ -499,8 +500,8 @@ and parsed into the initial set of global properties</p></li>
 </ul>
 </div></blockquote>
 <p>or by using the online help:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span> 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;rotate&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span>
 <span class="go">(...)</span>
 </pre></div>
 </div>
@@ -607,7 +608,7 @@ the new values whenever the control value is updated.</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="p">(</span><span class="s1">&#39;reset; translate -2&#39;</span><span class="p">)</span>
@@ -805,7 +806,7 @@ If none provided, a default colourmap will be loaded from lavavu.cubehelix()</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.colourmaps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colourmaps</span></span><a class="headerlink" href="#lavavu.Viewer.colourmaps" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colourmaps</span></span><a class="headerlink" href="#lavavu.Viewer.colourmaps" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the list of active colourmaps</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -892,13 +893,13 @@ Defaults to an autogenerated filename in current directory.</p></li>
 <dd><p>Process input events
 allows running interactive event loop while animating from python
 e.g.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">event_loop</span><span class="p">():</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">event_loop</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="k">while</span> <span class="n">lv</span><span class="o">.</span><span class="n">events</span><span class="p">():</span>
 <span class="gp">... </span>        <span class="c1">#...build next frame here...</span>
 <span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span> 
+<span class="gp">... </span><span class="n">event_loop</span><span class="p">()</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -963,7 +964,7 @@ Supports triangle mesh object data</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.figures">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">figures</span></span><a class="headerlink" href="#lavavu.Viewer.figures" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">figures</span></span><a class="headerlink" href="#lavavu.Viewer.figures" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the saved figures from loaded model
 Dict returned contains Figure objects which can be used to modify the figure</p>
 <dl class="field-list simple">
@@ -1087,7 +1088,7 @@ set this to False</p></li>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.gl">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gl</span></span><a class="headerlink" href="#lavavu.Viewer.gl" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gl</span></span><a class="headerlink" href="#lavavu.Viewer.gl" title="Link to this definition">¶</a></dt>
 <dd><p>Return GL version string</p>
 </dd></dl>
 
@@ -1209,7 +1210,7 @@ this starts an event handling loop which blocks python execution until the windo
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.objects">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">objects</span></span><a class="headerlink" href="#lavavu.Viewer.objects" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">objects</span></span><a class="headerlink" href="#lavavu.Viewer.objects" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the active objects</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1224,7 +1225,7 @@ Can be printed, iterated or accessed as a dictionary by object name</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.output_path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_path</span></span><a class="headerlink" href="#lavavu.Viewer.output_path" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_path</span></span><a class="headerlink" href="#lavavu.Viewer.output_path" title="Link to this definition">¶</a></dt>
 <dd><p>str
 Returns image output path</p>
 <dl class="field-list simple">
@@ -1251,7 +1252,7 @@ Returns image output path</p>
 </dl>
 <p class="rubric">Example</p>
 <p>Parse a colour string</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">parse_colour</span><span class="p">(</span><span class="s1">&#39;rgba(255,24,128,1.0)&#39;</span><span class="p">)</span>
 <span class="go">array([1.  , 0.09, 0.5 , 1.  ], dtype=float32)</span>
@@ -1278,7 +1279,7 @@ Returns image output path</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.port">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#lavavu.Viewer.port" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#lavavu.Viewer.port" title="Link to this definition">¶</a></dt>
 <dd><p>HTTP server interface port</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1396,7 +1397,7 @@ valid GLSL variable name, it just needs to match the declaration in the shader</
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.step">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">step</span></span><a class="headerlink" href="#lavavu.Viewer.step" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">step</span></span><a class="headerlink" href="#lavavu.Viewer.step" title="Link to this definition">¶</a></dt>
 <dd><p>int
 Returns current timestep</p>
 <dl class="field-list simple">
@@ -1408,7 +1409,7 @@ Returns current timestep</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Viewer.steps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><a class="headerlink" href="#lavavu.Viewer.steps" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><a class="headerlink" href="#lavavu.Viewer.steps" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the time step data from loaded model</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1637,7 +1638,7 @@ If a single integer is passed, will use as the width while maintaining output as
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Object">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Object" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Object" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The Object class provides an interface to a LavaVu drawing object
 Object instances are created internally in the Viewer class and can
@@ -1650,7 +1651,7 @@ be retrieved from the object list</p>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a viewer, load some test data, get objects</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">objects</span><span class="p">)</span>
@@ -1664,7 +1665,7 @@ be retrieved from the object list</p>
 </div>
 <p>A list of available properties can be found here: <a class="reference external" href="https://lavavu.github.io/Documentation/Property-Reference">https://lavavu.github.io/Documentation/Property-Reference</a>
 or by using the online help:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span> 
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;opacity&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="py method">
@@ -1815,7 +1816,7 @@ to the database when done</p></li>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Object.data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#lavavu.Object.data" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#lavavu.Object.data" title="Link to this definition">¶</a></dt>
 <dd><p>Return internal geometry data at current timestep
 Returns a Geometry() object that can be iterated through containing all data elements
 Elements contain vertex/normal/value etc. data as numpy arrays</p>
@@ -1828,7 +1829,7 @@ Elements contain vertex/normal/value etc. data as numpy arrays</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
@@ -1840,7 +1841,7 @@ Elements contain vertex/normal/value etc. data as numpy arrays</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Object.datasets">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">datasets</span></span><a class="headerlink" href="#lavavu.Object.datasets" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">datasets</span></span><a class="headerlink" href="#lavavu.Object.datasets" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve available labelled data sets on this object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -2141,7 +2142,7 @@ values are loaded as 8 bit unsigned integers</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.Object.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#lavavu.Object.name" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#lavavu.Object.name" title="Link to this definition">¶</a></dt>
 <dd><p>Get the object’s name property</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -2352,7 +2353,7 @@ decomposing the mesh into smaller triangles with the split option</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Properties">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Properties" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Properties" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The Properties class provides an interface to a collection of properties with a control factory,
 allowing controls to be created to manipulate their values interactively
@@ -2371,7 +2372,7 @@ the new values whenever the control value is updated.</p></li>
 </dl>
 <p class="rubric">Example</p>
 <p>Create a property set, load some test data</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">props</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">Properties</span><span class="p">(</span><span class="n">floatprop</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;boolprop&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
@@ -2388,7 +2389,7 @@ the new values whenever the control value is updated.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.ColourMap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ColourMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#ColourMap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.ColourMap" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ColourMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#ColourMap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.ColourMap" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The ColourMap class provides an interface to a LavaVu ColourMap
 ColourMap instances are created internally in the Viewer class and can
@@ -2401,7 +2402,7 @@ be retrieved from the colourmaps list</p>
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.ColourMap.colours">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colours</span></span><a class="headerlink" href="#lavavu.ColourMap.colours" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colours</span></span><a class="headerlink" href="#lavavu.ColourMap.colours" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the list of colours</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -2415,7 +2416,7 @@ be retrieved from the colourmaps list</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.ColourMap.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#lavavu.ColourMap.name" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#lavavu.ColourMap.name" title="Link to this definition">¶</a></dt>
 <dd><p>Get the colourmap name property</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -2429,7 +2430,7 @@ be retrieved from the colourmaps list</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lavavu.ColourMap.positions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positions</span></span><a class="headerlink" href="#lavavu.ColourMap.positions" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positions</span></span><a class="headerlink" href="#lavavu.ColourMap.positions" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the list of colour positions</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -2493,13 +2494,13 @@ NOTE: ignores position data</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.DrawData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#DrawData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.DrawData" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DrawData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#DrawData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.DrawData" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The DrawData class provides an interface to a single object data element
 DrawData instances are created internally from the Geometry class</p>
 <p>copy(), get() and set() methods provide access to the data types</p>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]],</span> <span class="n">colours</span><span class="o">=</span><span class="s2">&quot;red blue&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">values</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;myvals&quot;</span><span class="p">)</span>
@@ -2598,7 +2599,7 @@ there is no guarantee memory will not be released!</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Figure">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Figure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Figure" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Figure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Figure" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>The Figure class wraps a set of visualisation state data, providing a way
 of managing a collection of preset visualisations or “figures” of a single model</p>
@@ -2646,13 +2647,13 @@ Viewer.store(filename) and restored with Viewer.restore(filename)</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Geometry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Geometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Geometry" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Geometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Geometry" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
 <p>The Geometry class provides an interface to a drawing object’s internal data
 Geometry instances are created internally in the Object class with the data property</p>
 <p class="rubric">Example</p>
 <p>Get all object data</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">points</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#Fixed points, always plotted regardless of timestep</span>
@@ -2724,15 +2725,15 @@ Geometry instances are created internally in the Object class with the data prop
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Image">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(640,</span> <span class="pre">480)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255,</span> <span class="pre">255,</span> <span class="pre">255,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Image" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(640,</span> <span class="pre">480)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255,</span> <span class="pre">255,</span> <span class="pre">255,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Image" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Image class provides an interface to a raw image</p>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span> 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">rawimage</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;out.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>TODO: control blend equations</p>
@@ -2827,18 +2828,18 @@ otherwise will use default viewer dimensions</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lavavu.Video">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.mp4'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h264'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output.mp4'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">framerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h264'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lavavu.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lavavu.Video" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Video class provides an interface to record animations</p>
 <p>This now uses pyAV avoiding the need to build LavaVu with ffmpeg support</p>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lavavu</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lavavu</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span> <span class="o">=</span> <span class="n">lavavu</span><span class="o">.</span><span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lv</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>           
-<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>   
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> 
-<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>        
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">lv</span><span class="o">.</span><span class="n">video</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">lv</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
 </pre></div>
 </div>
 <dl class="py method">
@@ -2927,7 +2928,7 @@ values are loaded as 8 bit unsigned integer values</p>
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="index.html">LavaVu</a></h1>
 
@@ -3005,8 +3006,8 @@ values are loaded as 8 bit unsigned integer values</p>
       &#169;2020, Monash University.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
       |
       <a href="_sources/lavavu.rst.txt"
